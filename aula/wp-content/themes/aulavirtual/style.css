@@ -1,0 +1,278 @@
+/*
+Theme Name: Aula Virtual
+Author: Yeison Briceño
+Author URI: https://wordpress.org/
+Description: Tema personalizado para el aula virtual de CREA.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: aula, virtual, CREA, idartes, artistica
+*/
+
+/*********** Fuentes **********/
+
+@font-face {
+      font-family: "Local Van Condensed Bold";
+      src: url("fonts/Van Condensed-Bold.otf");
+}
+@font-face {
+      font-family: "Local Van Condensed Pro Light";
+      src: url("fonts/Van_Condensed_Pro_Light.ttf");
+}
+@font-face {
+      font-family: "Local Van Condensed Regular";
+      src: url("fonts/Van Condensed-Regular.otf");
+}
+
+/*********** Grid **********/
+.bg{
+  background-image: url("images/ip5.png");
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-7{
+    width: 13%;
+    float: left;
+    text-align: center;
+  }
+  .bg{
+    height: 900px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .col-md-1-7{
+    position: left;
+    float: left;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .col-md-1-7{
+    width: 14%;
+    float: left;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-sm-1-7{
+    width: 14%;
+    float: left;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px){
+  .col-xs-1-6{
+    width: 33%;
+    text-align: center;
+  }
+  .col-xs-1-6-12{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+  .col-xs-12{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 1200px){
+  .bg{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+  }
+}
+
+/*********** Estilo index **********/
+
+.index-titulo{
+  position: relative;
+  top: 150px;
+  text-align: center;
+  color: white;
+}
+.index-titulo img{
+  width: 70px;
+}
+
+.index-titulo a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 16px;
+}
+
+.index-menu {
+  position: relative;
+  color: white;
+  top: 40%;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 16px;
+}
+
+.index-menu ul{
+  list-style-type: none;
+   padding-left: 0;
+}
+
+.index-menu li a{
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+
+.index-logos{
+  text-align: right;
+  top: 38%;
+}
+
+
+h1{
+  font-family: 'Local Van Condensed Bold' !important;;
+  font-size: 80px;
+}
+label{
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 14px;
+}
+
+/*********** Estilo footer **********/
+
+.footer{
+  background-color: rgb(230, 63, 57);
+  color: white;
+  top: 40%;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 16px;
+}
+
+.footer h3{
+  color: white;
+}
+
+.footer ul{
+  list-style-type: none;
+   padding-left: 0;
+}
+
+.footer li a{
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+
+.footer address{
+  color: white;
+}
+.footer address a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+.dropdown{
+    display: inline-block;
+}
+.dropdown-toggle{
+  height: 50px;
+  font-size:  18px;
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.dropdown-toggle:active{
+  background-color: transparent !important;
+}
+.caret{
+  text-align: right;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  clear: both;
+  font-size: 16px;
+}
+
+.dropdown-menu li{
+  width: 300px
+}
+.dropdown-menu li a:hover {
+  background-color: rgba(120, 120, 232, 0.28);
+}
+
+.pModal{
+  display: block;
+  background-color: black;
+  text-align: center;
+  width: 170px;
+  background-color: rgba(221, 241, 252, 1);
+  height: 40px;
+  font-size: 22px;
+  border-radius: 10px 10px 10px 10px;
+  vertical-align: -50%;
+  color: rgba(46, 178, 245, 1);
+  }
+
+.navbar{
+  background-color: #ff3c36;
+  /*background-color: rgba(113, 83, 159, 1);*/
+  font-size: 20px;
+}
+
+.navbar-nav li a{
+  border-radius: 5px;
+  color:white !important;
+}
+
+.navbar-nav li a:hover{
+  background-color: #cd2924 !important;*/
+  border-radius: 5px;
+}
+.navbar-brand{
+  color:white !important;
+  font-size: 22px;
+}
+
+.p-modal{
+  background-color: rgba(33, 156, 211, 1);
+  color:white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+
+.b-index{
+  margin-top: 30px;
+}
+
+table.dataTable thead th, table.dataTable thead td{
+  border-bottom: 1px solid #999  !important;
+}
+table.dataTable.no-footer{
+  border-bottom: 1px solid #999 !important;
+}
