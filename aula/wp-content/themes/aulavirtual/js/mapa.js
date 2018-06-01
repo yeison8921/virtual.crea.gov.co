@@ -19,22 +19,22 @@ jQuery(document).ready(function($) {
     data: datos,
     success: function(result){
       swal({
-        title: 'Bien hecho',
-        text: 'El audio se ha guardado correctamente.',
-        icon: 'success',
+        title: "Bien hecho",
+        text: "El audio se ha guardado correctamente.",
+        icon: "success"
+      }). then(function(){
+        window.location.href = "localhost/virtual.crea.gov.co/aula/consulta-mapa-artes-electronicas";
       });
     },error: function(result){
       swal({
-        title: 'Error',
-        text: 'No se ha podido guardar el audio, por favor vuelva a intentarlo.',
-        icon: 'warning',
+        title: "Error",
+        text: "No se ha podido guardar el audio, por favor vuelva a intentarlo.",
+        icon: "warning",
       });
       }
     });
   });
 });
-
-
 
 function initMap() {
     /*var strictBounds = new google.maps.LatLngBounds(

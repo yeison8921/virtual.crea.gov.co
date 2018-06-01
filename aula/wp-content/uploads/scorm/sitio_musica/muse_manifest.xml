@@ -1,0 +1,27 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.virtual.com" resolutions="1x" timestamp="1527710598404">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="index.css" crc="3871014497" ref="index"/>
+    <file name="uno.css" crc="436060857" ref="uno"/>
+    <file name="dos.css" crc="4053427279" ref="dos"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:uno:dos"/>
+    <file name="museutils.js" crc="340535759" ref="index:uno:dos"/>
+    <file name="whatinput.js" crc="86476730" ref="index:uno:dos"/>
+    <file name="museconfig.js" crc="310584261" ref="index:uno:dos"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:uno:dos"/>
+    <file name="require.js" crc="7928878" ref="index:uno:dos"/>
+  </folder>
+  <folder name="images">
+    <file name="svg-pegado-964.svg" crc="4116999755" seo="true" ref="index:uno:dos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="dos" alt=""/>
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 964_poster_.png" crc="3946169183" ref="index:uno:dos"/>
+  </folder>
+  <file name="index.html" crc="464258782" seo="true" mt="1527710557781" redirect="true"/>
+  <file name="uno.html" crc="4021874674" seo="true" mt="1527710260328" redirect="true"/>
+  <file name="dos.html" crc="67834909" seo="true" mt="1527710380391" redirect="true"/>
+</manifest>

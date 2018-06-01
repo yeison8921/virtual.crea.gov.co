@@ -156,7 +156,6 @@ label{
 .footer{
   background-color: rgb(230, 63, 57);
   color: white;
-  top: 40%;
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 16px;
 }
@@ -183,9 +182,6 @@ label{
   color: white;
   text-decoration: none;
 }
-
-
-
 
 .dropdown{
     display: inline-block;

@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts','aula_cargar_estilos');
 
 include get_parent_theme_file_path( '/mapa/subirAudio.php' );
 include get_parent_theme_file_path( '/mapa/consultaMapa.php' );
-//include get_parent_theme_file_path( '/notas/notas.php' );
-//include get_parent_theme_file_path( '/h5p/h5p.php' );
+include get_parent_theme_file_path( '/notas/notas.php' );
+include get_parent_theme_file_path( '/h5p/h5p.php' );
 
 ?>

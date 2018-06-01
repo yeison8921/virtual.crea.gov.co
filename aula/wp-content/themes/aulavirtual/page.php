@@ -54,6 +54,13 @@
               </script>
           <?php endif; ?>
 
+          <?php if(is_page("Música")) :?>
+            <div class="row">
+              <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_musica/index.html" frameborder="0" width="1024" height="768"></iframe>
+              <!--style="overflow: hidden; height: 100vh; width: 100%;-->
+            </div>
+          <?php endif; ?>
+
         <?php the_content(); ?>
         <?php endwhile; endif; ?>
       </div>
