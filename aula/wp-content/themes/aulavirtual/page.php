@@ -18,12 +18,12 @@
             </div>
             <div class="form-group">
               <div class="col-sm-6">
-                <input class="form-control" type="text" name="lat" id="lat" readonly style="display: none;">
+                <input class="form-control" type="hidden" name="lat" id="lat">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-6">
-                <input class="form-control" type="text" name="lng" id="lng" readonly style="display: none;">
+                <input class="form-control" type="hidden" name="lng" id="lng">
               </div>
             </div>
             <br><br>
