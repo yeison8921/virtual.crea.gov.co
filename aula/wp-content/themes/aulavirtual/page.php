@@ -15,18 +15,9 @@
             <div class="form-group">
               <label for="">Descripción</label>
               <textarea class="form-control" id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Escriba una descripción" required></textarea>
+              <input class="form-control" type="hidden" name="lat" id="lat">
+              <input class="form-control" type="hidden" name="lng" id="lng">
             </div>
-            <div class="form-group">
-              <div class="col-sm-6">
-                <input class="form-control" type="hidden" name="lat" id="lat">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-6">
-                <input class="form-control" type="hidden" name="lng" id="lng">
-              </div>
-            </div>
-            <br><br>
             <div id="info" class="row bg-warning" style="text-align: center; display: none;">
             </div>
             <br>

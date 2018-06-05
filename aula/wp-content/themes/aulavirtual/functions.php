@@ -31,7 +31,7 @@ function aula_cargar_scripts()
     wp_enqueue_script( 'dataTables-buttons', get_template_directory_uri() . '/js/dataTables.buttons.min.js',array(),false,true);
     wp_enqueue_script( 'jszip', get_template_directory_uri() . '/js/jszip.min.js',array(),false,true);
     wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',array(),false,true);
-    wp_enqueue_script( 'sweet-alert',  get_template_directory_uri() . '/js/sweetAlert.min.js',array(),false,true);
+    wp_enqueue_script( 'sweet-alert',  get_template_directory_uri() . '/js/sweetAlert2.min.js',array(),false,true);
 
 
 
@@ -43,10 +43,12 @@ function aula_cargar_estilos()
     wp_register_style( 'bootstrap-estilo', get_template_directory_uri() . '/css/bootstrap.css',array(),false,'all');
     wp_register_style('buttons-dataTables', get_template_directory_uri().'/css/buttons.dataTables.min.css',array(),false,'all');
     wp_register_style('jquery-dataTables', get_template_directory_uri().'/css/jquery.dataTables.min.css',array(),false,'all');
+    wp_register_style('sweetAlert2', get_template_directory_uri().'/css/sweetAlert2.min.css',array(),false,'all');
     wp_register_style('estilo-principal',get_template_directory_uri().'/style.css',array(),false,'all');
     wp_enqueue_style( 'bootstrap-estilo' );
     wp_enqueue_style( 'buttons-dataTables' );
     wp_enqueue_style( 'jquery-dataTables' );
+    wp_enqueue_style( 'sweetAlert2' );
     wp_enqueue_style( 'estilo-principal' );
 
 

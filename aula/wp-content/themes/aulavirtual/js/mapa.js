@@ -14,7 +14,11 @@ jQuery(document).ready(function($) {
     title: "Subiendo audio",
     text: "Por favor espere",
     showConfirmButton: false,
-    allowOutsideClick: false
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    onOpen: () => {
+      swal.showLoading()
+    },
   });
   $.ajax({
     url: ajaxurl,
@@ -27,7 +31,7 @@ jQuery(document).ready(function($) {
       swal({
         title: "Bien hecho",
         text: "El audio se ha guardado correctamente.",
-        icon: "success"
+        type: "success"
       }). then(function(){
         window.location.href = "localhost/virtual.crea.gov.co/aula/consulta-mapa-artes-electronicas";
       });
@@ -35,7 +39,7 @@ jQuery(document).ready(function($) {
       swal({
         title: "Error",
         text: "No se ha podido guardar el audio, por favor vuelva a intentarlo.",
-        icon: "warning",
+        type: "warning",
       });
       }
     });
@@ -64,7 +68,6 @@ function initMap() {
       infoWindow.setPosition(pos);
       infoWindow.setContent('<h4>Hemos detectado tu ubicación</h4>');
       map.setCenter(pos);
-      console.log(pos);
       jQuery("#lat").val(pos["lat"]);
       jQuery("#lng").val(pos["lng"]);
     }, function() {
