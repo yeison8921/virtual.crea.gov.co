@@ -15,20 +15,18 @@ add_theme_support( 'post-thumbnails' );
 
 function aula_cargar_scripts()
 {
-
-    $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
-
-    function google_maps_api_add_async_defer_attribute($tag, $handle) {
-      if ( 'google-maps-api' !== $handle )
-      return $tag;
-      return str_replace( ' src', ' async defer src', $tag );
-    }
-
-    add_filter('script_loader_tag', 'google_maps_api_add_async_defer_attribute', 10, 2);
-    
     wp_enqueue_script( 'jquery',  'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false,true);
     if(is_page("Artes electrónicas") || is_page("Consulta mapa artes electrónicas")){
+      $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
       wp_enqueue_script('google-maps-api', esc_url( add_query_arg( 'key', $map_api_key.'&callback=initMap', '//maps.googleapis.com/maps/api/js' )), array(), null, true );
+
+      function google_maps_api_add_async_defer_attribute($tag, $handle) {
+        if ( 'google-maps-api' !== $handle )
+        return $tag;
+        return str_replace( ' src', ' async defer src', $tag );
+      }
+      add_filter('script_loader_tag', 'google_maps_api_add_async_defer_attribute', 10, 2);
+
       if(is_page("Artes electrónicas")){
         wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/mapa.js',array(),false,true);
       }else{
