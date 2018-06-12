@@ -32,8 +32,8 @@ function aula_cargar_scripts()
     wp_enqueue_script( 'jszip', get_template_directory_uri() . '/js/jszip.min.js',array(),false,true);
     wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',array(),false,true);
     wp_enqueue_script( 'sweet-alert',  get_template_directory_uri() . '/js/sweetAlert2.min.js',array(),false,true);
-
-
+    wp_enqueue_script( 'jquery-validate',  get_template_directory_uri() . '/js/jquery.validate.min.js',array(),false,true);
+    wp_enqueue_script( 'jquery-validate-additional-methods',  get_template_directory_uri() . '/js/jquery.validate.additional.methods.min.js',array(),false,true);
 
 }
 add_action( 'wp_enqueue_scripts', 'aula_cargar_scripts' );

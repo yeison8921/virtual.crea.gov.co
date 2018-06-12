@@ -1,49 +1,100 @@
 jQuery(document).ready(function($) {
-  $("#uploadAudio").submit(function(event) {
-  event.preventDefault();
-  var audio_file = $("#audioFile")[0].files[0];
-  var datos = new FormData();
-  datos.append('action', 'guardarAudio');
-  datos.append('id', $("#id").val());
-  datos.append('titulo', $("#titulo").val());
-  datos.append('descripcion', $("#descripcion").val());
-  datos.append('lat', $("#lat").val());
-  datos.append('lng', $("#lng").val());
-  datos.append('audio', audio_file);
-  swal({
-    title: "Subiendo audio",
-    text: "Por favor espere",
-    showConfirmButton: false,
-    allowOutsideClick: false,
-    allowEscapeKey: false,
-    onOpen: () => {
-      swal.showLoading()
+  $("#uploadAudio").validate({
+    rules:{
+      titulo:{
+        required: true
+      },
+      descripcion:{
+        required: true
+      },
+      audioFile: {
+        required: true,
+        accept: "audio/*"
+      },
+    },
+    messages:{
+      titulo:{
+        required: "Por favor ingrese un título"
+      },
+      descripcion:{
+        required: "Por favor ingrese una descripción"
+      },
+      audioFile: {
+        required: "Por favor seleccione un archivo",
+        accept: "Solo se permiten archivos en formato mp3"
+      },
+    },
+    invalidHandler: function(event, validator) {
+      return false;
+    },
+    errorPlacement: function(error, element) {
+      $(element).closest('.form-group').find('.help-block').html(error.html());
+    },
+    highlight: function(element) {
+      $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+      $(element).closest('.form-group').find('.help-block').html('');
+    },
+    submitHandler: function(form) {
+      subirAudio();
     },
   });
-  $.ajax({
-    url: ajaxurl,
-    contentType: false,
-    processData: false,
-    dataType: "html",
-    type: "POST",
-    data: datos,
-    success: function(result){
-      swal({
-        title: "Bien hecho",
-        text: "El audio se ha guardado correctamente.",
-        type: "success"
-      }). then(function(){
-        window.location.href = "localhost/virtual.crea.gov.co/aula/consulta-mapa-artes-electronicas";
-      });
-    },error: function(result){
+
+  function subirAudio(){
+    if($("#lat").val() == "" || $("#lng").val() == ""){
       swal({
         title: "Error",
-        text: "No se ha podido guardar el audio, por favor vuelva a intentarlo.",
+        text: "Por favor selecciona tu ubicación haciendo clic en cualquier parte del mapa.",
         type: "warning",
       });
-      }
-    });
-  });
+    }
+    else{
+      var audio_file = $("#audioFile")[0].files[0];
+      var datos = new FormData();
+      datos.append('action', 'guardarAudio');
+      datos.append('id', $("#id").val());
+      datos.append('titulo', $("#titulo").val());
+      datos.append('descripcion', $("#descripcion").val());
+      datos.append('lat', $("#lat").val());
+      datos.append('lng', $("#lng").val());
+      datos.append('audio', audio_file);
+      swal({
+        title: "Subiendo audio",
+        text: "Por favor espere",
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        onOpen: () => {
+          swal.showLoading()
+        },
+      });
+      $.ajax({
+        url: ajaxurl,
+        contentType: false,
+        processData: false,
+        dataType: "html",
+        type: "POST",
+        data: datos,
+        success: function(result){
+          swal({
+            title: "Bien hecho",
+            text: "El audio se ha guardado correctamente.",
+            type: "success"
+          }). then(function(){
+            window.location.href = "localhost/virtual.crea.gov.co/aula/consulta-mapa-artes-electronicas";
+          });
+        },error: function(result){
+          swal({
+            title: "Error",
+            text: "No se ha podido guardar el audio, por favor vuelva a intentarlo.",
+            type: "warning",
+          });
+          }
+        });
+    }
+  }
 });
 
 var map;
@@ -73,8 +124,6 @@ function initMap() {
     }, function() {
       jQuery("#info").show();
       jQuery("#info").html("<h4><strong>Hemos detectado que no has compartido tu ubicación, por favor selecciona tu ubicación haciendo clic en cualquier parte del mapa.<strong></h4>")
-      //jQuery("#lat").show();
-      //jQuery("#lng").show();
       google.maps.event.addListener(map, 'click', function(event) {
         placeMarker(event.latLng);
         jQuery("#lat").val(event.latLng.lat());
