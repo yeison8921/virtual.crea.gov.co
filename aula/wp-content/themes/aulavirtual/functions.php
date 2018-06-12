@@ -15,12 +15,25 @@ add_theme_support( 'post-thumbnails' );
 
 function aula_cargar_scripts()
 {
-    wp_enqueue_script( 'jquery',  'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false,true);
-    if(is_page("Artes electrónicas")){
-      wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/mapa.js',array(),false,true);
+
+    $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
+
+    function google_maps_api_add_async_defer_attribute($tag, $handle) {
+      if ( 'google-maps-api' !== $handle )
+      return $tag;
+      return str_replace( ' src', ' async defer src', $tag );
     }
-    if(is_page("Consulta mapa artes electrónicas")){
-      wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/consultaMapa.js',array(),false,true);
+
+    add_filter('script_loader_tag', 'google_maps_api_add_async_defer_attribute', 10, 2);
+    
+    wp_enqueue_script( 'jquery',  'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false,true);
+    if(is_page("Artes electrónicas") || is_page("Consulta mapa artes electrónicas")){
+      wp_enqueue_script('google-maps-api', esc_url( add_query_arg( 'key', $map_api_key.'&callback=initMap', '//maps.googleapis.com/maps/api/js' )), array(), null, true );
+      if(is_page("Artes electrónicas")){
+        wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/mapa.js',array(),false,true);
+      }else{
+        wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/consultaMapa.js',array(),false,true);
+      }
     }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script( 'funciones' , get_template_directory_uri() . '/js/funciones.js',array(),false,true);

@@ -37,14 +37,10 @@
               <button type="submit" id="guardar" class="form-control btn btn-primary">Guardar</button>
               </div>
             </div>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8&callback=initMap">
-            </script>
             </form>
           <?php endif; ?>
           <?php if(is_page("Consulta mapa artes electrónicas")) :?>
             <div id="map" style="height: 768px">
-              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8&callback=initMap">
-              </script>
           <?php endif; ?>
 
           <?php if(is_page("Música")) :?>
