@@ -2,7 +2,7 @@
 <div class="row footer">
 	<div class="col-lg-offset-5 col-lg-7 col-md-offset-1">
 		<div class="col-lg-3 col-md-3 col-sm-4">
-			<h3 class="title"><strong>Áreas artisticas</strong></h3>
+			<h3 class="title"><strong>Áreas artísticas</strong></h3>
 			<?php wp_nav_menu(array(
 				'container' => 'div',
 			  'items_wrap' => '<ul>%3$s</ul>',
@@ -17,13 +17,11 @@
 			  'theme_location' => 'nosotros'
 			)); ?>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-5">
+		<div class="col-lg-4 col-md-4 col-sm-5">
 			<h3 class="title"><strong>Contáctanos</strong></h3>
-			<address>
-				<strong>Dirección Carrera 8 # 15 - 46</strong>
+				Dirección: Carrera 8 # 15 - 46<br>
 				Teléfono: (571) - 3795750<br>
 				Email: <a href="mailto:#">contactenos@idartes.gov.co</a>
-			</address>
 		</div>
 	</div>
 	<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">

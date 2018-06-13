@@ -143,7 +143,7 @@ Tags: aula, virtual, CREA, idartes, artistica
 
 
 h1{
-  font-family: 'Local Van Condensed Bold' !important;;
+  font-family: 'Local Van Condensed Bold' !important;
   font-size: 80px;
 }
 label{
@@ -234,8 +234,8 @@ label{
 
 .navbar{
   background-color: #ff3c36;
-  /*background-color: rgba(113, 83, 159, 1);*/
-  font-size: 20px;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 26px;
 }
 
 .navbar-nav li a{
@@ -249,7 +249,7 @@ label{
 }
 .navbar-brand{
   color:white !important;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .p-modal{
