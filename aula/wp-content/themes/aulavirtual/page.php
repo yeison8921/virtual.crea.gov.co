@@ -50,6 +50,20 @@
             </div>
           <?php endif; ?>
 
+          <?php if(is_page("Creación literaria")) :?>
+            <div class="row">
+              <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_literatura/index.html" frameborder="0" width="1024" height="768"></iframe>
+              <!--style="overflow: hidden; height: 100vh; width: 100%;-->
+            </div>
+          <?php endif; ?>
+
+          <?php if(is_page("Danza")) :?>
+            <div class="row">
+              <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_danza/index.html" frameborder="0" width="1024" height="768"></iframe>
+              <!--style="overflow: hidden; height: 100vh; width: 100%;-->
+            </div>
+          <?php endif; ?>
+
         <?php the_content(); ?>
         <?php endwhile; endif; ?>
       </div>

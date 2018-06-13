@@ -1,0 +1,49 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.virtual.com.co" resolutions="1x" timestamp="1527707264319">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="uno.css" crc="249015805" ref="uno"/>
+    <file name="index.css" crc="4292770810" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:uno"/>
+    <file name="museutils.js" crc="340535759" ref="index:uno"/>
+    <file name="whatinput.js" crc="86476730" ref="index:uno"/>
+    <file name="museconfig.js" crc="310584261" ref="index:uno"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:uno"/>
+    <file name="require.js" crc="7928878" ref="index:uno"/>
+  </folder>
+  <folder name="images">
+    <file name="svg-pegado-992012x680.svg" crc="4034562066" seo="true" ref="index:uno">
+      <caption webpage="index" alt=""/>
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 992012x680_poster_.png" crc="3826063706" ref="index"/>
+    <file name="svg-pegado-223x43.svg" crc="4080308566" seo="true" ref="index:uno">
+      <caption webpage="index" alt=""/>
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 223x43_poster_.png" crc="4177412281" ref="index"/>
+    <file name="svg-pegado-112x43.svg" crc="3996739227" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 112x43_poster_.png" crc="336709038" ref="uno"/>
+    <file name="svg-pegado-112x432.svg" crc="4262182729" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 112x43_poster_2.png" crc="375019910" ref="uno"/>
+    <file name="svg-pegado-112x433.svg" crc="3929920646" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 112x43_poster_3.png" crc="21558867" ref="uno"/>
+    <file name="svg-pegado-112x434.svg" crc="136015466" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 112x43_poster_4.png" crc="431808342" ref="uno"/>
+    <file name="svg-pegado-134x43.svg" crc="496566223" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 134x43_poster_.png" crc="430436908" ref="uno"/>
+  </folder>
+  <file name="index.html" crc="4112513175" seo="true" mt="1527706058610" redirect="true"/>
+  <file name="uno.html" crc="3807726370" seo="true" mt="1527706052987" redirect="true"/>
+</manifest>

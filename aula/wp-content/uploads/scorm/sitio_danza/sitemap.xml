@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://www.virtual.com.co/index.html</loc>
+    <lastmod>2018-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-992012x680.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-223x43.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.virtual.com.co/uno.html</loc>
+    <lastmod>2018-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-992012x680.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-223x43.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-112x43.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-112x432.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-112x433.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-112x434.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.virtual.com.co/images/svg-pegado-134x43.svg</image:loc>
+    </image:image>
+  </url>
+</urlset>

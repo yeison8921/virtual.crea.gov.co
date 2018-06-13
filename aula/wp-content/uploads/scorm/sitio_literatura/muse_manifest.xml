@@ -1,0 +1,41 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.virtual.com" resolutions="1x" timestamp="1527708682945">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="uno.css" crc="487957650" ref="uno"/>
+    <file name="index.css" crc="4177051834" ref="index"/>
+    <file name="dos.css" crc="227457949" ref="dos"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:uno:dos"/>
+    <file name="museutils.js" crc="340535759" ref="index:uno:dos"/>
+    <file name="whatinput.js" crc="86476730" ref="index:uno:dos"/>
+    <file name="museconfig.js" crc="310584261" ref="index:uno:dos"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:uno:dos"/>
+    <file name="require.js" crc="7928878" ref="index:uno:dos"/>
+  </folder>
+  <folder name="images">
+    <file name="svg-pegado-977x560.svg" crc="381048776" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="svg pegado 977x560_poster_.png" crc="413973098" ref="index"/>
+    <file name="svg-pegado-28871x37.svg" crc="3923273528" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="svg pegado 28871x37_poster_.png" crc="3929474994" ref="index"/>
+    <file name="svg-pegado-977x5602.svg" crc="4179354431" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 977x560_poster_2.png" crc="15429146" ref="uno"/>
+    <file name="svg-pegado-388116x267.svg" crc="317653034" seo="true" ref="uno">
+      <caption webpage="uno" alt=""/>
+    </file>
+    <file name="svg pegado 388116x267_poster_.png" crc="396826779" ref="uno"/>
+    <file name="svg-pegado-1010x587.svg" crc="4083646751" seo="true" ref="dos">
+      <caption webpage="dos" alt=""/>
+    </file>
+    <file name="svg pegado 1010x587_poster_.png" crc="475453810" ref="dos"/>
+  </folder>
+  <file name="index.html" crc="4184658306" seo="true" mt="1527708480258" redirect="true"/>
+  <file name="uno.html" crc="4119846853" seo="true" mt="1527708598015" redirect="true"/>
+  <file name="dos.html" crc="3858364550" seo="true" mt="1527708605896" redirect="true"/>
+</manifest>
