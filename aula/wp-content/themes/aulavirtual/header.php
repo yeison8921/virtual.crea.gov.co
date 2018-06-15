@@ -27,7 +27,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="localhost/virtual.crea.gov.co/aula">Aula Virtual</a>
+          <a class="navbar-brand" href="<?php echo home_url() ?>">Aula Virtual</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

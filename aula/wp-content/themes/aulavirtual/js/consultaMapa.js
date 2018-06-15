@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
      for(i=0;i<count;i++){
        var lat=info[i]["lat"];
        var lng=info[i]["lng"];
-       var content = "<h1>"+info[i]["titulo"]+"</h1><br><p>"+info[i]["descripcion"]+"</p><br><audio controls controlsList='nodownload'><source src="+info[i]['ruta_archivo']+" type='audio/mpeg'></audio>";
+       var content = "<h4>"+info[i]["titulo"]+"</h4><br><strong>Por:</strong>"+info[i]["user_nicename"]+"<br><p>"+info[i]["descripcion"]+"</p><br><audio controls controlsList='nodownload'><source src="+info[i]['ruta_archivo']+" type='audio/mpeg'></audio>";
        //console.log(info);
          var marker = new google.maps.Marker({
            position: new google.maps.LatLng(lat, lng),

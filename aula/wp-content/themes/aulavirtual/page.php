@@ -24,7 +24,7 @@
             </div>
             <br>
             <div class="form-group">
-              <div id="map" style="height: 768px">
+              <div id="map">
               </div>
             </div>
             <div class="form-group">
@@ -39,9 +39,12 @@
             </div>
             </form>
           <?php endif; ?>
-          <?php if(is_page("Consulta mapa artes electrónicas")) :?>
-            <div id="map" style="height: 768px">
-          <?php endif; ?>
+          <div class="row">
+            <?php if(is_page("Consulta mapa artes electrónicas")) :?>
+              <div id="map">
+              </div>
+            <?php endif; ?>
+          </div>
 
           <?php if(is_page("Música")) :?>
             <div class="row">
