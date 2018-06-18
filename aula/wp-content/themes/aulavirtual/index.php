@@ -5,23 +5,23 @@
     <h1 style="text-align: left;">Aula Virtual</h1>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
-      Artes<br>plásticas</a>
+      Artes plásticas</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/arte-dramatico" ><img src="<?php bloginfo('template_url'); ?>/images/icono_arte_dramatico.png"><br>
-        Arte<br>dramático</a>
+        Arte dramático</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/artes-electronicas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_eletronicas.png"><br>
-        Artes<br>electrónicas</a>
+        Artes electrónicas</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
-        Audiovisuales
+        Audiovisuales</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/creacion-literaria" ><img src="<?php bloginfo('template_url'); ?>/images/icono_creacion_literatura.png"><br>
-        Creación<br>literaria</a>
+        Creación literaria</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
       <a href="<?php bloginfo('url'); ?>/danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
