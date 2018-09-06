@@ -184,7 +184,7 @@ label{
   text-decoration: none;
 }
 
-.dropdown{
+/* .dropdown{
     display: inline-block;
 }
 .dropdown-toggle{
@@ -218,7 +218,7 @@ label{
 }
 .dropdown-menu li a:hover {
   background-color: rgba(120, 120, 232, 0.28);
-}
+}*/
 
 .pModal{
   display: block;
@@ -277,4 +277,33 @@ table.dataTable.no-footer{
 #map{
   width: 100%;
   height: 400px;
+}
+
+#contenedor-index-danza{
+  /* min-height: 400px; */
+  background-image: url('images/fondo_aula_danza.jpg');
+  height: 1035px;
+}
+
+#div-dropdown-index-danza {
+  position: absolute;
+  top: 60%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#div-dropdown-index-danza .dropdown-menu {
+  padding: 0px 0;
+  margin: 0px 0 0;
+  background-color: #fff0;
+  border: 0px solid #ccc;
+  border: 0px solid rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
+  box-shadow: 0 0px 0px rgba(0,0,0,.175);
+}
+#div-dropdown-index-danza .dropdown-menu>li>a {
+  padding: 1px 0px;
+}
+#div-dropdown-index-danza .btn {
+  padding: 0px 0px;
 }

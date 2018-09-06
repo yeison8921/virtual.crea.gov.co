@@ -60,16 +60,27 @@
             </div>
           <?php endif; ?>
 
+        </div>
           <?php if(is_page("Danza")) :?>
-            <div class="row">
-              <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_danza/index.html" frameborder="0" width="1024" height="768"></iframe>
-              <!--style="overflow: hidden; height: 100vh; width: 100%;-->
+            <div class ="container-fluid" id="contenedor-index-danza" style="position: relative;">
+              <div id="div-dropdown-index-danza">
+                <div class="dropdown">
+                    <img class="btn dropdown-toggle img-responsive" src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/seleccion_modulo.png" alt="dropdown image" data-toggle="dropdown" style="width: 300px;">
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/cuerpo_imagen.png" class="img-responsive" style="width: 300px;" ></a></li>
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/cuerpo_movimiento.png" class="img-responsive" style="width: 300px;"></a></li>
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/cuerpo_palabra.png" class="img-responsive" style="width: 300px;"></a></li>
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/cuerpo_sonido.png" class="img-responsive" style="width: 300px;"></a></li>
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/cuerpo_tecnologia.png" class="img-responsive" style="width: 300px;"></a></li>
+                        <li><a href="#"><img src="<?php bloginfo('url'); ?>/wp-content/themes/aulavirtual/images/laboratorio_de_creacion.png" class="img-responsive" style="width: 300px;"></a></li>
+                    </ul>
+                </div>
+              </div>
             </div>
           <?php endif; ?>
 
         <?php the_content(); ?>
         <?php endwhile; endif; ?>
-      </div>
 
       <!--fin contenido -->
       <br>

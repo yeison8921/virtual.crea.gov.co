@@ -12,7 +12,6 @@ if(function_exists( 'add_theme_support' ))
 add_theme_support( 'post-thumbnails' );
 
 
-
 function aula_cargar_scripts()
 {
     wp_enqueue_script( 'jquery',  'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false,true);
