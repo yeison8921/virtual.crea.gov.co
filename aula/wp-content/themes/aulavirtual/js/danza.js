@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
 	var imgindex3 = ($("#bloginfo").val() + "/danza/images/fondo_reconocimiento_corporal.jpg");
 	var imgindex4 = ($("#bloginfo").val() + "/danza/images/fondo_movimientos_universales.jpg");
 	var imgindex5 = ($("#bloginfo").val() + "/danza/equilibrio/fondo-equilibrio.jpg");
+	var imgindex6 = ($("#bloginfo").val() + "/danza/giros/fondo-giros.jpg");
 
 	$("#btn_cuerpo_interdisciplinar").click(function() {
 		$("#div-inicio-curso-danza").hide();
@@ -83,6 +84,10 @@ jQuery(document).ready(function($){
 			case "btn_equilibrio_puntos_de_apoyo":
 			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex5+'")', 'height':'1035px'});
 			$("#div-equilibrio").show();
+			break;
+			case "btn_giros_y_saltos":
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex6+'")', 'height':'1035px'});
+			$("#div-giros").show();
 			break;
 		}
 	});

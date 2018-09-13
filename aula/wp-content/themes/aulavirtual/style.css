@@ -393,6 +393,21 @@ table.dataTable.no-footer{
   top: 45%;
 }
 
+#contenedor-aula-danza #div-giros #div-botones-giros{
+  position: relative;
+  top: 40%;
+}
+
+#contenedor-aula-danza #div-giros #div-contenido-principal-giros{
+  position: relative;
+  top: 15%;
+}
+
+#contenedor-aula-danza #div-giros #div-contenido-secundario-giros{
+  position: relative;
+  top: 45%;
+}
+
 
 .img-padding{
   padding-bottom: 10px;

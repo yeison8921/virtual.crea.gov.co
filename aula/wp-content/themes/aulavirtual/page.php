@@ -256,6 +256,35 @@
               <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_video.png">
             </div>
           </div>
+          <!--  -->
+          <div id="div-giros" class="row" style="display: none; height: 100%;">
+            <div id="div-botones-giros" class="col-lg-2" style="text-align: right; padding-left: 30px;">
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_reconocimiento_corporal.png" class="img-responsive">
+              <br>
+              <br>
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_movimientos_universales.png" class="img-responsive">
+              <br>
+              <br>
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_equilibrio_y_puntos_de_apoyo.png" class="img-responsive">
+              <br>
+              <br>
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_giros_y_saltos.png" class="img-responsive">
+              <br>
+              <br>
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_direcciones_desplazamientos.png" class="img-responsive">
+            </div>
+            <div id="div-contenido-principal-giros" class="col-lg-offset-1 col-lg-4" style="padding-left: 70px;">
+              <h2>GIROS Y SALTOS</h2>
+              <br>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris rutrum, dui curae facilisi ante facilisis phasellus quis eget aliquet magna, metus praesent hac nulla massa est orci mi. Nullam nisl sapien interdum arcu mollis auctor nec id, metus cum vel parturient lacinia penatibus. Penatibus duis elementum ut feugiat vestibulum integer, vivamus sodales habitant pretium a, felis congue imperdiet etiam risus. <br><br>In nec dignissim enim euismod turpis torquent nisi sapien nulla tempus mi conubia ante molestie ullamcorper varius, orci suspendisse semper curabitur habitasse porta laoreet nullam ligula dictum dis magnis nostra proin. Eros cum magna facilisi duis lacus purus ullamcorper blandit sodales, curabitur id dapibus aptent sociis erat ultrices dictumst diam, vulputate pretium vivamus iaculis molestie mus phasellus vel. Inceptos blandit odio ultricies proin fusce donec lacus morbi facilisi orci, velit ridiculus turpis per nostra et mattis risus facilisis, dictumst montes pharetra eu urna purus vehicula metus laoreet.
+            </div>
+            <div id="div-contenido-secundario-giros" class="col-lg-5" style="text-align: center;">
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_cualidades físicas.png">
+              <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_video.png">
+            </div>
+          </div>
+
         </div>
       </div>
     <!-- </div> -->
