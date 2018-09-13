@@ -280,8 +280,11 @@ table.dataTable.no-footer{
 }
 
 #contenedor-index-danza{
-  /* min-height: 400px; */
-  background-image: url('images/fondo_aula_danza.jpg');
+  background-image: url('danza/images/fondo_aula_danza.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*height: 100vh;*/
   height: 1035px;
 }
 
@@ -307,3 +310,99 @@ table.dataTable.no-footer{
 #div-dropdown-index-danza .btn {
   padding: 0px 0px;
 }
+
+#div-info-aula-danza {
+  position: relative;
+  top: 60%;
+}
+
+#div-info-detallada-danza{
+  top: 15%;
+  font-size: 20px;
+}
+
+#div-info-detallada-danza #div-metodolgia-danza{
+  font-size: 16px;
+}
+
+#div-info-detallada-danza h2{
+  color: white;
+}
+
+#div-encabezado-info-aula-danza{
+  position: relative;
+  top: 45%;
+}
+
+#contenedor-aula-danza{
+  background-image: url('danza/images/fondo_info_detallada_danza.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1035px;
+  font-size: 18px;
+}
+
+#contenedor-aula-danza #div-video-aula-danza{
+  position: relative;
+  top: 15%;
+}
+
+#contenedor-aula-danza #div-modulos-aula-danza{
+  position: relative;
+  top: 25%;
+}
+
+#contenedor-aula-danza #div-regresar-modulo{
+  position: relative;
+  top: 12%;
+}
+
+#contenedor-aula-danza #div-reconocimiento-corporal{
+  position: relative;
+  top: 40%;
+}
+
+#contenedor-aula-danza #div-movimientos-universales #div-botones-movimientos-universales{
+  position: relative;
+  top: 40%;
+}
+
+#contenedor-aula-danza #div-movimientos-universales #div-contenido-principal-movimientos-universales{
+  position: relative;
+  top: 15%;
+}
+
+#contenedor-aula-danza #div-movimientos-universales #div-contenido-secundario-movimientos-universales{
+  position: relative;
+  top: 70%;
+}
+
+#contenedor-aula-danza #div-equilibrio #div-botones-equilibrio{
+  position: relative;
+  top: 40%;
+}
+
+#contenedor-aula-danza #div-equilibrio #div-contenido-principal-equilibrio{
+  position: relative;
+  top: 15%;
+}
+
+#contenedor-aula-danza #div-equilibrio #div-contenido-secundario-equilibrio{
+  position: relative;
+  top: 45%;
+}
+
+
+.img-padding{
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+

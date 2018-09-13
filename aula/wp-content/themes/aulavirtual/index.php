@@ -24,7 +24,7 @@
         Creación literaria</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
+      <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
         Danza</a>
     </div>
     <div class="col-lg-1-7 col-md-1-7 col-xs-1-6-12 col-xs-12 col-sm-1-7">

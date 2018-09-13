@@ -32,6 +32,9 @@ function aula_cargar_scripts()
         wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/consultaMapa.js',array(),false,true);
       }
     }
+    if(is_page("Introducción aula danza") ||  is_page("Aula danza")){
+        wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/danza.js',array(),false,true);
+    }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script( 'funciones' , get_template_directory_uri() . '/js/funciones.js',array(),false,true);
     //wp_enqueue_script( 'notas' , get_template_directory_uri() . '/js/notas.js',array(),false,true);
