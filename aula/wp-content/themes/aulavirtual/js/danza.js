@@ -13,21 +13,21 @@ jQuery(document).ready(function($){
 	});
 
 	$("#div-info-aula-danza img").click(function(){
-		$("#contenedor-index-danza").css({'background-image':'url("'+imgindex2+'")', 'height':'1035px'});
+		$("#contenedor-index-danza").css({'background-image':'url("'+imgindex2+'")', 'height':'700px'});
 		$("#div-inicio-curso-danza").hide();
 		$("#div-encabezado-info-aula-danza").hide();
 		$("#div-info-aula-danza").hide();
 		$("#div-info-detallada-danza").show();
-		switch($(this).attr('name')) {
+		switch($(this).attr('id')) {
 			case "btn_introduccion_danza":
 			$("#div-objetivos-danza").hide();
-			$("#div-metodolgia-danza").hide();
+			$("#div-metodologia-danza").hide();
 			$("#div-publico-objetivo-danza").hide();
 			$("#div-creditos-danza").hide();
 			$("#div-introduccion-danza").show();
 			break;
 			case "btn_objetivos_danza":
-			$("#div-metodolgia-danza").hide();
+			$("#div-metodologia-danza").hide();
 			$("#div-publico-objetivo-danza").hide();
 			$("#div-creditos-danza").hide();
 			$("#div-introduccion-danza").hide();
@@ -38,19 +38,19 @@ jQuery(document).ready(function($){
 			$("#div-creditos-danza").hide();
 			$("#div-introduccion-danza").hide();
 			$("#div-objetivos-danza").hide();
-			$("#div-metodolgia-danza").show();
+			$("#div-metodologia-danza").show();
 			break;
 			case "btn_publico_objetivo_danza":
 			$("#div-creditos-danza").hide();
 			$("#div-introduccion-danza").hide();
 			$("#div-objetivos-danza").hide();
-			$("#div-metodolgia-danza").hide();
+			$("#div-metodologia-danza").hide();
 			$("#div-publico-objetivo-danza").show();
 			break;
 			case "btn_creditos_danza":
 			$("#div-introduccion-danza").hide();
 			$("#div-objetivos-danza").hide();
-			$("#div-metodolgia-danza").hide();
+			$("#div-metodologia-danza").hide();
 			$("#div-publico-objetivo-danza").hide();
 			$("#div-creditos-danza").show();
 			break;
@@ -74,20 +74,33 @@ jQuery(document).ready(function($){
 		$("#div-modulos-aula-danza").hide();
 		switch($(this).attr('id')) {
 			case "btn_reconocimiento_corporal":
-			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex3+'")', 'height':'1035px'});
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex3+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '700px'});
 			$("#div-reconocimiento-corporal").show();
 			break;
 			case "btn_movimientos_universales":
-			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex4+'")', 'height':'1035px'});
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex4+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '700px'});
 			$("#div-movimientos-universales").show();
 			break;
 			case "btn_equilibrio_puntos_de_apoyo":
-			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex5+'")', 'height':'1035px'});
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex5+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '700px'});
 			$("#div-equilibrio").show();
 			break;
 			case "btn_giros_y_saltos":
-			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex6+'")', 'height':'1035px'});
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex6+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '700px'});
 			$("#div-giros").show();
+			break;
+		}
+	});
+
+		$("#div-reconocimiento-corporal img").click(function(){
+		$("#div-actividades-reconocimiento-corporal").hide();
+		switch($(this).attr('id')) {
+			case "btn_rompecabezas":
+			$("#div-rompecabezas-reconocimiento-corporal").show();
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex3+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '720px'});
+			break;
+			case "btn_video":
+			$("#div-video-reconocimiento-corporal").show();
 			break;
 		}
 	});

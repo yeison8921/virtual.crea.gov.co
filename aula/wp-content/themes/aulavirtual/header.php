@@ -43,5 +43,4 @@
 
       </div><!-- /.container-fluid -->
     </nav>
-    <br>
     <!-- Fin navbar-->

@@ -30,6 +30,11 @@ Tags: aula, virtual, CREA, idartes, artistica
   background-image: url("images/ip5.png");
 }
 
+#contenedor-index-danza{
+  background-image: url('danza/images/fondo_aula_danza - copia.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+}
+
 @media (min-width: 1200px) {
   .col-lg-1-7{
     width: 14%;
@@ -42,6 +47,12 @@ Tags: aula, virtual, CREA, idartes, artistica
     background-repeat: no-repeat;
     background-size: cover;
     overflow: scroll;
+    }
+    #contenedor-index-danza{
+    height: 700px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -59,6 +70,17 @@ Tags: aula, virtual, CREA, idartes, artistica
     width: 14%;
     float: left;
     text-align: center;
+  }
+  #contenedor-index-danza{
+    height: 534px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .col-md-1-5{
+    width: 20%;
+    float: left;
+
   }
 }
 
@@ -245,7 +267,7 @@ label{
 }
 
 .navbar-nav li a:hover{
-  background-color: #cd2924 !important;*/
+  background-color: #cd2924 !important;
   border-radius: 5px;
 }
 .navbar-brand{
@@ -279,14 +301,76 @@ table.dataTable.no-footer{
   height: 400px;
 }
 
-#contenedor-index-danza{
-  background-image: url('danza/images/fondo_aula_danza.jpg');
+
+/*Estilos index aula danza */
+#div-inicio-curso-danza{
+  top: 50%;
+  position: relative;
+}
+
+#div-encabezado-info-aula-danza{
+  position: relative;
+  top: 40%;
+}
+
+#div-info-aula-danza {
+  position: relative;
+  top: 55%;
+}
+
+#div-metodologia-danza p{
+  overflow: auto;
+  height: 400px;
+}
+
+#div-info-detallada-danza h2{
+  color: white;
+}
+
+#div-info-detallada-danza{
+  top: 15%;
+  font-size: 18px;
+}
+/* Fin estilos index aula danza*/
+
+/*Estilos aula danza */
+#contenedor-aula-danza{
+  background-image: url(danza/images/fondo_info_detallada_danza.jpg);
   font-family: 'Local Van Condensed Regular', Regular !important;
   background-repeat: no-repeat;
-  background-size: contain;
-  /*height: 100vh;*/
-  height: 1035px;
+  background-size: cover;
+  height: 700px;
+  font-size: 18px;
 }
+
+#div-regresar-modulo{
+  position: relative;
+  top: 10%;
+  padding-left: 20px;
+}
+
+#div-video-aula-danza{
+  position: relative;
+  top: 7%;
+}
+
+#div-modulos-aula-danza{
+  position: relative;
+  top: 10%;
+}
+
+#div-reconocimiento-corporal{
+  position: relative;
+  top: 30%;
+
+}
+
+#div-botones-reconocimiento-corporal{
+  position: relative;
+  top: 40%;
+}
+
+/* Fin estilos aula danza*/
 
 #div-dropdown-index-danza {
   position: absolute;
@@ -311,57 +395,7 @@ table.dataTable.no-footer{
   padding: 0px 0px;
 }
 
-#div-info-aula-danza {
-  position: relative;
-  top: 60%;
-}
 
-#div-info-detallada-danza{
-  top: 15%;
-  font-size: 20px;
-}
-
-#div-info-detallada-danza #div-metodolgia-danza{
-  font-size: 16px;
-}
-
-#div-info-detallada-danza h2{
-  color: white;
-}
-
-#div-encabezado-info-aula-danza{
-  position: relative;
-  top: 45%;
-}
-
-#contenedor-aula-danza{
-  background-image: url('danza/images/fondo_info_detallada_danza.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 1035px;
-  font-size: 18px;
-}
-
-#contenedor-aula-danza #div-video-aula-danza{
-  position: relative;
-  top: 15%;
-}
-
-#contenedor-aula-danza #div-modulos-aula-danza{
-  position: relative;
-  top: 25%;
-}
-
-#contenedor-aula-danza #div-regresar-modulo{
-  position: relative;
-  top: 12%;
-}
-
-#contenedor-aula-danza #div-reconocimiento-corporal{
-  position: relative;
-  top: 40%;
-}
 
 #contenedor-aula-danza #div-movimientos-universales #div-botones-movimientos-universales{
   position: relative;
@@ -412,9 +446,6 @@ table.dataTable.no-footer{
 .img-padding{
   padding-bottom: 10px;
 }
-
-
-
 
 
 
