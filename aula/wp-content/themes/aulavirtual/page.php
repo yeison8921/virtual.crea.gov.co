@@ -154,7 +154,7 @@
               <div class="col-lg-2 col-md-1-5"><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="btn_direcciones_y_desplazamientos" class="img-responsive" style="height: 296px; width: 216px;"></a></div>
             </div>
           </div>
-          <div id="div-reconocimiento-corporal" class="row" style="display: none; border-style: solid; border-color: black;">
+          <div id="div-reconocimiento-corporal" class="row">
             <div class="row">
               <div id="div-botones-reconocimiento-corporal">
                <div class="col-lg-2 col-md-2" style="text-align: right;">
