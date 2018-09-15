@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 	});
 
 	$("#div-info-aula-danza img").click(function(){
-		$("#contenedor-index-danza").css({'background-image':'url("'+imgindex2+'")', 'height':'700px'});
+		$("#contenedor-index-danza").css({'background-image':'url("'+imgindex2+'")'});
 		$("#div-inicio-curso-danza").hide();
 		$("#div-encabezado-info-aula-danza").hide();
 		$("#div-info-aula-danza").hide();
@@ -91,16 +91,24 @@ jQuery(document).ready(function($){
 			break;
 		}
 	});
-
-		$("#div-reconocimiento-corporal img").click(function(){
+	$("#div-reconocimiento-corporal img").click(function(){
 		$("#div-actividades-reconocimiento-corporal").hide();
 		switch($(this).attr('id')) {
 			case "btn_rompecabezas":
 			$("#div-rompecabezas-reconocimiento-corporal").show();
-			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex3+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '720px'});
+			$("#contenedor-aula-danza").css({'background-image':'url("'+imgindex3+'")', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'height': '800px'});
 			break;
 			case "btn_video":
 			$("#div-video-reconocimiento-corporal").show();
+			break;
+		}
+	});
+	$("#div-botones-reconocimiento-corporal img").click(function() {
+		switch($(this).attr('id')) {
+			case "btn_reconocimiento_corporal":
+			$("#div-rompecabezas-reconocimiento-corporal").hide();
+			$("#div-video-reconocimiento-corporal").hide();
+			$("#div-actividades-reconocimiento-corporal").show();
 			break;
 		}
 	});

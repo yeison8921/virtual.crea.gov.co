@@ -1,65 +1,67 @@
 <?php get_header(); ?>
+<br>
 
-<div class="container-fluid bg">
+<div class="container-fluid">
+  <div class="row bg">
     <div class="row col-lg-offset-5 col-md-offset-1 index-titulo">
-    <h1 style="text-align: left;">Aula Virtual</h1>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
-      Artes plásticas</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/arte-dramatico" ><img src="<?php bloginfo('template_url'); ?>/images/icono_arte_dramatico.png"><br>
+      <h1 style="text-align: left;">Aula Virtual</h1>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
+        Artes plásticas</a>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/arte-dramatico" ><img src="<?php bloginfo('template_url'); ?>/images/icono_arte_dramatico.png"><br>
         Arte dramático</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/artes-electronicas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_eletronicas.png"><br>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/artes-electronicas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_eletronicas.png"><br>
         Artes electrónicas</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
         Audiovisuales</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/creacion-literaria" ><img src="<?php bloginfo('template_url'); ?>/images/icono_creacion_literatura.png"><br>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/creacion-literaria" ><img src="<?php bloginfo('template_url'); ?>/images/icono_creacion_literatura.png"><br>
         Creación literaria</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
         Danza</a>
-    </div>
-    <div class="col-lg-1-7 col-md-1-7 col-xs-1-6-12 col-xs-12 col-sm-1-7">
-      <a href="<?php bloginfo('url'); ?>/musica" ><img src="<?php bloginfo('template_url'); ?>/images/icono_musica.png"><br>
+      </div>
+      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6-12 col-xs-12 col-sm-1-7">
+        <a href="<?php bloginfo('url'); ?>/musica" ><img src="<?php bloginfo('template_url'); ?>/images/icono_musica.png"><br>
         Música</a>
+      </div>
     </div>
-
-  </div>
     <div class="row col-lg-offset-5 col-lg-7 col-md-offset-1 index-menu">
       <div class="col-lg-3 col-md-3 col-sm-4">
         <h3 class="title"><strong>Áreas artísticas</strong></h3>
         <?php wp_nav_menu(array(
-        'container' => 'div',
-        'items_wrap' => '<ul>%3$s</ul>',
-        'theme_location' => 'footer'
+          'container' => 'div',
+          'items_wrap' => '<ul>%3$s</ul>',
+          'theme_location' => 'footer'
         )); ?>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-3">
         <h3 class="title"><strong>Nosotros</strong></h3>
         <?php wp_nav_menu(array(
-				'container' => 'div',
-				'items_wrap' => '<ul>%3$s</ul>',
-				'theme_location' => 'nosotros'
-				)); ?>
+          'container' => 'div',
+          'items_wrap' => '<ul>%3$s</ul>',
+          'theme_location' => 'nosotros'
+        )); ?>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-5">
         <h3 class="title"><strong>Contáctanos</strong></h3>
-          Dirección: Carrera 8 # 15 - 46<br>
-          Teléfono: (571) - 3795750<br>
-          Email: <a href="mailto:#">contactenos@idartes.gov.co</a>
+        Dirección: Carrera 8 # 15 - 46<br>
+        Teléfono: (571) - 3795750<br>
+        Email: <a href="mailto:#">contactenos@idartes.gov.co</a>
       </div>
     </div>
     <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 index-logos">
       <img src="<?php bloginfo('template_url'); ?>/images/logo-alcaldia-header.png">
     </div>
+  </div>
 </div>
 
 <!--<img src="<?php bloginfo('template_url'); ?>/images/ip.jpg">-->

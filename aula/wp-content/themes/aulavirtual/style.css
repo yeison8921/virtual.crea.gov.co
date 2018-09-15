@@ -34,8 +34,12 @@ Tags: aula, virtual, CREA, idartes, artistica
   background-image: url('danza/images/fondo_aula_danza - copia.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
+#contenedor-aula-danza{
+  background-image: url(danza/images/fondo_info_detallada_danza.jpg);
+  font-family: 'Local Van Condensed Regular', Regular !important;
+}
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
   .col-lg-1-7{
     width: 14%;
     float: left;
@@ -47,12 +51,17 @@ Tags: aula, virtual, CREA, idartes, artistica
     background-repeat: no-repeat;
     background-size: cover;
     overflow: scroll;
-    }
-    #contenedor-index-danza{
+  }
+  #contenedor-index-danza{
     height: 700px;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  #div-botones-reconocimiento-corporal{
+    position: relative;
+    top: 40%;
+    padding-left: 30px;
   }
 }
 
@@ -72,7 +81,7 @@ Tags: aula, virtual, CREA, idartes, artistica
     text-align: center;
   }
   #contenedor-index-danza{
-    height: 534px;
+    height: 700px;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,7 +89,11 @@ Tags: aula, virtual, CREA, idartes, artistica
   .col-md-1-5{
     width: 20%;
     float: left;
-
+  }
+  #div-botones-reconocimiento-corporal{
+    position: relative;
+    top: 36%;
+    padding-left: 30px;
   }
 }
 
@@ -335,8 +348,7 @@ table.dataTable.no-footer{
 
 /*Estilos aula danza */
 #contenedor-aula-danza{
-  background-image: url(danza/images/fondo_info_detallada_danza.jpg);
-  font-family: 'Local Van Condensed Regular', Regular !important;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
@@ -344,9 +356,8 @@ table.dataTable.no-footer{
 }
 
 #div-regresar-modulo{
-  position: relative;
-  top: 10%;
-  padding-left: 20px;
+  text-align: left;
+  padding-left: 30px;
 }
 
 #div-video-aula-danza{
@@ -356,18 +367,26 @@ table.dataTable.no-footer{
 
 #div-modulos-aula-danza{
   position: relative;
-  top: 10%;
+  top: 15%;
 }
 
 #div-reconocimiento-corporal{
   position: relative;
-  top: 30%;
-
+  top: 10%;
+  height: 100%;
 }
 
-#div-botones-reconocimiento-corporal{
+#div-actividades-reconocimiento-corporal{
   position: relative;
-  top: 40%;
+  top: -5%;
+}
+
+#div-video-reconocimiento-corporal{
+  position: relative;
+  top: -70px;
+}
+#div-rompecabezas-reconocimiento-corporal{
+  top: -90px;
 }
 
 /* Fin estilos aula danza*/
