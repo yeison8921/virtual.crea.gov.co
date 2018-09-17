@@ -112,4 +112,54 @@ jQuery(document).ready(function($){
 			break;
 		}
 	});
+
+	$(".div-modulos img").click(function(){
+		$(".div-modulos").hide();
+		$(".div-video").hide();
+		$(".div-mod-enc").show();
+		$(".div-con-mod").show();
+		$(".tit-con").empty();
+		$(".tit-enc").empty();
+		switch($(this).attr('id')) {
+			case "btn_mod_reconocimiento":
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Reconocimiento Corporal</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>
+				`);
+			$(".tit-enc").append('<strong>DANZA</strong>');
+			$(".tit-con").append('Reconocimiento corporal');
+			break;
+			case "btn_mod_movimientos":
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
+				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
+			break;
+			case "btn_mod_equilibrio":
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
+			break;
+			case "btn_mod_giros":
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
+			break;
+			case "btn_direcciones":
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Direcciones y Desplazamientos</button></div></div>`);
+			break;
+		}
+
+	})
 });

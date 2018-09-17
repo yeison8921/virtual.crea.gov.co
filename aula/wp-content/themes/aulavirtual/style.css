@@ -12,6 +12,9 @@ Tags: aula, virtual, CREA, idartes, artistica
 
 /*********** Fuentes **********/
 
+html, body, .container-fluid{
+  height: 100vh%;
+}
 @font-face {
       font-family: "Local Van Condensed Bold";
       src: url("fonts/Van Condensed-Bold.otf");
@@ -34,10 +37,10 @@ Tags: aula, virtual, CREA, idartes, artistica
   background-image: url('danza/images/fondo_aula_danza - copia.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
-#contenedor-aula-danza{
+/*#contenedor-aula-danza{
   background-image: url(danza/images/fondo_info_detallada_danza.jpg);
   font-family: 'Local Van Condensed Regular', Regular !important;
-}
+}*/
 
 @media (min-width: 1200px){
   .col-lg-1-7{
@@ -219,59 +222,38 @@ label{
   text-decoration: none;
 }
 
-/* .dropdown{
-    display: inline-block;
-}
-.dropdown-toggle{
-  height: 50px;
-  font-size:  18px;
-  text-align: center;
-  background-color: transparent;
-  color: black;
+.btn-unsel{
+  background-color: #ffffff;
   border-radius: 5px;
-  width: 300px;
-  margin-top: 30px;
+  color: #581508;
+  border-color:#666666;
+  border-width: 0.5px;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 18px;
+  height: 30px;
+  margin-bottom: 20px;
 }
 
-.dropdown-toggle:active{
-  background-color: transparent !important;
-}
-.caret{
-  text-align: right;
-}
-
-.dropdown-menu li a {
-  text-decoration: none;
-  display: block;
-  color: black;
-  clear: both;
-  font-size: 16px;
+.btn-sel{
+  background-color: #ea7178; 
+  border-radius: 5px; 
+  color: #ffffff; 
+  border-color:#5e2d30; 
+  border-width: 0.5px;  
+  font-family: 'Local Van Condensed Regular', Regular !important; 
+  font-size: 18px; 
+  height: 30px;
+  margin-bottom: 20px;
 }
 
-.dropdown-menu li{
-  width: 300px
+.page-header{
+  margin: 32px 0 -1px;
 }
-.dropdown-menu li a:hover {
-  background-color: rgba(120, 120, 232, 0.28);
-}*/
-
-.pModal{
-  display: block;
-  background-color: black;
-  text-align: center;
-  width: 170px;
-  background-color: rgba(221, 241, 252, 1);
-  height: 40px;
-  font-size: 22px;
-  border-radius: 10px 10px 10px 10px;
-  vertical-align: -50%;
-  color: rgba(46, 178, 245, 1);
-  }
-
 .navbar{
   background-color: #ff3c36;
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 26px;
+  border-color: #ff3c36;
 }
 
 .navbar-nav li a{
@@ -348,11 +330,12 @@ table.dataTable.no-footer{
 
 /*Estilos aula danza */
 #contenedor-aula-danza{
-  background-position: left top;
+  height: 100%;
+/*  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
-  font-size: 18px;
+  font-size: 18px;*/
 }
 
 #div-regresar-modulo{
@@ -383,10 +366,12 @@ table.dataTable.no-footer{
 
 #div-video-reconocimiento-corporal{
   position: relative;
-  top: -70px;
+  top: -40px;
 }
 #div-rompecabezas-reconocimiento-corporal{
-  top: -90px;
+  position: relative;
+  top: -40px;
+  height: 630px;
 }
 
 /* Fin estilos aula danza*/

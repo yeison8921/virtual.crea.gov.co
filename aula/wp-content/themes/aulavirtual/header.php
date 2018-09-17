@@ -17,7 +17,7 @@
   <body <?php body_class() ?>>
 
     <!-- Inicio navbar-->
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -42,5 +42,5 @@
 
 
       </div><!-- /.container-fluid -->
-    </nav>
+    </div>
     <!-- Fin navbar-->

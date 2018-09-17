@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!--Inicio Contenido -->
 <br>
-<div class="container-fluid">
+<div class="container-fluid page-header">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!-- <h2><?php the_title(); ?></h2>-->
     <?php if(is_page("Artes electrónicas")) :?>
@@ -53,17 +53,17 @@
 
         <?php if(is_page("Audiovisuales")) :?>
       <div class="col-lg-2">
-        <button style="background-color: #ffffff; border-radius: 5px; color: #581508; border-color:#666666; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Reconocimiento Corporal</button>
+        <button class="btn-block btn-unsel">Reconocimiento Corporal</button>
         <br>
-        <button style="background-color: #ffffff; border-radius: 5px; color: #581508; border-color:#666666; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Movimientos Universales</button>
+        <button class="btn-block btn-sel">Movimientos Universales</button>
         <br>
-        <button style="background-color: #ffffff; border-radius: 5px; color: #581508; border-color:#666666; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Equilibrio Puntos de Apoyo</button>
+        <button class="btn-block btn-sel">Equilibrio Puntos de Apoyo</button>
         <br>
-        <button style="background-color: #ffffff; border-radius: 5px; color: #581508; border-color:#666666; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Giros y Saltos</button>
+        <button class="btn-block btn-sel">Giros y Saltos</button>
         <br>
-        <button style="background-color: #ffffff; border-radius: 5px; color: #581508; border-color:#666666; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Direcciones y Desplazamientos</button>
+        <button class="btn-block">Direcciones y Desplazamientos</button>
         <br>
-        <button style="background-color: #ea7178; border-radius: 5px; color: #ffffff; border-color:#5e2d30; border-width: 0.5px;  font-family: 'Local Van Condensed Regular', Regular !important; font-size: 16px;" class="btn-block">Reconocimiento Corporal</button>
+        <button class="btn-block">Reconocimiento Corporal</button>
 
       </div>
     <?php endif; ?>
@@ -141,152 +141,68 @@
   <?php endif; ?>
 
   <?php if(is_page("Aula danza")) :?>
-    <br>
-    <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
     <div class="row" id="contenedor-aula-danza">
-      <div class="row" style="text-align: right; top: 12%; position: relative;">
-        <div id="div-regresar-modulo" class="col-lg-2 col-md-3">
-          <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza" style="color: black; text-decoration: none;">SELECCIONA UN MÓDULO <i class="fas fa-caret-left"></i></a>
+      <div class="div-video col-lg-12 col-md-12" style="height: 60vh; top: 10%">
+        <div class="col-lg-2 col-md-2" style="height: 60vh">
+          <a href="">
+          <div class="col-lg-10 col-md-9">SELECCIONE UN MÓDULO</div>
+          <div class="col-lg-2 col-md-3"><i class='fas fa-caret-left'></i></div>
+          </a>
         </div>
-        <div id="div-video-aula-danza" class="col-lg-9 col-md-8">
-          <h2 style="text-align: right; color: white;">MÓDULO 1 - CUERPO MOVIMIENTO</h2>
-          <iframe width="400" height="205" src="https://www.youtube.com/embed/oy2Y8szjYIU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        <div class="col-lg-9 col-md-9 text-right" style="height: 60vh">
+          <h2>MÓDULO 1 - CUERPO MOVIMIENTO</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3x2ABSAMVno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        
       </div>
-        <div id="div-modulos-aula-danza" class="row">
-          <div class="col-lg-12">
-            <div class="col-lg-offset-1 col-lg-2 col-md-1-5"><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="btn_reconocimiento_corporal" class="img-responsive" style="height: 200px;">
-            </a></div>
-            <div class="col-lg-2 col-md-1-5"><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="btn_movimientos_universales" class="img-responsive" style="height: 200px;">
-            </a></div>
-            <div class="col-lg-2 col-md-1-5"><a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="btn_equilibrio_puntos_de_apoyo" class="img-responsive" style="height: 200px;">
-            </a></div>
-            <div class="col-lg-2 col-md-1-5"><a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="btn_giros_y_saltos" class="img-responsive" style="height: 200px;">
-            </a></div>
-            <div class="col-lg-2 col-md-1-5"><a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="btn_direcciones_y_desplazamientos" class="img-responsive" style="height: 200px;">
-            </a></div>
+      <div class="div-modulos col-lg-12 col-md-12" style="height: 25vh;">
+        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 text-center" style="height: 25vh">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="btn_mod_reconocimiento" class="img-responsive" style="height: 220px;"></center></a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="btn_mod_movimientos" class="img-responsive" style="height: 220px;"></center></a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="btn_mod_equilibrio" class="img-responsive" style="height: 220px;"></center></a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="btn_mod_giros" class="img-responsive" style="height: 220px;"></center></a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="btn_direcciones" class="img-responsive" style="height: 220px;"></center></a>
+        </div>        
+      </div>
+      <div class="div-mod-enc col-lg-12 col-md-12" style="height: 10vh; display: none; background-color: red;">
+        <div class="col-lg-1 col-md-1" style="position: relative;">
+          <img src="<?php bloginfo('template_url'); ?>/images/logo-alcaldia-header.png" width="200px">
+        </div>
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-3 col-md-4 text-center" style="position: relative;">
+          <h2 class="tit-enc"></h2>
+        </div>
+        <div class="col-lg-offset-3 col-lg-1 col-md-offset-3 col-md-1" style="position: relative;">
+          <img src="http">
+        </div>
+      </div>
+      <div class="div-con-mod col-lg-12 col-md-12" style="height: 85vh; display: none;">
+        <div class="col-lg-3 col-md-4" style="height: 85vh; background-color: #ec929c;">
+          <div class="div-btn-mod" style="top: 30%; position: relative;">
           </div>
         </div>
-        <div id="div-reconocimiento-corporal" class="row" style="display: none;">
-         <div id="div-botones-reconocimiento-corporal" class="col-lg-3 col-md-3">
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_reconocimiento_corporal.png" id="btn_reconocimiento_corporal" class="img-responsive img-padding">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_movimientos_universales.png" class="img-responsive img-padding">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_equilibrio_y_puntos_de_apoyo.png" class="img-responsive img-padding">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_giros_y_saltos.png" class="img-responsive img-padding">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_direcciones_desplazamientos.png" class="img-responsive">
-          </a>
-        </div>
-        <div id="div-actividades-reconocimiento-corporal" class="col-lg-offset-3 col-lg-9 col-md-offset-4 col-md-8">
-          <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_rompecabezas.png" id="btn_rompecabezas" class="col-lg-4 col-md-offset-1 col-md-4 img-responsive"></a>
-          <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/reconocimiento_corporal/btn_video.png" id="btn_video" class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 img-responsive"></a>
-        </div>
-        <div id="div-rompecabezas-reconocimiento-corporal" class="col-lg-offset-4 col-lg-8 col-md-offset-5 col-md-7" style="display: none;">
-          <iframe src="https://h5p.org/h5p/embed/303384" width="599" height="593" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-        </div>
-        <div id="div-video-reconocimiento-corporal" class="col-lg-offset-5 col-lg-8 col-md-offset-4 col-md-8" style="display: none;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5SytABu6lKY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <br>
-      <div id="div-movimientos-universales" class="row" style="display: none; height: 100%;">
-        <div id="div-botones-movimientos-universales" class="col-lg-2" style="text-align: right; padding-left: 30px;">
-          <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_reconocimiento_corporal.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_movimientos_universales.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_equilibrio_y_puntos_de_apoyo.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_giros_y_saltos.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_direcciones_desplazamientos.png" class="img-responsive">
-        </div>
-        <div id="div-contenido-principal-movimientos-universales" class="col-lg-offset-1 col-lg-5" style="padding-left: 70px;">
-          <h2>MOVIMIENTOS UNIVERSALES</h2>
-          <br>
-          <br>
-          <p>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o reli- giosos. Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de símbolos de la cultura y la sociedad. <br><br>En este sentido, la danza también es una forma de comunicación, ya que se usa el lenguaje no verbal entre los seres humanos, donde el bailarín o bailarina expresa sentimientos y emociones a través de sus movimientos y gestos. Se realiza mayormente con música, ya sea una canción, pieza musical o sonidos. <br><br>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o religiosos.<br><br>Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de simbolos de la cultura y la sociedad.</p>
-        </div>
-        <div id="div-contenido-secundario-movimientos-universales" class="col-lg-4">
-          <p style="padding-left: 20px; padding-right: 50px;">La danza y sus diferentes géneros se conectan directamente casi con todos los movimientos los cuales son llamados universales en este módulo, ya que se convierte en las técnicas para expresar por medio del baile la interacción de diversos elementos los cuales son llamados por nombres como Plie Releve, Cambre o Flex.</p>
-          <br>
-          <div style="text-align: center;">
-            <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_juega.png">
-            <img src="<?php bloginfo('template_url'); ?>/danza/movimientos_universales/btn_video.png">
+        <div class="col-lg-offset-1 col-lg-8 col-md-8" style="height: 85vh;">
+          <div style="position: relative; top: 5vh; height: 10vh;">
+            <h2 class="tit-con"></h2>
+          </div>
+          <div class="div-con-mod-uni" style="position: relative; top: 10vh; height: 65vh; display: none;">
+            <div class="col-lg-6 col-md-6" style="position: relative;">
+            </div>
+            <div class="col-lg-6 col-md-6" style="position: relative;"></div>
+          </div>
+          <div class="div-con-mod-dob" style="position: relative; top: 10vh; height: 65vh;">
+            <div class="col-lg-7 col-md-7" style="position: relative;">
+            </div>
+            <div class="col-lg-5 col-md-5" style="position: relative;"></div>
           </div>
         </div>
       </div>
-      <div id="div-equilibrio" class="row" style="display: none; height: 100%;">
-        <div id="div-botones-equilibrio" class="col-lg-2" style="text-align: right; padding-left: 30px;">
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_reconocimiento_corporal.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_movimientos_universales.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_equilibrio_y_puntos_de_apoyo.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_giros_y_saltos.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_direcciones_desplazamientos.png" class="img-responsive">
-        </div>
-        <div id="div-contenido-principal-equilibrio" class="col-lg-offset-1 col-lg-4" style="padding-left: 70px;">
-          <h2>EQUILIBRIO PUNTOS DE APOYO</h2>
-          <br>
-          <br>
-          <p>Los puntos de apoyo o también llamados puntos de equilibrio, son esas partes del cuerpo que están sobre una superficie fija (como el suelo) y a partir de los cuales se puede apoyar el resto del cuerpo ya sea para generar una posición estática como una parada de manos, o una posición que luego se mueva como un giro.</p>
-        </div>
-        <div id="div-contenido-secundario-equilibrio" class="col-lg-5" style="text-align: center;">
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_juega.png">
-          <img src="<?php bloginfo('template_url'); ?>/danza/equilibrio/btn_video.png">
-        </div>
-      </div>
-      <!--  -->
-      <div id="div-giros" class="row" style="display: none; height: 100%;">
-        <div id="div-botones-giros" class="col-lg-2" style="text-align: right; padding-left: 30px;">
-          <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_reconocimiento_corporal.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_movimientos_universales.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_equilibrio_y_puntos_de_apoyo.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_giros_y_saltos.png" class="img-responsive">
-          <br>
-          <br>
-          <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_direcciones_desplazamientos.png" class="img-responsive">
-        </div>
-        <div id="div-contenido-principal-giros" class="col-lg-offset-1 col-lg-4" style="padding-left: 70px;">
-          <h2>GIROS Y SALTOS</h2>
-          <br>
-          <br>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris rutrum, dui curae facilisi ante facilisis phasellus quis eget aliquet magna, metus praesent hac nulla massa est orci mi. Nullam nisl sapien interdum arcu mollis auctor nec id, metus cum vel parturient lacinia penatibus. Penatibus duis elementum ut feugiat vestibulum integer, vivamus sodales habitant pretium a, felis congue imperdiet etiam risus. <br><br>In nec dignissim enim euismod turpis torquent nisi sapien nulla tempus mi conubia ante molestie ullamcorper varius, orci suspendisse semper curabitur habitasse porta laoreet nullam ligula dictum dis magnis nostra proin. Eros cum magna facilisi duis lacus purus ullamcorper blandit sodales, curabitur id dapibus aptent sociis erat ultrices dictumst diam, vulputate pretium vivamus iaculis molestie mus phasellus vel. Inceptos blandit odio ultricies proin fusce donec lacus morbi facilisi orci, velit ridiculus turpis per nostra et mattis risus facilisis, dictumst montes pharetra eu urna purus vehicula metus laoreet.
-          </div>
-          <div id="div-contenido-secundario-giros" class="col-lg-5" style="text-align: center;">
-            <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_cualidades físicas.png">
-            <img src="<?php bloginfo('template_url'); ?>/danza/giros/btn_video.png">
-          </div>
-        </div>
     </div>
   <?php endif; ?>
   <?php the_content(); ?>
