@@ -122,7 +122,7 @@ jQuery(document).ready(function($){
 		$(".tit-enc").empty();
 		switch($(this).attr('id')) {
 			case "btn_mod_reconocimiento":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Reconocimiento Corporal</button></div></div>
+			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Reconocimiento Corporal</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
@@ -133,7 +133,7 @@ jQuery(document).ready(function($){
 			break;
 			case "btn_mod_movimientos":
 			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Movimientos Universales</button></div></div>
+				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Movimientos Universales</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
@@ -141,7 +141,7 @@ jQuery(document).ready(function($){
 			case "btn_mod_equilibrio":
 			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Equilibrio Puntos de Apoyo</button></div></div>
+				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Equilibrio Puntos de Apoyo</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
 			break;
@@ -149,7 +149,7 @@ jQuery(document).ready(function($){
 			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Giros y Saltos</button></div></div>
+				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Giros y Saltos</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
 			break;
 			case "btn_direcciones":
@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
 				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-2 text-right"><i class='fas fa-2x fa-caret-right'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Direcciones y Desplazamientos</button></div></div>`);
+				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Direcciones y Desplazamientos</button></div></div>`);
 			break;
 		}
 

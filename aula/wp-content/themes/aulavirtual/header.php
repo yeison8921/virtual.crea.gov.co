@@ -38,9 +38,6 @@
             'container_id' => 'bs-example-navbar-collapse-1',
             'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s</ul>'
         )); ?>
-
-
-
       </div><!-- /.container-fluid -->
     </div>
     <!-- Fin navbar-->

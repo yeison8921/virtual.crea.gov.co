@@ -12,9 +12,6 @@ Tags: aula, virtual, CREA, idartes, artistica
 
 /*********** Fuentes **********/
 
-html, body, .container-fluid{
-  height: 100vh%;
-}
 @font-face {
       font-family: "Local Van Condensed Bold";
       src: url("fonts/Van Condensed-Bold.otf");
@@ -37,10 +34,11 @@ html, body, .container-fluid{
   background-image: url('danza/images/fondo_aula_danza - copia.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
-/*#contenedor-aula-danza{
-  background-image: url(danza/images/fondo_info_detallada_danza.jpg);
-  font-family: 'Local Van Condensed Regular', Regular !important;
-}*/
+#contenedor-aula-danza{
+  /*background-image: url(danza/images/fondo_info_detallada_danza.jpg);
+  font-family: 'Local Van Condensed Regular', Regular !important;*/
+  font-family: 'Local Van Condensed Bold' !important;
+}
 
 @media (min-width: 1200px){
   .col-lg-1-7{
@@ -224,11 +222,10 @@ label{
 
 .btn-unsel{
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #581508;
   border-color:#666666;
   border-width: 0.5px;
-  font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 18px;
   height: 30px;
   margin-bottom: 20px;
@@ -236,11 +233,10 @@ label{
 
 .btn-sel{
   background-color: #ea7178; 
-  border-radius: 5px; 
+  border-radius: 10px; 
   color: #ffffff; 
   border-color:#5e2d30; 
-  border-width: 0.5px;  
-  font-family: 'Local Van Condensed Regular', Regular !important; 
+  border-width: 0.5px;
   font-size: 18px; 
   height: 30px;
   margin-bottom: 20px;
@@ -451,7 +447,15 @@ table.dataTable.no-footer{
   padding-bottom: 10px;
 }
 
+.div-mod-enc{
+ background-image: url('danza/images/header.jpg');
+ background-position: left top;
+ background-repeat: no-repeat;
+}
 
+.div-modulos img{
+  height: 220px;
+}
 
 
 

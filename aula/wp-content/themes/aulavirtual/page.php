@@ -38,46 +38,27 @@
         </div>
       </form>
     <?php endif; ?>
-    <div class="row">
-      <?php if(is_page("Consulta mapa artes electrónicas")) :?>
+    <?php if(is_page("Consulta mapa artes electrónicas")) :?>
+      <div class="container">
         <div id="map">
         </div>
-      <?php endif; ?>
-    </div>
-
+      </div>
+    <?php endif; ?>
     <?php if(is_page("Música")) :?>
       <div class="row">
         <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_musica/index.html" frameborder="0" width="1024" height="768"></iframe>
       </div>
     <?php endif; ?>
-
-        <?php if(is_page("Audiovisuales")) :?>
-      <div class="col-lg-2">
-        <button class="btn-block btn-unsel">Reconocimiento Corporal</button>
-        <br>
-        <button class="btn-block btn-sel">Movimientos Universales</button>
-        <br>
-        <button class="btn-block btn-sel">Equilibrio Puntos de Apoyo</button>
-        <br>
-        <button class="btn-block btn-sel">Giros y Saltos</button>
-        <br>
-        <button class="btn-block">Direcciones y Desplazamientos</button>
-        <br>
-        <button class="btn-block">Reconocimiento Corporal</button>
-
-      </div>
+    <?php if(is_page("Audiovisuales")) :?>
     <?php endif; ?>
-
     <?php if(is_page("Creación literaria")) :?>
       <div class="row">
         <iframe src="<?php bloginfo('url'); ?>/wp-content/uploads/scorm/sitio_literatura/index.html" frameborder="0" width="1024" height="768"></iframe>
-        <!--style="overflow: hidden; height: 100vh; width: 100%;-->
       </div>
     <?php endif; ?>
-  <?php if(is_page("Introducción aula danza")) :?>
-    <br>
-    <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
+    <?php if(is_page("Introducción aula danza")) :?>
       <div class="row" id="contenedor-index-danza">
+        <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
         <div class="row" id="div-inicio-curso-danza">
           <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_cuerpo_interdisciplinar.png" id="btn_cuerpo_interdisciplinar" width="250" class="img-responsive center-block"></a>
         </div>
@@ -123,67 +104,62 @@
             <h2 style="text-align: right;"><strong>METODOLOGÍA</strong></h2>
             <p>El curso está compuesto por seis módulos, cinco teórico-prácticos y un módulo final completamente práctico en el que se integran los conceptos  y elementos abordados en el curso.<br><br>
               <strong>MÓDULO 1: CUERPO - MOVIMIENTO</strong><br>El primer módulo tiene como objetivo plantear el vínculo entre el cuerpo y el movimiento desde el reconocimiento corporal, la exploración de diversas posibilidades de movimiento y la relación con el espacio. También se hace una introducción al lenguaje de la danza mediante términos universales comunes a los diversos géneros y estilos.<br><br><strong>MÓDULO 2: CUERPO – SONIDO</strong><br>Se explora la relación entre lo corporal y lo sonoro a partir de  la  definición  de sonido, sus cualidades (tono, timbre, duración e intensidad) y su relación con el cuerpo mediante el movimiento.<br><br><strong>MÓDULO 3: CUERPO – IMÁGEN</strong><br>Se plantea la investigación de las relaciones entre lo  corporal y lo visual partiendo  del cuerpo como imagen, pasando por el gesto, la acción y la interpretación. El cuerpo en relación con los objetos y con el espacio teniendo en cuenta las diversas arquitecturas posibilitadoras (física, móvil y onírica).<br><br><strong>MÓDULO 4: CUERPO – PALABRA</strong><br>La palabra como estímulo, disparador y/o elemento de creación dentro de la creación artística/escénica. El cuerpo en relación con la palabra como constructora de sentido dentro de un código, un idioma y/o un lenguaje de programación. Explorando el significado, la ambigüedad, intención, rítmica y musicalidad de las palabras.<br><br><strong>MÓDULO 5: CUERPO – TECNOLOGÍA</strong><br>La tecnología como lenguaje, herramienta de composición y mecanismo para el desarrollo y/o la creación artística. Por medio del videodanza como forma artística híbrida, el uso de los smartphones y sus posibilidades técnicas se propone la exploración del cuerpo a través de la tecnología, modificando sus características y posibilidades físicas reales. La creación a partir del cuerpo en el espacio virtual.<br><br><strong>MÓDULO 6: LABORATORIO DE CREACIÓN</strong><br>El módulo final propone el desarrollo de un proyecto creativo que involucre algunas de las interacciones planteadas entre cuerpo, movimiento, sonido, imagen, palabra y tecnología. Las creaciones de los participantes se compartirán en un foro cuyo objetivo es generar un espacio de reflexión, socialización y retroalimentación para los participantes en relación a sus propuestas creativas.</p>
+            </div>
+            <div class="row" id="div-publico-objetivo-danza" style="display: none;">
+              <h2 style="text-align: right;"><strong>PÚBLICO OBJETIVO</strong></h2>
+              <p>Nuestro público objetivo es de jóvenes y adultos en las edades de los 15 a los 40 años de todos los estratos sociales que tengan acceso a internet.</p>
+            </div>
+            <div class="row" id="div-creditos-danza" style="display: none;">
+              <h2 style="text-align: right;"><strong>CRÉDITOS</strong></h2>
+            </div>
+            <div id="div-btn-inicio-danza" class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" style="display: none; width: 216px;">
+              <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_inicio_danza.png" name="btn_inicio_danza" class="img-responsive">
+            </div>
           </div>
-          <div class="row" id="div-publico-objetivo-danza" style="display: none;">
-            <h2 style="text-align: right;"><strong>PÚBLICO OBJETIVO</strong></h2>
-            <p>Nuestro público objetivo es de jóvenes y adultos en las edades de los 15 a los 40 años de todos los estratos sociales que tengan acceso a internet.</p>
-          </div>
-          <div class="row" id="div-creditos-danza" style="display: none;">
-            <h2 style="text-align: right;"><strong>CRÉDITOS</strong></h2>
-          </div>
-          <div id="div-btn-inicio-danza" class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" style="display: none; width: 216px;">
-            <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_inicio_danza.png" name="btn_inicio_danza" class="img-responsive">
-          </div>
+          <!-- Fin div info detallada danza -->
         </div>
-        <!-- Fin div info detallada danza -->
-      </div>
-      
-  <?php endif; ?>
-
-  <?php if(is_page("Aula danza")) :?>
+    <?php endif; ?>
+    <?php if(is_page("Aula danza")) :?>
     <div class="row" id="contenedor-aula-danza">
-      <div class="div-video col-lg-12 col-md-12" style="height: 60vh; top: 10%">
-        <div class="col-lg-2 col-md-2" style="height: 60vh">
-          <a href="">
-          <div class="col-lg-10 col-md-9">SELECCIONE UN MÓDULO</div>
-          <div class="col-lg-2 col-md-3"><i class='fas fa-caret-left'></i></div>
-          </a>
+      <div class="div-video">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-left">
+          <a href="">SELECCIONE UN MÓDULO     <i class='fas fa-caret-left'></i></a>
         </div>
-        <div class="col-lg-9 col-md-9 text-right" style="height: 60vh">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-7 text-right">
           <h2>MÓDULO 1 - CUERPO MOVIMIENTO</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/3x2ABSAMVno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="545" height="300" src="https://www.youtube.com/embed/3x2ABSAMVno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="div-modulos col-lg-12 col-md-12" style="height: 25vh;">
-        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 text-center" style="height: 25vh">
-          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="btn_mod_reconocimiento" class="img-responsive" style="height: 220px;"></center></a>
+      <div class="div-modulos">
+        <div class="col-xs-6 col-sm-offset-2 col-sm-3 col-md-offset-0 col-md-1-5 col-lg-offset-1 col-lg-2">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="btn_mod_reconocimiento" class="img-responsive"></center></a>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
-          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="btn_mod_movimientos" class="img-responsive" style="height: 220px;"></center></a>
+        <div class="col-xs-6 col-sm-offset-2 col-sm-3 col-md-offset-0 col-md-1-5 col-lg-offset-0 col-lg-2">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="btn_mod_movimientos" class="img-responsive"></center></a>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
-          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="btn_mod_equilibrio" class="img-responsive" style="height: 220px;"></center></a>
+        <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="btn_mod_equilibrio" class="img-responsive"></center></a>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
-          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="btn_mod_giros" class="img-responsive" style="height: 220px;"></center></a>
+        <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="btn_mod_giros" class="img-responsive"></center></a>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 25vh">
-          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="btn_direcciones" class="img-responsive" style="height: 220px;"></center></a>
+        <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
+          <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="btn_direcciones" class="img-responsive"></center></a>
         </div>        
       </div>
-      <div class="div-mod-enc col-lg-12 col-md-12" style="height: 10vh; display: none; background-color: red;">
+      <div class="div-mod-enc" style="height: 10vh; display: none;">
         <div class="col-lg-1 col-md-1" style="position: relative;">
-          <img src="<?php bloginfo('template_url'); ?>/images/logo-alcaldia-header.png" width="200px">
+          <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_bogota.png">
         </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-3 col-md-4 text-center" style="position: relative;">
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-3 col-md-4 text-center" style="position: relative; color: #9c474c;">
           <h2 class="tit-enc"></h2>
         </div>
         <div class="col-lg-offset-3 col-lg-1 col-md-offset-3 col-md-1" style="position: relative;">
-          <img src="http">
+          <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_crea.png">
         </div>
       </div>
       <div class="div-con-mod col-lg-12 col-md-12" style="height: 85vh; display: none;">
-        <div class="col-lg-3 col-md-4" style="height: 85vh; background-color: #ec929c;">
+        <div class="col-lg-3 col-md-4" style="height: 85vh; background:radial-gradient(ellipse 100% 150% at 75% 50% , rgba(236,146,156,1) 0%, rgba(236,146,156,1) 30%, rgba(136,86,89,1) 100%); ">
           <div class="div-btn-mod" style="top: 30%; position: relative;">
           </div>
         </div>
@@ -204,7 +180,7 @@
         </div>
       </div>
     </div>
-  <?php endif; ?>
+    <?php endif; ?>
   <?php the_content(); ?>
 <?php endwhile; endif; ?>
 
