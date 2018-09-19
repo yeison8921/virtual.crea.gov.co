@@ -116,50 +116,104 @@ jQuery(document).ready(function($){
 	$(".div-modulos img").click(function(){
 		$(".div-modulos").hide();
 		$(".div-video").hide();
+		$(".div-mod-enc").css({
+			'display': 'flex',
+			'align-items': 'center'
+		});
 		$(".div-mod-enc").show();
 		$(".div-con-mod").show();
 		$(".tit-con").empty();
-		$(".tit-enc").empty();
-		switch($(this).attr('id')) {
-			case "btn_mod_reconocimiento":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>
-				`);
-			$(".tit-enc").append('<strong>DANZA</strong>');
-			$(".tit-con").append('Reconocimiento corporal');
-			break;
-			case "btn_mod_movimientos":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
-			break;
-			case "btn_mod_equilibrio":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
-			break;
-			case "btn_mod_giros":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Direcciones y Desplazamientos</button></div></div>`);
-			break;
-			case "btn_direcciones":
-			$(".div-btn-mod").append(`<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Reconocimiento Corporal</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Movimientos Universales</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Equilibrio Puntos de Apoyo</button></div></div>
-				<div class='row'><div class="col-md-1"></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-unsel'>Giros y Saltos</button></div></div>
-				<div class='row'><div class="col-md-1"><i class='fas fa-2x fa-caret-right' style='color: #7a0228;'></i></div><div class="col-md-8" style="padding:0px"><button class='btn btn-block btn-sel'>Direcciones y Desplazamientos</button></div></div>`);
-			break;
+		$(".div-con-mod-uno").empty();
+		$(".div-con-mod-dos").empty();
+		if($(this).attr('id') == "img_mod_reconocimiento"){
+			$("#btn-reconocimiento").removeClass('btn-unsel');
+			$("#btn-reconocimiento").addClass('btn-sel');
+			$("#flecha-reconocimiento").show();
+			$("#mod-reconocimiento").show();
 		}
+		if($(this).attr('id') == "img_mod_movimientos"){
+			$("#btn-movimientos").removeClass('btn-unsel');
+			$("#btn-movimientos").addClass('btn-sel');
+			$("#flecha-movimientos").show();
+			$("#mod-movimientos").show();
+		}
+		if($(this).attr('id') == "img_mod_equilibrio"){
+			$("#btn-equilibrio").removeClass('btn-unsel');
+			$("#btn-equilibrio").addClass('btn-sel');
+			$("#flecha-equilibrio").show();
+			$("#mod-equilibrio").show();
+		}
+		if($(this).attr('id') == "img_mod_giros"){
+			$("#btn-giros").removeClass('btn-unsel');
+			$("#btn-giros").addClass('btn-sel');
+			$("#flecha-giros").show();
+			$("#mod-giros").show();
+		}
+		if($(this).attr('id') == "img_mod_direcciones"){
+			$("#btn-direcciones").removeClass('btn-unsel');
+			$("#btn-direcciones").addClass('btn-sel');
+			$("#flecha-direcciones").show();
+			$("#mod-direcciones").show();
+		}
+	});
 
-	})
+$(".div-btn-mod button").click(function() {
+	$("#mod-reconocimiento").hide();
+	$("#mod-movimientos").hide();
+	$("#mod-equilibrio").hide();
+	$("#mod-giros").hide();
+	$("#mod-direcciones").hide();
+	if($("#btn-reconocimiento").hasClass('btn-sel')){
+		$("#btn-reconocimiento").removeClass('btn-sel');
+		$("#btn-reconocimiento").addClass('btn-unsel');
+		$("#flecha-reconocimiento").hide();
+	}
+	if($("#btn-movimientos").hasClass('btn-sel')){
+		$("#btn-movimientos").removeClass('btn-sel');
+		$("#btn-movimientos").addClass('btn-unsel');
+		$("#flecha-movimientos").hide();
+	}
+	if($("#btn-equilibrio").hasClass('btn-sel')){
+		$("#btn-equilibrio").removeClass('btn-sel');
+		$("#btn-equilibrio").addClass('btn-unsel');
+		$("#flecha-equilibrio").hide();
+	}
+	if($("#btn-giros").hasClass('btn-sel') ){
+		$("#btn-giros").removeClass('btn-sel');
+		$("#btn-giros").addClass('btn-unsel');
+		$("#flecha-giros").hide();
+	}
+	if($("#btn-direcciones").hasClass('btn-sel')){
+		$("#btn-direcciones").removeClass('btn-sel');
+		$("#btn-direcciones").addClass('btn-unsel');
+		$("#flecha-direcciones").hide();
+	}
+	switch($(this).attr('id')) {
+		case "btn-reconocimiento":
+		$("#btn-reconocimiento").addClass('btn-sel');
+		$("#flecha-reconocimiento").show();
+		$("#mod-reconocimiento").show();
+		break;
+		case "btn-movimientos":
+		$("#btn-movimientos").addClass('btn-sel');
+		$("#flecha-movimientos").show();
+		$("#mod-movimientos").show();
+		break;
+		case "btn-equilibrio":
+		$("#btn-equilibrio").addClass('btn-sel');
+		$("#flecha-equilibrio").show();
+		$("#mod-equilibrio").show();
+		break;
+		case "btn-giros":
+		$("#btn-giros").addClass('btn-sel');
+		$("#flecha-giros").show();
+		$("#mod-giros").show();
+		break;
+		case "btn-direcciones":
+		$("#btn-direcciones").addClass('btn-sel');
+		$("#flecha-direcciones").show();
+		$("#mod-direcciones").show();
+		break;
+	}
+});
 });

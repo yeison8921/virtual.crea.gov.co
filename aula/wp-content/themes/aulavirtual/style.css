@@ -35,8 +35,12 @@ Tags: aula, virtual, CREA, idartes, artistica
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
 #contenedor-aula-danza{
-  /*background-image: url(danza/images/fondo_info_detallada_danza.jpg);
-  font-family: 'Local Van Condensed Regular', Regular !important;*/
+  /*background-image: url(danza/images/fondo_info_detallada_danza.jpg);*/
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 18px;
+  color: #591508;
+}
+#contenedor-aula-danza .tit-enc{
   font-family: 'Local Van Condensed Bold' !important;
 }
 
@@ -457,6 +461,9 @@ table.dataTable.no-footer{
   height: 220px;
 }
 
-
+.flecha{
+  color: #7a0228;
+  display: none;
+}
 
 
