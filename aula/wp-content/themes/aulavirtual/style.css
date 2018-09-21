@@ -63,10 +63,27 @@ Tags: aula, virtual, CREA, idartes, artistica
     background-repeat: no-repeat;
     background-size: cover;
   }
-  #div-botones-reconocimiento-corporal{
-    position: relative;
-    top: 40%;
-    padding-left: 30px;
+  .div-con-gir-uno{
+    overflow: auto;
+    height: 500px;
+  }
+}
+
+@media (min-width: 992px){
+  .btn-unsel, .btn-sel{
+    font-size: 18px;
+  }
+  .div-con-rec-uno .btn, .div-con-rec-dos .btn{
+    width: 350px;
+  }
+  .div-con-rec-uno, .div-con-rec-dos{
+    height: 500px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 992px){
+  .btn-unsel .btn-sel{
+    font-size: 15px;
   }
 }
 
@@ -94,11 +111,6 @@ Tags: aula, virtual, CREA, idartes, artistica
   .col-md-1-5{
     width: 20%;
     float: left;
-  }
-  #div-botones-reconocimiento-corporal{
-    position: relative;
-    top: 36%;
-    padding-left: 30px;
   }
 }
 
@@ -230,7 +242,6 @@ label{
   color: #581508;
   border-color:#666666;
   border-width: 0.5px;
-  font-size: 18px;
   height: 30px;
   margin-bottom: 20px;
 }
@@ -240,8 +251,7 @@ label{
   border-radius: 10px; 
   color: #ffffff; 
   border-color:#5e2d30; 
-  border-width: 0.5px;
-  font-size: 18px; 
+  border-width: 0.5px; 
   height: 30px;
   margin-bottom: 20px;
 }
@@ -399,54 +409,6 @@ table.dataTable.no-footer{
   padding: 0px 0px;
 }
 
-
-
-#contenedor-aula-danza #div-movimientos-universales #div-botones-movimientos-universales{
-  position: relative;
-  top: 40%;
-}
-
-#contenedor-aula-danza #div-movimientos-universales #div-contenido-principal-movimientos-universales{
-  position: relative;
-  top: 15%;
-}
-
-#contenedor-aula-danza #div-movimientos-universales #div-contenido-secundario-movimientos-universales{
-  position: relative;
-  top: 70%;
-}
-
-#contenedor-aula-danza #div-equilibrio #div-botones-equilibrio{
-  position: relative;
-  top: 40%;
-}
-
-#contenedor-aula-danza #div-equilibrio #div-contenido-principal-equilibrio{
-  position: relative;
-  top: 15%;
-}
-
-#contenedor-aula-danza #div-equilibrio #div-contenido-secundario-equilibrio{
-  position: relative;
-  top: 45%;
-}
-
-#contenedor-aula-danza #div-giros #div-botones-giros{
-  position: relative;
-  top: 40%;
-}
-
-#contenedor-aula-danza #div-giros #div-contenido-principal-giros{
-  position: relative;
-  top: 15%;
-}
-
-#contenedor-aula-danza #div-giros #div-contenido-secundario-giros{
-  position: relative;
-  top: 45%;
-}
-
-
 .img-padding{
   padding-bottom: 10px;
 }
@@ -466,4 +428,16 @@ table.dataTable.no-footer{
   display: none;
 }
 
+.div-con-rec-uno, .div-con-rec-dos{
+  align-items: center;
+  display: flex;
+}
 
+.div-con-mod{
+  display: block;
+  overflow: auto;
+}
+
+.div-btn-mod{
+  background: radial-gradient(ellipse 100% 150% at 75% 50% , rgba(236,146,156,1) 0%, rgba(236,146,156,1) 30%, rgba(136,86,89,1) 100%);
+}

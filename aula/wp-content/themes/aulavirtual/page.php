@@ -158,71 +158,71 @@
           <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_crea.png">
         </div>
       </div>
-      <div class="div-con-mod" style="height: 600px; display: none;">
-        <div class="col-lg-3 col-md-4" style=" height: 600px; background:radial-gradient(ellipse 100% 150% at 75% 50% , rgba(236,146,156,1) 0%, rgba(236,146,156,1) 30%, rgba(136,86,89,1) 100%); ">
-          <div class="div-btn-mod" style="margin-top: 30%;">
+      <div class="div-con-mod" style="display: none;">
+        <div class="div-btn-mod col-lg-3 col-md-4 col-sm-4">
+          <div style="margin-top: 40%;">
             <div class='row'>
-              <div class="col-md-1">
+              <div class="col-lg-1 col-md-1 col-sm-1">  
                 <i class="fas fa-2x fa-caret-right flecha" id="flecha-reconocimiento"></i>
               </div>
-              <div class="col-md-8">
+              <div class="col-lg-9 col-md-10 col-sm-10">
                 <button class='btn btn-block btn-unsel' id="btn-reconocimiento">Reconocimiento Corporal</button>
               </div>
             </div>
             <div class='row'>
-              <div class="col-md-1">
+              <div class="col-lg-1 col-md-1 col-sm-1">
                 <i class="fas fa-2x fa-caret-right flecha" id="flecha-movimientos"></i>
               </div>
-              <div class="col-md-8">
+              <div class="col-lg-9 col-md-10 col-sm-10">
                 <button class='btn btn-block btn-unsel' id="btn-movimientos">Movimientos Universales</button>
               </div>
             </div>
             <div class='row'>
-              <div class="col-md-1">
+              <div class="col-lg-1 col-md-1 col-sm-1">
                <i class="fas fa-2x fa-caret-right flecha" id="flecha-equilibrio"></i>
              </div>
-             <div class="col-md-8">
+             <div class="col-lg-9 col-md-10 col-sm-10">
               <button class='btn btn-block btn-unsel' id="btn-equilibrio">Equilibrio Puntos de Apoyo</button>
             </div>
           </div>
           <div class='row'>
-            <div class="col-md-1">
+            <div class="col-lg-1 col-md-1 col-sm-1">
               <i class="fas fa-2x fa-caret-right flecha" id="flecha-giros"></i>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-9 col-md-10 col-sm-10">
               <button class='btn btn-block btn-unsel' id="btn-giros">Giros y Saltos</button>
             </div>
           </div>
           <div class='row'>
-            <div class="col-md-1">
+            <div class="col-lg-1 col-md-1 col-sm-1">
               <i class="fas fa-2x fa-caret-right flecha" id="flecha-direcciones"></i>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-9 col-md-10 col-sm-10">
               <button class='btn btn-block btn-unsel' id="btn-direcciones">Direcciones y Desplazamientos</button>
             </div>
           </div>
         </div>
         </div>
 
-        <div class="row col-lg-offset-1 col-lg-8 col-md-8" id="mod-reconocimiento" style="display: none;">
-          <h2 class="tit-rec" style="padding-bottom: 40px;">RECONOCIMIENTO CORPORAL</h2>
+        <div class="row col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 col-sm-offset-1 col-sm-7" id="mod-reconocimiento" style="display: none;">
+          <h2 class="tit-rec" style="padding-bottom: 30px;">RECONOCIMIENTO CORPORAL</h2>
           <div class="row">
-            <div class="div-con-rec-uno col-lg-6 col-md-6" style="height: 500px; align-items: center; display: flex;">      
-              <button class='btn btn-block btn-sel center-block' style='width: 350px;'>Rompezabezas</button>
+            <div class="div-con-rec-uno col-lg-6 col-md-6 col-sm-12">      
+              <button class='btn btn-block btn-sel center-block'>Rompezabezas</button>
             </div>
-            <div class="div-con-rec-dos col-lg-6 col-md-6" style="height: 500px; align-items: center; display: flex;">      
-              <button class='btn btn-block btn-sel center-block' style='width: 350px;'>Video</button>
+            <div class="div-con-rec-dos col-lg-6 col-md-6 col-sm-12">      
+              <button class='btn btn-block btn-sel center-block'>Video</button>
             </div>
           </div>
         </div>
 
-        <div class="row col-lg-offset-1 col-lg-8 col-md-8" id="mod-movimientos" style="display: none;">
+        <div class="row col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7" id="mod-movimientos" style="display: none;">
           <h2 class="tit-mov" style="padding-bottom: 40px;">MOVIMIENTOS UNIVERSALES</h2>
           <div class="row">
-            <div class="div-con-mov-mod-uno col-lg-6 col-md-6" style="">
+            <div class="div-con-mov-mod-uno col-lg-6 col-md-12" style="">
               <p>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o religiosos. Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de símbolos de la cultura y la sociedad. <br><br>En este sentido, la danza también es una forma de comunicación, ya que se usa el lenguaje no verbal entre los seres humanos, donde el bailarín o bailarina expresa sentimientos y emociones a través de sus movimientos y gestos. Se realiza mayormente con música, ya sea una canción, pieza musical o sonidos. <br><br>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o religiosos.<br><br>Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de simbolos de la cultura y la sociedad.</p>
             </div>
-            <div class="div-con-mov-mod-dos col-lg-6 col-md-6" style="">
+            <div class="div-con-mov-mod-dos col-lg-6 col-md-12" style="">
               <img src="<?php bloginfo('template_url'); ?>/danza/images/movimientos_cuerpo.png" class="img-responsive" width="480px">
               <p>La danza y sus diferentes géneros se conectan directamente casi con todos los movimientos los cuales son llamados universales en este módulo, ya que se convierte en las técnicas para expresar por medio del baile la interacción de diversos elementos los cuales son llamados por nombres como Plie Releve, Cambre o Flex.</p>
               <div class="col-lg-6">
@@ -235,54 +235,53 @@
           </div>
         </div>
 
-        <div class="row col-lg-offset-1 col-lg-8 col-md-8" id="mod-equilibrio" style="display: none;">
+        <div class="row col-lg-offset-1 col-lg-8 col-md-8 col-md-offset-1 col-md-7" id="mod-equilibrio" style="display: none;">
           <h2 class="tit-equi" style="padding-bottom: 40px;">EQUILIBRIO PUNTOS DE APOYO</h2>
           <div class="row">
-            <div class="div-con-equi-uno col-lg-6 col-md-6" style="">
+            <div class="div-con-equi-uno col-lg-6 col-md-12">
               <p>Los puntos de apoyo o también llamados puntos de equilibrio, son esas partes del cuerpo que están sobre una superficie fija (como el suelo) y a partir de los cuales se puede apoyar el resto del cuerpo ya sea para generar una posición estática como una parada de manos, o una posición que luego se mueva como un giro.</p>
             </div>
-            <div class="div-con-equi-dos col-lg-6 col-md-6" style="">
-              <div class="col-lg-6">
-                <button class='btn btn-block btn-sel'>Juega</button>
-              </div>
-              <div class="col-lg-6">
-                <button class='btn btn-block btn-sel'>Video</button>
-              </div>
+            <div class="div-con-equi-dos col-lg-offset-1 col-lg-4 col-md-12">
+              <button class='btn btn-block btn-sel'>Juega</button>
+              <button class='btn btn-block btn-sel'>Video</button>
             </div>
           </div>
         </div>
 
-        <div class="row col-lg-offset-1 col-lg-8 col-md-8" id="mod-giros" style="display: none;">
+        <div class="row col-lg-offset-1 col-lg-8 col-md-8 col-md-offset-1 col-md-7" id="mod-giros" style="display: none;">
           <h2 class="tit-gir" style="padding-bottom: 40px;">GIROS Y SALTOS</h2>
           <div class="row">
-            <div class="div-con-gir-uno col-lg-6 col-md-6" style="overflow: auto; height: 500px;">
-              <p>En la danza se manejan diferentes géneros musicales y técnicas las cuales dan un punto de partida para conocer de fondo el modo en que se realizan cada uno de los pasos, saltos o giros. Es de importancia resaltar cómo cada danza tiene complementos importantes tales como el vestuario, maquillaje, puesta en escena y música<br><br>Dentro de todo lo que une a la danza, la técnica en diferentes pasos como los giros y saltos cambia dependiendo del género que se vaya a trabajar; para girar existen diferentes etapas las cuales el bailarín debe seguir:<br><br>
+            <div class="div-con-gir-uno col-lg-6 col-md-12">
+              <p>En la danza se manejan diferentes géneros musicales y técnicas las cuales dan un punto de partida para conocer de fondo el modo en que se realizan cada uno de los pasos, saltos o giros. Es de importancia resaltar cómo cada danza tiene complementos importantes tales como el vestuario, maquillaje, puesta en escena y música.<br><br>Dentro de todo lo que une a la danza, la técnica en diferentes pasos como los giros y saltos cambia dependiendo del género que se vaya a trabajar; para girar existen diferentes etapas las cuales el bailarín debe seguir:<br>
                 <ul>
                   <li>Equilibrio estático: El cual se realiza antes de comenzar el giro.</li>
                   <li>Equilibrio dinámico: Se realiza en el momento que ya se está ejecutando el giro y sirve para mantenerse en un punto o seguir un recorrido, entender y manejar estos principios ayuda a prevenir el mareo.</li>
                   <li>Velocidad de giro: El cual depende del ritmo y la energía puesta.</li>
-                </ul><br><br>Existen varias técnicas para realizar giros los cuales se conectan directamente con la tradición de cada baile, por ejemplo en la danza Sufí se realizan giros los cuales se conectan con Dios y son completamente místicos y su técnica se basa en girar sobre el propio eje muchas veces y a velocidad, este es “...un baile relacionado directamente con el movimiento giratorio de los planetas y la conexión con Dios, los derviches enlazan un giro tras otro en un espectáculo muy popular  hoy en día en El Cairo, que aúna el misticismo y el folclor”. (El confidencial, 2009)<br><br>En el flamenco existen clasificaciones para realizar un giro los cuales manejan una técnica propia, para girar es indispensable saber que la cabeza es el último elemento en llegar al punto de donde se partió; veremos todos los giros los cuales hacen parte de este género. Giros en el punto de apoyo, giros en el eje longitudinal, giros fuera del eje vertical, giros sobre un punto de apoyo, giros sobre el punto de apoyo alterno y giros combinados.<br><br>Otro género en donde los giros son un punto importante son las danzas orientales, la técnica varía dependiendo lo que se quiera proyectar en el escenario. “... juntar las manos mientras se va girando y luego abrirlas con gracia y elegancia para hacer una postura básica y luego sí la ondulación. Para esta última se hace un ocho vertical con la cadera y se repite el giro”. ( La danza de la vida, 2016).<br><br>En conclusión los giros se determinan dependiendo el género musical, aunque todos se unan entre sí y se logre llegar una aproximación para cumplir con las técnicas establecidas desde el ballet.
+                </ul><br>Existen varias técnicas para realizar giros los cuales se conectan directamente con la tradición de cada baile, por ejemplo en la danza Sufí se realizan giros los cuales se conectan con Dios y son completamente místicos y su técnica se basa en girar sobre el propio eje muchas veces y a velocidad, este es “...un baile relacionado directamente con el movimiento giratorio de los planetas y la conexión con Dios, los derviches enlazan un giro tras otro en un espectáculo muy popular  hoy en día en El Cairo, que aúna el misticismo y el folclor”. (El confidencial, 2009)<br><br>En el flamenco existen clasificaciones para realizar un giro los cuales manejan una técnica propia, para girar es indispensable saber que la cabeza es el último elemento en llegar al punto de donde se partió; veremos todos los giros los cuales hacen parte de este género. Giros en el punto de apoyo, giros en el eje longitudinal, giros fuera del eje vertical, giros sobre un punto de apoyo, giros sobre el punto de apoyo alterno y giros combinados.<br><br>Otro género en donde los giros son un punto importante son las danzas orientales, la técnica varía dependiendo lo que se quiera proyectar en el escenario. “... juntar las manos mientras se va girando y luego abrirlas con gracia y elegancia para hacer una postura básica y luego sí la ondulación. Para esta última se hace un ocho vertical con la cadera y se repite el giro”. ( La danza de la vida, 2016).<br><br>En conclusión los giros se determinan dependiendo el género musical, aunque todos se unan entre sí y se logre llegar una aproximación para cumplir con las técnicas establecidas desde el ballet.
               </p>
             </div>
-            <div class="div-con-gir-dos col-lg-6 col-md-6" style="height: 500px; align-items: center; display: flex;">
-              <div class="col-lg-6">
-                <button class='btn btn-block btn-sel'>Cualidades físicas</button>
-              </div>
-              <div class="col-lg-offset-1 col-lg-6">
-                <button class='btn btn-block btn-sel'>Video</button>
-              </div>
+            <div class="div-con-gir-dos col-lg-offset-1 col-lg-4 col-md-12"> <!-- style="height: 500px; align-items: center; display: flex;" -->
+              <button class='btn btn-block btn-sel'>Cualidades físicas</button>
+              <button class='btn btn-block btn-sel'>Video</button>
             </div>
           </div>
         </div>
 
-        <div class="row col-lg-offset-1 col-lg-8 col-md-8" id="mod-direcciones" style="display: none;">
+        <div class="row col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7" id="mod-direcciones" style="display: none;">
           <h2 class="tit-dir" style="padding-bottom: 40px;">DIRECCIONES Y DESPLAZAMIENTOS</h2>
           <div class="row">
-            <div class="div-con-dir-uno col-lg-6 col-md-6" style=""></div>
-            <div class="div-con-dir-dos col-lg-6 col-md-6" style=""></div>
+            <div class="div-con-dir-mod-uno col-lg-6 col-md-12" style="">
+              <p>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o religiosos. Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de símbolos de la cultura y la sociedad. <br><br>En este sentido, la danza también es una forma de comunicación, ya que se usa el lenguaje no verbal entre los seres humanos, donde el bailarín o bailarina expresa sentimientos y emociones a través de sus movimientos y gestos. Se realiza mayormente con música, ya sea una canción, pieza musical o sonidos. <br><br>La danza o el baile es un arte donde se utiliza el movimiento del cuerpo usualmente con música, como una forma de expresión y de interacción social, con fines de entretenimiento, artisticos o religiosos.<br><br>Es el movimiento en el espacio que se realiza con una parte o todo el cuerpo del ejecutante, con cierto compás o ritmo como expresión de sentimientos individuales, o de simbolos de la cultura y la sociedad.</p>
+            </div>
+            <div class="div-con-dir-mod-dos col-lg-6 col-md-12" style="">
+              <img src="<?php bloginfo('template_url'); ?>/danza/images/movimientos_cuerpo.png" class="img-responsive" width="480px">
+              <p>La danza y sus diferentes géneros se conectan directamente casi con todos los movimientos los cuales son llamados universales en este módulo, ya que se convierte en las técnicas para expresar por medio del baile la interacción de diversos elementos los cuales son llamados por nombres como Plie Releve, Cambre o Flex.</p>
+              <div class="col-lg-12">
+                <button class="btn btn-block btn-sel">Video interactivo</button>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
     <?php endif; ?>
