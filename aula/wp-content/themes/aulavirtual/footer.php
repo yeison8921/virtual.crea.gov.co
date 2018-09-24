@@ -1,7 +1,6 @@
 <!--Inicio footer-->
 <footer >
 	<div class="row footer">
-		
 		<div class=" col-lg-offset-5 col-lg-7 col-md-offset-1">
 			<div class="col-lg-3 col-md-3 col-sm-4">
 				<h3 class="title"><strong>Áreas artísticas</strong></h3>

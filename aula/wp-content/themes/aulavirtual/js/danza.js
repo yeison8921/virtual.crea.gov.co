@@ -114,13 +114,9 @@ jQuery(document).ready(function($){
 	});
 
 	$(".div-modulos img").click(function(){
+		$("#contenedor-aula-danza").css({'background-image':'url("")'});
 		$(".div-modulos").hide();
 		$(".div-video").hide();
-		$(".div-mod-enc").css({
-			'display': 'flex',
-			'align-items': 'center'
-		});
-		$(".div-mod-enc").show();
 		$(".div-con-mod").show();
 		$(".tit-con").empty();
 		$(".div-con-mod-uno").empty();
@@ -157,63 +153,82 @@ jQuery(document).ready(function($){
 		}
 	});
 
-$(".div-btn-mod button").click(function() {
-	$("#mod-reconocimiento").hide();
-	$("#mod-movimientos").hide();
-	$("#mod-equilibrio").hide();
-	$("#mod-giros").hide();
-	$("#mod-direcciones").hide();
-	if($("#btn-reconocimiento").hasClass('btn-sel')){
-		$("#btn-reconocimiento").removeClass('btn-sel');
-		$("#btn-reconocimiento").addClass('btn-unsel');
-		$("#flecha-reconocimiento").hide();
-	}
-	if($("#btn-movimientos").hasClass('btn-sel')){
-		$("#btn-movimientos").removeClass('btn-sel');
-		$("#btn-movimientos").addClass('btn-unsel');
-		$("#flecha-movimientos").hide();
-	}
-	if($("#btn-equilibrio").hasClass('btn-sel')){
-		$("#btn-equilibrio").removeClass('btn-sel');
-		$("#btn-equilibrio").addClass('btn-unsel');
-		$("#flecha-equilibrio").hide();
-	}
-	if($("#btn-giros").hasClass('btn-sel') ){
-		$("#btn-giros").removeClass('btn-sel');
-		$("#btn-giros").addClass('btn-unsel');
-		$("#flecha-giros").hide();
-	}
-	if($("#btn-direcciones").hasClass('btn-sel')){
-		$("#btn-direcciones").removeClass('btn-sel');
-		$("#btn-direcciones").addClass('btn-unsel');
-		$("#flecha-direcciones").hide();
-	}
-	switch($(this).attr('id')) {
-		case "btn-reconocimiento":
-		$("#btn-reconocimiento").addClass('btn-sel');
-		$("#flecha-reconocimiento").show();
-		$("#mod-reconocimiento").show();
-		break;
-		case "btn-movimientos":
-		$("#btn-movimientos").addClass('btn-sel');
-		$("#flecha-movimientos").show();
-		$("#mod-movimientos").show();
-		break;
-		case "btn-equilibrio":
-		$("#btn-equilibrio").addClass('btn-sel');
-		$("#flecha-equilibrio").show();
-		$("#mod-equilibrio").show();
-		break;
-		case "btn-giros":
-		$("#btn-giros").addClass('btn-sel');
-		$("#flecha-giros").show();
-		$("#mod-giros").show();
-		break;
-		case "btn-direcciones":
-		$("#btn-direcciones").addClass('btn-sel');
-		$("#flecha-direcciones").show();
-		$("#mod-direcciones").show();
-		break;
-	}
-});
+	$(".div-btn-mod button").click(function() {
+		$("#mod-reconocimiento").hide();
+		$("#mod-movimientos").hide();
+		$("#mod-equilibrio").hide();
+		$("#mod-giros").hide();
+		$("#mod-direcciones").hide();
+		if($("#btn-reconocimiento").hasClass('btn-sel')){
+			$("#btn-reconocimiento").removeClass('btn-sel');
+			$("#btn-reconocimiento").addClass('btn-unsel');
+			$("#flecha-reconocimiento").hide();
+		}
+		if($("#btn-movimientos").hasClass('btn-sel')){
+			$("#btn-movimientos").removeClass('btn-sel');
+			$("#btn-movimientos").addClass('btn-unsel');
+			$("#flecha-movimientos").hide();
+		}
+		if($("#btn-equilibrio").hasClass('btn-sel')){
+			$("#btn-equilibrio").removeClass('btn-sel');
+			$("#btn-equilibrio").addClass('btn-unsel');
+			$("#flecha-equilibrio").hide();
+		}
+		if($("#btn-giros").hasClass('btn-sel') ){
+			$("#btn-giros").removeClass('btn-sel');
+			$("#btn-giros").addClass('btn-unsel');
+			$("#flecha-giros").hide();
+		}
+		if($("#btn-direcciones").hasClass('btn-sel')){
+			$("#btn-direcciones").removeClass('btn-sel');
+			$("#btn-direcciones").addClass('btn-unsel');
+			$("#flecha-direcciones").hide();
+		}
+		switch($(this).attr('id')) {
+			case "btn-reconocimiento":
+			$("#btn-reconocimiento").addClass('btn-sel');
+			$("#flecha-reconocimiento").show();
+			$(".div-act-rom-rec").hide();
+			$(".div-act-vid-rec").hide();
+			$("#mod-reconocimiento").show();
+			$(".div-con-rec-uno").show();
+			$(".div-con-rec-dos").show();
+			break;
+			case "btn-movimientos":
+			$("#btn-movimientos").addClass('btn-sel');
+			$("#flecha-movimientos").show();
+			$("#mod-movimientos").show();
+			break;
+			case "btn-equilibrio":
+			$("#btn-equilibrio").addClass('btn-sel');
+			$("#flecha-equilibrio").show();
+			$("#mod-equilibrio").show();
+			break;
+			case "btn-giros":
+			$("#btn-giros").addClass('btn-sel');
+			$("#flecha-giros").show();
+			$("#mod-giros").show();
+			break;
+			case "btn-direcciones":
+			$("#btn-direcciones").addClass('btn-sel');
+			$("#flecha-direcciones").show();
+			$("#mod-direcciones").show();
+			break;
+		}
+	});
+
+	$("#mod-reconocimiento button").click(function() {
+		$(".div-con-rec-uno").hide();
+		$(".div-con-rec-dos").hide();
+		switch($(this).attr('id')) {
+			case "btn-rompecabezas-rec":
+			$(".div-act-rom-rec").show();
+			break;
+			case "btn-video-rec":
+			$(".div-act-vid-rec").show();
+			break;
+		}
+	});
+
+
 });

@@ -26,6 +26,16 @@ Tags: aula, virtual, CREA, idartes, artistica
 }
 
 /*********** Grid **********/
+
+/*html,body, .row, .div-btn-mod{
+  height: 100%;
+}
+
+#contenedor-index-danza {
+  height: 100%;
+  overflow: hidden;
+}*/
+
 .bg{
   background-image: url("images/ip5.png");
 }
@@ -35,12 +45,17 @@ Tags: aula, virtual, CREA, idartes, artistica
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
 #contenedor-aula-danza{
-  /*background-image: url(danza/images/fondo_info_detallada_danza.jpg);*/
+  background-image: url('danza/images/fondo_aula_modulos_2.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 18px;
   color: #591508;
 }
-#contenedor-aula-danza .tit-enc{
+
+.tit-enc{
   font-family: 'Local Van Condensed Bold' !important;
 }
 
@@ -257,7 +272,7 @@ label{
 }
 
 .page-header{
-  margin: 32px 0 -1px;
+  margin: 32px 0 -10px;
 }
 .navbar{
   background-color: #ff3c36;
@@ -288,7 +303,6 @@ label{
   text-align: center;
 
 }
-
 
 .b-index{
   margin-top: 30px;
@@ -339,15 +353,6 @@ table.dataTable.no-footer{
 /* Fin estilos index aula danza*/
 
 /*Estilos aula danza */
-#contenedor-aula-danza{
-  height: 100%;
-/*  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  font-size: 18px;*/
-}
-
 #div-regresar-modulo{
   text-align: left;
   padding-left: 30px;
@@ -417,6 +422,8 @@ table.dataTable.no-footer{
  background-image: url('danza/images/header.jpg');
  background-position: left top;
  background-repeat: no-repeat;
+ display: flex;
+ align-items: center;
 }
 
 .div-modulos img{
@@ -440,4 +447,11 @@ table.dataTable.no-footer{
 
 .div-btn-mod{
   background: radial-gradient(ellipse 100% 150% at 75% 50% , rgba(236,146,156,1) 0%, rgba(236,146,156,1) 30%, rgba(136,86,89,1) 100%);
+}
+
+.div-muneca{
+  height: auto;
+  position: absolute;
+  left: 160px;
+  z-index: 1;
 }
