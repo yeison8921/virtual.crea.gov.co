@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<br>
-
 <div class="container-fluid">
   <div class="row bg">
     <div class="row col-lg-offset-5 col-md-offset-1 index-titulo">

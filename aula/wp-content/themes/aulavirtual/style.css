@@ -27,14 +27,12 @@ Tags: aula, virtual, CREA, idartes, artistica
 
 /*********** Grid **********/
 
-/*html,body, .row, .div-btn-mod{
-  height: 100%;
+html, body {
+  height: 100%; /*Fixes the height to 100% of the viewport*/
 }
-
-#contenedor-index-danza {
-  height: 100%;
-  overflow: hidden;
-}*/
+body {
+  padding-top: 50px; /*50px for the height of the navbar + 37px for the offset*/
+}
 
 .bg{
   background-image: url("images/ip5.png");
@@ -44,6 +42,7 @@ Tags: aula, virtual, CREA, idartes, artistica
   background-image: url('danza/images/fondo_aula_danza - copia.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
+
 #contenedor-aula-danza{
   background-image: url('danza/images/fondo_aula_modulos_2.jpg');
   background-position: left top;
@@ -70,7 +69,6 @@ Tags: aula, virtual, CREA, idartes, artistica
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: scroll;
   }
   #contenedor-index-danza{
     height: 700px;
@@ -272,7 +270,7 @@ label{
 }
 
 .page-header{
-  margin: 32px 0 -10px;
+  margin: 51px 0 -10px;
 }
 .navbar{
   background-color: #ff3c36;
@@ -418,10 +416,11 @@ table.dataTable.no-footer{
   padding-bottom: 10px;
 }
 
-.div-mod-enc{
+#div-mod-enc{
  background-image: url('danza/images/header.jpg');
  background-position: left top;
  background-repeat: no-repeat;
+ background-size: cover;
  display: flex;
  align-items: center;
 }

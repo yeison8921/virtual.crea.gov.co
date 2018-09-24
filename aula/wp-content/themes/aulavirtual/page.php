@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!--Inicio Contenido -->
-<div class="container-fluid page-header">
+<div class="container-fluid">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!-- <h2><?php the_title(); ?></h2>-->
     <?php if(is_page("Artes electrónicas")) :?>
@@ -119,14 +119,14 @@
         </div>
     <?php endif; ?>
     <?php if(is_page("Aula danza")) :?>
-      <div class="row div-mod-enc">
-        <div class="col-lg-1 col-md-1">
+      <div class="row" id="div-mod-enc">
+        <div class="col-lg-1 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_bogota.png">
         </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-3 col-md-4 text-center" style="color: #9c474c;">
+        <div class="col-lg-offset-4 col-lg-2 col-md-offset-4 col-md-2" style="color: #9c474c;">
           <h2 class="tit-enc" style="font-size: 60px;"><strong>DANZA</strong></h2>
         </div>
-        <div class="col-lg-offset-3 col-lg-1 col-md-offset-3 col-md-1">
+        <div class="col-lg-offset-4 col-lg-1 col-md-offset-4 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_crea.png">
         </div>
       </div>
@@ -138,7 +138,7 @@
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-7 text-right">
             <h2>MÓDULO 1 - CUERPO MOVIMIENTO</h2>  
             <!-- <div class="embed-responsive embed-responsive-16by9"> -->
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lJB9zRP0hmY" frameborder="0" width="480" height="320" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ttg8-K0hOnU" frameborder="0" width="480" height="320" allowfullscreen></iframe>
               <!-- </div> -->
             </div>
           </div>
@@ -222,7 +222,7 @@
                   <iframe src="https://h5p.org/h5p/embed/303384" width="800" height="600" frameborder="0" allowfullscreen="allowfullscreen"></iframe><!-- <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script> -->
                 </div>
                 <div class="div-act-vid-rec text-center" style="display: none;">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/5SytABu6lKY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/artq-ZfapzY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
               </div>
             </div>

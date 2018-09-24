@@ -14,7 +14,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body <?php body_class() ?>>
+  <body> <!-- <?php body_class() ?> -->
 
     <!-- Inicio navbar-->
       <div class="navbar navbar-default navbar-fixed-top">
