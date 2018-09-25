@@ -5,11 +5,22 @@ jQuery(document).ready(function($){
 	var imgindex4 = ($("#bloginfo").val() + "/danza/images/fondo_movimientos_universales.jpg");
 	var imgindex5 = ($("#bloginfo").val() + "/danza/equilibrio/fondo-equilibrio.jpg");
 	var imgindex6 = ($("#bloginfo").val() + "/danza/giros/fondo-giros.jpg");
+	var m1 = ($("#bloginfo").val() + "/danza/images/muneca_reconocimiento.png");
+	var m2 = ($("#bloginfo").val() + "/danza/images/muneca_movimientos.png");
+	var m3 = ($("#bloginfo").val() + "/danza/images/muneca_equilibrio.png");
+	var m4 = ($("#bloginfo").val() + "/danza/images/muneca_giros.png");
+	var m5 = ($("#bloginfo").val() + "/danza/images/muneca_direcciones.png");
 
 	$("#btn_cuerpo_interdisciplinar").click(function() {
 		$("#div-inicio-curso-danza").hide();
 		$("#div-encabezado-info-aula-danza").show();
 		$("#div-info-aula-danza").show();
+	});
+
+	$("#btn_iniciar_curso").click(function(){
+		$("#div-sel-modulo").show();
+		$("#div-encabezado-info-aula-danza").hide();
+		$("#div-info-aula-danza").hide();
 	});
 
 	$("#div-info-aula-danza img").click(function(){
@@ -126,30 +137,35 @@ jQuery(document).ready(function($){
 			$("#btn-reconocimiento").addClass('btn-sel');
 			$("#flecha-reconocimiento").show();
 			$("#mod-reconocimiento").show();
+			$(".muneca").attr('src', m1);
 		}
 		if($(this).attr('id') == "img_mod_movimientos"){
 			$("#btn-movimientos").removeClass('btn-unsel');
 			$("#btn-movimientos").addClass('btn-sel');
 			$("#flecha-movimientos").show();
 			$("#mod-movimientos").show();
+			$(".muneca").attr('src', m2);
 		}
 		if($(this).attr('id') == "img_mod_equilibrio"){
 			$("#btn-equilibrio").removeClass('btn-unsel');
 			$("#btn-equilibrio").addClass('btn-sel');
 			$("#flecha-equilibrio").show();
 			$("#mod-equilibrio").show();
+			$(".muneca").attr('src', m3);
 		}
 		if($(this).attr('id') == "img_mod_giros"){
 			$("#btn-giros").removeClass('btn-unsel');
 			$("#btn-giros").addClass('btn-sel');
 			$("#flecha-giros").show();
 			$("#mod-giros").show();
+			$(".muneca").attr('src', m4);
 		}
 		if($(this).attr('id') == "img_mod_direcciones"){
 			$("#btn-direcciones").removeClass('btn-unsel');
 			$("#btn-direcciones").addClass('btn-sel');
 			$("#flecha-direcciones").show();
 			$("#mod-direcciones").show();
+			$(".muneca").attr('src', m5);
 		}
 	});
 
@@ -193,26 +209,31 @@ jQuery(document).ready(function($){
 			$("#mod-reconocimiento").show();
 			$(".div-con-rec-uno").show();
 			$(".div-con-rec-dos").show();
+			$(".muneca").attr('src', m1);
 			break;
 			case "btn-movimientos":
 			$("#btn-movimientos").addClass('btn-sel');
 			$("#flecha-movimientos").show();
 			$("#mod-movimientos").show();
+			$(".muneca").attr('src', m2);
 			break;
 			case "btn-equilibrio":
 			$("#btn-equilibrio").addClass('btn-sel');
 			$("#flecha-equilibrio").show();
 			$("#mod-equilibrio").show();
+			$(".muneca").attr('src', m3);
 			break;
 			case "btn-giros":
 			$("#btn-giros").addClass('btn-sel');
 			$("#flecha-giros").show();
 			$("#mod-giros").show();
+			$(".muneca").attr('src', m4);
 			break;
 			case "btn-direcciones":
 			$("#btn-direcciones").addClass('btn-sel');
 			$("#flecha-direcciones").show();
 			$("#mod-direcciones").show();
+			$(".muneca").attr('src', m5);
 			break;
 		}
 	});

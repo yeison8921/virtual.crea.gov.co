@@ -41,6 +41,10 @@ body {
 #contenedor-index-danza{
   background-image: url('danza/images/fondo_aula_danza - copia.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
+  height: 700px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #contenedor-aula-danza{
@@ -66,12 +70,6 @@ body {
   }
   .bg{
     height: 900px;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #contenedor-index-danza{
-    height: 700px;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,12 +112,6 @@ body {
     width: 14%;
     float: left;
     text-align: center;
-  }
-  #contenedor-index-danza{
-    height: 700px;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .col-md-1-5{
     width: 20%;
@@ -389,14 +381,14 @@ table.dataTable.no-footer{
 
 /* Fin estilos aula danza*/
 
-#div-dropdown-index-danza {
+#div-dropdown-modulo-danza {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
 }
 
-#div-dropdown-index-danza .dropdown-menu {
+#div-dropdown-modulo-danza .dropdown-menu {
   padding: 0px 0;
   margin: 0px 0 0;
   background-color: #fff0;
@@ -405,10 +397,10 @@ table.dataTable.no-footer{
   -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
   box-shadow: 0 0px 0px rgba(0,0,0,.175);
 }
-#div-dropdown-index-danza .dropdown-menu>li>a {
+#div-dropdown-modulo-danza .dropdown-menu>li>a {
   padding: 1px 0px;
 }
-#div-dropdown-index-danza .btn {
+#div-dropdown-modulo-danza .btn {
   padding: 0px 0px;
 }
 
@@ -423,6 +415,7 @@ table.dataTable.no-footer{
  background-size: cover;
  display: flex;
  align-items: center;
+ height: 80px;
 }
 
 .div-modulos img{
@@ -449,8 +442,17 @@ table.dataTable.no-footer{
 }
 
 .div-muneca{
-  height: auto;
   position: absolute;
-  left: 160px;
+  left: -200px;
   z-index: 1;
+  top: 5%;
+}
+
+#div-sel-modulo{
+  top: 50%;
+  position: relative;
+}
+
+#div-sel-modulo img{
+  width: 250px;
 }
