@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var imgindex1 = ($("#bloginfo").val() + "/danza/images/fondo_aula_danza.jpg") 
-	var imgindex2 = ($("#bloginfo").val() + "/danza/images/fondo_info_detallada_danza.jpg");
+	var imgindex2 = ($("#bloginfo").val() + "/danza/images/fondo_aula_modulos.jpg");
 	var imgindex3 = ($("#bloginfo").val() + "/danza/images/fondo_reconocimiento_corporal.jpg");
 	var imgindex4 = ($("#bloginfo").val() + "/danza/images/fondo_movimientos_universales.jpg");
 	var imgindex5 = ($("#bloginfo").val() + "/danza/equilibrio/fondo-equilibrio.jpg");
@@ -239,15 +239,15 @@ jQuery(document).ready(function($){
 	});
 
 	$("#mod-reconocimiento button").click(function() {
-		$(".div-con-rec-uno").hide();
-		$(".div-con-rec-dos").hide();
 		switch($(this).attr('id')) {
 			case "btn-rompecabezas-rec":
+			$(".div-con-rec-uno").hide();
+			$(".div-con-rec-dos").hide();
 			$(".div-act-rom-rec").show();
 			break;
-			case "btn-video-rec":
+/*			case "btn-video-rec":
 			$(".div-act-vid-rec").show();
-			break;
+			break;*/
 		}
 	});
 

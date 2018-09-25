@@ -30,8 +30,10 @@ Tags: aula, virtual, CREA, idartes, artistica
 html, body {
   height: 100%; /*Fixes the height to 100% of the viewport*/
 }
+
 body {
-  padding-top: 50px; /*50px for the height of the navbar + 37px for the offset*/
+  min-height: 1000px;
+  padding-top: 50px;
 }
 
 .bg{
@@ -178,7 +180,7 @@ body {
 .index-menu {
   position: relative;
   color: white;
-  top: 40%;
+  top: 35%;
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 16px;
 }
@@ -195,8 +197,7 @@ body {
 }
 
 .index-logos{
-  text-align: right;
-  top: 38%;
+  top: 32%;
 }
 
 
@@ -211,6 +212,12 @@ label{
 
 /*********** Estilo footer **********/
 
+.bg .footer{
+  background-color: transparent;
+  position: relative;
+  top: 30%;
+}
+
 .footer{
   background-color: rgb(230, 63, 57);
   color: white;
@@ -218,13 +225,9 @@ label{
   font-size: 16px;
 }
 
-.footer h3{
-  color: white;
-}
-
 .footer ul{
   list-style-type: none;
-   padding-left: 0;
+  padding-left: 0;
 }
 
 .footer li a{
@@ -233,13 +236,16 @@ label{
   text-align: left;
 }
 
-.footer address{
-  color: white;
-}
 .footer address a{
   color: white;
   text-decoration: none;
 }
+
+.footer address a:hover{
+  color: black;
+}
+
+/*********************/
 
 .btn-unsel{
   background-color: #ffffff;
@@ -261,9 +267,6 @@ label{
   margin-bottom: 20px;
 }
 
-.page-header{
-  margin: 51px 0 -10px;
-}
 .navbar{
   background-color: #ff3c36;
   font-family: 'Local Van Condensed Regular', Regular !important;

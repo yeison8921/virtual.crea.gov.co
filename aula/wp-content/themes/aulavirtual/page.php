@@ -237,7 +237,7 @@
                   <iframe src="https://h5p.org/h5p/embed/303384" width="800" height="600" frameborder="0" allowfullscreen="allowfullscreen"></iframe><!-- <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script> -->
                 </div>
                 <div class="div-act-vid-rec text-center" style="display: none;">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/artq-ZfapzY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/artq-ZfapzY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@
                     <button class="btn btn-block btn-sel">Juega</button>
                   </div>
                   <div class="col-lg-6">
-                    <button class="btn btn-block btn-sel">Video</button>
+                    <button class="btn btn-block btn-sel" data-toggle="modal" data-target="#modal-video-movimientos">Video</button>
                   </div>
                 </div>
               </div>
@@ -310,6 +310,24 @@
             </div>
           </div>
         </div>
+        <!-- Inicio del modal video movimientos -->
+        <div id="modal-video-movimientos" class="modal modal-wide fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/artq-ZfapzY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-success" data-dismiss="modal" value="Ok"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin del modal-->
       </div>
     <?php endif; ?>
   <?php the_content(); ?>
