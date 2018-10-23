@@ -2,38 +2,40 @@
 
 //Registrar menu
 register_nav_menus( array(
-        'principal' => ('Menú principal superior'),
-        'footer' => ('Menú footer'),
-        'nosotros' => ('Menú nosotros')
-    ));
+    'principal' => ('Menú principal superior'),
+    'footer' => ('Menú footer'),
+    'nosotros' => ('Menú nosotros')
+));
 
 
 if(function_exists( 'add_theme_support' ))
-add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
 
-function aula_cargar_scripts()
-{
+function aula_cargar_scripts(){
     wp_enqueue_script( 'jquery',  'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false,true);
     if(is_page("Artes electrónicas") || is_page("Consulta mapa artes electrónicas")){
-      $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
-      wp_enqueue_script('google-maps-api', esc_url( add_query_arg( 'key', $map_api_key.'&callback=initMap', '//maps.googleapis.com/maps/api/js' )), array(), null, true );
+        $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
+        wp_enqueue_script('google-maps-api', esc_url( add_query_arg( 'key', $map_api_key.'&callback=initMap', '//maps.googleapis.com/maps/api/js' )), array(), null, true );
 
-      function google_maps_api_add_async_defer_attribute($tag, $handle) {
-        if ( 'google-maps-api' !== $handle )
-        return $tag;
-        return str_replace( ' src', ' async defer src', $tag );
-      }
-      add_filter('script_loader_tag', 'google_maps_api_add_async_defer_attribute', 10, 2);
+        function google_maps_api_add_async_defer_attribute($tag, $handle){
+            if ( 'google-maps-api' !== $handle )
+                return $tag;
+            return str_replace( ' src', ' async defer src', $tag );
+        }
+        add_filter('script_loader_tag', 'google_maps_api_add_async_defer_attribute', 10, 2);
 
-      if(is_page("Artes electrónicas")){
-        wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/mapa.js',array(),false,true);
-      }else{
-        wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/consultaMapa.js',array(),false,true);
-      }
+        if(is_page("Artes electrónicas")){
+            wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/mapa.js',array(),false,true);
+        }else{
+            wp_enqueue_script( 'mapa', get_template_directory_uri(). '/js/consultaMapa.js',array(),false,true);
+        }
     }
     if(is_page("Introducción aula danza") ||  is_page("Aula danza")){
         wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/danza.js',array(),false,true);
+    }
+    if(is_page("Música")){
+        wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/musica.js',array(),false,true);
     }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script( 'funciones' , get_template_directory_uri() . '/js/funciones.js',array(),false,true);
@@ -49,10 +51,10 @@ function aula_cargar_scripts()
     wp_enqueue_script( 'jquery-validate-additional-methods',  get_template_directory_uri() . '/js/jquery.validate.additional.methods.min.js',array(),false,true);
 
 }
+
 add_action( 'wp_enqueue_scripts', 'aula_cargar_scripts' );
 
-function aula_cargar_estilos()
-{
+function aula_cargar_estilos(){
     wp_register_style( 'bootstrap-estilo', get_template_directory_uri() . '/css/bootstrap.css',array(),false,'all');
     wp_register_style('buttons-dataTables', get_template_directory_uri().'/css/buttons.dataTables.min.css',array(),false,'all');
     wp_register_style('jquery-dataTables', get_template_directory_uri().'/css/jquery.dataTables.min.css',array(),false,'all');
@@ -64,9 +66,8 @@ function aula_cargar_estilos()
     wp_enqueue_style( 'sweetAlert2' );
     wp_enqueue_style( 'estilo-principal' );
 
-
-
 }
+
 add_action('wp_enqueue_scripts','aula_cargar_estilos');
 
 include get_parent_theme_file_path( '/mapa/subirAudio.php' );

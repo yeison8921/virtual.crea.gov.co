@@ -13,16 +13,16 @@ Tags: aula, virtual, CREA, idartes, artistica
 /*********** Fuentes **********/
 
 @font-face {
-      font-family: "Local Van Condensed Bold";
-      src: url("fonts/Van Condensed-Bold.otf");
+  font-family: "Local Van Condensed Bold";
+  src: url("fonts/Van Condensed-Bold.otf");
 }
 @font-face {
-      font-family: "Local Van Condensed Pro Light";
-      src: url("fonts/Van_Condensed_Pro_Light.ttf");
+  font-family: "Local Van Condensed Pro Light";
+  src: url("fonts/Van_Condensed_Pro_Light.ttf");
 }
 @font-face {
-      font-family: "Local Van Condensed Regular";
-      src: url("fonts/Van Condensed-Regular.otf");
+  font-family: "Local Van Condensed Regular";
+  src: url("fonts/Van Condensed-Regular.otf");
 }
 
 /*********** Grid **********/
@@ -58,6 +58,15 @@ body {
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 18px;
   color: #591508;
+}
+
+#contenedor-index-musica{
+  background-image: url('musica/images/fondo_aula_musica.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  height: 900px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tit-enc{
@@ -187,7 +196,7 @@ body {
 
 .index-menu ul{
   list-style-type: none;
-   padding-left: 0;
+  padding-left: 0;
 }
 
 .index-menu li a{
@@ -267,6 +276,27 @@ label{
   margin-bottom: 20px;
 }
 
+.btn-musica-p{
+  font-size: 30px;
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 2.5px; 
+  height: 55px;
+  margin-bottom: 20px;
+}
+
+.btn-musica-s{
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 0.5px; 
+  height: 35px;
+  margin-bottom: 20px;
+  width: 200px;
+  font-size: 20px
+}
+
 .navbar{
   background-color: #ff3c36;
   font-family: 'Local Van Condensed Regular', Regular !important;
@@ -344,6 +374,20 @@ table.dataTable.no-footer{
   font-size: 18px;
 }
 /* Fin estilos index aula danza*/
+
+
+/*Estilos index aula musica */
+#div-inicio-curso-musica, #div-inicio-info-aula-musica{
+  top: 70%;
+  position: relative;
+}
+
+#div-info-aula-musica{
+  top: 80%;
+  position: relative;
+}
+/* Fin estilos index aula musica*/
+
 
 /*Estilos aula danza */
 #div-regresar-modulo{
