@@ -34,7 +34,7 @@ function aula_cargar_scripts(){
     if(is_page("Introducción aula danza") ||  is_page("Aula danza")){
         wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/danza.js',array(),false,true);
     }
-    if(is_page("Música")){
+    if(is_page("Introducción aula música") || is_page("Música")){
         wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/musica.js',array(),false,true);
     }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);

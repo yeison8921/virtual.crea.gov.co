@@ -43,15 +43,14 @@
         </div>
       </div>
     <?php endif; ?>
-    <?php if(is_page("Música")) :?>
+    <?php if(is_page("Introducción aula música")) :?>
+      <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
       <div class="row" id="contenedor-index-musica">
-        <div id=""><a href="<?php bloginfo('template_url'); ?>/musica/images/logo_crea.jpg"></a></div>
-        <div id=""><a href="<?php bloginfo('template_url'); ?>/musica/images/logo_alcaldia.jpg"></a></div>
         <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-inicio-curso-musica">
           <button class="btn btn-block btn-musica-p" id="btn-salones">SALONES INTERACTIVOS DE MÚSICA</button>
         </div>
         <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-inicio-info-aula-musica" style="display: none;">
-          <button class="btn btn-block btn-musica-p">INICIAR</button>
+          <button class="btn btn-block btn-musica-p" id="btn-inicio-musica">INICIAR</button>
         </div>
         <div class="row"></div>
         <div id="div-info-aula-musica" class="row" style="display: none;">
@@ -69,6 +68,55 @@
           </div>
           <div class="col-lg-2 col-md-1-5">
             <button class="btn btn-musica-s">Créditos</button>
+          </div>
+        </div>
+        <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
+          <div id="div-dropdown-modulo-musica">
+            <div class="dropdown">
+              <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
+              <ul class="dropdown-menu btn-block">
+                <li><button class="btn btn-block btn-musica-d">Andina</button></li>
+                <li><button class="btn btn-block btn-musica-d">Llanero</button></li>
+                <li><button class="btn btn-block btn-musica-d">Pacífico</button></li>
+                <li><button class="btn btn-block btn-musica-d">Atlántico</button></li>
+                <li><button class="btn btn-block btn-musica-d">Carranga</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+    <?php if(is_page("Música")) :?>
+      <div class="row" id="div-mod-enc-mus">
+        <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
+        <div class="col-lg-1 col-md-1 text-center">
+          <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
+        </div>
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-4 col-md-4 text-center" style="color: #9c474c;">
+          <h2 class="tit-enc" style="font-size: 60px;"><strong>MÚSICA ANDINA</strong></h2>
+        </div>
+        <div class="col-lg-offset-3 col-lg-1 col-md-offset-4 col-md-1 text-center">
+          <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
+        </div>
+      </div>
+      <div class="row" id="contenedor-aula-musica">
+        <div class="col-lg-offset-5 col-lg-6 col-md-offset-3 col-md-8" style="top: 10%;">
+          <div class="col-lg-offset-1 col-lg-11" id="div-info-andina">
+            <h2>La Música Andina</h2>
+            <br>
+            <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina</p>
+          </div>
+          <div class="col-lg-offset-1 col-lg-4">
+            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.jpg">
+            <button class="btn btn-block btn-musica-s">Sala Teórica</button></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.jpg">
+            <button class="btn btn-block btn-musica-s">Sala Interactiva</button></a>
+          </div>
+          <div class="col-lg-3">
+            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.jpg">
+            <button class="btn btn-block btn-musica-s">Sala General</button></a>
           </div>
         </div>
       </div>
@@ -161,13 +209,13 @@
         <div class="row" id="div-mod-enc">
           <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
           <div class="col-lg-1 col-md-1 text-center">
-            <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_bogota.png">
+            <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
           </div>
           <div class="col-lg-offset-4 col-lg-2 col-md-offset-4 col-md-2" style="color: #9c474c;">
             <h2 class="tit-enc" style="font-size: 60px;"><strong>DANZA</strong></h2>
           </div>
           <div class="col-lg-offset-4 col-lg-1 col-md-offset-4 col-md-1 text-center">
-            <img src="<?php bloginfo('template_url'); ?>/danza/images/logo_crea.png">
+            <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
           </div>
         </div>
         <div class="row" id="contenedor-aula-danza">

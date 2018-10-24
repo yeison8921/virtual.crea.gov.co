@@ -28,7 +28,7 @@
         Danza</a>
       </div>
       <div class="col-lg-1-7 col-md-1-7 col-xs-1-6-12 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/musica" ><img src="<?php bloginfo('template_url'); ?>/images/icono_musica.png"><br>
+        <a href="<?php bloginfo('url'); ?>/introduccion-aula-musica" ><img src="<?php bloginfo('template_url'); ?>/images/icono_musica.png"><br>
         Música</a>
       </div>
     </div>

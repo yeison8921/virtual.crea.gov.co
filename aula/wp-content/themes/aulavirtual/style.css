@@ -60,15 +60,6 @@ body {
   color: #591508;
 }
 
-#contenedor-index-musica{
-  background-image: url('musica/images/fondo_aula_musica.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 900px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .tit-enc{
   font-family: 'Local Van Condensed Bold' !important;
 }
@@ -276,26 +267,6 @@ label{
   margin-bottom: 20px;
 }
 
-.btn-musica-p{
-  font-size: 30px;
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 2.5px; 
-  height: 55px;
-  margin-bottom: 20px;
-}
-
-.btn-musica-s{
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 0.5px; 
-  height: 35px;
-  margin-bottom: 20px;
-  width: 200px;
-  font-size: 20px
-}
 
 .navbar{
   background-color: #ff3c36;
@@ -444,6 +415,7 @@ table.dataTable.no-footer{
   -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
   box-shadow: 0 0px 0px rgba(0,0,0,.175);
 }
+
 #div-dropdown-modulo-danza .dropdown-menu>li>a {
   padding: 1px 0px;
 }
@@ -503,3 +475,102 @@ table.dataTable.no-footer{
 #div-sel-modulo img{
   width: 250px;
 }
+
+
+/*Estilos aula música*/
+
+#contenedor-index-musica{
+  background-image: url('musica/images/fondo_introduccion_musica.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  height: 900px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contenedor-aula-musica{
+  background-image: url('musica/images/fondo_modulos_musica.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 18px;
+  color: #591508;
+}
+
+#div-mod-enc-mus{
+ background-image: url('musica/images/header_modulo_musica.jpg');
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: cover;
+ display: flex;
+ align-items: center;
+ height: 80px;
+}
+
+#div-dropdown-modulo-musica .dropdown-menu {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#contenedor-index-musica button:hover {
+  color: #08580f;
+}
+
+.btn-musica-p{
+  background-color: white; 
+  font-size: 30px;
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 2.5px; 
+  height: 55px;
+  margin-bottom: 20px;
+}
+
+.btn-musica-s{
+  background-color: white; 
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 0.5px; 
+  height: 35px;
+  margin-bottom: 20px;
+  width: 200px;
+  font-size: 20px
+}
+
+.btn-musica-d{
+  background-color: white; 
+  font-size: 30px;
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 2.5px; 
+  height: 55px;
+  margin-bottom: 2px;
+}
+
+#div-info-andina{
+  text-align: left;
+}
+
+#div-info-andina>h2{
+  font-size: 45px;
+  color: #16a20f;
+  text-align: right;
+}
+
+#div-info-andina>p{
+  font-size: 23px;
+  color: #403938;
+  text-align: right;
+}
+#contenedor-aula-musica > div > div > a{
+  text-decoration: none;
+}
+
+
+
+/*Fin estilos aula música*/
