@@ -100,8 +100,8 @@
         </div>
       </div>
       <div class="row" id="contenedor-aula-musica">
-        <div class="col-lg-offset-5 col-lg-6 col-md-offset-3 col-md-8" style="top: 10%;">
-          <div class="col-lg-offset-1 col-lg-11" id="div-info-andina">
+        <div class="col-lg-offset-5 col-lg-6 col-md-offset-3 col-md-8" id="div-info-andina">
+          <div class="col-lg-offset-1 col-lg-11">
             <h2>La Música Andina</h2>
             <br>
             <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina</p>
@@ -118,6 +118,9 @@
             <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.jpg">
             <button class="btn btn-block btn-musica-s">Sala General</button></a>
           </div>
+        </div>
+        <div id="mod">
+          
         </div>
       </div>
     <?php endif; ?>

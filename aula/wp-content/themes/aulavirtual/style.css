@@ -554,15 +554,15 @@ table.dataTable.no-footer{
 
 #div-info-andina{
   text-align: left;
+  top: 10%;
 }
-
-#div-info-andina>h2{
+#div-info-andina > div > h2{
   font-size: 45px;
   color: #16a20f;
   text-align: right;
 }
 
-#div-info-andina>p{
+#div-info-andina > div > p{
   font-size: 23px;
   color: #403938;
   text-align: right;
@@ -570,7 +570,5 @@ table.dataTable.no-footer{
 #contenedor-aula-musica > div > div > a{
   text-decoration: none;
 }
-
-
 
 /*Fin estilos aula música*/
