@@ -55,19 +55,19 @@
         <div class="row"></div>
         <div id="div-info-aula-musica" class="row" style="display: none;">
           <div class="col-lg-offset-1 col-lg-2 col-md-1-5">
-            <button class="btn btn-musica-s">Introducción</button>
+            <button class="btn btn-block btn-musica-s">Introducción</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-musica-s">Objetivos</button>
+            <button class="btn btn-block btn-musica-s">Objetivos</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-musica-s">Metodología</button>
+            <button class="btn btn-block btn-musica-s">Metodología</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-musica-s">Público objetivo</button>
+            <button class="btn btn-block btn-musica-s">Público objetivo</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-musica-s">Créditos</button>
+            <button class="btn btn-block btn-musica-s">Créditos</button>
           </div>
         </div>
         <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
@@ -87,6 +87,7 @@
       </div>
     <?php endif; ?>
     <?php if(is_page("Música")) :?>
+      <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
       <div class="row" id="div-mod-enc-mus">
         <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
         <div class="col-lg-1 col-md-1 text-center">
@@ -106,23 +107,68 @@
             <br>
             <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina</p>
           </div>
-          <div class="col-lg-offset-1 col-lg-4">
+          <div class="col-lg-4 text-center">
             <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.jpg">
-            <button class="btn btn-block btn-musica-s">Sala Teórica</button></a>
+              <button class="btn btn-block btn-musica-s">Sala Teórica</button></a>
+            </div>
+            <div class="col-lg-4 text-center">
+              <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.jpg">
+                <button class="btn btn-block btn-musica-s">Sala Interactiva</button></a>
+              </div>
+              <div class="col-lg-4 text-center">
+                <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.jpg">
+                  <button class="btn btn-block btn-musica-s">Sala General</button></a>
+                </div>
+              </div>
+              <div id="div-con-mod-andina" style="display: none;">
+                <div class="col-lg-3 col-md-4 col-sm-4" id="div-btn-mod-mus" style="height: 750px;">
+                  <div style="margin-top: 60%;">
+                    <div class='row'>
+                      <div class="col-lg-1 col-md-1 col-sm-1">  
+                        <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>
+                      </div>
+                      <div class="col-lg-9 col-md-10 col-sm-10">
+                        <button class='btn btn-block btn-musica-t' id="btn-guabina">Guabina</button>
+                      </div>
+                    </div>
+                    <div class='row'>
+                      <div class="col-lg-1 col-md-1 col-sm-1">
+                        <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>
+                      </div>
+                      <div class="col-lg-9 col-md-10 col-sm-10">
+                        <button class='btn btn-block btn-musica-s' id="btn-pasillo">Pasillo</button>
+                      </div>
+                    </div>
+                    <div class='row'>
+                      <div class="col-lg-1 col-md-1 col-sm-1">
+                       <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
+                     </div>
+                     <div class="col-lg-9 col-md-10 col-sm-10">
+                      <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-offset-1 col-lg-8">
+                <div class="col-lg-12" id="div-tit-andina">
+                  <h2>SALA TEÓRICA</h2>
+                </div>
+                <div class="col-lg-7" id="div-tex-andina">
+                  <p>En Colombia, el término "música andina" se refiere a una serie de géneros musicales de algunos departamentos surcados por montañas de la Cordillera de los Andes, la cual en territorio Colombiano se divide en tres ramales conocidos como la Cordillera Oriental, Cordillera Central y Cordillera Occidental, comprendiendo entre otros los departamentos de Nariño, Cauca, Valle del Cauca, Huila, Tolima, Cundinamarca, Santander, Norte de Santander, Antioquia Boyacá y el Eje cafetero.<br><br>Debido a su extensa cobertura geográfica, la música andina colombiana es muy amplia y variada, ya que cada región le imprime su toque cultural, derivando varios ritmos entre los cuales esta el bambuco, guabina, torbellino, sanjuanero, la carranga, pasillo rajaleña, bunde, música guasca, etc.</p>
+                </div>
+                <div class="col-lg-5" id="div-img-andina">
+                  <img src="<?php bloginfo('template_url'); ?>/musica/images/instrumento.jpg" class="img-responsive">
+                  <hr>
+                  <p>La guaracha es un instrumento musucal idiófono de raspado utilizado mayormente en el vallenato. Se fabrica, entre otros, de caña o de lata.</p>
+                </div>
+                <div class="col-lg-7">
+                  <div class="col-lg-4"><button class="btn btn-block btn-musica-s" id="btn-ritmo-and">Ritmo</button></div>
+                  <div class="col-lg-4"><button class="btn btn-block btn-musica-s" id="btn-melodia-and">Melodía</button></div>
+                  <div class="col-lg-4"><button class="btn btn-block btn-musica-s" id="btn-armonia-and">Armonía</button></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.jpg">
-            <button class="btn btn-block btn-musica-s">Sala Interactiva</button></a>
-          </div>
-          <div class="col-lg-3">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.jpg">
-            <button class="btn btn-block btn-musica-s">Sala General</button></a>
-          </div>
-        </div>
-        <div id="mod">
-          
-        </div>
-      </div>
     <?php endif; ?>
     <?php if(is_page("Audiovisuales")) :?>
     <?php endif; ?>
@@ -337,7 +383,7 @@
                 </div>
               </div>
 
-              <div  id="mod-equilibrio" style="display: none;">
+              <div id="mod-equilibrio" style="display: none;">
                 <h2 class="tit-equi" style="padding-bottom: 40px;">EQUILIBRIO PUNTOS DE APOYO</h2>
                 <div class="row">
                   <div class="div-con-equi-uno col-lg-6 col-md-12">
