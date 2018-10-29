@@ -93,7 +93,7 @@
         <div class="col-lg-1 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
         </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-4 col-md-4 text-center" style="color: #9c474c;">
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-4 col-md-4 text-center" style="color: #425c2f;">
           <h2 class="tit-enc" style="font-size: 60px;"><strong>MÚSICA ANDINA</strong></h2>
         </div>
         <div class="col-lg-offset-3 col-lg-1 col-md-offset-4 col-md-1 text-center">
@@ -108,15 +108,15 @@
             <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina</p>
           </div>
           <div class="col-lg-4 text-center">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.jpg">
+            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
               <button class="btn btn-block btn-musica-s">Sala Teórica</button></a>
             </div>
             <div class="col-lg-4 text-center">
-              <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.jpg">
+              <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
                 <button class="btn btn-block btn-musica-s">Sala Interactiva</button></a>
               </div>
               <div class="col-lg-4 text-center">
-                <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.jpg">
+                <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
                   <button class="btn btn-block btn-musica-s">Sala General</button></a>
                 </div>
               </div>
