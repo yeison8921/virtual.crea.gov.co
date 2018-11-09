@@ -590,19 +590,19 @@ table.dataTable.no-footer{
   background: #98f89f;
 }
 
-#div-tit-andina{
+.con-tit-mod-mus{
   height: 150px; 
   padding-top: 50px;
-  font-size: 24px;  
 }
 
-#div-tit-andina>h2{
-  font-size: 45px;  
+.tit-mod-mus{
+  font-size: 45px;
 }
 
-#div-tex-andina{
+.text-modulo{
   height: 500px; 
   font-size: 22px;
 }
+
 
 /*Fin estilos aula música*/
