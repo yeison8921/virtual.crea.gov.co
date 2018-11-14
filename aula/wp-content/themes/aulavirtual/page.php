@@ -93,10 +93,10 @@
         <div class="col-lg-1 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
         </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-4 col-md-4 text-center" style="color: #425c2f;">
-          <h2 class="tit-enc" style="font-size: 60px;"><strong>MÚSICA ANDINA</strong></h2>
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6  text-center" style="color: #425c2f;">
+          <h2 class="tit-enc"><strong>MÚSICA ANDINA</strong></h2>
         </div>
-        <div class="col-lg-offset-3 col-lg-1 col-md-offset-4 col-md-1 text-center">
+        <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
         </div>
       </div>
@@ -107,16 +107,16 @@
             <br>
             <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina</p>
           </div>
-          <div class="col-lg-4 text-center">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
+          <div class="col-lg-4 col-md-4 text-center">
+            <a href="#" id="btn-sala-teorica"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
               <button class="btn btn-block btn-musica-s">Sala Teórica</button></a>
             </div>
-            <div class="col-lg-4 text-center">
-              <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
+            <div class="col-lg-4 col-md-4 text-center">
+              <a href="#" id="btn-sala-interactiva"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
                 <button class="btn btn-block btn-musica-s">Sala Interactiva</button></a>
               </div>
-              <div class="col-lg-4 text-center">
-                <a href="#"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
+              <div class="col-lg-4 col-md-4 text-center">
+                <a href="#" id="btn-sala-general"><img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
                   <button class="btn btn-block btn-musica-s">Sala General</button></a>
                 </div>
               </div>
@@ -149,21 +149,21 @@
               </div>
             </div>
             <div id="div-con-guabina" style="display: none;">
-              <div class="col-lg-offset-1 col-lg-8">
-                <div class="col-lg-12 con-tit-mod-mus" id="div-tit-guabina">
+              <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+                <div class="col-lg-12 col-md-12 con-tit-mod-mus" id="div-tit-guabina">
                   <h2 class="tit-mod-mus"></h2>
                 </div>
-                <div class="col-lg-7 col-md-7 text-modulo" id="div-tex-guabina">
+                <div class="col-lg-6 col-md-12 text-modulo" id="div-tex-guabina">
                   <p></p>
                   <img src="" class="img-responsive">
                 </div>
-                <div class="col-lg-5 col-md-5" id="div-img-guabina">
+                <div class="col-lg-6 col-md-12" id="div-img-guabina">
                   <p></p>
                   <img src="" class="img-responsive">
                   <hr>
                   <span></span>
                 </div>
-                <div class="col-lg-7 col-md-7" id="div-btn-guabina">
+                <div class="col-lg-7 col-md-12" id="div-btn-guabina">
                   <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-ritmo-guabina">Ritmo</button></div>
                   <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-melodia-guabina">Melodía</button></div>
                   <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-armonia-guabina">Armonía</button></div>
@@ -171,44 +171,44 @@
               </div>
             </div>
             <div id="div-con-pasillo" style="display: none;">
-              <div class="col-lg-offset-1 col-lg-8">
+              <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
                 <div class="col-lg-12 con-tit-mod-mus" id="div-tit-pasillo">
                   <h2 class="tit-mod-mus"></h2>
                 </div>
-                <div class="col-lg-6 col-md-6 text-modulo" id="div-tex-pasillo">
+                <div class="col-lg-6 col-md-12 text-modulo" id="div-tex-pasillo">
                   <p></p>
                   <img src="" class="img-responsive">
                 </div>
-                <div class="col-lg-6 col-md-6" id="div-img-pasillo">
+                <div class="col-lg-6 col-md-12" id="div-img-pasillo">
                   <p></p>
                   <img src="" class="img-responsive">
                   <hr>
                   <span></span>
                 </div>
-                <div class="col-lg-7 col-md-7" id="div-btn-pasillo">
-                  <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-ritmo-pasillo">Ritmo</button></div>
-                  <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-melodia-pasillo">Melodía y Armonía</button></div>
+                <div class="col-lg-12 col-md-12" id="div-btn-pasillo">
+                  <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3"><button class="btn btn-block btn-musica-s" id="btn-ritmo-pasillo">Ritmo</button></div>
+                  <div class="col-lg-3 col-md-3"><button class="btn btn-block btn-musica-s" id="btn-melodia-pasillo">Melodía y Armonía</button></div>
                 </div>
               </div>
             </div>
             <div id="div-con-bambuco" style="display: none;">
-              <div class="col-lg-offset-1 col-lg-8">
+              <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
                 <div class="col-lg-12 con-tit-mod-mus" id="div-tit-bambuco">
                   <h2 class="tit-mod-mus"></h2>
                 </div>
-                <div class="col-lg-12 col-md-12 text-modulo" id="div-tex-bambuco">
+                <div class="col-lg-6 col-md-12 text-modulo" id="div-tex-bambuco">
                   <p></p>
                   <img src="" class="img-responsive">
                 </div>
-                <div class="col-lg-12 col-md-12" id="div-img-bambuco">
+                <div class="col-lg-6 col-md-12" id="div-img-bambuco">
                   <p></p>
                   <img src="" class="img-responsive">
                   <hr>
                   <span></span>
                 </div>
-                <div class="col-lg-7 col-md-7" id="div-btn-bambuco">
-                  <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-ritmo-bambuco">Ritmo</button></div>
-                  <div class="col-lg-4 col-md-4"><button class="btn btn-block btn-musica-s" id="btn-melodia-bambuco">Melodía y Armonía</button></div>
+                <div class="col-lg-12 col-md-12" id="div-btn-bambuco">
+                  <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3"><button class="btn btn-block btn-musica-s" id="btn-ritmo-bambuco">Ritmo</button></div>
+                  <div class="col-lg-3 col-md-3"><button class="btn btn-block btn-musica-s" id="btn-melodia-bambuco">Melodía y Armonía</button></div>
                 </div>
               </div>
             </div>

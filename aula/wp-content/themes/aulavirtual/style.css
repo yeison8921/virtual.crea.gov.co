@@ -62,6 +62,7 @@ body {
 
 .tit-enc{
   font-family: 'Local Van Condensed Bold' !important;
+  font-size: 50px;
 }
 
 @media (min-width: 1200px){
@@ -480,7 +481,7 @@ table.dataTable.no-footer{
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 850px;
+  height: 1000px;
   font-family: 'Local Van Condensed Regular', Regular !important;
   font-size: 18px;
   color: #08580f;
@@ -501,8 +502,12 @@ table.dataTable.no-footer{
   border: 0px solid transparent;
 }
 
-#contenedor-index-musica, #contenedor-aula-musica button:hover {
-  color: #08580f;
+#contenedor-index-musica, #contenedor-aula-musica .btn-musica-s:hover {
+  color: inherit;
+}
+
+#contenedor-index-musica, #contenedor-aula-musica .btn-musica-t:hover {
+  color: #ffffff;
 }
 
 #div-inicio-curso-musica, #div-inicio-info-aula-musica{
@@ -539,7 +544,7 @@ table.dataTable.no-footer{
   border-width: 0.5px; 
   height: 35px;
   margin-bottom: 20px;
-  font-size: 20px
+  font-size: 1vw;
 }
 
 .btn-musica-t{
@@ -548,7 +553,7 @@ table.dataTable.no-footer{
   color: #ffffff;
   height: 35px;
   margin-bottom: 20px;
-  font-size: 20px
+  font-size: 1vw;
 }
 
 .btn-musica-d{
@@ -600,8 +605,10 @@ table.dataTable.no-footer{
 }
 
 .text-modulo{
-  height: 500px; 
+  height: 550px; 
   font-size: 22px;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 
