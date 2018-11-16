@@ -467,10 +467,50 @@ table.dataTable.no-footer{
 
 /*Estilos aula música*/
 
+@media (max-height: 626px) {
+  #div-info-andina > div > p{
+    font-size: 14px;
+  }
+  .btn-musica-s, .btn-musica-t{
+    font-size: 14px;
+    height: 30px;
+  }
+  .text-modulo, .btn-musica-s, .btn-musica-t{
+    font-size: 14px;
+  }
+  .tit-mod-mus{
+    font-size: 35px;
+  }
+  .con-tit-mod-mus{
+    height: 130px; 
+    padding-top: 40px;
+  }
+}
+
+@media (min-height: 938px) {
+  #div-info-andina > div > p{
+    font-size: 22px;
+  }
+  .btn-musica-s, .btn-musica-t{
+    font-size: 22px;
+    height: 40px;
+  }
+  .text-modulo{
+    font-size: 22px;
+  }
+  .tit-mod-mus{
+    font-size: 45px;
+  }
+  .con-tit-mod-mus{
+    height: 150px; 
+    padding-top: 40px;
+  }
+}
+
 #contenedor-index-musica{
   background-image: url('musica/images/fondo_introduccion_musica.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 590px;
+  height: 100vh;
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -481,7 +521,8 @@ table.dataTable.no-footer{
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 590px;
+  height: 80vh;
+  /*height: 590px;*/
   font-family: 'Local Van Condensed Regular', Regular !important;
   /*font-size: 16px;*/
   color: #08580f;
@@ -501,13 +542,19 @@ table.dataTable.no-footer{
   background-color: transparent;
   border: 0px solid transparent;
 }
-
-#contenedor-index-musica, #contenedor-aula-musica .btn-musica-s:hover {
+#contenedor-aula-musica a:hover{
+  text-decoration: none;
   color: inherit;
 }
 
-#contenedor-index-musica, #contenedor-aula-musica .btn-musica-t:hover {
+.btn-musica-s:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.btn-musica-t:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 
 #div-inicio-curso-musica, #div-inicio-info-aula-musica{
@@ -543,18 +590,15 @@ table.dataTable.no-footer{
   color: #08580f; 
   border-color: #08580f; 
   border-width: 0.5px; 
-  height: 35px;
   margin-bottom: 20px;
-  font-size: 1.5vw;
+
 }
 
 .btn-musica-t{
   background-color: #121a1c; 
   border-radius: 10px; 
   color: #ffffff;
-  height: 35px;
   margin-bottom: 20px;
-  font-size: 1.5vw;
 }
 
 .btn-musica-d{
@@ -580,10 +624,10 @@ table.dataTable.no-footer{
 }
 
 #div-info-andina > div > p{
-  font-size: 17px;
   color: #403938;
   text-align: right;
 }
+
 #contenedor-aula-musica > div > div > a{
   text-decoration: none;
 }
@@ -597,21 +641,6 @@ table.dataTable.no-footer{
   background: #98f89f;
 }
 
-.con-tit-mod-mus{
-  height: 150px; 
-  padding-top: 50px;
-}
-
-.tit-mod-mus{
-  font-size: 45px;
-}
-
-.text-modulo{
-  height: 550px; 
-  font-size: 22px;
-  overflow-y: auto;
-  padding-bottom: 20px;
-}
 
 
-/*Fin estilos aula música*/
+/*Fin estilos aula música
