@@ -72,14 +72,27 @@ jQuery(document).ready(function($){
 		if($(this).data('modulo') == "interactiva"){
 			switch($(this).attr('id')) {
 				case "btn-guabina":
+				$("#div-int-guabina").show();
+				$("#div-int-bambuco").hide();
+				$("#div-int-pasillo").hide();
 				$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
 				$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
 				limpiarInfo("guabina");
 				infoBasicaInteractivaGuabina()
 				break;
 				case "btn-pasillo":
+				$("#div-int-guabina").hide();
+				$("#div-int-bambuco").hide();
+				$("#div-int-pasillo").show();
+				limpiarInfo("pasillo");
+				infoBasicaInteractivaPasillo();
 				break;
 				case "btn-bambuco":
+				$("#div-int-guabina").hide();
+				$("#div-int-pasillo").hide();
+				$("#div-int-bambuco").show();
+				limpiarInfo("bambuco");
+				infoBasicaInteractivaBambuco();
 				break;
 			}
 		}
@@ -88,6 +101,23 @@ jQuery(document).ready(function($){
 	function infoBasicaInteractivaGuabina(){
 		$("#div-tit-guabina h2").text("GUABINA");
 		$("#div-tex-guabina p").html("<span style='font-size: 20px'>SCROLL</span>En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales");
+	}
+
+	function infoBasicaInteractivaPasillo(){
+		$("#div-tit-pasillo	h2").text("PASILLO");
+		$("#div-tex-pasillo #img-u").attr("src",  $("#bloginfo").val() + "/musica/images/guitarra.jpg");
+		$("#div-tex-pasillo #img-d").attr("src",  $("#bloginfo").val() + "/musica/images/icono_sala_interactiva.png");
+	}
+
+	function infoBasicaInteractivaBambuco(){
+		$("#div-tit-bambuco	h2").text("BAMBUCO");
+		$("#div-int-bambuco #div-tex-bambuco").removeClass().addClass("col-lg-4 col-md-4 text-center");
+		$("#div-int-bambuco #div-img-bambuco").removeClass().addClass("col-lg-7 col-md-7");
+		$("#div-int-bambuco img").not("#img-t").css("width", '130px');
+		$("#div-tex-bambuco #img-u").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+		$("#div-tex-bambuco #img-d").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/chucho.png");
+		$("#div-img-bambuco #img-t").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/instrumento_2.png");
+		$("#div-img-bambuco #img-c").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/bandola.png");
 	}
 
 	function infoBasicaPasiilo(){
@@ -214,8 +244,40 @@ jQuery(document).ready(function($){
 			case "btn-play-guabina":
 			$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-3").addClass("col-lg-offset-2");
 			$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-3").addClass("col-lg-offset-2");
-			$("#div-tit-guabina h2").text("GUABINA");
+			$("#div-tit-guabina h2").text("PLAY ALONG LA RUANA");
 			$("#div-int-guabina #div-tex-guabina p").html('<iframe width="460" height="215" src="https://www.youtube.com/embed/ENrGhbsxRJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+			break;
+		}
+	});
+
+	$("#div-int-pasillo").on('click', 'button', function() {
+		limpiarInfo("pasillo");
+		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
+		$("#div-int-pasillo button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
+		switch($(this).attr('id')) {
+			case "btn-instrumentos-pasillo":
+			infoBasicaInteractivaPasillo();
+			break;
+			case "btn-play-pasillo":
+			$("#div-tit-pasillo h2").text("PLAY ALONG CACHIPAY");
+			$("#div-int-pasillo #div-img-pasillo p").html('<iframe width="460" height="215" src="https://www.youtube.com/embed/lGdywufbTE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+			break;
+		}
+	});
+
+	$("#div-int-bambuco").on('click', 'button', function() {
+		limpiarInfo("bambuco");
+		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
+		$("#div-int-bambuco button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
+		switch($(this).attr('id')) {
+			case "btn-instrumentos-bambuco":
+			infoBasicaInteractivaBambuco();
+			break;
+			case "btn-play-bambuco":
+			$("#div-tit-bambuco h2").text("PLAY ALONG BOCHICA");
+			$("#div-int-bambuco #div-tex-bambuco").removeClass().addClass("col-lg-12 col-md-12");
+			$("#div-int-bambuco #div-img-bambuco").removeClass().addClass("col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6");
+			$("#div-int-bambuco #div-img-bambuco p").html('<iframe width="460" height="215" src="https://www.youtube.com/embed/1hwdMxAHctc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 			break;
 		}
 	});

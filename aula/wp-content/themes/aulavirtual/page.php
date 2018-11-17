@@ -254,6 +254,64 @@
           </div>
         </div>
       </div>
+      <div id="div-int-pasillo" style="display: none;">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+          <div class="col-lg-12 con-tit-mod-mus" id="div-tit-pasillo">
+            <h2 class="tit-mod-mus">PASILLO</h2>
+          </div>
+          <div class="text-modulo">
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-tex-pasillo">
+              <p></p>
+              <a href="#" id="l-img-u"><img src="" id="img-u"></a>
+              <a href="#" id="l-img-d"><img src="" id="img-d"></a>
+            </div>
+            <div class="col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6" id="div-img-pasillo">
+              <p></p>
+              <a href="#" id="l-img-t"><img src="" id="img-t"></a>
+              <a href="#" id="l-img-c"><img src="" id="img-c"></a>
+              <hr>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10" id="div-btn-pasillo">
+            <div class="col-lg-4 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-instrumentos-pasillo">Instrumentos tradicionales</button>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-play-pasillo">Play along</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="div-int-bambuco" style="display: none;">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+          <div class="col-lg-12 con-tit-mod-mus" id="div-tit-bambuco">
+            <h2 class="tit-mod-mus">BAMBUCO</h2>
+          </div>
+          <div class="text-modulo">
+            <div class="col-lg-4 col-md-4 text-center" id="div-tex-bambuco">
+              <p></p>
+              <a href="#" id="l-img-u"><img src="" id="img-u"></a>
+              <a href="#" id="l-img-d"><img src="" id="img-d"></a>
+            </div>
+            <div class="col-lg-7 col-md-7" id="div-img-bambuco">
+              <p></p>
+              <a href="#" id="l-img-t"><img src="" id="img-t"></a>
+              <a href="#" id="l-img-c"><img src="" id="img-c"></a>
+              <hr>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10" id="div-btn-bambuco">
+            <div class="col-lg-4 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-instrumentos-bambuco">Instrumentos tradicionales</button>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-play-bambuco">Play along</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <?php endif; ?>
   <?php if(is_page("Audiovisuales")) :?>
