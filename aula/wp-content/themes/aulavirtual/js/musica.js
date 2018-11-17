@@ -23,14 +23,16 @@ jQuery(document).ready(function($){
 		$("#flecha-guabina").show();
 		switch($(this).attr('id')) {
 			case "btn-sala-teorica":
+			$("#div-btn-mod-mus button").attr("data-modulo", "teorica");
 			$("#div-con-guabina").show();
 			InfoBasicaGuabina();
 			break;
 			case "btn-sala-interactiva":
-
+			$("#div-btn-mod-mus button").attr("data-modulo", "interactiva");
+			$("#div-int-guabina").show();
+			infoBasicaInteractivaGuabina();
 			break;
 			case "btn-sala-general":
-
 			break;
 		}
 	});
@@ -40,32 +42,53 @@ jQuery(document).ready(function($){
 		$("#div-btn-mod-mus .flecha-musica").not(this).hide();
 		$($(this).parent().parent().children()[0]).children(".flecha-musica").show();
 		$("#div-btn-mod-mus button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
-		switch($(this).attr('id')) {
-			case "btn-guabina":
-			$("#div-con-guabina").show();
-			$("#div-con-pasillo").hide();
-			$("#div-con-bambuco").hide();
-			limpiarInfo("guabina");
-			InfoBasicaGuabina();
-			break;
-			case "btn-pasillo":
-			$("#div-con-guabina").hide();
-			$("#div-con-bambuco").hide();
-			$("#div-img-pasillo img").css("height", "");
-			$("#div-con-pasillo").show();
-			limpiarInfo("pasillo");
-			infoBasicaPasiilo();
-			break;
-			case "btn-bambuco":
-			$("#div-con-guabina").hide();
-			$("#div-con-pasillo").hide();
-			$("#div-tex-bambuco").removeClass('col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6').addClass('col-lg-6 col-md-12');
-			$("#div-con-bambuco").show();
-			limpiarInfo("bambuco");
-			InfoBasicaBambuco();
-			break;
+		if($(this).data('modulo') == "teorica"){
+			switch($(this).attr('id')) {
+				case "btn-guabina":
+				$("#div-con-guabina").show();
+				$("#div-con-pasillo").hide();
+				$("#div-con-bambuco").hide();
+				limpiarInfo("guabina");
+				InfoBasicaGuabina();
+				break;
+				case "btn-pasillo":
+				$("#div-con-guabina").hide();
+				$("#div-con-bambuco").hide();
+				$("#div-img-pasillo img").css("height", "");
+				$("#div-con-pasillo").show();
+				limpiarInfo("pasillo");
+				infoBasicaPasiilo();
+				break;
+				case "btn-bambuco":
+				$("#div-con-guabina").hide();
+				$("#div-con-pasillo").hide();
+				$("#div-tex-bambuco").removeClass('col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6').addClass('col-lg-6 col-md-12');
+				$("#div-con-bambuco").show();
+				limpiarInfo("bambuco");
+				InfoBasicaBambuco();
+				break;
+			}
+		}
+		if($(this).data('modulo') == "interactiva"){
+			switch($(this).attr('id')) {
+				case "btn-guabina":
+				$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
+				$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
+				limpiarInfo("guabina");
+				infoBasicaInteractivaGuabina()
+				break;
+				case "btn-pasillo":
+				break;
+				case "btn-bambuco":
+				break;
+			}
 		}
 	});
+
+	function infoBasicaInteractivaGuabina(){
+		$("#div-tit-guabina h2").text("GUABINA");
+		$("#div-tex-guabina p").html("<span style='font-size: 20px'>SCROLL</span>En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales");
+	}
 
 	function infoBasicaPasiilo(){
 		$("#div-tit-pasillo h2").text("PASILLO")
@@ -173,4 +196,57 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$("#div-int-guabina").on('click', 'button', function() {
+		limpiarInfo("guabina");
+		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
+		$("#div-int-guabina button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
+		switch($(this).attr('id')) {
+			case "btn-instrumentos-guabina":
+			$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-2 col-md-offset-2").addClass("col-lg-offset-3 col-md-offset-3");
+			$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-2 col-md-offset-2 text-center").addClass("col-lg-offset-3 col-md-offset-3");
+			$("#div-tit-guabina h2").text("GUABINA");
+			$("#div-int-guabina img").css("width", '120px');
+			$("#img-u").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png");
+			$("#img-d").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
+			$("#img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png");
+			$("#img-c").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png");
+			break;
+			case "btn-play-guabina":
+			$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-3").addClass("col-lg-offset-2");
+			$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-3").addClass("col-lg-offset-2");
+			$("#div-tit-guabina h2").text("GUABINA");
+			$("#div-int-guabina #div-tex-guabina p").html('<iframe width="460" height="215" src="https://www.youtube.com/embed/ENrGhbsxRJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+			break;
+		}
+	});
+
+	$("#div-int-guabina").on('click', 'a', function() {
+		limpiarInfo("guabina");
+		$("#div-int-guabina #div-tex-guabina").removeClass().addClass("col-lg-6 col-md-6");
+		$("#div-int-guabina #div-img-guabina").removeClass().addClass("col-lg-6 col-md-6");
+		$("#div-int-guabina img").css("width", "");
+		$("#div-int-guabina #div-img-guabina").addClass('text-center');
+		switch($(this).attr('id')) {
+			case "l-img-u":
+			$("#div-tit-guabina h2").text("MARRANA");
+			$("#div-tex-guabina p").html('Conocida también como zambumbía, puerca, farruco y puerca, es un tambor de fricción con varilla fija, el cual se fabrica con un calabazo o fruto seco de totumo,al que se le corta un sector para formarle boca en la parte superior; sobre esta boca, se coloca un aro de bejuco al que va atado un parche o cuero (puede ser de cerdo de monte, conejo, cordero o chivo) y éste, es atravesado por una varilla de madera, asegurada por dentro y por fuera. Este instrumento es empleado para tocar ritmos como rajaleñas y sanjuaneros, es muy popular en el departamento de Santander, en los conjuntos guabineros para la música del torbellino.  El nombre de este instrumento, se debe a la semejanza con el gruñido de un cerdo o marrano.<br>Ver: <a href="https://www.fundacionbat.com.co/instrumentos.php?IDDepartamento=52">Marrana 1</a> y <a href="http://www.ewakulak.com/index.php?option=com_content&task=view&id=437">Marrana 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=Ei2c9zp4tNU">Youtube</a>');
+			$("#div-img-guabina #img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png")
+			break;
+			case "l-img-d":
+			$("#div-tit-guabina h2").text("CUCHARAS");
+			$("#div-tex-guabina p").html('Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión (entrechocandolas por su parte convexa) por acción de las dos manos: la una, sujetándolas (con el dedo índice de separador) y la otra, entrechocándolas con los dedos, palma, dorso, antebrazo o codo. Este instrumento fue muy usado para amenizar fiestas y reuniones, la cual, era una práctica muy frecuente en las clases populares. El sonido de las cucharas es muy similar al de las castañuelas (aunque no suenan exactamente igual). Existen varias técnicas y maneras de ejecución de éste instrumento, una de ellas, es golpearlas como si fueran palillos, otra, es coger ambas con una mano, y golpearlas contra la rodilla y la otra mano.<br>Ver: <a href="ahttp://www.tamborileros.com/tradiberia/idifono1.htm">Cucharas 1</a> y <a href="http://canteradesonidos.blogspot.com/2014/07/las-cucharas-como-instrumento-musical.html">Cucharas 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=95Jhfy38QKk">Youtube</a>');
+			$("#div-img-guabina #img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png")
+			break;
+			case "l-img-t":
+			$("#div-tit-guabina h2").text("GUARACHA");
+			$("#div-tex-guabina p").html('Su nombre proviene de un ave, la cual canta en coro entre hembras y machos. La guacharaca es un instrumento musical de rascado que se compone de dos partes: la guacharaca misma (cuya superficie es corrugada) y un trinche o peine (construido con alambre duro y mango de madera, el cual se usa para frotar o “rascar” la superficie corrugada de la guacharaca.<br>Ver: <a href="https://portalvallenato.net/2013/07/29/la-historia-de-la-guacharaca/">Historia de la guaracha</a> y <a href="http://blogs.eltiempo.com/vallenateando/2005/09/06/la-guacharaca/">Guaracha - El Tiempo</a><br>Imagen: <a href="https://www.google.com.co/search?q=guacharacas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiti4em3KreAhWLvFMKHbyYBGwQ_AUIDigB&biw=1517&bih=695#imgrc=HHWh9SKhvbAjkM:">Imagen guaracha</a> <br>Audio y video: <a href="https://www.youtube.com/watch?v=tGrsesfTto8">Youtube</a>');
+			$("#div-img-guabina #img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png")
+			break;
+			case "l-img-c":
+			$("#div-tit-guabina h2").text("ESTERILLA");
+			$("#div-tex-guabina p").html('Instrumento tradicional colombiano, construido con cañutos o trozos de bambú (en tre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.<br>Ver: <a href="https://culturatolimense.wordpress.com/category/instrumentos-folcloricos/">Esterilla 1</a> y <a href="https://www.google.com.co/search?q=esterillas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiC_qTb2KreAhUxvFkKHYCJDwoQ_AUIDigB&biw=1517&bih=695#imgrc=f6HFNsIO75OWCM">Esterilla 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=jDsUWn4cnoQ">Youtube</a>');
+			$("#div-img-guabina #img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png")
+			break;
+		}
+	});
 });

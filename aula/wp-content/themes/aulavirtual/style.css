@@ -467,7 +467,7 @@ table.dataTable.no-footer{
 
 /*Estilos aula música*/
 
-@media (max-height: 626px) {
+@media (max-height: 657px) {
   #div-info-andina > div > p{
     font-size: 14px;
   }
@@ -482,8 +482,8 @@ table.dataTable.no-footer{
     font-size: 35px;
   }
   .con-tit-mod-mus{
-    height: 130px; 
-    padding-top: 40px;
+    height: 150px; 
+    padding-top: 50px;
   }
 }
 
@@ -522,9 +522,7 @@ table.dataTable.no-footer{
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
-  /*height: 590px;*/
   font-family: 'Local Van Condensed Regular', Regular !important;
-  /*font-size: 16px;*/
   color: #08580f;
 }
 
