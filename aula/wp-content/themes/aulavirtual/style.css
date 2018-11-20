@@ -466,6 +466,18 @@ table.dataTable.no-footer{
 
 
 /*Estilos aula música*/
+.contenido{
+  display: none;
+}
+
+.text-modulo{
+  height: 70vh;
+}
+
+.botones-contenido{
+  bottom: 5%; 
+  position: absolute;
+}
 
 @media (max-height: 657px) {
   #div-info-andina > div > p{
@@ -487,7 +499,7 @@ table.dataTable.no-footer{
   }
 }
 
-@media (min-height: 938px) {
+@media (min-height: 889px) {
   #div-info-andina > div > p{
     font-size: 22px;
   }
@@ -544,15 +556,15 @@ table.dataTable.no-footer{
   text-decoration: none;
   color: inherit;
 }
-
+/*
 .btn-musica-s:hover {
   color: inherit !important;
   text-decoration: none !important;
-}
+}*/
 
-.btn-musica-t:hover {
-  color: #ffffff;
-  text-decoration: none;
+.btn-musica-t:hover, .btn-musica-t:focus  {
+  color: #ffffff !important;
+  text-decoration: !important;
 }
 
 #div-inicio-curso-musica, #div-inicio-info-aula-musica{
@@ -592,7 +604,7 @@ table.dataTable.no-footer{
 
 }
 
-.btn-musica-t{
+.btn-musica-t, .btn-musica-s:hover{
   background-color: #121a1c; 
   border-radius: 10px; 
   color: #ffffff;
