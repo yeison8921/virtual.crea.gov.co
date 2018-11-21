@@ -45,29 +45,48 @@
     <?php endif; ?>
     <?php if(is_page("Introducción aula música")) :?>
       <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+      <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
       <div class="row" id="contenedor-index-musica">
-        <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-inicio-curso-musica">
+        <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-botones-inicio">
           <button class="btn btn-block btn-musica-p" id="btn-salones">SALONES INTERACTIVOS DE MÚSICA</button>
-        </div>
-        <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-inicio-info-aula-musica" style="display: none;">
-          <button class="btn btn-block btn-musica-p" id="btn-inicio-musica">INICIAR</button>
+          <button class="btn btn-block btn-musica-p" id="btn-iniciar" style="display: none;">INICIAR</button>
         </div>
         <div class="row"></div>
         <div id="div-info-aula-musica" class="row" style="display: none;">
           <div class="col-lg-offset-1 col-lg-2 col-md-1-5">
-            <button class="btn btn-block btn-musica-s">Introducción</button>
+            <button class="btn btn-block btn-musica-s" id="btn-introduccion">Introducción</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-block btn-musica-s">Objetivos</button>
+            <button class="btn btn-block btn-musica-s" id="btn-objetivos">Objetivos</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-block btn-musica-s">Metodología</button>
+            <button class="btn btn-block btn-musica-s" id="btn-metodologia">Metodología</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-block btn-musica-s">Público objetivo</button>
+            <button class="btn btn-block btn-musica-s" id="btn-publico">Público objetivo</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <button class="btn btn-block btn-musica-s">Créditos</button>
+            <button class="btn btn-block btn-musica-s" id="btn-creditos">Créditos</button>
+          </div>
+        </div>
+        <div class="row" id="div-mod-enc-mus" style="display: none;">
+          <div class="col-lg-1 col-md-1 text-center">
+            <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
+          </div>
+          <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 text-center" style="color: #425c2f;">
+            <h2 class="tit-enc"><strong>MÚSICA</strong></h2>
+          </div>
+          <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 text-center">
+            <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
+          </div>
+        </div>
+        <div class="row col-lg-offset-6 col-lg-5 col-md-offset-6 col-md-5" id="div-info-detallada-musica" style="display: none; height: 100%;">
+          <div id="con-idm">
+            <h2><strong></strong></h2>
+            <p></p>
+          </div>
+          <div class="col-lg-4 col-md-4" style="position: absolute; bottom: 25%;">
+            <button class="btn btn-block btn-musica-s">Regresar</button>
           </div>
         </div>
         <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
@@ -93,7 +112,7 @@
         <div class="col-lg-1 col-md-1 text-center">
           <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
         </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6  text-center" style="color: #425c2f;">
+        <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 text-center" style="color: #425c2f;">
           <h2 class="tit-enc"><strong>MÚSICA ANDINA</strong></h2>
         </div>
         <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 text-center">
@@ -127,7 +146,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-4" id="div-btn-mod-mus" style="height: 750px; display: none;">
+        <div class="col-lg-3 col-md-3 col-sm-4" id="div-btn-mod-mus" style="height: 750px; display: none;">
           <br>
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
@@ -165,7 +184,7 @@
         </div>
       </div>
       <div class="contenido" id="div-con-guabina">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 col-md-12 con-tit-mod-mus" id="div-tit-guabina">
             <h2 class="tit-mod-mus"></h2>
           </div>
@@ -181,7 +200,7 @@
               <span></span>
             </div>
           </div>
-          <div class="row col-lg-6 col-md-6 botones-contenido" id="div-btn-guabina">
+          <div class="row col-lg-6 col-md-12 botones-contenido" id="div-btn-guabina">
             <div class="col-lg-4 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-ritmo-guabina">Ritmo</button>
             </div>
@@ -195,7 +214,7 @@
         </div>
       </div>
       <div class="contenido" id="div-con-pasillo">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-pasillo">
             <h2 class="tit-mod-mus"></h2>
           </div>
@@ -212,17 +231,17 @@
             </div>
           </div>
           <div class="col-lg-12 col-md-12 botones-contenido" id="div-btn-pasillo">
-            <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3">
+            <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-ritmo-pasillo">Ritmo</button>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-2 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-melodia-pasillo">Melodía y Armonía</button>
             </div>
           </div>
         </div>
       </div>
       <div class="contenido" id="div-con-bambuco">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-bambuco">
             <h2 class="tit-mod-mus"></h2>
           </div>
@@ -239,17 +258,17 @@
             </div>
           </div>
           <div class="col-lg-12 col-md-12 botones-contenido" id="div-btn-bambuco">
-            <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3">
+            <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-ritmo-bambuco">Ritmo</button>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-2 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-melodia-bambuco">Melodía y Armonía</button>
             </div>
           </div>
         </div>
       </div>
       <div class="contenido" id="div-int-guabina">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-guabina">
             <h2 class="tit-mod-mus">GUABINA</h2>
           </div>
@@ -269,16 +288,16 @@
           </div>
           <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-guabina">
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-instrumentos-guabina">Instrumentos tradicionales</button>
+              <button class="btn btn-block btn-musica-s" id="btn-play-guabina">Play along<!-- Instrumentos tradicionales --></button>
             </div>
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-play-guabina">Play along</button>
+              <button class="btn btn-block btn-musica-s" id="btn-referentes-guabina">Referentes</button>
             </div>
           </div>
         </div>
       </div>
       <div class="contenido" id="div-int-pasillo">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-pasillo">
             <h2 class="tit-mod-mus">PASILLO</h2>
           </div>
@@ -298,16 +317,16 @@
           </div>
           <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-pasillo">
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-instrumentos-pasillo">Instrumentos tradicionales</button>
+              <button class="btn btn-block btn-musica-s" id="btn-play-pasillo">Play along<!-- Instrumentos tradicionales --></button>
             </div>
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-play-pasillo">Play along</button>
+              <button class="btn btn-block btn-musica-s" id="btn-referentes-pasillo">Referentes</button>
             </div>
           </div>
         </div>
       </div>
       <div class="contenido" id="div-int-bambuco">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-bambuco">
             <h2 class="tit-mod-mus">BAMBUCO</h2>
           </div>
@@ -327,10 +346,10 @@
           </div>
           <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-bambuco">
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-instrumentos-bambuco">Instrumentos tradicionales</button>
+              <button class="btn btn-block btn-musica-s" id="btn-play-bambuco">Play along<!-- Instrumentos tradicionales --></button>
             </div>
             <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-play-bambuco">Play along</button>
+              <button class="btn btn-block btn-musica-s" id="btn-referentes-bambuco">Referentes</button>
             </div>
           </div>
         </div>

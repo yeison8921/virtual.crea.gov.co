@@ -475,11 +475,11 @@ table.dataTable.no-footer{
   position: absolute;
 }
 
-@media (max-height: 657px) {
+@media (max-height: 889px){
   .text-modulo{
     height: 60vh;
   }
-  #div-info-andina > div > p{
+  #div-info-andina > div > p, #con-idm > p{
     font-size: 14px;
   }
   .btn-musica-s, .btn-musica-t{
@@ -502,7 +502,7 @@ table.dataTable.no-footer{
   .text-modulo{
     height: 70vh;
   }
-  #div-info-andina > div > p{
+  #div-info-andina > div > p, #con-idm > p{
     font-size: 22px;
   }
   .btn-musica-s, .btn-musica-t{
@@ -569,7 +569,7 @@ table.dataTable.no-footer{
   text-decoration: !important;
 }
 
-#div-inicio-curso-musica, #div-inicio-info-aula-musica{
+#div-botones-inicio{
   top: 50%;
   position: relative;
 }
@@ -625,11 +625,11 @@ table.dataTable.no-footer{
   font-size: 1.5vw;
 }
 
-#div-info-andina{
+#div-info-andina, #div-info-detallada-musica{
   text-align: left;
   top: 5%;
 }
-#div-info-andina > div > h2{
+#div-info-andina > div > h2, #con-idm > h2{
   font-size: 45px;
   color: #16a20f;
   text-align: right;

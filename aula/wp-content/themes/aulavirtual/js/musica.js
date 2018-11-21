@@ -1,19 +1,73 @@
 jQuery(document).ready(function($){
-	$("#btn-salones").click(function() {
-		$("#div-inicio-curso-musica").hide();
-		$("#div-inicio-info-aula-musica").show();
-		$("#div-info-aula-musica").show();
+
+	$("#div-botones-inicio").on('click', 'button', function() {
+		switch($(this).attr('id')){
+			case "btn-salones":
+			$(this).hide();
+			$("#btn-iniciar").show();
+			$("#div-info-aula-musica").show();
+			break;
+			case "btn-iniciar":
+			$(this).hide();
+			$("#div-info-aula-musica").hide();
+			$("#div-sel-modulo-musica").show();
+			break;
+		}
 	});
 
-	$("#btn-inicio-musica").click(function() {
-		$("#div-sel-modulo-musica").show();
-		$("#btn-inicio-musica").hide();
-		$("#div-info-aula-musica").hide();
+	$("#div-info-detallada-musica button").click(function() {
+		$("#contenedor-index-musica").css('background-image', 'url("'+ $("#bloginfo").val() + '/musica/images/fondo_introduccion_musica.jpg")');
+		$("#div-mod-enc-mus").hide();
+		$("#div-info-detallada-musica").hide();
+		$("#div-botones-inicio").show();
+		$("#div-info-aula-musica").show();
 	});
 
 	$(".dropdown-menu").on('click', 'button', function() {
 		blog_info = $("#blog-info").val();
 		window.location.href = blog_info+"/musica";
+	});
+
+	$("#div-info-aula-musica").on('click', 'button', function() {
+		$("#div-botones-inicio").hide();
+		$("#div-info-aula-musica").hide();
+		$("#contenedor-index-musica").css('background-image', 'url("'+ $("#bloginfo").val() + '/musica/images/fondo_modulos_musica.jpg")');
+		$("#div-mod-enc-mus").show();
+		$("#div-info-detallada-musica").show();
+		$("#con-idm h2").empty();
+		$("#con-idm p").empty();
+		switch($(this).attr('id')){
+			case "btn-introduccion":
+			$("#con-idm h2").text("Introducción");
+			$("#con-idm p").html("¡Bienvenidos! En estas salas encontrarán herramientas prácticas que les ayudarán a conocer los ritmos de la música colombiana. Escuchando, tocando e interactuando.");
+			break;
+			case "btn-objetivos":
+			$("#con-idm h2").text("Objetivos");
+			$("#con-idm p").html("<ol>"+
+				"<li>Presentar conceptos básicos y generales sobre la gramática musical.</li>"+
+				"<li>Dar a conocer la música de las regiones de Colombia: sus características, instrumentos musicales típicos y algunos ritmos de cada región.</li>"+
+				"<li>Brindar herramientas conceptuales, prácticas e interactivas para la interpretación instrumental/vocal de ritmos de la música colombiana.</li></ol>");
+			break;
+			case "btn-metodologia":
+			$("#con-idm h2").text("Metodología");
+			$("#con-idm p").html("En este curso, se abordará la música en dos aspectos:<br><ol>"+
+				"<li>Teórico</li>"+
+				"<li>Práctico</li></ol>En el aspecto teórico, se incluirán elementos tales como definiciones, guías, métodos, entre otros, capaces de brindar herramientas para el desarrollo artístico de los beneficiarios; y en el aspecto práctico, se buscará, afianzar y consolidar dichas herramientas. El curso, desarrollará algunas estrategias, tales como LAS SALAS INTERACTIVAS, con el fin de aportar, enriquecer y fortalecer, tanto los procesos de formación artística de los usuarios, como sus aptitudes y destrezas musicales; de manera integral.");
+			break;
+			case "btn-publico":
+			$("#con-idm h2").text("Público Objetivo");
+			$("#con-idm p").html("Los contenidos del aula virtual están dirigidos a:<br><ul>"+
+				"<li>Beneficiarios que asisten a los diferentes talleres del programa de música del IDARTES, bien sea de la línea Emprende CREA o Arte en la Escuela.</li>"+
+				"<li>Artistas Formadores que deseen acceder al contenido del aula virtual como herramienta para complementar sus prácticas pedagógicas en el aula.</li>"+
+				"<li>Jóvenes y/o adultos en proceso de formación musical (profesional o empírica) que desean profundizar en los conceptos y prácticas de algunos ritmos de la música colombiana.</li>"+
+				"<li>Público en general que desee indagar y/o ampliar sus conocimientos musicales a través de los contenidos que se presentan en el aula virtual.</li></ul>");
+			break;
+			case "btn-creditos":
+			$("#con-idm h2").text("Créditos");
+			$("#con-idm p").html("");
+			break;
+		}
+
 	});
 
 	$("#contenedor-aula-musica").on('click', 'a', function() {
@@ -26,6 +80,7 @@ jQuery(document).ready(function($){
 		}
 		switch($(this).attr('id')) {
 			case "regresar":
+			$(".contenido").hide();
 			$("#contenedor-aula-musica").css('background-image', 'url("'+ $("#bloginfo").val() + '/musica/images/fondo_modulos_musica.jpg")');
 			$("#div-info-andina").show();
 			$("#div-btn-mod-mus").hide();
@@ -41,6 +96,14 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-sala-interactiva":
 			$("#div-btn-mod-mus button").data("data-modulo", "interactiva");
+			$("#div-btn-mod-mus").append('<div class="row">'
+				+'<div class="col-lg-1 col-md-1 col-sm-1">'
+				+'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>'
+				+'</div>'
+				+'<div class="col-lg-9 col-md-10 col-sm-10">'
+				+'<button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>'
+				+'</div>'
+				+'</div>');
 			$("#div-int-guabina").show();
 			limpiarInfo("guabina");
 			infoBasicaInteractivaGuabina();
@@ -107,7 +170,7 @@ jQuery(document).ready(function($){
 	}
 
 	function infoBasicaInteractivaPasillo(){
-		$("#div-int-pasillo #div-tit-pasillo	h2").text("PASILLO");
+		$("#div-int-pasillo #div-tit-pasillo h2").text("PASILLO");
 		$("#div-int-pasillo #div-tex-pasillo #img-u").attr("src",  $("#bloginfo").val() + "/musica/images/guitarra.jpg");
 		$("#div-int-pasillo #div-tex-pasillo #img-d").attr("src",  $("#bloginfo").val() + "/musica/images/icono_sala_interactiva.png");
 	}
@@ -134,7 +197,7 @@ jQuery(document).ready(function($){
 	}
 
 	function InfoBasicaGuabina(){
-		$("#div-tit-guabina h2").text("SALA TEÓRICA")
+		$("#div-tit-guabina h2").text("GUABINA")
 		$("#div-tex-guabina p").html('Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.<br><br>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.');
 		$("#div-img-guabina img").attr('src', $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
 		$("#div-img-guabina span").html("Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.");
