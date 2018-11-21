@@ -470,16 +470,15 @@ table.dataTable.no-footer{
   display: none;
 }
 
-.text-modulo{
-  height: 70vh;
-}
-
 .botones-contenido{
   bottom: 5%; 
   position: absolute;
 }
 
 @media (max-height: 657px) {
+  .text-modulo{
+    height: 60vh;
+  }
   #div-info-andina > div > p{
     font-size: 14px;
   }
@@ -500,6 +499,9 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 889px) {
+  .text-modulo{
+    height: 70vh;
+  }
   #div-info-andina > div > p{
     font-size: 22px;
   }

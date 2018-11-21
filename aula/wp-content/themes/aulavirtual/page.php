@@ -137,7 +137,7 @@
               <br>
             </div>
           </div>
-          <div style="margin-top: 60%;">
+          <div style="margin-top: 50%;">
             <div class='row'>
               <div class="col-lg-1 col-md-1 col-sm-1">  
                 <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>
@@ -181,7 +181,7 @@
               <span></span>
             </div>
           </div>
-          <div class="row col-lg-6 col-md-12 botones-contenido" id="div-btn-guabina">
+          <div class="row col-lg-6 col-md-6 botones-contenido" id="div-btn-guabina">
             <div class="col-lg-4 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-ritmo-guabina">Ritmo</button>
             </div>

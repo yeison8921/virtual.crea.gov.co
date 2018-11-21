@@ -17,11 +17,13 @@ jQuery(document).ready(function($){
 	});
 
 	$("#contenedor-aula-musica").on('click', 'a', function() {
-		$("#contenedor-aula-musica").css({'background-image':'url("")'});
-		$(".contenido").hide();
-		$("#div-info-andina").hide();
-		$("#div-btn-mod-mus").show();
-		$("#flecha-guabina").show();
+		if($(this).attr("id") == "btn-sala-teorica" || $(this).attr("id") == "btn-sala-interactiva" || $(this).attr("id") == "btn-sala-general"){
+			$("#contenedor-aula-musica").css({'background-image':'url("")'});
+			$(".contenido").hide();
+			$("#div-info-andina").hide();
+			$("#div-btn-mod-mus").show();
+			$("#flecha-guabina").show();
+		}
 		switch($(this).attr('id')) {
 			case "regresar":
 			$("#contenedor-aula-musica").css('background-image', 'url("'+ $("#bloginfo").val() + '/musica/images/fondo_modulos_musica.jpg")');
@@ -32,13 +34,13 @@ jQuery(document).ready(function($){
 			$("#div-btn-mod-mus button").not("#btn-guabina").removeClass().addClass('btn btn-block btn-musica-s');
 			break;
 			case "btn-sala-teorica":
-			$("#div-btn-mod-mus button").attr("data-modulo", "teorica");
+			$("#div-btn-mod-mus button").data("data-modulo", "teorica");
 			$("#div-con-guabina").show();
 			limpiarInfo("guabina");
 			InfoBasicaGuabina();
 			break;
 			case "btn-sala-interactiva":
-			$("#div-btn-mod-mus button").attr("data-modulo", "interactiva");
+			$("#div-btn-mod-mus button").data("data-modulo", "interactiva");
 			$("#div-int-guabina").show();
 			limpiarInfo("guabina");
 			infoBasicaInteractivaGuabina();
@@ -54,9 +56,9 @@ jQuery(document).ready(function($){
 		$($(this).parent().parent().children()[0]).children(".flecha-musica").show();
 		$("#div-btn-mod-mus button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
 		$(".contenido").hide();
-		if($(this).data('modulo') == "teorica"){
+		if($(this).data('data-modulo') == "teorica"){
 			console.log($(this).attr('data-modulo'));
-			/*switch($(this).attr('id')) {
+			switch($(this).attr('id')) {
 				case "btn-guabina":
 				$("#div-con-guabina").show();
 				limpiarInfo("guabina");
@@ -74,9 +76,9 @@ jQuery(document).ready(function($){
 				limpiarInfo("bambuco");
 				InfoBasicaBambuco();
 				break;
-			}*/
+			}
 		}
-		if($(this).data('modulo') == "interactiva"){
+		if($(this).data('data-modulo') == "interactiva"){
 			switch($(this).attr('id')) {
 				case "btn-guabina":
 				$("#div-int-guabina").show();
@@ -132,7 +134,7 @@ jQuery(document).ready(function($){
 	}
 
 	function InfoBasicaGuabina(){
-		$("#div-tit-guabina h2").text("SALA TEÓRICA");
+		$("#div-tit-guabina h2").text("SALA TEÓRICA")
 		$("#div-tex-guabina p").html('Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.<br><br>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.');
 		$("#div-img-guabina img").attr('src', $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
 		$("#div-img-guabina span").html("Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.");
