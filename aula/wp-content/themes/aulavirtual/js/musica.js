@@ -167,10 +167,10 @@ jQuery(document).ready(function($){
 
 	function infoBasicaInstrumentos(){
 		$("#img-guitarra").attr("src", $("#bloginfo").val() + "/musica/images/guitarra.jpg")
-		$("#img-").attr("src", $("#bloginfo").val() + "/musica/images/")
-		$("#img-").attr("src", $("#bloginfo").val() + "/musica/images/")
-		$("#img-cucho").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/chucho.png")
-		$("#img-").attr("src", $("#bloginfo").val() + "/musica/images/")
+		$("#img-sala").attr("src", $("#bloginfo").val() + "/musica/images/icono_sala_interactiva.png")
+		//$("#img-").attr("src", $("#bloginfo").val() + "/musica/images/")
+		$("#img-chucho").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/chucho.png")
+		//$("#img-").attr("src", $("#bloginfo").val() + "/musica/images/")
 		$("#img-bandola").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/bandola.png")
 		$("#img-marrana").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png")
 		$("#img-cuchara").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png")

@@ -61,6 +61,7 @@ body {
 }
 
 .tit-enc{
+  color: #425c2f;
   font-family: 'Local Van Condensed Bold' !important;
   font-size: 50px;
 }
@@ -139,12 +140,30 @@ body {
     width: 100%;
     text-align: center;
   }
+  #contenedor-aula-musica{
+    height: 100%;
+  }
+  .tit-enc{
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 769px){
+  #contenedor-aula-musica{
+    height: 80vh;
+  }
+  .tit-enc{
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 767px){
   .col-xs-12{
     width: 100%;
     text-align: center;
+  }
+  #div-logo-bogota, #div-logo-crea{
+    display: none;
   }
 
 }
@@ -470,87 +489,86 @@ table.dataTable.no-footer{
   display: none;
 }
 
-.botones-contenido{
+/*.botones-contenido{
   bottom: 5%; 
   position: absolute;
-}
+  }*/
 
-@media (max-height: 889px){
-  .text-modulo{
-    height: 60vh;
+  @media (max-height: 889px){
+    .text-modulo{
+      height: 60vh;
+    }
+    #div-info-andina > div > p, #con-idm > p{
+      font-size: 14px;
+    }
+    .btn-musica-s, .btn-musica-t{
+      font-size: 14px;
+      height: 30px;
+    }
+    .text-modulo, .btn-musica-s, .btn-musica-t{
+      font-size: 14px;
+    }
+    .tit-mod-mus{
+      font-size: 35px;
+    }
+    .con-tit-mod-mus{
+      height: 150px; 
+      padding-top: 50px;
+    }
   }
-  #div-info-andina > div > p, #con-idm > p{
-    font-size: 14px;
-  }
-  .btn-musica-s, .btn-musica-t{
-    font-size: 14px;
-    height: 30px;
-  }
-  .text-modulo, .btn-musica-s, .btn-musica-t{
-    font-size: 14px;
-  }
-  .tit-mod-mus{
-    font-size: 35px;
-  }
-  .con-tit-mod-mus{
-    height: 150px; 
-    padding-top: 50px;
-  }
-}
 
-@media (min-height: 889px) {
-  .text-modulo{
-    height: 70vh;
+  @media (min-height: 889px) {
+    .text-modulo{
+      height: 70vh;
+    }
+    #div-info-andina > div > p, #con-idm > p{
+      font-size: 22px;
+    }
+    .btn-musica-s, .btn-musica-t{
+      font-size: 22px;
+      height: 40px;
+    }
+    .text-modulo{
+      font-size: 22px;
+    }
+    .tit-mod-mus{
+      font-size: 45px;
+    }
+    .con-tit-mod-mus{
+      height: 150px; 
+      padding-top: 40px;
+    }
   }
-  #div-info-andina > div > p, #con-idm > p{
-    font-size: 22px;
-  }
-  .btn-musica-s, .btn-musica-t{
-    font-size: 22px;
-    height: 40px;
-  }
-  .text-modulo{
-    font-size: 22px;
-  }
-  .tit-mod-mus{
-    font-size: 45px;
-  }
-  .con-tit-mod-mus{
-    height: 150px; 
-    padding-top: 40px;
-  }
-}
 
-#contenedor-index-musica{
-  background-image: url('musica/images/fondo_introduccion_musica.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 100vh;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  #contenedor-index-musica{
+    background-image: url('musica/images/fondo_introduccion_musica.jpg');
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    height: 100vh;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-#contenedor-aula-musica{
-  background-image: url('musica/images/fondo_modulos_musica.jpg');
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  color: #08580f;
-}
+  #contenedor-aula-musica{
+    background-image: url('musica/images/fondo_modulos_musica.jpg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    color: #08580f;
+  }
 
-#div-mod-enc-mus{
- background-image: url('musica/images/header_modulo_musica.png');
- background-position: left top;
- background-repeat: no-repeat;
- background-size: cover;
- display: flex;
- align-items: center;
- height: 80px;
-}
+  #div-mod-enc-mus{
+   background-image: url('musica/images/header_modulo_musica.png');
+   background-position: left top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 80px;
+   line-height: 80px;
+   text-align: center;
+ }
 
-#div-dropdown-modulo-musica .dropdown-menu {
+ #div-dropdown-modulo-musica .dropdown-menu {
   background-color: transparent;
   border: 0px solid transparent;
 }
@@ -562,96 +580,97 @@ table.dataTable.no-footer{
 .btn-musica-s:hover {
   color: inherit !important;
   text-decoration: none !important;
-}*/
+  }*/
 
-.btn-musica-t:hover, .btn-musica-t:focus  {
-  color: #ffffff !important;
-  text-decoration: !important;
-}
+  .btn-musica-t:hover, .btn-musica-t:focus  {
+    color: #ffffff !important;
+    text-decoration: !important;
+  }
 
-#div-botones-inicio{
-  top: 50%;
-  position: relative;
-}
+  #div-botones-inicio{
+    top: 50%;
+    position: relative;
+  }
 
-#div-info-aula-musica{
-  top: 65%;
-  position: relative;
-}
+  #div-info-aula-musica{
+    top: 65%;
+    position: relative;
+  }
 
-#div-sel-modulo-musica{
-  top: 50%;
-  position: relative;
-}
+  #div-sel-modulo-musica{
+    top: 50%;
+    position: relative;
+  }
 
-.btn-musica-p{
-  background-color: white; 
-  font-size: 30px;
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 2.5px; 
-  height: 45px;
-  margin-bottom: 20px;
-  font-size: 1.5vw;
-}
+  .btn-musica-p{
+    background-color: white; 
+    font-size: 30px;
+    border-radius: 10px; 
+    color: #08580f; 
+    border-color: #08580f; 
+    border-width: 2.5px; 
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 1.5vw;
+  }
 
-.btn-musica-s{
-  background-color: white; 
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 0.5px; 
-  margin-bottom: 20px;
+  .btn-musica-s{
+    background-color: white; 
+    border-radius: 10px; 
+    color: #08580f; 
+    border-color: #08580f; 
+    border-width: 0.5px; 
+    margin-bottom: 20px;
 
-}
+  }
 
-.btn-musica-t, .btn-musica-s:hover{
-  background-color: #121a1c; 
-  border-radius: 10px; 
-  color: #ffffff;
-  margin-bottom: 20px;
-}
+  .btn-musica-t, .btn-musica-s:hover{
+    background-color: #121a1c; 
+    border-radius: 10px; 
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
 
-.btn-musica-d{
-  background-color: white; 
-  font-size: 30px;
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 2.5px; 
-  height: 45px;
-  margin-bottom: 2px;
-  font-size: 1.5vw;
-}
+  .btn-musica-d{
+    background-color: white; 
+    font-size: 30px;
+    border-radius: 10px; 
+    color: #08580f; 
+    border-color: #08580f; 
+    border-width: 2.5px; 
+    height: 45px;
+    margin-bottom: 2px;
+    font-size: 1.5vw;
+  }
 
-#div-info-andina, #div-info-detallada-musica{
-  text-align: left;
-  top: 5%;
-}
-#div-info-andina > div > h2, #con-idm > h2{
-  font-size: 45px;
-  color: #16a20f;
-  text-align: right;
-}
+  #div-info-detallada-musica{
+    text-align: left;
+    top: 5%;
+  }
 
-#div-info-andina > div > p{
-  color: #403938;
-  text-align: right;
-}
+  #div-info-andina > div > h2, #con-idm > h2{
+    font-size: 45px;
+    color: #16a20f;
+    text-align: right;
+  }
 
-#contenedor-aula-musica > div > div > a{
-  text-decoration: none;
-}
+  #div-info-andina > div > p{
+    color: #403938;
+    text-align: right;
+  }
 
-.flecha-musica{
-  color: #ffffff;
-  display: none;
-}
+  #contenedor-aula-musica > div > div > a{
+    text-decoration: none;
+  }
 
-#div-btn-mod-mus{
-  background: #98f89f;
-}
+  .flecha-musica{
+    color: #ffffff;
+    display: none;
+  }
+
+  #div-btn-mod-mus{
+    background: #98f89f;
+  }
 
 
 
