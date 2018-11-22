@@ -175,14 +175,22 @@
             </div>
             <div class='row'>
               <div class="col-lg-1 col-md-1 col-sm-1">
-               <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
-             </div>
-             <div class="col-lg-9 col-md-10 col-sm-10">
-              <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
+                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
+              </div>
+              <div class="col-lg-9 col-md-10 col-sm-10">
+                <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-1 col-md-1 col-sm-1">
+                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>
+              </div>
+              <div class="col-lg-9 col-md-10 col-sm-10">
+                <button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       <div class="contenido" id="div-con-guabina">
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
           <div class="row col-lg-12 col-md-12 con-tit-mod-mus" id="div-tit-guabina">
@@ -191,7 +199,7 @@
           <div class="row text-modulo col-lg-12 col-md-12">
             <div class="col-lg-6 col-md-12" id="div-tex-guabina">
               <p></p>
-              <img src="" class="img-responsive">
+              <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
             </div>
             <div class="col-lg-6 col-md-12" id="div-img-guabina">
               <p></p>
@@ -219,13 +227,13 @@
             <h2 class="tit-mod-mus"></h2>
           </div>
           <div class="row text-modulo col-lg-12 col-md-12">
-            <div class="col-lg-6 col-md-12" id="div-tex-pasillo">
+            <div class="col-lg-6 col-md-6" id="div-tex-pasillo">
               <p></p>
-              <img src="" class="img-responsive">
+              <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
             </div>
-            <div class="col-lg-6 col-md-12" id="div-img-pasillo">
+            <div class="col-lg-6 col-md-6" id="div-img-pasillo">
               <p></p>
-              <img src="" class="img-responsive">
+              <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
               <hr>
               <span></span>
             </div>
@@ -246,13 +254,13 @@
             <h2 class="tit-mod-mus"></h2>
           </div>
           <div class="row col-lg-12 col-md-12 text-modulo">
-            <div class="col-lg-6 col-md-12" id="div-tex-bambuco">
+            <div class="col-lg-6 col-md-6" id="div-tex-bambuco">
               <p></p>
-              <img src="" class="img-responsive">
+              <a href="" data-fancybox><img src=""></a>
             </div>
-            <div class="col-lg-6 col-md-12" id="div-img-bambuco">
+            <div class="col-lg-6 col-md-6" id="div-img-bambuco">
               <p></p>
-              <img src="" class="img-responsive">
+              <a href="" data-fancybox><img src=""></a>
               <hr>
               <span></span>
             </div>
@@ -273,24 +281,24 @@
             <h2 class="tit-mod-mus">GUABINA</h2>
           </div>
           <div class="row col-lg-12 col-md-12 text-modulo">
-            <div class="col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6" id="div-tex-guabina">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8" id="div-tex-guabina">
               <p></p>
-              <a href="#" id="l-img-u"><img src="" id="img-u"></a>
-              <a href="#" id="l-img-d"><img src="" id="img-d"></a>
+              <!-- <a href="#" id="l-img-u"><img src="" id="img-u"></a>
+              <a href="#" id="l-img-d"><img src="" id="img-d"></a> -->
             </div>
-            <div class="col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6" id="div-img-guabina">
+            <!-- <div class="col-lg-6 col-md-6" id="div-img-guabina">
               <p></p>
               <a href="#" id="l-img-t"><img src="" id="img-t"></a>
               <a href="#" id="l-img-c"><img src="" id="img-c"></a>
               <hr>
               <span></span>
-            </div>
+            </div> -->
           </div>
-          <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-guabina">
-            <div class="col-lg-4 col-md-4">
+          <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 botones-contenido" id="div-btn-guabina">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-play-guabina">Play along<!-- Instrumentos tradicionales --></button>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-referentes-guabina">Referentes</button>
             </div>
           </div>
@@ -302,24 +310,24 @@
             <h2 class="tit-mod-mus">PASILLO</h2>
           </div>
           <div class="row col-lg-12 col-md-12 text-modulo">
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-tex-pasillo">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8" id="div-tex-pasillo">
               <p></p>
-              <a href="#" id="l-img-u"><img src="" id="img-u"></a>
-              <a href="#" id="l-img-d"><img src="" id="img-d"></a>
+              <!-- <a href="#" id="l-img-u"><img src="" id="img-u"></a>
+              <a href="#" id="l-img-d"><img src="" id="img-d"></a> -->
             </div>
-            <div class="col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6" id="div-img-pasillo">
+            <!-- <div class="col-lg-offset-2 col-lg-6 col-md-offset-2 col-md-6" id="div-img-pasillo">
               <p></p>
               <a href="#" id="l-img-t"><img src="" id="img-t"></a>
               <a href="#" id="l-img-c"><img src="" id="img-c"></a>
               <hr>
               <span></span>
-            </div>
+            </div> -->
           </div>
-          <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-pasillo">
-            <div class="col-lg-4 col-md-4">
+          <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 botones-contenido" id="div-btn-pasillo">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-play-pasillo">Play along<!-- Instrumentos tradicionales --></button>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-referentes-pasillo">Referentes</button>
             </div>
           </div>
@@ -331,25 +339,97 @@
             <h2 class="tit-mod-mus">BAMBUCO</h2>
           </div>
           <div class="row col-lg-12 col-md-12 text-modulo">
-            <div class="col-lg-4 col-md-4 text-center" id="div-tex-bambuco">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-8 col-md-8" id="div-tex-bambuco">
               <p></p>
-              <a href="#" id="l-img-u"><img src="" id="img-u"></a>
-              <a href="#" id="l-img-d"><img src="" id="img-d"></a>
+              <!-- <a href="#" id="l-img-u"><img src="" id="img-u"></a>
+              <a href="#" id="l-img-d"><img src="" id="img-d"></a> -->
             </div>
-            <div class="col-lg-7 col-md-7" id="div-img-bambuco">
+            <!-- <div class="col-lg-7 col-md-7" id="div-img-bambuco">
               <p></p>
               <a href="#" id="l-img-t"><img src="" id="img-t"></a>
               <a href="#" id="l-img-c"><img src="" id="img-c"></a>
               <hr>
               <span></span>
-            </div>
+            </div> -->
           </div>
-          <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 botones-contenido" id="div-btn-bambuco">
-            <div class="col-lg-4 col-md-4">
+          <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 botones-contenido" id="div-btn-bambuco">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-play-bambuco">Play along<!-- Instrumentos tradicionales --></button>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-6 col-md-6">
               <button class="btn btn-block btn-musica-s" id="btn-referentes-bambuco">Referentes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenido" id="div-instrumentos">
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
+          <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-instrumentos">
+            <h2 class="tit-mod-mus"></h2>
+          </div>
+          <div class="row col-lg-12 col-md-12 text-modulo">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8" id="div-imgs-instrumentos">
+              <div class="row">
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-guitarra" class="img-responsive">
+                  </a> 
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png" id="img-" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/musica/images/bambuco/instrumento_1.png" id="img-" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-chucho" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/musica/images/bambuco/instrumento_2.png" id="img-" class="img-responsive">
+                  </a>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-bandola" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-marrana" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-cuchara" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-guaracha" class="img-responsive">
+                  </a>  
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <a href="#">
+                    <img src="" id="img-esterilla" class="img-responsive">
+                  </a>  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6" id="div-tex-instrumentos">
+              <p></p>
+            </div>
+            <div class="col-lg-6 col-md-6" id="div-img-instrumentos">
+              <img src="" class="img-responsive">
+              <hr>
             </div>
           </div>
         </div>
