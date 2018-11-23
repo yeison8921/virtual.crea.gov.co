@@ -89,17 +89,17 @@ jQuery(document).ready(function($){
 			$("#div-btn-mod-mus button").not("#btn-guabina").removeClass().addClass('btn btn-block btn-musica-s');
 			break;
 			case "btn-sala-teorica":
-			$("#div-btn-mod-mus button").data("data-modulo", "teorica");
+			$("#div-btn-mod-mus button").data("data-sala", "teorica");
 			$("#div-btn-mod-mus #btn-instrumentos").hide();
 			$("#div-con-guabina").show();
 			limpiarInfo("guabina");
 			InfoBasicaGuabina();
 			break;
 			case "btn-sala-interactiva":
-			$("#div-btn-mod-mus button").data("data-modulo", "interactiva");
-			$("#div-btn-mod-mus #btn-instrumentos").show();
-			$("#div-int-guabina").show();
-			limpiarInfo("guabina");
+			$("#div-btn-mod-mus button").data("data-sala", "interactiva");
+			$("#div-btn-interactiva button").data("data-modulo", "guabina");
+			$("#div-sala-interactiva").show()
+			limpiarInfoInteractiva();
 			infoBasicaInteractivaGuabina();
 			break;
 			case "btn-sala-general":
@@ -113,8 +113,8 @@ jQuery(document).ready(function($){
 		$($(this).parent().parent().children()[0]).children(".flecha-musica").show();
 		$("#div-btn-mod-mus button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
 		$(".contenido").hide();
-		if($(this).data('data-modulo') == "teorica"){
-			console.log($(this).attr('data-modulo'));
+		if($(this).data('data-sala') == "teorica"){
+			console.log($(this).attr('data-sala'));
 			switch($(this).attr('id')) {
 				case "btn-guabina":
 				$("#div-con-guabina").show();
@@ -135,23 +135,22 @@ jQuery(document).ready(function($){
 				break;
 			}
 		}
-		if($(this).data('data-modulo') == "interactiva"){
+		if($(this).data('data-sala') == "interactiva"){
+			limpiarInfoInteractiva();
+			$("#div-btn-interactiva button").removeClass().addClass('btn btn-block btn-musica-s');
+			$("#div-conu-interactiva").removeClass().addClass("col-lg-6 col-md-6");
+			$("#div-cond-interactiva").removeClass().addClass("col-lg-6 col-md-6");
 			switch($(this).attr('id')) {
 				case "btn-guabina":
-				$("#div-int-guabina").show();
-				$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
-				$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-3 col-md-offset-3").addClass("col-lg-offset-2 col-md-offset-2");
-				limpiarInfo("guabina");
-				infoBasicaInteractivaGuabina()
+				$("#div-btn-interactiva button").data("data-modulo", "guabina");
+				infoBasicaInteractivaGuabina();
 				break;
 				case "btn-pasillo":
-				$("#div-int-pasillo").show();
-				limpiarInfo("pasillo");
 				infoBasicaInteractivaPasillo();
+				$("#div-btn-interactiva button").data("data-modulo", "pasillo");
 				break;
 				case "btn-bambuco":
-				$("#div-int-bambuco").show();
-				limpiarInfo("bambuco");
+				$("#div-btn-interactiva button").data("data-modulo", "bambuco");
 				infoBasicaInteractivaBambuco();
 				break;
 			}
@@ -164,6 +163,77 @@ jQuery(document).ready(function($){
 			infoBasicaInstrumentos();
 		}
 	});
+
+	$("#div-btn-interactiva").on('click', 'button', function() {
+		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
+		$("#div-btn-interactiva button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
+		limpiarInfoInteractiva();
+		$("#div-conu-interactiva").removeClass().addClass("col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8");
+		$("#div-cond-interactiva").removeClass();
+		if($(this).data('data-modulo') == "guabina"){
+			switch($(this).attr("id")){
+				case "btn-play-interactiva":
+				$("#div-tit-interactiva h2").text("PLAY ALONG LA RUANA");
+				$("#div-conu-interactiva p").html('Video');
+				break;
+				case "btn-referentes-interactiva":
+				$("#div-tit-interactiva h2").text("REFERENTES GUABINA");
+				$("#div-conu-interactiva p").html("Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada");
+				break;
+			}
+		}
+		if($(this).data('data-modulo') == "pasillo"){
+			switch($(this).attr("id")){
+				case "btn-play-interactiva":
+				$("#div-tit-interactiva h2").text("PLAY ALONG CACHIPAY");
+				$("#div-conu-interactiva p").html('Video');
+				break;
+				case "btn-referentes-interactiva":
+				$("#div-tit-interactiva h2").text("REFERENTES PASILLO");
+				$("#div-conu-interactiva p").html("Aires de mi Tierra - Gustavo Gómez Ardila<br>La Gata Golosa - Fulgencio García<br>Amalia ... Joaquín Arias<br>Atardecer ... Carlos Viecco<br>Cachipay ... D.R.A.<br>Chispazo ... Pedro Morales Pino<br>Desde Lejos ... Bonifacio Bautista<br>El Pereirano ... Camilo Bedoya");
+				break;
+			}
+		}
+		if($(this).data('data-modulo') == "bambuco"){
+			switch($(this).attr("id")){
+				case "btn-play-interactiva":
+				$("#div-tit-interactiva h2").text("PLAY ALONG BOCHICA");
+				$("#div-conu-interactiva p").html('Video');
+				break;
+				case "btn-referentes-interactiva":
+				$("#div-tit-interactiva h2").text("REFERENTES BAMBUCO");
+				$("#div-conu-interactiva p").html("Bambuquisimo ... León Cardona<br>Bachue ... Francisco Cristancho<br>Bohica ... Francisco Cristancho<br>Como P ́desenguayabar ... Jorge Olaya<br>El Sotareño ... Federico Diago");
+				break;
+			}
+		}
+	});
+
+
+	function limpiarInfoInteractiva(){
+		$("#div-tit-interactiva h2").empty();
+		$("#div-conu-interactiva p").empty();
+		$("#div-cond-interactiva p").empty();
+	}
+
+	function infoBasicaInteractivaGuabina(){
+		$("#div-tit-interactiva h2").text("GUABINA");
+		$("#div-conu-interactiva p").html("En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales");
+		$("#div-cond-interactiva p").html('<div class="embed-responsive embed-responsive-16by9">'
+			+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qv_quuy50Jo" allowfullscreen></iframe>'
+			+'</div>');
+	}
+
+	function infoBasicaInteractivaPasillo(){
+		$("#div-tit-interactiva h2").text("PASILLO");
+		$("#div-conu-interactiva p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend placerat quam, at vestibulum dolor laoreet a. Curabitur a dictum erat, eget efficitur eros. Sed tincidunt volutpat ornare. Curabitur dignissim erat in ligula faucibus porta. Donec orci lectus, sollicitudin non turpis quis, ullamcorper consectetur erat. Nulla ac lectus ut eros convallis consectetur at a quam. Donec vitae maximus felis. Nunc tincidunt nisi id augue consectetur, id luctus arcu dapibus. In ut facilisis nulla. Aliquam viverra a risus vitae commodo. Sed sit amet nibh interdum, porttitor purus quis, tempus orci. Suspendisse non velit molestie, faucibus risus at, ultrices enim. Morbi libero diam, bibendum eget tempor quis, dapibus et lacus. Etiam eu dui at arcu fermentum iaculis bibendum id velit. Vivamus porta vulputate lorem ac mattis.");
+		$("#div-cond-interactiva p").html('Video');
+	}
+
+	function infoBasicaInteractivaBambuco(){
+		$("#div-tit-interactiva h2").text("BAMBUCO");
+		$("#div-conu-interactiva p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend placerat quam, at vestibulum dolor laoreet a. Curabitur a dictum erat, eget efficitur eros. Sed tincidunt volutpat ornare. Curabitur dignissim erat in ligula faucibus porta. Donec orci lectus, sollicitudin non turpis quis, ullamcorper consectetur erat. Nulla ac lectus ut eros convallis consectetur at a quam. Donec vitae maximus felis. Nunc tincidunt nisi id augue consectetur, id luctus arcu dapibus. In ut facilisis nulla. Aliquam viverra a risus vitae commodo. Sed sit amet nibh interdum, porttitor purus quis, tempus orci. Suspendisse non velit molestie, faucibus risus at, ultrices enim. Morbi libero diam, bibendum eget tempor quis, dapibus et lacus. Etiam eu dui at arcu fermentum iaculis bibendum id velit. Vivamus porta vulputate lorem ac mattis.");
+		$("#div-cond-interactiva p").html('Video');
+	}
 
 	function infoBasicaInstrumentos(){
 		$("#img-guitarra").attr("src", $("#bloginfo").val() + "/musica/images/guitarra.jpg")
@@ -178,32 +248,6 @@ jQuery(document).ready(function($){
 		$("#img-esterilla").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png")
 	}
 
-	function infoBasicaInteractivaGuabina(){
-		$("#div-tit-guabina h2").text("GUABINA");
-		$("#div-tex-guabina p").html("En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales");
-		/*$("#div-img-guabina p").html('<div class="embed-responsive embed-responsive-16by9">'
-			+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qv_quuy50Jo" allowfullscreen></iframe>'
-			+'</div>');*/
-	}
-
-	function infoBasicaInteractivaPasillo(){
-		$("#div-tit-pasillo h2").text("PASILLO");
-		$("#div-tex-pasillo p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend placerat quam, at vestibulum dolor laoreet a. Curabitur a dictum erat, eget efficitur eros. Sed tincidunt volutpat ornare. Curabitur dignissim erat in ligula faucibus porta. Donec orci lectus, sollicitudin non turpis quis, ullamcorper consectetur erat. Nulla ac lectus ut eros convallis consectetur at a quam. Donec vitae maximus felis. Nunc tincidunt nisi id augue consectetur, id luctus arcu dapibus. In ut facilisis nulla. Aliquam viverra a risus vitae commodo. Sed sit amet nibh interdum, porttitor purus quis, tempus orci. Suspendisse non velit molestie, faucibus risus at, ultrices enim. Morbi libero diam, bibendum eget tempor quis, dapibus et lacus. Etiam eu dui at arcu fermentum iaculis bibendum id velit. Vivamus porta vulputate lorem ac mattis.");
-		/*$("#div-int-pasillo #div-tex-pasillo #img-u").attr("src",  $("#bloginfo").val() + "/musica/images/guitarra.jpg");
-		$("#div-int-pasillo #div-tex-pasillo #img-d").attr("src",  $("#bloginfo").val() + "/musica/images/icono_sala_interactiva.png");*/
-	}
-
-	function infoBasicaInteractivaBambuco(){
-		$("#div-tit-bambuco	h2").text("BAMBUCO");
-		$("#div-tex-bambuco p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend placerat quam, at vestibulum dolor laoreet a. Curabitur a dictum erat, eget efficitur eros. Sed tincidunt volutpat ornare. Curabitur dignissim erat in ligula faucibus porta. Donec orci lectus, sollicitudin non turpis quis, ullamcorper consectetur erat. Nulla ac lectus ut eros convallis consectetur at a quam. Donec vitae maximus felis. Nunc tincidunt nisi id augue consectetur, id luctus arcu dapibus. In ut facilisis nulla. Aliquam viverra a risus vitae commodo. Sed sit amet nibh interdum, porttitor purus quis, tempus orci. Suspendisse non velit molestie, faucibus risus at, ultrices enim. Morbi libero diam, bibendum eget tempor quis, dapibus et lacus. Etiam eu dui at arcu fermentum iaculis bibendum id velit. Vivamus porta vulputate lorem ac mattis.");
-		/*$("#div-int-bambuco #div-tex-bambuco").removeClass().addClass("col-lg-4 col-md-4 text-center");
-		$("#div-int-bambuco #div-img-bambuco").removeClass().addClass("col-lg-7 col-md-7");
-		$("#div-int-bambuco img").not("#img-t").css("width", '130px');
-		$("#div-tex-bambuco #img-u").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-		$("#div-tex-bambuco #img-d").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/chucho.png");
-		$("#div-img-bambuco #img-t").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/instrumento_2.png");
-		$("#div-img-bambuco #img-c").attr("src",  $("#bloginfo").val() + "/musica/images/bambuco/bandola.png");*/
-	}
 
 	function infoBasicaPasiilo(){
 		$("#div-tit-pasillo h2").text("PASILLO")
@@ -318,70 +362,6 @@ jQuery(document).ready(function($){
 			$("#div-img-bambuco a").attr("href", $("#bloginfo").val() + "/musica/images/bambuco/bochica_melodia_y_cifra_2.jpg");
 			$("#div-img-bambuco img").css("height", "300px");
 			$("#div-img-bambuco img").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/bochica_melodia_y_cifra_2.jpg");
-			break;
-		}
-	});
-
-	$("#div-int-guabina").on('click', 'button', function() {
-		limpiarInfo("guabina");
-		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
-		$("#div-int-guabina button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
-		switch($(this).attr('id')) {
-			case "btn-play-guabina":
-			$("#div-tit-guabina h2").text("PLAY ALONG LA RUANA");
-			$("#div-tex-guabina p").html('<div class="embed-responsive embed-responsive-16by9">'
-			+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qv_quuy50Jo" allowfullscreen></iframe>'
-			+'</div>');
-			break;
-			case "btn-referentes-guabina":
-			$("#div-tit-guabina h2").text("REFERENTES GUABINA");
-			$("#div-tex-guabina p").html('Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada');
-			break;
-			case "btn-instrumentos-guabina":
-			/*$("#div-int-guabina #div-tex-guabina").removeClass("col-lg-offset-2 col-md-offset-2").addClass("col-lg-offset-3 col-md-offset-3");
-			$("#div-int-guabina #div-img-guabina").removeClass("col-lg-offset-2 col-md-offset-2 text-center").addClass("col-lg-offset-3 col-md-offset-3");*/
-			$("#div-tit-guabina h2").text("GUABINA");
-			/*$("#div-int-guabina img").css("width", '120px');*/
-			/*$("#img-u").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png");
-			$("#img-d").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
-			$("#img-t").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png");
-			$("#img-c").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png");*/
-			break;
-		}
-	});
-
-	$("#div-int-pasillo").on('click', 'button', function() {
-		limpiarInfo("pasillo");
-		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
-		$("#div-int-pasillo button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
-		switch($(this).attr('id')) {
-			case "btn-play-pasillo":
-			$("#div-tit-pasillo h2").text("PLAY ALONG CACHIPAY");
-			$("#div-tex-pasillo p").html('<div class="embed-responsive embed-responsive-16by9">'
-			+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lGdywufbTE0" allowfullscreen></iframe>'
-			+'</div>');
-			break;
-			case "btn-referentes-pasillo":
-			$("#div-tit-pasillo h2").text("REFERENTES PASILLO");
-			$("#div-tex-pasillo p").html('Aires de mi Tierra - Gustavo Gómez Ardila<br>La Gata Golosa - Fulgencio García<br>Amalia ... Joaquín Arias<br>Atardecer ... Carlos Viecco<br>Cachipay ... D.R.A.<br>Chispazo ... Pedro Morales Pino<br>Desde Lejos ... Bonifacio Bautista<br>El Pereirano ... Camilo Bedoya<br>');
-			break;
-		}
-	});
-
-	$("#div-int-bambuco").on('click', 'button', function() {
-		limpiarInfo("bambuco");
-		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
-		$("#div-int-bambuco button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
-		switch($(this).attr('id')) {
-			case "btn-play-bambuco":
-			$("#div-tit-bambuco h2").text("PLAY ALONG BOCHICA");
-			$("#div-tex-bambuco p").html('<div class="embed-responsive embed-responsive-16by9">'
-			+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1hwdMxAHctc" allowfullscreen></iframe>'
-			+'</div>');
-			break;
-			case "btn-referentes-bambuco":
-			$("#div-tit-bambuco h2").text("REFERENTES BAMBUCO");
-			$("#div-tex-bambuco p").html("Bambuquisimo ... León Cardona<br>Bachue ... Francisco Cristancho<br>Bohica ... Francisco Cristancho<br>Como P ́desenguayabar ... Jorge Olaya<br>El Sotareño ... Federico Diago<br>");
 			break;
 		}
 	});
