@@ -147,223 +147,175 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
           <br>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#" id="regresar" style="color: #333; text-decoration: none;">
-                <i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>
-              </a>
+              <i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>
+            </a>
           </div>
-            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style="margin-top: 40%;">
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">  
-                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>
-              </div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-                <button class='btn btn-block btn-musica-t' id="btn-guabina">Guabina</button>
-              </div>
+          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style="margin-top: 40%;">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">  
+              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>
             </div>
-            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>
-              </div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-                <button class='btn btn-block btn-musica-s' id="btn-pasillo">Pasillo</button>
-              </div>
-            </div>
-            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
-              </div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-                <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>
-              </div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-                <button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>
-              </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
+              <button class='btn btn-block btn-musica-t' id="btn-guabina">Guabina</button>
             </div>
           </div>
-          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8 contenido" id="div-sala-interactiva" style="height: 100%;">
-            <div class="col-lg-12 col-md-12" id="div-tit-interactiva" style="height: 15%;">
-              <h2 style="font-size: 35px;"></h2>
+          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>
             </div>
-            <div class="col-lg-12 col-md-12" style="height: 55%;">
-              <div class="col-lg-6 col-md-6" id="div-conu-interactiva" style="height: 100%;">
-                <p></p>
-              </div>
-              <div class="col-lg-6 col-md-6" id="div-cond-interactiva" style="height: 100%;">
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12" id="div-btn-interactiva" style="height: 10%;">
-              <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-play-interactiva">Play along</button>
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-referentes-interactiva">Referentes</button>
-              </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
+              <button class='btn btn-block btn-musica-s' id="btn-pasillo">Pasillo</button>
             </div>
           </div>
-        <div class="contenido" id="div-con-guabina">
-          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8 col-sm-8 col-xs-12">
-            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 con-tit-mod-mus" id="div-tit-guabina">
-              <h2 class="tit-mod-mus"></h2>
+          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
             </div>
-            <div class="row text-modulo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" id="div-tex-guabina">
-                <p></p>
-                <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
-              </div>
-              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" id="div-img-guabina">
-                <p></p>
-                <img src="" class="img-responsive">
-                <hr>
-                <span></span>
-              </div>
-              <div class="row col-lg-6 col-md-12 col-xs-12 botones-contenido" id="div-btn-guabina">
-                <div class="col-lg-4 col-md-4 col-xs-4">
-                  <button class="btn btn-block btn-musica-s" id="btn-ritmo-guabina">Ritmo</button>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-4">
-                  <button class="btn btn-block btn-musica-s" id="btn-melodia-guabina">Melodía</button>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-4">
-                  <button class="btn btn-block btn-musica-s" id="btn-armonia-guabina">Armonía</button>
-                </div>
-              </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
+              <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
+              <button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>
             </div>
           </div>
         </div>
-        <div class="contenido" id="div-con-pasillo">
-          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8 col-sm-8 col-xs-12">
-            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 con-tit-mod-mus" id="div-tit-pasillo">
-              <h2 class="tit-mod-mus"></h2>
-            </div>
-            <div class="row text-modulo col-lg-12 col-md-12 col-xs-12">
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="div-tex-pasillo">
-                <p></p>
-                <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="div-img-pasillo">
-                <p></p>
-                <a href="" data-fancybox="gallery"><img src="" style="height: 300px;"></a>
-                <hr>
-                <span></span>
-              </div>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 botones-contenido" id="div-btn-pasillo">
-                <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
-                  <button class="btn btn-block btn-musica-s" id="btn-ritmo-pasillo">Ritmo</button>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                  <button class="btn btn-block btn-musica-s" id="btn-melodia-pasillo">Melodía y Armonía</button>
-                </div>
-              </div>
-            </div>
+
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
+          <div class="col-lg-12 col-md-12" id="div-tit-teorica" style="height: 15%;">
+            <h2 style="font-size: 35px;"></h2>
           </div>
-        </div>
-        <div class="contenido" id="div-con-bambuco">
-          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8 col-sm-8 col-xs-12">
-            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 con-tit-mod-mus" id="div-tit-bambuco">
-              <h2 class="tit-mod-mus"></h2>
-            </div>
-            <div class="row col-lg-12 col-md-12 text-modulo">
-              <div class="col-lg-6 col-md-6" id="div-tex-bambuco">
-                <p></p>
-                <a href="" data-fancybox><img src=""></a>
-              </div>
-              <div class="col-lg-6 col-md-6" id="div-img-bambuco">
-                <p></p>
-                <a href="" data-fancybox><img src=""></a>
-                <hr>
-                <span></span>
-              </div>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 botones-contenido" id="div-btn-bambuco">
-                <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-4 col-sm-6">
-                  <button class="btn btn-block btn-musica-s" id="btn-ritmo-bambuco">Ritmo</button>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <button class="btn btn-block btn-musica-s" id="btn-melodia-bambuco">Melodía y Armonía</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>    
-      <!-- <div class="contenido" id="div-instrumentos">
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8">
-          <div class="row col-lg-12 con-tit-mod-mus" id="div-tit-instrumentos">
-            <h2 class="tit-mod-mus"></h2>
-          </div>
-          <div class="row col-lg-12 col-md-12 text-modulo">
-            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8" id="div-imgs-instrumentos">
-              <div class="row">
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-guitarra" class="img-responsive">
-                  </a> 
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png" id="img-sala" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/musica/images/bambuco/instrumento_1.png" id="img-" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-chucho" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/musica/images/bambuco/instrumento_2.png" id="img-" class="img-responsive">
-                  </a>  
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-bandola" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-marrana" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-cuchara" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-guaracha" class="img-responsive">
-                  </a>  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                  <a href="#">
-                    <img src="" id="img-esterilla" class="img-responsive">
-                  </a>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6" id="div-tex-instrumentos">
+          <div class="col-lg-12 col-md-12" style="height: 55%;">
+            <div class="col-lg-6 col-md-6" id="div-conu-teorica" style="height: 100%;">
+              <img src="" class="img-responsive">
               <p></p>
             </div>
-            <div class="col-lg-6 col-md-6" id="div-img-instrumentos">
+            <div class="col-lg-6 col-md-6" id="div-cond-teorica" style="height: 100%;">
               <img src="" class="img-responsive">
-              <hr>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12" id="div-btns-teorica" style="height: 10%;">
+            <div class="col-lg-6 col-md-12" id="div-btnu-teorica">
+              <div class="col-lg-4 col-md-4">
+                <button class="btn btn-block btn-musica-s" id="btn-ritmo-teorica">Ritmo</button>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <button class="btn btn-block btn-musica-s" id="btn-melodia-teorica">Melodía</button>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <button class="btn btn-block btn-musica-s" id="btn-armonia-teorica">Armonía</button>
+              </div>
+            </div>
+            <div id="div-btnd-teorica" class="col-lg-12 col-md-12">
+              <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4">
+                <button class="btn btn-block btn-musica-s" id="btn-ritmo-teorica">Ritmo</button>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <button class="btn btn-block btn-musica-s" id="btn-melodia-teorica">Melodía y armonía</button>
+              </div>
             </div>
           </div>
         </div>
-      </div> -->
+
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-interactiva" style="height: 100%;">
+          <div class="col-lg-12 col-md-12" id="div-tit-interactiva" style="height: 15%;">
+            <h2 style="font-size: 35px;"></h2>
+          </div>
+          <div class="col-lg-12 col-md-12" style="height: 55%;">
+            <div class="col-lg-6 col-md-6" id="div-conu-interactiva" style="height: 100%;">
+              <p></p>
+            </div>
+            <div class="col-lg-6 col-md-6" id="div-cond-interactiva" style="height: 100%;">
+              <p></p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12" id="div-btn-interactiva" style="height: 10%;">
+            <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-play-interactiva">Play along</button>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <button class="btn btn-block btn-musica-s" id="btn-referentes-interactiva">Referentes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido" id="div-instrumentos" style="height: 100%;">
+          <div class="col-lg-12 col-md-12" id="div-tit-instrumentos" style="height: 15%;">
+            <h2 style="font-size: 35px; height: 80%"></h2>
+          </div>
+          <div class="col-lg-12 col-md-12" id="div-img-instrumentos" style="height: 55%;">
+            <div class="col-lg-12 col-md-12" style="height: 50%;">
+              <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                <a href="#">
+                  <img id="img-1" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-2" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-3" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-4" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-5" src="" class="img-responsive">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12" style="height: 50%;">
+              <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                <a href="#">
+                  <img id="img-bandola" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-marrana" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-cuchara" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-guaracha" src="" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                <a href="#">
+                  <img id="img-esterilla" src="" class="img-responsive">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12" id="div-des-instrumentos" style="height: 30%;">
+           <div class="col-lg-6 col-md-6" style="height: 100%;">
+            <p></p>
+           </div>
+           <div class="col-lg-6 col-md-6" style="height: 100%;">
+              <img src="">
+           </div>
+         </div>
+       </div>
     </div>
   <?php endif; ?>
   <?php if(is_page("Audiovisuales")) :?>
