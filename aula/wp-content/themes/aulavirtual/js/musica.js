@@ -196,7 +196,7 @@ jQuery(document).ready(function($){
 				break;
 				case "btn-armonia-teorica":
 				$("#div-tit-teorica h2").text("LA RUANA");
-				$("#div-conu-teorica img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/armonia_la_ruana.png");
+				$("#div-conu-teorica img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/armonia_la_ruana.jpg");
 				$("#div-cond-teorica p").html("ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
 					"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
 					"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
@@ -243,7 +243,9 @@ jQuery(document).ready(function($){
 			switch($(this).attr("id")){
 				case "btn-play-interactiva":
 				$("#div-tit-interactiva h2").text("PLAY ALONG LA RUANA");
-				$("#div-conu-interactiva p").html('Video');
+				$("#div-conu-interactiva p").html('<div class="embed-responsive embed-responsive-16by9">'
+					+'<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/10mzYSZ2zKc" allowfullscreen></iframe>'
+					+'</div>');
 				break;
 				case "btn-referentes-interactiva":
 				$("#div-tit-interactiva h2").text("REFERENTES GUABINA");
