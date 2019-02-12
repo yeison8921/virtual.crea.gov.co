@@ -147,45 +147,8 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
-          <br>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#" id="regresar" style="color: #333; text-decoration: none;">
-              <i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>
-            </a>
-          </div>
-          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style="margin-top: 40%;">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">  
-              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-              <button class='btn btn-block btn-musica-t' id="btn-guabina">Guabina</button>
-            </div>
-          </div>
-          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-              <button class='btn btn-block btn-musica-s' id="btn-pasillo">Pasillo</button>
-            </div>
-          </div>
-          <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-              <button class='btn btn-block btn-musica-s' id="btn-bambuco">Bambuco</button>
-            </div>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-              <i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
-              <button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>
-            </div>
-          </div>
         </div>
 
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
@@ -243,6 +206,41 @@
             </div>
             <div class="col-lg-4 col-md-4">
               <button class="btn btn-block btn-musica-s" id="btn-referentes-interactiva">Referentes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
+          <div class="col-lg-12 col-md-12" id="div-tit-general" style="height: 15%">
+            <h2 style="font-size: 35px;"></h2>
+          </div>
+          <div class="col-lg-9" style="height: 65%;">
+            <div class="col-lg-offset-1 col-lg-10" id="div-conu-general" style="height: 80%;">
+              <p></p>
+            </div>
+            <div class="col-lg-12" id="div-cond-general" style="height: 12%;">
+              <div class="col-lg-4 text-center" id="btn-cont-general-uno" style="height: 100%;">
+              </div>
+              <div class="col-lg-4 text-center" id="btn-cont-general-dos" style="height: 100%;">
+              </div>
+              <div class="col-lg-4 text-center" id="btn-cont-general-tres" style="height: 100%;">
+              </div>
+            </div>
+            <div class="col-lg-12" id="div-cont-general" style="height: 12%;">
+              <div class="col-lg-4 text-center" id="btn-cont-general-cuatro" style="height: 100%;">
+              </div>
+              <div class="col-lg-4 text-center" id="btn-cont-general-cinco" style="height: 100%;">
+              </div>
+              <div class="col-lg-4 text-center" id="btn-cont-general-seis" style="height: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3" id="div-barra-general" style="height: 65%; margin-top: 5%;">
+            <div class="col-lg-12" id="btn-barra-uno" style="height: 12%">
+            </div>
+            <div class="col-lg-12" id="btn-barra-dos" style="height: 12%">
+            </div>
+            <div class="col-lg-12" id="btn-barra-tres" style="height: 12%">
             </div>
           </div>
         </div>
@@ -310,12 +308,12 @@
           <div class="col-lg-12 col-md-12" id="div-des-instrumentos" style="height: 30%;">
            <div class="col-lg-6 col-md-6" style="height: 100%;">
             <p></p>
-           </div>
-           <div class="col-lg-6 col-md-6" style="height: 100%;">
-              <img src="">
-           </div>
-         </div>
-       </div>
+          </div>
+          <div class="col-lg-6 col-md-6" style="height: 100%;">
+            <img src="">
+          </div>
+        </div>
+      </div>
     </div>
   <?php endif; ?>
   <?php if(is_page("Audiovisuales")) :?>

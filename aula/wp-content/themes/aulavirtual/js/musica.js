@@ -89,6 +89,7 @@ jQuery(document).ready(function($){
 			$("#div-btn-mod-mus button").not("#btn-guabina").removeClass().addClass('btn btn-block btn-musica-s');
 			break;
 			case "btn-sala-teorica":
+			botonesLateralesSala("teorica");
 			$("#div-btn-mod-mus button").data("data-sala", "teorica");
 			$("#div-sala-teorica button").data("data-modulo", "guabina");
 			$("#div-sala-teorica #div-btnd-teorica").hide();
@@ -98,6 +99,7 @@ jQuery(document).ready(function($){
 			infoBasicaTeoricaGuabina();
 			break;
 			case "btn-sala-interactiva":
+			botonesLateralesSala("interactiva");
 			$("#div-btn-mod-mus button").data("data-sala", "interactiva");
 			$("#div-btn-interactiva button").data("data-modulo", "guabina");
 			$("#div-btn-mod-mus #btn-instrumentos").show();
@@ -106,9 +108,107 @@ jQuery(document).ready(function($){
 			infoBasicaInteractivaGuabina();
 			break;
 			case "btn-sala-general":
+			botonesLateralesSala("general");
+			$("#div-btn-mod-mus button").data("data-sala", "general");
+			$("#div-sala-general").show();
+			limpiarInfoEscala();
+			infoBasicaEscala();
 			break;
 		}
 	});
+
+	function botonesLateralesSala(sala){
+		$("#div-btn-mod-mus").empty();
+		$("#div-btn-mod-mus").append('<br>'+
+			'<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">'+
+			'<a href="#" id="regresar" style="color: #333; text-decoration: none;">'+
+			'<i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>'+
+			'</a>'+
+			'</div>'
+			);
+
+		if(sala == "teorica" || sala == "interactiva"){
+			$("#div-btn-mod-mus").append(
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-t" id="btn-guabina">Guabina</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-pasillo">Pasillo</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-bambuco">Bambuco</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>'+
+				'</div>'+
+				'</div>'
+				);
+		}
+
+		if(sala == "general"){
+			$("#div-btn-mod-mus").append(
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-escala"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-t" id="btn-escala">Escala</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-ritmo"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-ritmo">Ritmo y Métrica</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-acordes"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-acordes">Acordes</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-funciones"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-funciones">Funciones Armónicas</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-armaduras"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-armaduras">Armaduras</button>'+
+				'</div>'+
+				'</div>'
+				);
+		}
+	}
 
 	$("#div-btn-mod-mus").on('click', 'button', function() {
 		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
@@ -171,6 +271,16 @@ jQuery(document).ready(function($){
 				case "btn-instrumentos":
 				infoBasicaInstrumentos();
 				$("#div-des-instrumentos").hide();
+				break;
+			}
+		}
+		if($(this).data('data-sala') == "general"){
+			limpiarInfoEscala();
+			switch($(this).attr('id')) {
+				case "btn-escala":
+				console.log("this");
+				$("#div-sala-general").show();
+				infoBasicaEscala();
 				break;
 			}
 		}
@@ -358,6 +468,42 @@ jQuery(document).ready(function($){
 		$("#div-des-instrumentos p").empty();
 		$("#div-des-instrumentos img").attr("src", "");
 	}
+
+	function infoBasicaEscala(){
+		$("#div-tit-general h2").text("ESCALA");
+		$("#div-conu-general p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
+		$("#btn-cont-general-dos").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
+		$("#btn-barra-uno").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button> ");
+		$("#btn-barra-dos").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button> ");
+		$("#btn-barra-tres").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button> ");
+	}
+
+	function limpiarInfoEscala(){
+		$("#div-tit-general h2").empty();
+		$("#div-conu-general p").html();
+		$("#btn-cont-general-dos").empty();
+		$("#btn-barra-uno").empty();
+		$("#btn-barra-dos").empty();
+		$("#btn-barra-tres").empty();
+	}
+
+
+	$("#div-sala-general").on('click', 'button', function() {
+		switch($(this).attr("id")){
+			case "btn-estructura":
+			limpiarInfoEscala();
+			infoBasicaEscala();
+			$("#div-tit-general h2").empty().text("ESTRUCTURA DE LA ESCALA MAYOR");
+			$("#div-conu-general p").empty().html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
+			break;
+			case "btn-escala-do":
+			break;
+			case "btn-escala-sol":
+			break;
+			case "btn-escala-re":
+			break;
+		}
+	});
 
 	$("#div-instrumentos").on('click', 'img', function() {
 		$("#div-img-instrumentos").hide();
