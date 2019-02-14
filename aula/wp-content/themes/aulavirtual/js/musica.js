@@ -113,6 +113,7 @@ jQuery(document).ready(function($){
 			$("#div-sala-general").show();
 			limpiarInfoEscala();
 			infoBasicaEscala();
+			creacionBotonesSalaGeneral("escala");
 			break;
 		}
 	});
@@ -276,12 +277,19 @@ jQuery(document).ready(function($){
 		}
 		if($(this).data('data-sala') == "general"){
 			limpiarInfoEscala();
+			$("#div-sala-general button").remove(".btn");
+			$("#div-sala-general").show();
 			switch($(this).attr('id')) {
 				case "btn-escala":
-				console.log("this");
-				$("#div-sala-general").show();
 				infoBasicaEscala();
+				creacionBotonesSalaGeneral("escala");
 				break;
+				case "btn-ritmo":
+				infoBasicaRitmo();
+				break;
+				case "btn-acordes":
+				infoBasicaAcordes();
+				break
 			}
 		}
 	});
@@ -472,35 +480,77 @@ jQuery(document).ready(function($){
 	function infoBasicaEscala(){
 		$("#div-tit-general h2").text("ESCALA");
 		$("#div-conu-general p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
-		$("#btn-cont-general-dos").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
-		$("#btn-barra-uno").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button> ");
-		$("#btn-barra-dos").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button> ");
-		$("#btn-barra-tres").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button> ");
 	}
 
 	function limpiarInfoEscala(){
 		$("#div-tit-general h2").empty();
 		$("#div-conu-general p").html();
-		$("#btn-cont-general-dos").empty();
-		$("#btn-barra-uno").empty();
-		$("#btn-barra-dos").empty();
-		$("#btn-barra-tres").empty();
+		$("#div-conu-general img").attr("src", "");
+		/*$("#div-sala-general button").remove(".btn");*/
+	}
+
+	function creacionBotonesSalaGeneral(seccion){
+		if(seccion == "escala"){
+			$("#btn-cont-general-dos").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
+			$("#btn-barra-uno").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button>");
+			$("#btn-barra-dos").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button>");
+			$("#btn-barra-tres").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button>");
+		}
+	}
+
+	function infoEstructura(){
+		$("#div-tit-general h2").text("ESTRUCTURA DE LA ESCALA MAYOR");
+		$("#div-conu-general p").html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
+	}
+
+	function infoDoMayor(){
+		$("#div-tit-general h2").text("ESCALA DE DO MAYOR");
+		$("#div-conu-general p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
+		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
+	}
+
+	function infoSolMayor(){
+		$("#div-tit-general h2").text("ESCALA DE SOL MAYOR");
+		$("#div-conu-general p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
+		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
+	}
+
+	function infoReMayor(){
+		$("#div-tit-general h2").text("ESCALA DE RE MAYOR");
+		$("#div-conu-general p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
+		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
+	}
+
+	function infoBasicaRitmo(){
+		$("#div-tit-general h2").text("RITMO");
+		$("#div-conu-general p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.<br><h2 style='font-size: 35px;'>MÉTRICA</h2><br>Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
+	}
+
+	function infoBasicaAcordes(){
+		$("#div-tit-general h2").text("¿QUÉ ES UN ACORDE?");
+		$("#div-conu-general p").html("Un acorde está conformado por tres o más notas que suenan simultáneamente.<br><br>"+
+			"Dentro de cada escala mayor encontramos una sucesión de acordes mayores.menores y disminuidos, que se forman a partir de cada uno de los grados de la escala, dichos grados están representados con números romanos: I grado, Il grado, IlI grado y así sucesivamente.<br><br>"+
+			"Escala de Do Mayor con numeración por grados");
+		$("#div-conu-general img").attr("src","delfkhekfh");
+		$("#div-cond-general p").html("En esta ocasión veremos acordes de 3 sonidos llamados TRIADAS y de 4 sonidos llamados comúnmente CUATRIADAS, ambos para la tonalidad Mayor.");
+
 	}
 
 
 	$("#div-sala-general").on('click', 'button', function() {
+		limpiarInfoEscala();
 		switch($(this).attr("id")){
 			case "btn-estructura":
-			limpiarInfoEscala();
-			infoBasicaEscala();
-			$("#div-tit-general h2").empty().text("ESTRUCTURA DE LA ESCALA MAYOR");
-			$("#div-conu-general p").empty().html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
+			infoEstructura();
 			break;
 			case "btn-escala-do":
+			infoDoMayor();
 			break;
 			case "btn-escala-sol":
+			infoSolMayor();
 			break;
 			case "btn-escala-re":
+			infoReMayor();
 			break;
 		}
 	});
