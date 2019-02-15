@@ -478,15 +478,16 @@ jQuery(document).ready(function($){
 	}
 
 	function infoBasicaEscala(){
-		$("#div-tit-general h2").text("ESCALA");
+		$("#div-conu-general h2").text("ESCALA");
 		$("#div-conu-general p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
 	}
 
 	function limpiarInfoEscala(){
-		$("#div-tit-general h2").empty();
+		$("#div-conu-general h2").empty();
 		$("#div-conu-general p").html();
+		$("#div-cond-general h2").empty();
+		$("#div-cond-general p").html();
 		$("#div-conu-general img").attr("src", "");
-		/*$("#div-sala-general button").remove(".btn");*/
 	}
 
 	function creacionBotonesSalaGeneral(seccion){
@@ -523,7 +524,9 @@ jQuery(document).ready(function($){
 
 	function infoBasicaRitmo(){
 		$("#div-tit-general h2").text("RITMO");
-		$("#div-conu-general p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.<br><h2 style='font-size: 35px;'>MÉTRICA</h2><br>Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
+		$("#div-conu-general p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.");
+		$("#div-cond-general h2").text("MÉTRICA");
+		$("#div-cond-general p").html("Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
 	}
 
 	function infoBasicaAcordes(){

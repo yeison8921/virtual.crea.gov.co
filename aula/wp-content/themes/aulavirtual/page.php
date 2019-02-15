@@ -211,14 +211,15 @@
         </div>
 
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
-          <div class="col-lg-12 col-md-12" id="div-tit-general" style="height: 15%">
-            <h2 style="font-size: 35px;"></h2>
-          </div>
-          <div class="col-lg-9" style="height: 65%;">
-            <div class="col-lg-offset-1 col-lg-10" id="div-conu-general" style="height: 80%;">
+          <div class="col-lg-9" style="height: 65%; border-color: black; border-style: solid;">
+            <div class="col-lg-11" id="div-conu-general" style="height: 80%; border-color: black; border-style: solid;">
+              <h2 style="font-size: 35px;"></h2>
               <p></p>
+              <img src="" class="img-responsive">
             </div>
-            <div class="col-lg-12" id="div-cond-general" style="height: 12%;">
+            <div class="col-lg-11" id="div-cond-general" style="height: 12%; border-color: black; border-style: solid;">
+              <h2 style="font-size: 35px;"></h2>
+              <p></p>
               <div class="col-lg-4 text-center" id="btn-cont-general-uno" style="height: 100%;">
               </div>
               <div class="col-lg-4 text-center" id="btn-cont-general-dos" style="height: 100%;">
@@ -226,7 +227,7 @@
               <div class="col-lg-4 text-center" id="btn-cont-general-tres" style="height: 100%;">
               </div>
             </div>
-            <div class="col-lg-12" id="div-cont-general" style="height: 12%;">
+            <div class="col-lg-11" id="div-cont-general" style="height: 12%; border-color: black; border-style: solid;">
               <div class="col-lg-4 text-center" id="btn-cont-general-cuatro" style="height: 100%;">
               </div>
               <div class="col-lg-4 text-center" id="btn-cont-general-cinco" style="height: 100%;">
