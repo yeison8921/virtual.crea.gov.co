@@ -277,7 +277,6 @@ jQuery(document).ready(function($){
 		}
 		if($(this).data('data-sala') == "general"){
 			limpiarInfoEscala();
-			$("#div-sala-general button").remove(".btn");
 			$("#div-sala-general").show();
 			switch($(this).attr('id')) {
 				case "btn-escala":
@@ -289,6 +288,7 @@ jQuery(document).ready(function($){
 				break;
 				case "btn-acordes":
 				infoBasicaAcordes();
+				creacionBotonesSalaGeneral("acordes");
 				break
 			}
 		}
@@ -478,70 +478,134 @@ jQuery(document).ready(function($){
 	}
 
 	function infoBasicaEscala(){
-		$("#div-conu-general h2").text("ESCALA");
-		$("#div-conu-general p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
+		$("#div-pri-sec-gen h2").text("ESCALA");
+		$("#div-pri-sec-gen p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
 	}
 
 	function limpiarInfoEscala(){
-		$("#div-conu-general h2").empty();
-		$("#div-conu-general p").html();
-		$("#div-cond-general h2").empty();
-		$("#div-cond-general p").html();
-		$("#div-conu-general img").attr("src", "");
+		$("#div-pri-sec-gen h2").empty();
+		$("#div-pri-sec-gen p").html("");
+		$("#div-pri-sec-gen img").attr("src", "");
+		$("#div-seg-sec-gen h2").empty();
+		$("#div-seg-sec-gen p").html("");
+		$("#div-seg-sec-gen img").attr("src", "");
+		$("#div-sala-general button").remove(".btn");
+		$("#div-seg-btn-sec-gen a div").remove();
 	}
 
 	function creacionBotonesSalaGeneral(seccion){
 		if(seccion == "escala"){
-			$("#btn-cont-general-dos").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
-			$("#btn-barra-uno").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button>");
-			$("#btn-barra-dos").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button>");
-			$("#btn-barra-tres").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button>");
+			$("#div-qui-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
+			$("#div-pri-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button>");
+			$("#div-seg-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button>");
+			$("#div-ter-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button>");
+		}
+		if(seccion == "acordes"){
+			$("#div-cua-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
+			$("#div-sex-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
 		}
 	}
 
 	function infoEstructura(){
-		$("#div-tit-general h2").text("ESTRUCTURA DE LA ESCALA MAYOR");
-		$("#div-conu-general p").html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
+		$("#div-pri-sec-gen h2").text("ESTRUCTURA DE LA ESCALA MAYOR");
+		$("#div-pri-sec-gen p").html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
 	}
 
 	function infoDoMayor(){
-		$("#div-tit-general h2").text("ESCALA DE DO MAYOR");
-		$("#div-conu-general p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
-		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
+		$("#div-pri-sec-gen h2").text("ESCALA DE DO MAYOR");
+		$("#div-pri-sec-gen p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
 	}
 
 	function infoSolMayor(){
-		$("#div-tit-general h2").text("ESCALA DE SOL MAYOR");
-		$("#div-conu-general p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
-		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
+		$("#div-pri-sec-gen h2").text("ESCALA DE SOL MAYOR");
+		$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
 	}
 
 	function infoReMayor(){
-		$("#div-tit-general h2").text("ESCALA DE RE MAYOR");
-		$("#div-conu-general p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
-		$("#div-conu-general img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
+		$("#div-pri-sec-gen h2").text("ESCALA DE RE MAYOR");
+		$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
 	}
 
 	function infoBasicaRitmo(){
-		$("#div-tit-general h2").text("RITMO");
-		$("#div-conu-general p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.");
-		$("#div-cond-general h2").text("MÉTRICA");
-		$("#div-cond-general p").html("Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
+		$("#div-pri-sec-gen h2").text("RITMO");
+		$("#div-pri-sec-gen p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.");
+		$("#div-seg-sec-gen h2").text("MÉTRICA");
+		$("#div-seg-sec-gen p").html("Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
 	}
 
 	function infoBasicaAcordes(){
-		$("#div-tit-general h2").text("¿QUÉ ES UN ACORDE?");
-		$("#div-conu-general p").html("Un acorde está conformado por tres o más notas que suenan simultáneamente.<br><br>"+
+		$("#div-pri-sec-gen h2").text("¿QUÉ ES UN ACORDE?");
+		$("#div-pri-sec-gen p").html("Un acorde está conformado por tres o más notas que suenan simultáneamente.<br><br>"+
 			"Dentro de cada escala mayor encontramos una sucesión de acordes mayores.menores y disminuidos, que se forman a partir de cada uno de los grados de la escala, dichos grados están representados con números romanos: I grado, Il grado, IlI grado y así sucesivamente.<br><br>"+
 			"Escala de Do Mayor con numeración por grados");
-		$("#div-conu-general img").attr("src","delfkhekfh");
-		$("#div-cond-general p").html("En esta ocasión veremos acordes de 3 sonidos llamados TRIADAS y de 4 sonidos llamados comúnmente CUATRIADAS, ambos para la tonalidad Mayor.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/Escala_Do_mayor.png");
+		$("#div-seg-sec-gen p").html("<br><br><br><br>En esta ocasión veremos acordes de 3 sonidos llamados TRIADAS y de 4 sonidos llamados comúnmente CUATRIADAS, ambos para la tonalidad Mayor.");
+	}
 
+	function infoTriadas(){
+		$("#div-pri-sec-gen h2").text("TRIADAS");
+		$("#div-pri-sec-gen p").html("Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/triadas.png");
+		$("#div-seg-sec-gen p").html("<br><br>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.<br><br>"+
+			"Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.");
+	}
+
+	function infoTriadasDos(){
+		$("#div-pri-sec-gen p").html('De esta manera Do es la primera nota de la triada y se llamars "Tónica".<br>'+
+		'La nota del medio es Mi y es el tercer grado de la escala de Do mayor, su nombre "Mediante".<br>'+
+		'Y la quinta nota, Sol quien a su vez es el quinto grado de la escala de Do Mayor tiene por nombre "Dominante"'+
+		'Vemos también en esta imagen que la distancia que se genera entre I y III grado y III y V grado es un intervalo de tercera, y que entre el II y el V grado hay un intervalo de quinta.<br>'+
+		'La relación entre las notas en el acorde y la clase de intervalos que se crean (mayores o menores), te dicen que clase de acorde triada estás tocando, mayor, menor o disminuido.<br><br>'+
+		'Intervalos que se forman en la escala de Do mayor');
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/triadas_2.png");
+	}
+
+	function infoTriadasTres(){
+		$("#div-pri-sec-gen p").html("Intervalos en los acordes mayores, menores y disminuidos que se forman en la escala Mayor.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/triadas_3.png");
+		$("#div-seg-sec-gen p").html("Acordes de tres sonidos (Triadas) de la escala de Do Mayor con numeración y carácter");
+		$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/triadas_4.png");
+	}
+
+	function infoTriadasCuatro(){
+		$("#div-pri-sec-gen p").html("Acordes de tres sonidos de la escala de Do Mayor con nombres de cada uno:");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/triadas_5.png");
+		$("#div-seg-sec-gen p").html("Según los anteriores ejemplos, podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
+			"<ul>"+
+			"<li>Acordes Mayores: I, IV y V grado</li>"+
+			"<li>Acordes menores: ii, iii y vi grado</li>"+
+			"<li>Acordes disminuidos: vii grado</li>"+
+			"</ul>");
+	}
+
+	function infoCuatriadas(){
+		$("#div-pri-sec-gen p").html("Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.<br><br>"+
+			"A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos  y en el siguiente gráfico  sus respectivos nombres.<br><br>"+
+			"Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/cuatriadas.png");
+	}
+
+	function infoCuatriadasDos(){
+		$("#div-pri-sec-gen p").html("Acordes de cuatro sonidos de la escala de Do Mayor con nombres de cada uno.");
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/cuatriadas_2.png");
+		$("#div-seg-sec-gen p").html("Podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
+			"<ul>"+
+			"<li>Acordes Mayores Delta7: I y IV</li>"+
+			"<li>Acordes Mayores7: V</li>"+
+			"<li>Acordes menores7: ii, iii y vi</li>"+
+			"<li>Acordes semidisminuidos: vii</li>"+
+			"</ul>");
 	}
 
 
 	$("#div-sala-general").on('click', 'button', function() {
 		limpiarInfoEscala();
+		if($(this).attr("id") == "btn-estructura" || $(this).attr("id") == "btn-escala-do" || $(this).attr("id") == "btn-escala-sol" || $(this).attr("id") == "btn-escala-re"){
+			creacionBotonesSalaGeneral("escala");
+		}
 		switch($(this).attr("id")){
 			case "btn-estructura":
 			infoEstructura();
@@ -555,6 +619,67 @@ jQuery(document).ready(function($){
 			case "btn-escala-re":
 			infoReMayor();
 			break;
+			case "btn-triadas":
+			$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
+			$("#ref-ade-pag").append("<div class='fd'></div>");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			infoTriadas();
+			creacionBotonesSalaGeneral("acordes");
+			break;
+			case "btn-cuatriadas":
+			$("#div-seg-btn-sec-gen").data("data-tema", "cuatriadas");
+			$("#ref-ade-pag").append("<div class='fd'></div>");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			infoCuatriadas();
+			creacionBotonesSalaGeneral("acordes");
+			break;
+		}
+	});
+
+	$("#div-ter-sec-gen").on('click', 'a', function() {
+		limpiarInfoEscala();
+		creacionBotonesSalaGeneral("acordes");
+		if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas"){
+			switch($(this).data("data-pagina")){
+				case "uno":
+				infoTriadas();
+				$("#ref-ade-pag").data("data-pagina", "dos");
+				$("#ref-ade-pag").append("<div class='fd'></div>");
+				break;
+				case "dos":
+				infoTriadasDos();
+				$("#ref-ade-pag").data("data-pagina", "tres");
+				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-atr-pag").data("data-pagina", "uno");
+				$("#ref-atr-pag").append("<div class='fi'></div>");
+				break;
+				case "tres":
+				infoTriadasTres();
+				$("#ref-ade-pag").data("data-pagina", "cuatro");
+				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-atr-pag").data("data-pagina", "dos");
+				$("#ref-atr-pag").append("<div class='fi'></div>");
+				break;
+				case "cuatro":
+				infoTriadasCuatro();
+				$("#ref-atr-pag").data("data-pagina", "tres");
+				$("#ref-atr-pag").append("<div class='fi'></div>");
+				break;
+			}
+		}
+		if($("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
+			switch($(this).data("data-pagina")){
+				case "uno":
+				infoCuatriadas();
+				$("#ref-ade-pag").data("data-pagina", "dos");
+				$("#ref-ade-pag").append("<div class='fd'></div>");
+				break;
+				case "dos":
+				infoCuatriadasDos();
+				$("#ref-atr-pag").data("data-pagina", "uno");
+				$("#ref-atr-pag").append("<div class='fi'></div>");
+				break;
+			}
 		}
 	});
 

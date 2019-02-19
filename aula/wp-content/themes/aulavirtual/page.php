@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+  <?php get_header(); ?>
 <!--Inicio Contenido -->
 <div class="container-fluid">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -211,37 +211,42 @@
         </div>
 
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
-          <div class="col-lg-9" style="height: 65%; border-color: black; border-style: solid;">
-            <div class="col-lg-11" id="div-conu-general" style="height: 80%; border-color: black; border-style: solid;">
+          <div class="col-lg-9 col-md-9" style="height: 80%;">
+            <div class="col-lg-12 col-md-12" id="div-pri-sec-gen" style="height: 40%;">
               <h2 style="font-size: 35px;"></h2>
               <p></p>
               <img src="" class="img-responsive">
             </div>
-            <div class="col-lg-11" id="div-cond-general" style="height: 12%; border-color: black; border-style: solid;">
+            <div class="col-lg-12 col-md-12" id="div-seg-sec-gen" style="height: 40%; ">
               <h2 style="font-size: 35px;"></h2>
               <p></p>
-              <div class="col-lg-4 text-center" id="btn-cont-general-uno" style="height: 100%;">
+              <img src="" class="img-responsive">
+            </div>
+            <div class="col-lg-12 col-md-12" id="div-ter-sec-gen" style="height: 10%;">
+              <div class="col-lg-4 col-md-4 text-center" id="div-pri-btn-sec-gen" style="height: 100%;">
               </div>
-              <div class="col-lg-4 text-center" id="btn-cont-general-dos" style="height: 100%;">
+              <div class="col-lg-4 col-md-4 text-center" id="div-seg-btn-sec-gen" style="height: 100%;">
+                <a class="col-lg-6 col-md-6" href="#" id="ref-atr-pag"></a>
+                <a class="col-lg-6 col-md-6" href="#" id="ref-ade-pag"></a>
               </div>
-              <div class="col-lg-4 text-center" id="btn-cont-general-tres" style="height: 100%;">
+              <div class="col-lg-4 col-md-4 text-center" id="div-ter-btn-sec-gen" style="height: 100%;">
               </div>
             </div>
-            <div class="col-lg-11" id="div-cont-general" style="height: 12%; border-color: black; border-style: solid;">
-              <div class="col-lg-4 text-center" id="btn-cont-general-cuatro" style="height: 100%;">
+            <div class="col-lg-12 col-md-12" id="div-cua-sec-gen" style="height: 10%; ">
+              <div class="col-lg-4 col-md-4 text-center" id="div-cua-btn-sec-gen" style="height: 100%;">
               </div>
-              <div class="col-lg-4 text-center" id="btn-cont-general-cinco" style="height: 100%;">
+              <div class="col-lg-4 col-md-4 text-center" id="div-qui-btn-sec-gen" style="height: 100%;">
               </div>
-              <div class="col-lg-4 text-center" id="btn-cont-general-seis" style="height: 100%;">
+              <div class="col-lg-4 col-md-4 text-center" id="div-sex-btn-sec-gen" style="height: 100%;">
               </div>
             </div>
           </div>
-          <div class="col-lg-3" id="div-barra-general" style="height: 65%; margin-top: 5%;">
-            <div class="col-lg-12" id="btn-barra-uno" style="height: 12%">
+          <div class="col-lg-3 col-md-4" id="div-bar-gen" style="height: 65%; margin-top: 20%;">
+            <div class="col-lg-12 col-md-12" id="div-pri-btn-bar-gen" style="height: 12%">
             </div>
-            <div class="col-lg-12" id="btn-barra-dos" style="height: 12%">
+            <div class="col-lg-12 col-md-12" id="div-seg-btn-bar-gen" style="height: 12%">
             </div>
-            <div class="col-lg-12" id="btn-barra-tres" style="height: 12%">
+            <div class="col-lg-12 col-md-12" id="div-ter-btn-bar-gen" style="height: 12%">
             </div>
           </div>
         </div>

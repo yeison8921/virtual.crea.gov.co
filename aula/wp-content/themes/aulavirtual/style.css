@@ -661,6 +661,22 @@ table.dataTable.no-footer{
     background: #98f89f;
   }
 
+  .fd{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #121a1c;
+  }
+
+  .fi{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right:20px solid #121a1c; 
+  }
+
 
 
 /*Fin estilos aula música
