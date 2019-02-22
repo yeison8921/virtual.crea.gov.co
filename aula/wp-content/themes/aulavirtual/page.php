@@ -211,7 +211,7 @@
         </div>
 
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
-          <div class="col-lg-9 col-md-9" style="height: 80%;">
+          <div class="col-lg-9 col-md-8" style="height: 80%;">
             <div class="col-lg-12 col-md-12" id="div-pri-sec-gen" style="height: 40%;">
               <h2 style="font-size: 35px;"></h2>
               <p></p>

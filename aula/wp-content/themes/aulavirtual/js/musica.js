@@ -285,6 +285,7 @@ jQuery(document).ready(function($){
 				break;
 				case "btn-ritmo":
 				infoBasicaRitmo();
+				creacionBotonesSalaGeneral("ritmo");
 				break;
 				case "btn-acordes":
 				infoBasicaAcordes();
@@ -491,18 +492,23 @@ jQuery(document).ready(function($){
 		$("#div-seg-sec-gen img").attr("src", "");
 		$("#div-sala-general button").remove(".btn");
 		$("#div-seg-btn-sec-gen a div").remove();
+		$("#div-ter-btn-bar-gen").empty();
 	}
 
 	function creacionBotonesSalaGeneral(seccion){
 		if(seccion == "escala"){
-			$("#div-qui-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
-			$("#div-pri-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-do'>Escala Do Mayor</button>");
-			$("#div-seg-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-sol'>Escala Sol Mayor</button>");
-			$("#div-ter-btn-bar-gen").append("<button class='btn btn-block btn-musica-s' id='btn-escala-re'>Escala Re Mayor</button>");
+			$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
+			$("#div-pri-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-do' style='height: 80%;'>Escala Do Mayor</button>");
+			$("#div-seg-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-sol' style='height: 80%;'>Escala Sol Mayor</button>");
+			$("#div-ter-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-re' style='height: 80%;'>Escala Re Mayor</button>");
 		}
 		if(seccion == "acordes"){
-			$("#div-cua-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
-			$("#div-sex-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
+		}
+		if(seccion == "ritmo"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas' style='height: 100%;'>Métricas de<br>compas simple</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-figuras' style='height: 100%;'>Figuras musicales</button>");
 		}
 	}
 
@@ -511,22 +517,23 @@ jQuery(document).ready(function($){
 		$("#div-pri-sec-gen p").html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
 	}
 
-	function infoDoMayor(){
-		$("#div-pri-sec-gen h2").text("ESCALA DE DO MAYOR");
-		$("#div-pri-sec-gen p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
-	}
+	function infoEscalas(escala){
+		if(escala == "do"){
+			$("#div-pri-sec-gen h2").text("ESCALA DE DO MAYOR");
+			$("#div-pri-sec-gen p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
+		}
+		if(escala == "sol"){
+			$("#div-pri-sec-gen h2").text("ESCALA DE SOL MAYOR");
+			$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
+		}
+		if(escala == "re"){
+			$("#div-pri-sec-gen h2").text("ESCALA DE RE MAYOR");
+			$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
+		}
 
-	function infoSolMayor(){
-		$("#div-pri-sec-gen h2").text("ESCALA DE SOL MAYOR");
-		$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
-	}
-
-	function infoReMayor(){
-		$("#div-pri-sec-gen h2").text("ESCALA DE RE MAYOR");
-		$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
 	}
 
 	function infoBasicaRitmo(){
@@ -534,6 +541,63 @@ jQuery(document).ready(function($){
 		$("#div-pri-sec-gen p").html("Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.");
 		$("#div-seg-sec-gen h2").text("MÉTRICA");
 		$("#div-seg-sec-gen p").html("Es la que define la estructura de cada compás en una pieza musical. Existen las métricas de compás simple, cuya división de pulso es binaria. Y las métricas de compás compuesto, cuya división de pulso es ternaria. En esta ocasión nos encargaremos de las métricas de compás simple.");
+	}
+
+	function infoMetricas(boton=0){
+		if(boton == 0){
+			$("#div-pri-sec-gen p").html("<br><br>La métrica está representada por un fraccionario que aparece al inicio de la pieza musical."+
+				"<br><br>El número que está en la parte superior del fraccionario indica el número de pulsos por compás");
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/ritmo/fraccion.png");
+			$("#div-seg-sec-gen p").html("<br><br>El número que está en la parte inferior del fraccionario indica la figura que ocupa cada uno de esos pulsos en compás simple.");
+		}
+		$("#div-seg-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas-utilizadas' style='height: 100%;'>Métricas<br>más utiilizadas</button>");
+	}
+
+	function infoFiguras(){
+		$("#div-pri-sec-gen p").html("Todas las figuras musicales tienen un número que las representa así:");
+		$("#div-pri-sec-gen p").html("<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
+			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>8 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/corchea.png' height='90'>   Corchea</div>"+
+			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>2 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/blanca.png' height='90'>   Blanca</div>"+
+			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>16 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/semicorchea.png' height='90'>   Semicorchea</div>"+
+			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>4 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/negra.png' height='90'>   Negra</div>");
+	}
+
+	function infoMetricasUtilizadas(){
+		$("#div-pri-sec-gen p").html("En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
+			"A continuación, veremos las métricas más utilizadas en compás simple.");
+		$("#div-pri-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dos-cuartos' style='height: 80%;'>2/4</button>");
+		$("#div-seg-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-tres-cuartos' style='height: 80%;'>3/4</button>");
+		$("#div-ter-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatro-cuartos' style='height: 80%;'>4/4</button>");
+	}
+
+	function infoCuartos(numero){
+		if(numero == 2){
+			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran dos pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.");
+
+		}
+		if(numero == 3){
+			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran tres pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca con puntillo.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.");
+
+		}
+		if(numero == 4){
+			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran cuatro pulsos de negra por compás.<br>"+
+				"Unidad de compás: redonda.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.<br>");
+			$("#div-ter-btn-bar-gen").html("<br>También encontramos las métricas:<br>"+
+				"2/16, 3/16, 4/16<br>"+
+				"2/8, 3/8, 4/8<br>"+
+				"2/2, 3/2, 4/2<br>");
+		}
 	}
 
 	function infoBasicaAcordes(){
@@ -606,32 +670,55 @@ jQuery(document).ready(function($){
 		if($(this).attr("id") == "btn-estructura" || $(this).attr("id") == "btn-escala-do" || $(this).attr("id") == "btn-escala-sol" || $(this).attr("id") == "btn-escala-re"){
 			creacionBotonesSalaGeneral("escala");
 		}
+		if($(this).attr("id") == "btn-metricas" || $(this).attr("id") == "btn-figuras" || $(this).attr("id") == "btn-metricas-utilizadas" || $(this).attr("id") == "btn-dos-cuartos" || $(this).attr("id") == "btn-tres-cuartos" || $(this).attr("id") == "btn-cuatro-cuartos"){
+			creacionBotonesSalaGeneral("ritmo");
+		}
+		if($(this).attr("id") == "btn-triadas" || $(this).attr("id") == "btn-cuatriadas"){
+			creacionBotonesSalaGeneral("acordes");
+		}
+		if($(this).attr("id") == "btn-dos-cuartos" || $(this).attr("id") == "btn-tres-cuartos" || $(this).attr("id") == "btn-cuatro-cuartos" || $(this).attr("id") == "btn-metricas-utilizadas"){
+			infoMetricas(1);
+			infoMetricasUtilizadas();
+		}
 		switch($(this).attr("id")){
 			case "btn-estructura":
 			infoEstructura();
 			break;
 			case "btn-escala-do":
-			infoDoMayor();
+			infoEscalas("do");
 			break;
 			case "btn-escala-sol":
-			infoSolMayor();
+			infoEscalas("sol");
 			break;
 			case "btn-escala-re":
-			infoReMayor();
+			infoEscalas("re");
 			break;
 			case "btn-triadas":
 			$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
-			$("#ref-ade-pag").append("<div class='fd'></div>");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
 			$("#ref-ade-pag").data("data-pagina", "dos");
 			infoTriadas();
-			creacionBotonesSalaGeneral("acordes");
 			break;
 			case "btn-cuatriadas":
 			$("#div-seg-btn-sec-gen").data("data-tema", "cuatriadas");
-			$("#ref-ade-pag").append("<div class='fd'></div>");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
 			$("#ref-ade-pag").data("data-pagina", "dos");
 			infoCuatriadas();
-			creacionBotonesSalaGeneral("acordes");
+			break;
+			case "btn-metricas":
+			infoMetricas();
+			break;
+			case "btn-figuras":
+			infoFiguras();
+			break;
+			case "btn-dos-cuartos":
+			infoCuartos(2);
+			break;
+			case "btn-tres-cuartos":
+			infoCuartos(3);
+			break;
+			case "btn-cuatro-cuartos":
+			infoCuartos(4);
 			break;
 		}
 	});
@@ -644,26 +731,26 @@ jQuery(document).ready(function($){
 				case "uno":
 				infoTriadas();
 				$("#ref-ade-pag").data("data-pagina", "dos");
-				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
 				break;
 				case "dos":
 				infoTriadasDos();
 				$("#ref-ade-pag").data("data-pagina", "tres");
-				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
 				$("#ref-atr-pag").data("data-pagina", "uno");
-				$("#ref-atr-pag").append("<div class='fi'></div>");
+				$("#ref-atr-pag").html("<div class='fi'></div>");
 				break;
 				case "tres":
 				infoTriadasTres();
 				$("#ref-ade-pag").data("data-pagina", "cuatro");
-				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
 				$("#ref-atr-pag").data("data-pagina", "dos");
-				$("#ref-atr-pag").append("<div class='fi'></div>");
+				$("#ref-atr-pag").html("<div class='fi'></div>");
 				break;
 				case "cuatro":
 				infoTriadasCuatro();
 				$("#ref-atr-pag").data("data-pagina", "tres");
-				$("#ref-atr-pag").append("<div class='fi'></div>");
+				$("#ref-atr-pag").html("<div class='fi'></div>");
 				break;
 			}
 		}
@@ -672,12 +759,12 @@ jQuery(document).ready(function($){
 				case "uno":
 				infoCuatriadas();
 				$("#ref-ade-pag").data("data-pagina", "dos");
-				$("#ref-ade-pag").append("<div class='fd'></div>");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
 				break;
 				case "dos":
 				infoCuatriadasDos();
 				$("#ref-atr-pag").data("data-pagina", "uno");
-				$("#ref-atr-pag").append("<div class='fi'></div>");
+				$("#ref-atr-pag").html("<div class='fi'></div>");
 				break;
 			}
 		}
