@@ -112,7 +112,7 @@ jQuery(document).ready(function($){
 			$("#div-btn-mod-mus button").data("data-sala", "general");
 			$("#div-sala-general").show();
 			limpiarInfoEscala();
-			infoBasicaEscala();
+			infoEscalas("ESCALA", "Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).");
 			creacionBotonesSalaGeneral("escala");
 			break;
 		}
@@ -280,7 +280,7 @@ jQuery(document).ready(function($){
 			$("#div-sala-general").show();
 			switch($(this).attr('id')) {
 				case "btn-escala":
-				infoBasicaEscala();
+				infoEscalas("ESCALA", "Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).");
 				creacionBotonesSalaGeneral("escala");
 				break;
 				case "btn-ritmo":
@@ -290,7 +290,11 @@ jQuery(document).ready(function($){
 				case "btn-acordes":
 				infoBasicaAcordes();
 				creacionBotonesSalaGeneral("acordes");
-				break
+				break;
+				case "btn-funciones":
+				infoBasicaFunciones();
+				creacionBotonesSalaGeneral("funciones");
+				break;
 			}
 		}
 	});
@@ -478,11 +482,6 @@ jQuery(document).ready(function($){
 		$("#div-des-instrumentos img").attr("src", "");
 	}
 
-	function infoBasicaEscala(){
-		$("#div-pri-sec-gen h2").text("ESCALA");
-		$("#div-pri-sec-gen p").html("Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”. <br><br> La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S). ");
-	}
-
 	function limpiarInfoEscala(){
 		$("#div-pri-sec-gen h2").empty();
 		$("#div-pri-sec-gen p").html("");
@@ -502,38 +501,26 @@ jQuery(document).ready(function($){
 			$("#div-seg-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-sol' style='height: 80%;'>Escala Sol Mayor</button>");
 			$("#div-ter-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-re' style='height: 80%;'>Escala Re Mayor</button>");
 		}
-		if(seccion == "acordes"){
-			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
-			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
-		}
 		if(seccion == "ritmo"){
 			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas' style='height: 100%;'>Métricas de<br>compas simple</button>");
 			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-figuras' style='height: 100%;'>Figuras musicales</button>");
 		}
+		if(seccion == "acordes"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
+		}
+		if(seccion == "funciones"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-tonica' style='height: 100%;'>Tónica</button>");
+			$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-subdominante' style='height: 100%;'>Subdominante</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dominante' style='height: 100%;'>Dominante</button>");
+		}
 	}
 
-	function infoEstructura(){
-		$("#div-pri-sec-gen h2").text("ESTRUCTURA DE LA ESCALA MAYOR");
-		$("#div-pri-sec-gen p").html("Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
-	}
-
-	function infoEscalas(escala){
-		if(escala == "do"){
-			$("#div-pri-sec-gen h2").text("ESCALA DE DO MAYOR");
-			$("#div-pri-sec-gen p").html("Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.");
-			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Do_Mayor.jpg");
-		}
-		if(escala == "sol"){
-			$("#div-pri-sec-gen h2").text("ESCALA DE SOL MAYOR");
-			$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).");
-			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Sol_Mayor.jpg");
-		}
-		if(escala == "re"){
-			$("#div-pri-sec-gen h2").text("ESCALA DE RE MAYOR");
-			$("#div-pri-sec-gen p").html("Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).");
-			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/Nota_Re_Mayor.jpg");
-		}
-
+	function infoEscalas(title, text, img=""){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(text);
+		if(img != "")
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/"+img);
 	}
 
 	function infoBasicaRitmo(){
@@ -570,34 +557,10 @@ jQuery(document).ready(function($){
 		$("#div-ter-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatro-cuartos' style='height: 80%;'>4/4</button>");
 	}
 
-	function infoCuartos(numero){
-		if(numero == 2){
-			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran dos pulsos de negra por compás.<br>"+
-				"Unidad de compás: blanca.<br>"+
-				"Unidad de pulso: negra.<br>"+
-				"Unidad de primera división: corchea.<br>"+
-				"Unidad de segunda división: semicorchea.");
-
-		}
-		if(numero == 3){
-			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran tres pulsos de negra por compás.<br>"+
-				"Unidad de compás: blanca con puntillo.<br>"+
-				"Unidad de pulso: negra.<br>"+
-				"Unidad de primera división: corchea.<br>"+
-				"Unidad de segunda división: semicorchea.");
-
-		}
-		if(numero == 4){
-			$("#div-seg-sec-gen p").html("Métrica en la que se encuentran cuatro pulsos de negra por compás.<br>"+
-				"Unidad de compás: redonda.<br>"+
-				"Unidad de pulso: negra.<br>"+
-				"Unidad de primera división: corchea.<br>"+
-				"Unidad de segunda división: semicorchea.<br>");
-			$("#div-ter-btn-bar-gen").html("<br>También encontramos las métricas:<br>"+
-				"2/16, 3/16, 4/16<br>"+
-				"2/8, 3/8, 4/8<br>"+
-				"2/2, 3/2, 4/2<br>");
-		}
+	function infoCuartos(main_text, sec_text=""){
+		$("#div-seg-sec-gen p").html(main_text);
+		if(sec_text != "")
+			$("#div-ter-btn-bar-gen").html(sec_text);
 	}
 
 	function infoBasicaAcordes(){
@@ -664,6 +627,19 @@ jQuery(document).ready(function($){
 			"</ul>");
 	}
 
+	function infoBasicaFunciones (){
+		$("#div-pri-sec-gen h2").text("FUNCIONES ARMÓNICAS");
+		$("#div-pri-sec-gen p").html("Las funciones armónicas son regiones de la tonalidad que nos permiten entender la relación existente entre los acordes que la componen.<br><br>"+
+			"Existen tres funciones armónicas tanto en tonalidad Mayor como en tonalidad menor.");
+	}
+
+	function infoArmonicas(title, text, img, button){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(text);
+		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/funciones/"+img);
+		$("#div-seg-btn-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-"+button+"' style='height: 100%;'>Acordes</button>");
+	}
+
 
 	$("#div-sala-general").on('click', 'button', function() {
 		limpiarInfoEscala();
@@ -680,18 +656,21 @@ jQuery(document).ready(function($){
 			infoMetricas(1);
 			infoMetricasUtilizadas();
 		}
+		if($(this).attr("id") == "btn-tonica" || $(this).attr("id") == "btn-subdominante" || $(this).attr("id") == "btn-dominante" || $(this).attr("id") == "btn-acordes-tonica" || $(this).attr("id") == "btn-acordes-subdominante" || $(this).attr("id") == "btn-acordes-dominante"){
+			creacionBotonesSalaGeneral("funciones");
+		}
 		switch($(this).attr("id")){
 			case "btn-estructura":
-			infoEstructura();
+			infoEscalas("ESTRUCTURA DE LA ESCALA MAYOR", "Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
 			break;
 			case "btn-escala-do":
-			infoEscalas("do");
+			infoEscalas("ESCALA DE DO MAYOR", "Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.", "Nota_Do_Mayor.jpg" );
 			break;
 			case "btn-escala-sol":
-			infoEscalas("sol");
+			infoEscalas("ESCALA DE SOL MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).", "Nota_Sol_Mayor.jpg");
 			break;
 			case "btn-escala-re":
-			infoEscalas("re");
+			infoEscalas("ESCALA DE RE MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).", "Nota_Re_Mayor.jpg");
 			break;
 			case "btn-triadas":
 			$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
@@ -712,13 +691,46 @@ jQuery(document).ready(function($){
 			infoFiguras();
 			break;
 			case "btn-dos-cuartos":
-			infoCuartos(2);
+			infoCuartos("Métrica en la que se encuentran dos pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.");
 			break;
 			case "btn-tres-cuartos":
-			infoCuartos(3);
+			infoCuartos("Métrica en la que se encuentran tres pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca con puntillo.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.");
 			break;
 			case "btn-cuatro-cuartos":
-			infoCuartos(4);
+			infoCuartos("Métrica en la que se encuentran cuatro pulsos de negra por compás.<br>"+
+				"Unidad de compás: redonda.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.<br>", "<br>También encontramos las métricas:<br>"+
+				"2/16, 3/16, 4/16<br>"+
+				"2/8, 3/8, 4/8<br>"+
+				"2/2, 3/2, 4/2<br>");
+			break;
+			case "btn-tonica":
+			infoArmonicas("TÓNICA", "Representada por el número romano I, debido a que su nota fundamental es el primer grado de la escala. Se denomina “Tónica” porque es el acorde del primer grado el que nos indica cuál es la tonalidad.", "tonica.png", "acordes-tonica");
+			break;
+			case "btn-subdominante":
+			infoArmonicas("SUB DOMINANTE", "Representada por el número romano IV, debido a que su nota fundamental es el cuarto grado de la escala.", "subdominante.png", "acordes-subdominante");
+			break;
+			case "btn-dominante":
+			infoArmonicas("DOMINANTE", "Representada por el número romano V, debido a que su nota fundamental es el quinto grado de la escala.", "dominante.png", "acordes-dominante");
+			break;
+			case "btn-acordes-tonica":
+			infoArmonicas("TÓNICA", "En esta región se ubicarán los acordes de I, iii y vi grado por contener dentro de su estructura la nota “mi”, que es la que le da el carácter de Mayor al acorde de Tónica. Auditivamente  estos acordes se sienten como el punto de reposo, descanso o final.", "acordes_tonica.png", "acordes-tonica");
+			break;
+			case "btn-acordes-subdominante":
+			infoArmonicas("SUB DOMINANTE", "Además del IV grado incluirá el acorde del ii grado. Auditivamente son acordes que pueden conducir tanto a los de tónica como a los de dominante.", "acordes_subdominante.png", "acordes-subdominante");
+			break;
+			case "btn-acordes-dominante":
+			infoArmonicas("DOMINANTE", "Estará conformada también por los acordes del V y vii grado disminuido. Auditivamente estos acordes ayudan a definir la tonalidad ya que crean una tensión que resuelve generalmente a la tónica.", "acordes_dominante.png", "acordes-dominante");
 			break;
 		}
 	});
