@@ -1,157 +1,171 @@
   <?php get_header(); ?>
-<!--Inicio Contenido -->
-<div class="container-fluid">
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <!-- <h2><?php the_title(); ?></h2>-->
-    <?php if(is_page("Artes electrónicas")) :?>
-      <form id="uploadAudio" action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" id="id" value="<?php echo get_current_user_id(); ?>">
-        <div class="form-group">
-          <label for="">Título</label>
-          <input class="form-control" type="text" id="titulo" name="titulo" placeholder="Título del audio">
-          <span class="help-block" id="error"></span>
-        </div>
-        <div class="form-group">
-          <label for="">Descripción</label>
-          <textarea class="form-control" id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Escriba una descripción"></textarea>
-          <span class="help-block" id="error"></span>
-          <input class="form-control" type="hidden" name="lat" id="lat">
-          <input class="form-control" type="hidden" name="lng" id="lng">
-        </div>
-        <div id="info" class="row bg-warning" style="text-align: center; display: none;">
-        </div>
-        <br>
-        <div class="form-group">
+  <!--Inicio Contenido -->
+  <div class="container-fluid">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <!-- <h2><?php the_title(); ?></h2>-->
+      <?php if(is_page("Artes electrónicas")) :?>
+        <form id="uploadAudio" action="" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" id="id" value="<?php echo get_current_user_id(); ?>">
+          <div class="form-group">
+            <label for="">Título</label>
+            <input class="form-control" type="text" id="titulo" name="titulo" placeholder="Título del audio">
+            <span class="help-block" id="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="">Descripción</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Escriba una descripción"></textarea>
+            <span class="help-block" id="error"></span>
+            <input class="form-control" type="hidden" name="lat" id="lat">
+            <input class="form-control" type="hidden" name="lng" id="lng">
+          </div>
+          <div id="info" class="row bg-warning" style="text-align: center; display: none;">
+          </div>
+          <br>
+          <div class="form-group">
+            <div id="map">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="">Subir audio</label>
+            <input type="file" id="audioFile" name="audioFile">
+            <span class="help-block" id="error"></span>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-6 col-sm-offset-3">
+              <button type="submit" id="guardar" class="form-control btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </form>
+      <?php endif; ?>
+      <?php if(is_page("Consulta mapa artes electrónicas")) :?>
+        <div class="container">
           <div id="map">
           </div>
         </div>
-        <div class="form-group">
-          <label for="">Subir audio</label>
-          <input type="file" id="audioFile" name="audioFile">
-          <span class="help-block" id="error"></span>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-6 col-sm-offset-3">
-            <button type="submit" id="guardar" class="form-control btn btn-primary">Guardar</button>
+      <?php endif; ?>
+      <?php if(is_page("Introducción aula música")) :?>
+        <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+        <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+        <div class="row" id="contenedor-index-musica">
+          <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8" id="div-botones-inicio">
+            <button class="btn btn-block btn-musica-s" id="btn-salones">SALONES INTERACTIVOS DE MÚSICA</button>
+            <button class="btn btn-block btn-musica-s" id="btn-iniciar" style="display: none;">INICIAR</button>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-info-aula-musica" style="display: none;">
+            <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-2 col-sm-4 col-xs-offset-2 col-xs-4">
+              <button class="btn btn-block btn-musica-s" id="btn-introduccion">Introducción</button>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+              <button class="btn btn-block btn-musica-s" id="btn-objetivos">Objetivos</button>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+              <button class="btn btn-block btn-musica-s" id="btn-metodologia">Metodología</button>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+              <button class="btn btn-block btn-musica-s" id="btn-publico">Público objetivo</button>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+              <button class="btn btn-block btn-musica-s" id="btn-creditos">Créditos</button>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-mod-enc-mus" style="display: none;">
+            <div class="col-lg-1 col-md-1 col-sm-2">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png" id="div-logo-bogota">
+            </div>
+            <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 col-sm-8 col-xs-12 ">
+              <h2 class="tit-enc"><strong>MÚSICA</strong></h2>
+            </div>
+            <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 col-sm-2" id="div-logo-crea">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
+            </div>            
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-info-detallada-musica" style="display: none;">
+            <div class="col-lg-offset-6 col-lg-5 col-md-offset-6 col-md-5 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+              <div id="con-idm">
+                <h2><strong></strong></h2>
+                <p></p>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <button class="btn btn-block btn-musica-s">Regresar</button>
+              </div>
+            </div>
+          </div>
+          <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
+            <div id="div-dropdown-modulo-musica">
+              <div class="dropdown">
+                <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
+                <ul class="dropdown-menu btn-block">
+                  <li><button class="btn btn-block btn-musica-d">Andina</button></li>
+                  <li><button class="btn btn-block btn-musica-d">Llanero</button></li>
+                  <li><button class="btn btn-block btn-musica-d">Pacífico</button></li>
+                  <li><button class="btn btn-block btn-musica-d">Atlántico</button></li>
+                  <li><button class="btn btn-block btn-musica-d">Carranga</button></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </form>
-    <?php endif; ?>
-    <?php if(is_page("Consulta mapa artes electrónicas")) :?>
-      <div class="container">
-        <div id="map">
-        </div>
-      </div>
-    <?php endif; ?>
-    <?php if(is_page("Introducción aula música")) :?>
-      <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
-      <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-      <div class="row" id="contenedor-index-musica">
-        <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8" id="div-botones-inicio">
-          <button class="btn btn-block btn-musica-s" id="btn-salones">SALONES INTERACTIVOS DE MÚSICA</button>
-          <button class="btn btn-block btn-musica-s" id="btn-iniciar" style="display: none;">INICIAR</button>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-info-aula-musica" style="display: none;">
-          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-2 col-sm-4 col-xs-offset-2 col-xs-4">
-            <button class="btn btn-block btn-musica-s" id="btn-introduccion">Introducción</button>
+      <?php endif; ?>
+      <?php if(is_page("Música")) :?>
+        <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+        <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
+        <div class="row" id="contenedor-aula-musica">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-mod-enc-mus">
+            <div class="col-lg-1 col-md-1 col-sm-2 text-center" id="div-logo-bogota">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
+            </div>
+            <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 col-sm-8 col-xs-12 text-center">
+              <h2 class="tit-enc"><strong>MÚSICA ANDINA</strong></h2>
+            </div>
+            <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 col-sm-2 text-center" id="div-logo-crea">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
+            </div>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-            <button class="btn btn-block btn-musica-s" id="btn-objetivos">Objetivos</button>
+          <div class="col-lg-offset-4 col-lg-7 col-md-offset-3 col-md-8 col-sm-12 col-xs-12" id="div-info-andina">
+            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+              <h2>La Música Andina</h2>
+              <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-salas">
+              <div class="col-lg-offset-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
+                <a href="#" id="btn-sala-teorica">
+                  <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
+                  <button class="btn btn-block btn-musica-s">Sala Teórica</button>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
+                <a href="#" id="btn-sala-interactiva">
+                  <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
+                  <button class="btn btn-block btn-musica-s">Sala Interactiva</button>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
+                <a href="#" id="btn-sala-general">
+                  <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
+                  <button class="btn btn-block btn-musica-s">Sala General</button>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-            <button class="btn btn-block btn-musica-s" id="btn-metodologia">Metodología</button>
+
+          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-            <button class="btn btn-block btn-musica-s" id="btn-publico">Público objetivo</button>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-            <button class="btn btn-block btn-musica-s" id="btn-creditos">Créditos</button>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-mod-enc-mus" style="display: none;">
-          <div class="col-lg-1 col-md-1 col-sm-2">
-            <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png" id="div-logo-bogota">
-          </div>
-          <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 col-sm-8 col-xs-12 ">
-            <h2 class="tit-enc"><strong>MÚSICA</strong></h2>
-          </div>
-          <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 col-sm-2" id="div-logo-crea">
-            <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
-          </div>            
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-info-detallada-musica" style="display: none;">
-          <div class="col-lg-offset-6 col-lg-5 col-md-offset-6 col-md-5 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-            <div id="con-idm">
-              <h2><strong></strong></h2>
+          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%; border-style: solid; border-color: black;">
+            <div class="col-lg-12" id="div-pri-sec-teo" style="height: 15%; border-style: solid; border-color: black;">
+              <h2 style="font-size: 35px;"></h2>
+            </div>
+            <div class="col-lg-6" id="div-seg-sec-teo" style="height: 50%; border-style: solid; border-color: black;">
               <p></p>
             </div>
-            <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s">Regresar</button>
+            <div class="col-lg-6" id="div-ter-sec-teo" style="height: 50%; border-style: solid; border-color: black;">
+              <img src="" class="img-responsive">
+              <p></p>
+            </div>
+            <div class="col-lg-12" id="div-cua-sec-teo" style="height: 10%; border-style: solid; border-color: black;">
             </div>
           </div>
-        </div>
-        <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
-          <div id="div-dropdown-modulo-musica">
-            <div class="dropdown">
-              <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
-              <ul class="dropdown-menu btn-block">
-                <li><button class="btn btn-block btn-musica-d">Andina</button></li>
-                <li><button class="btn btn-block btn-musica-d">Llanero</button></li>
-                <li><button class="btn btn-block btn-musica-d">Pacífico</button></li>
-                <li><button class="btn btn-block btn-musica-d">Atlántico</button></li>
-                <li><button class="btn btn-block btn-musica-d">Carranga</button></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-    <?php if(is_page("Música")) :?>
-      <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
-      <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
-      <div class="row" id="contenedor-aula-musica">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-mod-enc-mus">
-          <div class="col-lg-1 col-md-1 col-sm-2 text-center" id="div-logo-bogota">
-            <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
-          </div>
-          <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 col-sm-8 col-xs-12 text-center">
-            <h2 class="tit-enc"><strong>MÚSICA ANDINA</strong></h2>
-          </div>
-          <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 col-sm-2 text-center" id="div-logo-crea">
-            <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
-          </div>
-        </div>
-        <div class="col-lg-offset-4 col-lg-7 col-md-offset-3 col-md-8 col-sm-12 col-xs-12" id="div-info-andina">
-          <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-            <h2>La Música Andina</h2>
-            <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-salas">
-            <div class="col-lg-offset-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-              <a href="#" id="btn-sala-teorica">
-                <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
-                <button class="btn btn-block btn-musica-s">Sala Teórica</button>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-              <a href="#" id="btn-sala-interactiva">
-                <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
-                <button class="btn btn-block btn-musica-s">Sala Interactiva</button>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-              <a href="#" id="btn-sala-general">
-                <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
-                <button class="btn btn-block btn-musica-s">Sala General</button>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
-        </div>
-
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
+<!--         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
           <div class="col-lg-12 col-md-12" id="div-tit-teorica" style="height: 15%;">
             <h2 style="font-size: 35px;"></h2>
           </div>
@@ -186,7 +200,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-interactiva" style="height: 100%;">
           <div class="col-lg-12 col-md-12" id="div-tit-interactiva" style="height: 15%;">
