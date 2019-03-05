@@ -150,80 +150,37 @@
 
           <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
           </div>
-          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%; border-style: solid; border-color: black;">
-            <div class="col-lg-12" id="div-pri-sec-teo" style="height: 15%; border-style: solid; border-color: black;">
+
+          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
+            <div class="col-lg-12 col-md-12" id="div-pri-sec-teo" style="height: 15%;">
               <h2 style="font-size: 35px;"></h2>
             </div>
-            <div class="col-lg-6" id="div-seg-sec-teo" style="height: 50%; border-style: solid; border-color: black;">
-              <p></p>
-            </div>
-            <div class="col-lg-6" id="div-ter-sec-teo" style="height: 50%; border-style: solid; border-color: black;">
+            <div class="col-lg-6 col-md-6" id="div-seg-sec-teo" style="height: 55%;">
               <img src="" class="img-responsive">
               <p></p>
             </div>
-            <div class="col-lg-12" id="div-cua-sec-teo" style="height: 10%; border-style: solid; border-color: black;">
-            </div>
-          </div>
-
-<!--         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
-          <div class="col-lg-12 col-md-12" id="div-tit-teorica" style="height: 15%;">
-            <h2 style="font-size: 35px;"></h2>
-          </div>
-          <div class="col-lg-12 col-md-12" style="height: 55%;">
-            <div class="col-lg-6 col-md-6" id="div-conu-teorica" style="height: 100%;">
+            <div class="col-lg-6 col-md-6" id="div-ter-sec-teo" style="height: 55%;">
               <img src="" class="img-responsive">
               <p></p>
             </div>
-            <div class="col-lg-6 col-md-6" id="div-cond-teorica" style="height: 100%;">
-              <img src="" class="img-responsive">
-              <p></p>
+            <div class="col-lg-12 col-md-12" id="div-cua-sec-teo" style="height: 10%;">
             </div>
           </div>
-          <div class="col-lg-12 col-md-12" id="div-btns-teorica" style="height: 10%;">
-            <div class="col-lg-6 col-md-12" id="div-btnu-teorica">
-              <div class="col-lg-4 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-ritmo-teorica">Ritmo</button>
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-melodia-teorica">Melodía</button>
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-armonia-teorica">Armonía</button>
-              </div>
-            </div>
-            <div id="div-btnd-teorica" class="col-lg-12 col-md-12">
-              <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-ritmo-teorica">Ritmo</button>
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <button class="btn btn-block btn-musica-s" id="btn-melodia-teorica">Melodía y armonía</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
-        <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-interactiva" style="height: 100%;">
-          <div class="col-lg-12 col-md-12" id="div-tit-interactiva" style="height: 15%;">
-            <h2 style="font-size: 35px;"></h2>
-          </div>
-          <div class="col-lg-12 col-md-12" style="height: 55%;">
-            <div class="col-lg-6 col-md-6" id="div-conu-interactiva" style="height: 100%;">
+          <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-interactiva" style="height: 100%;">
+            <div class="col-lg-12 col-md-12" id="div-pri-sec-int" style="height: 15%;">
+              <h2 style="font-size: 35px;"></h2>
+            </div>
+            <div id="div-seg-sec-int">
               <p></p>
             </div>
-            <div class="col-lg-6 col-md-6" id="div-cond-interactiva" style="height: 100%;">
+            <div id="div-ter-sec-int">
               <p></p>
             </div>
-          </div>
-          <div class="col-lg-12 col-md-12" id="div-btn-interactiva" style="height: 10%;">
-            <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-play-interactiva">Play along</button>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <button class="btn btn-block btn-musica-s" id="btn-referentes-interactiva">Referentes</button>
+            <div class="col-lg-12 col-md-12" id="div-cua-sec-int" style="height: 10%;">
             </div>
           </div>
-        </div>
-
+          
         <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
           <div class="col-lg-9 col-md-8" style="height: 80%;">
             <div class="col-lg-12 col-md-12" id="div-pri-sec-gen" style="height: 40%;">
@@ -231,7 +188,7 @@
               <p></p>
               <img src="" class="img-responsive">
             </div>
-            <div class="col-lg-12 col-md-12" id="div-seg-sec-gen" style="height: 40%; ">
+            <div class="col-lg-12 col-md-12" id="div-seg-sec-gen" style="height: 40%;">
               <h2 style="font-size: 35px;"></h2>
               <p></p>
               <img src="" class="img-responsive">
@@ -256,12 +213,12 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4" id="div-bar-gen" style="height: 65%; margin-top: 20%;">
-            <div class="col-lg-12 col-md-12" id="div-pri-btn-bar-gen" style="height: 12%">
+            <!-- <div class="col-lg-12 col-md-12" id="div-pri-btn-bar-gen" style="height: 12%">
             </div>
             <div class="col-lg-12 col-md-12" id="div-seg-btn-bar-gen" style="height: 12%">
             </div>
             <div class="col-lg-12 col-md-12" id="div-ter-btn-bar-gen" style="height: 12%">
-            </div>
+            </div -->>
           </div>
         </div>
 
