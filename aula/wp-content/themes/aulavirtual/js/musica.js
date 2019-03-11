@@ -410,6 +410,19 @@ jQuery(document).ready(function($){
 		}
 	}
 
+	function infoArmaduras(title, mainText, mainImg, secText, secImg){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(mainText);
+		$("#div-seg-sec-gen p").html(secText);
+		if(mainImg != ""){
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+mainImg);
+		}
+		if(secImg != ""){
+			$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+secImg);
+		}
+
+	}
+
 	function infoFiguras(){
 		$("#div-pri-sec-gen p").html("Todas las figuras musicales tienen un número que las representa así:");
 		$("#div-pri-sec-gen p").html("<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
@@ -674,6 +687,13 @@ jQuery(document).ready(function($){
 					"Existen tres funciones armónicas tanto en tonalidad Mayor como en tonalidad menor.", "", "");
 				creacionBotonesSala("funciones");
 				break;
+				case "btn-armaduras":
+				infoArmaduras("ARMADURAS", "La armadura, es el conjunto de alteraciones (sostenidos o bemoles), situadas a la derecha de la clave, en el pentagramay, es la encargada de indicarnos la tonalidad del tema o canción que estemos trabajando.", "becuadro1.png", "La armadura, permite a los músicos ahorrar la escritura de alteraciones durante toda la partitura.<br>"+
+					"El orden de los sostenidos siempre es el mismo de todas las armaduras: FA, DO, SOL, RE, LA, MI, SI.", "becuadro1,1.png");
+				$("#div-seg-btn-sec-gen").data("data-tema", "armaduras");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
+				$("#ref-ade-pag").data("data-pagina", "dos");
+				break;
 			}
 		}
 	});
@@ -709,7 +729,9 @@ jQuery(document).ready(function($){
 
 	$("#div-ter-sec-gen").on('click', 'a', function() {
 		limpiarInfoGeneral();
-		creacionBotonesSala("acordes");
+		if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas" || $("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
+			creacionBotonesSala("acordes");
+		}
 		if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas"){
 			switch($(this).data("data-pagina")){
 				case "uno":
@@ -766,6 +788,21 @@ jQuery(document).ready(function($){
 					"<li>Acordes menores7: ii, iii y vi</li>"+
 					"<li>Acordes semidisminuidos: vii</li>"+
 					"</ul>", "");
+				$("#ref-atr-pag").data("data-pagina", "uno");
+				$("#ref-atr-pag").html("<div class='fi'></div>");
+				break;
+			}
+		}
+		if($("#div-seg-btn-sec-gen").data("data-tema") == "armaduras"){
+			switch($(this).data("data-pagina")){
+				case "uno":
+				infoArmaduras("ARMADURAS", "La armadura, es el conjunto de alteraciones (sostenidos o bemoles), situadas a la derecha de la clave, en el pentagramay, es la encargada de indicarnos la tonalidad del tema o canción que estemos trabajando.", "becuadro1.png", "La armadura, permite a los músicos ahorrar la escritura de alteraciones durante toda la partitura.<br>"+
+					"El orden de los sostenidos siempre es el mismo de todas las armaduras: FA, DO, SOL, RE, LA, MI, SI.", "becuadro1,1.png");
+				$("#ref-ade-pag").data("data-pagina", "dos");
+				$("#ref-ade-pag").html("<div class='fd'></div>");
+				break;
+				case "dos":
+				infoArmaduras("ARMADURAS", "El orden de los bemoles, es inverso al de los sostenidos: SI, MI, LA, RE, SOL, DO, FA.", "orden_de_los_bemoles.png", "Se puede utilizar un becuadro, para anular el efecto de la armadura en una nota:", "becuadro.png");
 				$("#ref-atr-pag").data("data-pagina", "uno");
 				$("#ref-atr-pag").html("<div class='fi'></div>");
 				break;
