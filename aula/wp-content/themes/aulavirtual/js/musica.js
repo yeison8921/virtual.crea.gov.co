@@ -423,15 +423,6 @@ jQuery(document).ready(function($){
 
 	}
 
-	function infoFiguras(){
-		$("#div-pri-sec-gen p").html("Todas las figuras musicales tienen un número que las representa así:");
-		$("#div-pri-sec-gen p").html("<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>8 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/corchea.png' height='90'>   Corchea</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>2 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/blanca.png' height='90'>   Blanca</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>16 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/semicorchea.png' height='90'>   Semicorchea</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>4 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/negra.png' height='90'>   Negra</div>");
-	}
-
 	function limpiarInfoGeneral(){
 		$("#div-pri-sec-gen h2").html("");
 		$("#div-pri-sec-gen p").html("");
@@ -560,7 +551,12 @@ jQuery(document).ready(function($){
 				"2/2, 3/2, 4/2</p>", 1, 1);
 			break;
 			case "btn-figuras":
-			infoFiguras();
+			infoRitmo("", "Todas las figuras musicales tienen un número que las representa así:"+
+				"<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>8 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/corchea.png' height='90'>   Corchea</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>2 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/blanca.png' height='90'>   Blanca</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>16 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/semicorchea.png' height='90'>   Semicorchea</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>4 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/negra.png' height='90'>   Negra</div>", "", "", "", "", "", "", "");
 			break;
 			case "btn-triadas":
 			$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
