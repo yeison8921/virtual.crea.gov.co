@@ -213,12 +213,6 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4" id="div-bar-gen" style="height: 65%; margin-top: 20%;">
-            <!-- <div class="col-lg-12 col-md-12" id="div-pri-btn-bar-gen" style="height: 12%">
-            </div>
-            <div class="col-lg-12 col-md-12" id="div-seg-btn-bar-gen" style="height: 12%">
-            </div>
-            <div class="col-lg-12 col-md-12" id="div-ter-btn-bar-gen" style="height: 12%">
-            </div -->>
           </div>
         </div>
 
