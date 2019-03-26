@@ -4,7 +4,7 @@
     <div class="row col-lg-offset-5 col-md-offset-1 index-titulo">
       <h1 style="text-align: left;">Aula Virtual</h1>
       <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
+        <a href="<?php bloginfo('url'); ?>/introduccion-aula-artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
         Artes plásticas</a>
       </div>
       <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">

@@ -35,7 +35,10 @@ function aula_cargar_scripts(){
         wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/danza.js',array(),false,true);
     }
     if(is_page("Introducción aula música") || is_page("Música")){
-        wp_enqueue_script( 'danza', get_template_directory_uri(). '/js/musica.js',array(),false,true);
+        wp_enqueue_script( 'musica', get_template_directory_uri(). '/js/musica.js',array(),false,true);
+    }
+    if(is_page("Introducción aula artes plásticas")){
+        wp_enqueue_script( 'artes-plasticas', get_template_directory_uri(). '/js/artes_plasticas.js',array(),false,true);
     }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script( 'funciones' , get_template_directory_uri() . '/js/funciones.js',array(),false,true);

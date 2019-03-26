@@ -569,6 +569,91 @@
         <!--Fin del modal-->
       </div>
     <?php endif; ?>
+
+    <?php if(is_page("Introducción aula artes plásticas")) :?>
+      <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+      <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10" style="border-style: solid; border-color: black; height: 4000px;"> <!-- height: 100vh; -->
+        <div class="col-lg-12 col-md-12" style="border-style: solid; border-color: black; margin-top: 200px; height: 450px;">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/titulo.png" class="img-responsive" style="margin:auto;">
+        </div>
+        <div class="btns-intro-aap col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10 " style="border-style: solid; border-color: black;">
+          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+            <img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_intro_normal.png">
+            <p>Introducción</p>
+          </div>
+          <div class="col-lg-2 col-md-2">
+            <img id="img-objetivos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_objetivos_normal.png">
+            <p>Objetivos</p>
+          </div>
+          <div class="col-lg-2 col-md-2">
+            <img id="img-publico-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_publico_normal.png">
+            <p>Público objetivo</p>
+          </div>
+          <div class="col-lg-2 col-md-2">
+            <img id="img-metodologia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_metodologia_normal.png">
+            <p>Metodología</p>
+          </div>
+          <div class="col-lg-2 col-md-2">
+            <img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_creditos_normal.png">
+            <p>Créditos</p>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12" id="uno" style="border-style: solid; border-color: black;">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/imagen.png" class="img-responsive">
+        </div>
+        <div class="col-lg-12 col-md-12" id="dos" style="border-style: solid; border-color: black;">
+          <div class="col-lg-12 col-md-12" id="tres">
+            <div class="col-lg-12 col-md-12">
+              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-responsive">
+            </div>
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="contenido" style="margin-top: 20%">
+              <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" class="img-responsive">
+                <br>
+                <br>
+                <br>
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" class="img-responsive">
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" class="img-responsive">
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12" id="cuatro" style="border-style: solid; border-color: black; height: 700px;">
+          <div class="col-lg-12 col-md-12" id="cinco">
+            <div class="col-lg-12 col-md-12">
+              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-responsive">
+            </div>
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_linea_normal.png" id="img-linea" class="img-responsive">
+                <p>Línea</p>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_color_normal.png" id="img-color" class="img-responsive">
+                <p>Color</p>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_gesto_normal.png" id="img-gesto" class="img-responsive">
+                <p>Gesto</p>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png" id="img-creatividad" class="img-responsive">
+                <p>Creatividad</p>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/segunda imagen.png" class="img-responsive">
+
+      </div>
+    <?php endif; ?>
+
     <?php the_content(); ?>
   <?php endwhile; endif; ?>
 
