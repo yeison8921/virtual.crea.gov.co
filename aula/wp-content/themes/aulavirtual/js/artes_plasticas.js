@@ -1,4 +1,11 @@
 jQuery(document).ready(function($){
+	$("#div-index").css({
+		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo.png")',
+		'background-size': 'cover',
+		'background-position': 'center',
+		'background-repeat': 'no-repeat',
+	});
+
 	$("#uno").css({
 		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondo.png")'
 	});
@@ -41,38 +48,38 @@ jQuery(document).ready(function($){
 	.mouseover(function() {
 		switch($(this).attr("id")){
 			case "img-intro-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_intro_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_color.png");
 			break;
 			case "img-objetivos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_objetivos_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_color.png");
 			break;
 			case "img-publico-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_publico_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_color.png");
 			break;
 			case "img-metodologia-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_metodologia_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_color.png");
 			break;
 			case "img-creditos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_creditos_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_color.png");
 			break;
 		}
 	})
 	.mouseout(function() {
 		switch($(this).attr("id")){
 			case "img-intro-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_intro_normal.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_normal.png");
 			break;
 			case "img-objetivos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_objetivos_normal.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_normal.png");
 			break;
 			case "img-publico-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_publico_normal.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_normal.png");
 			break;
 			case "img-metodologia-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_metodologia_normal.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_normal.png");
 			break;
 			case "img-creditos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/img_creditos_normal.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_normal.png");
 			break;
 		}
 	});
