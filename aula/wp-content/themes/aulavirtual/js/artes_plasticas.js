@@ -1,21 +1,26 @@
 jQuery(document).ready(function($){
+	num_pag = 1;
 	$("#div-index").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo.png")',
-		'background-size': 'cover',
+		//'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/titulo.png")',
+		//'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo.png")',
+		//'background-size': 'cover',
+		'background-size': 'contain',
 		'background-position': 'center',
 		'background-repeat': 'no-repeat',
 	});
 
 	$("#uno").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondo.png")'
+		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondo.png")',
+		'background-size': 'cover',
+		'background-repeat': 'no-repeat',
+		'width' : '100%'
 	});
 
 	$("#dos").css({
 		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/introduccion/fondo.png")',
-		'background-repeat': 'no-repeat',
 		'background-size': 'cover',
-		'width' : '100%',
-		'height': 700
+		'background-repeat': 'no-repeat',
+		'width' : '100%'
 	});
 
 	$("#tres").css({
@@ -32,7 +37,6 @@ jQuery(document).ready(function($){
 		'background-repeat': 'no-repeat',
 		'background-size': 'cover',
 		'width' : '100%',
-		'height': 700
 	});
 
 	$("#cinco").css({
@@ -42,9 +46,67 @@ jQuery(document).ready(function($){
 		'background-size': 'contain',
 		'width' : '100%',
 		'height': '100%'
-	})
+	});
 
-	$(".btns-intro-aap img")
+	$("#contenedor-index-artes-plasticas").on("click", "img", function() {
+		if($(this).attr("id") == "img-titulo"){
+			$("#div-index").hide();
+			$("#btns-intro-aap").hide();
+			$("#uno").show();
+		}
+		if($(this).attr("id") == "img-mapa"){
+			$("#uno").hide();
+			$("#dos").show();
+		}
+		if($(this).attr("id") == "img-observacion"){
+			$("#dos").hide();
+			$("#cuatro").show();
+		}
+		if($(this).attr("id") == "img-introduccion"){
+			$("#dos").hide();
+			$("#div-brujula").show();
+		}
+	});
+
+	$("#btns-mover-comic").on("click", "img", function() {
+		if($(this).attr("id") == "img-atras-comic"){
+			if(num_pag > 1){
+				num_pag--;
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
+				$("#img-siguiente-comic").attr("data-pagina", num_pag);
+			}
+		}
+		if($(this).attr("id") == "img-siguiente-comic"){
+			if(num_pag < 15){
+				$("#img-atras-comic").attr("data-pagina", num_pag);
+				num_pag++;
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
+				$(this).attr("data-pagina", num_pag);
+			}
+		}
+	});
+
+	$(".img-atras").click(function(){
+		if($(this).data("atras") == "index"){
+			$("#div-index").show();
+			$("#btns-intro-aap").show();
+			$("#uno").hide();
+		}
+		if($(this).data("atras") == "uno"){
+			$("#dos").hide();
+			$("#uno").show();
+		}
+		if($(this).data("atras") == "dos"){
+			$("#cuatro").hide();
+			$("#dos").show();
+		}
+		if($(this).data("atras") == "cuatro"){
+			$("#div-brujula").hide();
+			$("#dos").show();
+		}
+	});
+
+	$("#btns-intro-aap img")
 	.mouseover(function() {
 		switch($(this).attr("id")){
 			case "img-intro-aap":
