@@ -671,7 +671,7 @@
                 </div>
               </div>
             </div>
-            <div  class="col-lg-12 col-md-12" id="div-brujula" style="height: 800px; display: none;">
+            <div  class="col-lg-12 col-md-12" id="div-brujula" style="height: 600px; display: none;">
               <div class="col-lg-12 col-md-12">
                 <a href="#">
                   <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="cuatro">
