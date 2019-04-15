@@ -106,7 +106,7 @@ jQuery(document).ready(function($){
 			botonesLateralesSala("interactiva");
 			limpiarInfoInteractiva();
 			infoSalaInteractiva("GUABINA", "Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.<br><br>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.", "<div class='embed-responsive embed-responsive-16by9'>"+
-				"<iframe class='embed-responsive-item' src='https://youtu.be/wY5ON6FujAY' allowfullscreen></iframe>"+
+				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/wY5ON6FujAY' allowfullscreen></iframe>"+
 				"</div>", 1);
 			creacionBotonesSala("interactiva");
 			$("#div-btn-mod-mus button").data("data-sala", "interactiva");
@@ -178,12 +178,12 @@ jQuery(document).ready(function($){
 			switch($(this).attr("id")){
 				case "btn-play-guitarra":
 				infoSalaInteractiva("PLAY ALONG GUITARRA", "<div class='embed-responsive embed-responsive-16by9'>"+
-					"<iframe class='embed-responsive-item' src='https://youtu.be/ivCvTEMq5bs' allowfullscreen></iframe>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/ivCvTEMq5bs' allowfullscreen></iframe>"+
 					"</div>", "", 2);
 				break;
 				case "btn-play-tiple":
 				infoSalaInteractiva("PLAY ALONG TIPLE", "<div class='embed-responsive embed-responsive-16by9'>"+
-					"<iframe class='embed-responsive-item' src='https://youtu.be/8sFJkixKn8c' allowfullscreen></iframe>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8sFJkixKn8c' allowfullscreen></iframe>"+
 					"</div>", "", 2);
 				break;
 				case "btn-play-bandola":
