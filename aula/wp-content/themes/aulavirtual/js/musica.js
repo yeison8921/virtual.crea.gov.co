@@ -43,15 +43,21 @@ jQuery(document).ready(function($){
 			case "btn-objetivos":
 			$("#con-idm h2").text("Objetivos");
 			$("#con-idm p").html("<ol>"+
-				"<li>Presentar conceptos básicos y generales sobre la gramática musical.</li>"+
-				"<li>Dar a conocer la música de las regiones de Colombia: sus características, instrumentos musicales típicos y algunos ritmos de cada región.</li>"+
-				"<li>Brindar herramientas conceptuales, prácticas e interactivas para la interpretación instrumental/vocal de ritmos de la música colombiana.</li></ol>");
+				"<li>Podrás aprender conceptos generales de gramática musical.</li>"+
+				"<li>Conocerás música de las regiones de Colombia: sus características, instrumentos musicales típicos y algunos ritmos de cada región.</li>"+
+				"</ol>"+
+				"<p>Bienvenidos a esta guía interactiva para la interpretación instrumental/vocal de ritmos de música colombiana.</p>");
 			break;
 			case "btn-metodologia":
 			$("#con-idm h2").text("Metodología");
-			$("#con-idm p").html("En este curso, se abordará la música en dos aspectos:<br><ol>"+
+			$("#con-idm p").html("<p>En estos salones interactivos, se abordará la música en dos aspectos:</p>"+
+				"<ol>"+
 				"<li>Teórico</li>"+
-				"<li>Práctico</li></ol>En el aspecto teórico, se incluirán elementos tales como definiciones, guías, métodos, entre otros, capaces de brindar herramientas para el desarrollo artístico de los beneficiarios; y en el aspecto práctico, se buscará, afianzar y consolidar dichas herramientas. El curso, desarrollará algunas estrategias, tales como LAS SALAS INTERACTIVAS, con el fin de aportar, enriquecer y fortalecer, tanto los procesos de formación artística de los usuarios, como sus aptitudes y destrezas musicales; de manera integral.");
+				"<li>Práctico</li>"+
+				"</ol>"+
+				"<p>En el aspecto teórico, tendrás a tu disposición definiciones, guías y métodos, capaces de brindarte recursos técnicos y expresivos para tu desarrollo artístico.</p>"+
+				"<p>En lo práctico, podrás afianzar y consolidar los conocimientos que adquieras en la teoría.</p>"+
+				"<p>El curso, desarrollará algunas estrategias, tales como LAS SALAS INTERACTIVAS, para enriquecer y fortalecer, tanto tu proceso de formación artística, y tus aptitudes y destrezas musicales; de manera integral.</p>");
 			break;
 			case "btn-publico":
 			$("#con-idm h2").text("Público Objetivo");
@@ -100,7 +106,7 @@ jQuery(document).ready(function($){
 			botonesLateralesSala("interactiva");
 			limpiarInfoInteractiva();
 			infoSalaInteractiva("GUABINA", "Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.<br><br>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.", "<div class='embed-responsive embed-responsive-16by9'>"+
-				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo' allowfullscreen></iframe>"+
+				"<iframe class='embed-responsive-item' src='https://youtu.be/wY5ON6FujAY' allowfullscreen></iframe>"+
 				"</div>", 1);
 			creacionBotonesSala("interactiva");
 			$("#div-btn-mod-mus button").data("data-sala", "interactiva");
@@ -170,10 +176,21 @@ jQuery(document).ready(function($){
 		limpiarInfoInteractiva();
 		if($(this).data('data-modulo') == "guabina"){
 			switch($(this).attr("id")){
-				case "btn-play-interactiva":
-				infoSalaInteractiva("PLAY ALONG LA RUANA", "<div class='embed-responsive embed-responsive-16by9'>"+
-					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/10mzYSZ2zKc' allowfullscreen></iframe>"+
+				case "btn-play-guitarra":
+				infoSalaInteractiva("PLAY ALONG GUITARRA", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://youtu.be/ivCvTEMq5bs' allowfullscreen></iframe>"+
 					"</div>", "", 2);
+				break;
+				case "btn-play-tiple":
+				infoSalaInteractiva("PLAY ALONG TIPLE", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://youtu.be/8sFJkixKn8c' allowfullscreen></iframe>"+
+					"</div>", "", 2);
+				break;
+				case "btn-play-bandola":
+				infoSalaInteractiva("PLAY ALONG BANDOLA", "video", "", 2);
+				break;
+				case "btn-karaoke":
+				infoSalaInteractiva("KARAOKE", "karaoke", "", 2);
 				break;
 				case "btn-referentes-interactiva":
 				infoSalaInteractiva("REFERENTES GUABINA", "Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada", "", 2)
@@ -466,8 +483,13 @@ jQuery(document).ready(function($){
 				"<div class='col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>");
 		}
 		if(seccion == "interactiva"){
-			$("#div-cua-sec-int").html("<div class='col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4'><button class='btn btn-block btn-musica-s' id='btn-play-interactiva'>Play along</button></div>"+
-				"<div class='col-lg-4 col-md-4'><button class='btn btn-block btn-musica-s' id='btn-referentes-interactiva'>Referentes</button></div>");
+			$("#div-cua-sec-int").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-guitarra'>Play Along Guitarra</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-tiple'>Play Along Tiple</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-bandola'>Play Along Bandola</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-karaoke'>Karaoke</button></div>"+
+				"<div class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4'><button class='btn btn-block btn-musica-s' id='btn-referentes-interactiva'>Referentes</button></div>");
+			/*$("#div-cua-sec-int").html("<div class='col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4'><button class='btn btn-block btn-musica-s' id='btn-play-interactiva'>Play along</button></div>"+
+			"<div class='col-lg-4 col-md-4'><button class='btn btn-block btn-musica-s' id='btn-referentes-interactiva'>Referentes</button></div>");*/
 		}
 		if(seccion == "escala"){
 			$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-do' style='height: 12%;'>Escala Do Mayor</button>"+
