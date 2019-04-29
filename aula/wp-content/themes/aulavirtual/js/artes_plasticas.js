@@ -66,22 +66,56 @@ jQuery(document).ready(function($){
 			$("#dos").hide();
 			$("#div-brujula").show();
 		}
+		if($(this).attr("id") == "img-creatividad"){
+			$("#cuatro").hide();
+			$("#div-creatividad").show();
+		}
+		if($(this).attr("id") == "img-linea"){
+			$("#cuatro").hide();
+			$("#div-linea").show();
+		}
 	});
 
-	$("#btns-mover-comic").on("click", "img", function() {
+	$(".btns-mover-comic").on("click", "img", function() {
 		if($(this).attr("id") == "img-atras-comic"){
 			if(num_pag > 1){
 				num_pag--;
-				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
+				if($(this).data("comic") == "creatividad"){
+					$("#img-comic-creatividad").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_"+num_pag+".jpg");
+				}
+				if($(this).data("comic") == "brujula"){
+					$("#img-comic-brujula").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
+				}
+				if($(this).data("comic") == "linea"){
+					$("#img-comic-linea").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_"+num_pag+".jpg");
+				}
 				$("#img-siguiente-comic").attr("data-pagina", num_pag);
 			}
 		}
 		if($(this).attr("id") == "img-siguiente-comic"){
-			if(num_pag < 15){
-				$("#img-atras-comic").attr("data-pagina", num_pag);
-				num_pag++;
-				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
-				$(this).attr("data-pagina", num_pag);
+			if($(this).data("comic") == "creatividad"){
+				if(num_pag < 8){
+					$("#img-atras-comic").attr("data-pagina", num_pag);
+					num_pag++;
+					$("#img-comic-creatividad").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_"+num_pag+".jpg");
+					$(this).attr("data-pagina", num_pag);
+				}
+			}
+			if($(this).data("comic") == "brujula"){
+				if(num_pag < 15){
+					$("#img-atras-comic").attr("data-pagina", num_pag);
+					num_pag++;
+					$("#img-comic-brujula").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
+					$(this).attr("data-pagina", num_pag);
+				}
+			}
+			if($(this).data("comic") == "linea"){
+				if(num_pag < 9){
+					$("#img-atras-comic").attr("data-pagina", num_pag);
+					num_pag++;
+					$("#img-comic-linea").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_"+num_pag+".jpg");
+					$(this).attr("data-pagina", num_pag);
+				}
 			}
 		}
 	});
@@ -97,12 +131,14 @@ jQuery(document).ready(function($){
 			$("#uno").show();
 		}
 		if($(this).data("atras") == "dos"){
+			$("#div-brujula").hide();
 			$("#cuatro").hide();
 			$("#dos").show();
 		}
 		if($(this).data("atras") == "cuatro"){
-			$("#div-brujula").hide();
-			$("#dos").show();
+			$("#div-creatividad").hide();
+			$("#div-linea").hide();
+			$("#cuatro").show();
 		}
 	});
 
