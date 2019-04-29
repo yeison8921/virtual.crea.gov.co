@@ -696,7 +696,7 @@
                 </a>
               </div>
               <div class="col-lg-12 col-md-12 text-center" id="div-comic-creatividad">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/creatividad/img_viñeta_1.jpg" id="img-comic-creatividad" style="height: 600">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/creatividad/img_viñeta_1.jpg" id="img-comic-creatividad" style="height: 600px">
               </div>
               <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center btns-mover-comic">
                 <a href="#">
@@ -715,7 +715,7 @@
                 </a>
               </div>
               <div class="col-lg-12 col-md-12 text-center" id="div-comic-linea">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/linea/img_viñeta_1.jpg" id="img-comic-linea" style="height: 600;">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/linea/img_viñeta_1.jpg" id="img-comic-linea" style="height: 600px;">
               </div>
               <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center btns-mover-comic">
                 <a href="#">
