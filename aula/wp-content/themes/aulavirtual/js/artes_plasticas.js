@@ -62,60 +62,47 @@ jQuery(document).ready(function($){
 			$("#dos").hide();
 			$("#cuatro").show();
 		}
-		if($(this).attr("id") == "img-introduccion"){
+		if($(this).attr("id") == "img-brujula"){
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_1.jpg");
+			$("#div-comic .img-atras").data("atras", "dos");
+			$("#btns-mover-comic img").data("comic", "brujula");
+			$("#btns-mover-comic img").data("total", "15");
 			$("#dos").hide();
-			$("#div-brujula").show();
 		}
 		if($(this).attr("id") == "img-creatividad"){
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_1.jpg");
+			$("#div-comic .img-atras").data("atras", "cuatro");
+			$("#btns-mover-comic img").data("comic", "creatividad");
+			$("#btns-mover-comic img").data("total", "8");
 			$("#cuatro").hide();
-			$("#div-creatividad").show();
 		}
 		if($(this).attr("id") == "img-linea"){
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_1.jpg");
+			$("#div-comic .img-atras").data("atras", "cuatro");
+			$("#btns-mover-comic img").data("comic", "linea");
+			$("#btns-mover-comic img").data("total", "9");
 			$("#cuatro").hide();
-			$("#div-linea").show();
+		}
+		if($(this).attr("id") == "img-brujula" || $(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
+			num_pag = 1;
+			$("#div-comic").show();
 		}
 	});
 
-	$(".btns-mover-comic").on("click", "img", function() {
+	$("#btns-mover-comic").on("click", "img", function() {
 		if($(this).attr("id") == "img-atras-comic"){
 			if(num_pag > 1){
 				num_pag--;
-				if($(this).data("comic") == "creatividad"){
-					$("#img-comic-creatividad").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_"+num_pag+".jpg");
-				}
-				if($(this).data("comic") == "brujula"){
-					$("#img-comic-brujula").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
-				}
-				if($(this).data("comic") == "linea"){
-					$("#img-comic-linea").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_"+num_pag+".jpg");
-				}
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
 				$("#img-siguiente-comic").attr("data-pagina", num_pag);
 			}
 		}
 		if($(this).attr("id") == "img-siguiente-comic"){
-			if($(this).data("comic") == "creatividad"){
-				if(num_pag < 8){
-					$("#img-atras-comic").attr("data-pagina", num_pag);
-					num_pag++;
-					$("#img-comic-creatividad").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_"+num_pag+".jpg");
-					$(this).attr("data-pagina", num_pag);
-				}
-			}
-			if($(this).data("comic") == "brujula"){
-				if(num_pag < 15){
-					$("#img-atras-comic").attr("data-pagina", num_pag);
-					num_pag++;
-					$("#img-comic-brujula").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_"+num_pag+".png");
-					$(this).attr("data-pagina", num_pag);
-				}
-			}
-			if($(this).data("comic") == "linea"){
-				if(num_pag < 9){
-					$("#img-atras-comic").attr("data-pagina", num_pag);
-					num_pag++;
-					$("#img-comic-linea").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_"+num_pag+".jpg");
-					$(this).attr("data-pagina", num_pag);
-				}
+			if(num_pag < $(this).data("total")){
+				$("#img-atras-comic").attr("data-pagina", num_pag);
+				num_pag++;
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
+				$(this).attr("data-pagina", num_pag);
 			}
 		}
 	});
@@ -131,13 +118,12 @@ jQuery(document).ready(function($){
 			$("#uno").show();
 		}
 		if($(this).data("atras") == "dos"){
-			$("#div-brujula").hide();
+			$("#div-comic").hide();
 			$("#cuatro").hide();
 			$("#dos").show();
 		}
 		if($(this).data("atras") == "cuatro"){
-			$("#div-creatividad").hide();
-			$("#div-linea").hide();
+			$("#div-comic").hide();
 			$("#cuatro").show();
 		}
 	});

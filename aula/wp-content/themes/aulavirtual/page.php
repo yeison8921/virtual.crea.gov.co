@@ -623,7 +623,7 @@
                 <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="contenido" style="margin-top: 20%">
                   <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
                     <a href="#">
-                      <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-introduccion" class="img-responsive">
+                      <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" class="img-responsive">
                     </a>
                     <br>
                     <br>
@@ -671,58 +671,21 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12" id="div-brujula" style="height: 600px; display: none;">
+            <div class="col-lg-12 col-md-12" id="div-comic" style="height: 600px; display: none;">
               <div class="col-lg-12 col-md-12">
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="dos">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="">
                 </a>
               </div>
-              <div class="col-lg-12 col-md-12 text-center" id="div-comic">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_viñeta_1.png" id="img-comic-brujula" style="height: 80%;">
+              <div class="col-lg-12 col-md-12 text-center" id="div-imagenes-comic">
+                <img src="" id="img-comic" style="height: 80%;">
               </div>
-              <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center btns-mover-comic">
+              <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center" id="btns-mover-comic">
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_atras.png" id="img-atras-comic" data-pagina="0" data-comic="brujula">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_atras.png" id="img-atras-comic" data-pagina="0" data-comic="" data-total="">
                 </a>
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_siguiente.png" id="img-siguiente-comic" data-pagina="1" data-comic="brujula">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12" id="div-creatividad" style="height: 600px; display: none;">
-              <div class="col-lg-12 col-md-12">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="cuatro">
-                </a>
-              </div>
-              <div class="col-lg-12 col-md-12 text-center" id="div-comic-creatividad">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/creatividad/img_viñeta_1.jpg" id="img-comic-creatividad" style="height: 600px">
-              </div>
-              <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center btns-mover-comic">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_atras.png" id="img-atras-comic" data-pagina="0" data-comic="creatividad">
-                </a>
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_siguiente.png" id="img-siguiente-comic" data-pagina="1" data-comic="creatividad">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12" id="div-linea" style="height: 600px; display: none;">
-              <div class="col-lg-12 col-md-12">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="cuatro">
-                </a>
-              </div>
-              <div class="col-lg-12 col-md-12 text-center" id="div-comic-linea">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/linea/img_viñeta_1.jpg" id="img-comic-linea" style="height: 600px;">
-              </div>
-              <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center btns-mover-comic">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_atras.png" id="img-atras-comic" data-pagina="0" data-comic="linea">
-                </a>
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/brujula/img_siguiente.png" id="img-siguiente-comic" data-pagina="1" data-comic="linea">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_siguiente.png" id="img-siguiente-comic" data-pagina="1" data-comic="" data-total="">
                 </a>
               </div>
             </div>
