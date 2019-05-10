@@ -351,7 +351,7 @@ table.dataTable.no-footer{
   top: 55%;
 }
 
-#div-metodologia-danza p{
+#div-info-detallada-danza p{
   overflow: auto;
   height: 400px;
 }
@@ -412,6 +412,33 @@ table.dataTable.no-footer{
   left:50%;
   transform: translate(-50%,-50%);
 }
+
+/*#div-dropdown-modulo-danza .dropdown-menu{
+  padding: 0px 0px;
+  margin: 0px 0px 0px;
+  background-color: #fff0;
+  border: 0px solid #ccc;
+  border: 0px solid rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
+  box-shadow: 0 0px 0px rgba(0,0,0,.175);
+}
+#div-dropdown-modulo-danza .dropdown-menu>li>a {
+  padding: 1px 0px;
+}
+
+#div-dropdown-modulo-danza .btn-unsel {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-color: #581508;
+  color: #581508;
+  border-width: 2px;
+  height: 30px;
+
+}
+
+#div-dropdown-modulo-danza .dropdown .btn {
+  padding: 0px 5px;
+}*/
 
 #div-dropdown-modulo-danza .dropdown-menu {
   padding: 0px 0;
@@ -529,35 +556,35 @@ table.dataTable.no-footer{
   }
 }
 
-  #contenedor-index-musica{
-    background-image: url('musica/images/fondo_introduccion_musica.jpg');
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    height: 100vh;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+#contenedor-index-musica{
+  background-image: url('musica/images/fondo_introduccion_musica.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  height: 100vh;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  #contenedor-aula-musica{
-    background-image: url('musica/images/fondo_modulos_musica.jpg');
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    color: #08580f;
-  }
+#contenedor-aula-musica{
+  background-image: url('musica/images/fondo_modulos_musica.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  color: #08580f;
+}
 
-  #div-mod-enc-mus{
-   background-image: url('musica/images/header_modulo_musica.png');
-   background-position: left top;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 80px;
-   line-height: 80px;
-   text-align: center;
- }
+#div-mod-enc-mus{
+ background-image: url('musica/images/header_modulo_musica.png');
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 80px;
+ line-height: 80px;
+ text-align: center;
+}
 
- #div-dropdown-modulo-musica .dropdown-menu {
+#div-dropdown-modulo-musica .dropdown-menu {
   background-color: transparent;
   border: 0px solid transparent;
 }

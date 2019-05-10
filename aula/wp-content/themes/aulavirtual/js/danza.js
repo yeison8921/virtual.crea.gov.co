@@ -31,39 +31,49 @@ jQuery(document).ready(function($){
 		$("#div-info-detallada-danza").show();
 		switch($(this).attr('id')) {
 			case "btn_introduccion_danza":
-			$("#div-objetivos-danza").hide();
-			$("#div-metodologia-danza").hide();
-			$("#div-publico-objetivo-danza").hide();
-			$("#div-creditos-danza").hide();
-			$("#div-introduccion-danza").show();
+			$("#div-info-detallada-danza h2").html("").html("INTRODUCCIÓN");
+			$("#div-info-detallada-danza p").html("").html("El Aula Virtual de danza es un espacio que les invita a relacionarse con sus cuerpos de manera consciente, explorando las particularidades y potencialidades del movimiento.<br><br>"+
+				"Nuestro punto de partida es el impulso cotidiano de movimiento como herramienta para reconocer el cuerpo, ese territorio que habitamos, el lugar desde el que nos comunicamos e interactuamos con el mundo.<br><br>"+
+				"Posteriormente, nos acercamos a la danza como el lenguaje que nos conecta con nosotros mismos y los otros, el ritual de conexión con lo primitivo, con las costumbres y tradiciones de pueblos, comunidades y territorios.<br><br>"+
+				"El curso está compuesto por cinco secciones a través de las que se desarrollan diversos conceptos y actividades, estos son: Conexión Corporal Ritmo, Expresión, Espacio y Memoria.<br><br>"+
+				"Las herramientas, ejercicios y retos propuestos son una invitación a interactuar desde el cuerpo en movimiento, dialogando con los diversos géneros de la danza y técnicas corporales.<br><br>"+
+				"Los invitamos a crear un mundo en el que todos nos relacionamos de una manera más cercana y amigable con nuestros cuerpos. ¿Se imaginan cómo sería el mundo si todos tuviéramos una mejor relación con nuestro cuerpo?<br><br>"+
+				"	¡Bienvenidos!");
 			break;
 			case "btn_objetivos_danza":
-			$("#div-metodologia-danza").hide();
-			$("#div-publico-objetivo-danza").hide();
-			$("#div-creditos-danza").hide();
-			$("#div-introduccion-danza").hide();
-			$("#div-objetivos-danza").show();
+			$("#div-info-detallada-danza h2").text("OBJETIVOS");
+			$("#div-info-detallada-danza p").html("<strong>General:</strong><br>Conectarse con el movimiento a través del cuerpo desde un espacio interactivo que propone experiencias virtuales y presenciales, enfocadas al descubrimiento y exploración de la danza como lenguaje.<br><br>"+
+				"<strong>Específicos:</strong><br>"+
+				"<ol>"+
+				"<li>Descubrir las potencialidades del cuerpo en movimiento por medio de diferentes retos y ejercicios.</li>"+
+				"<li>Ampliar los conocimientos sobre la Danza y las técnicas relacionadas con el movimiento, así como su desarrollo a través de la historia.</li>"+
+				"<li>Interactuar con otros participantes a través de la plataforma, proponiendo un diálogo que permita la reflexión y retroalimentación en relación con las experiencias.</li>"+
+				"</ol>");
 			break;
 			case "btn_metodologia_danza":
-			$("#div-publico-objetivo-danza").hide();
-			$("#div-creditos-danza").hide();
-			$("#div-introduccion-danza").hide();
-			$("#div-objetivos-danza").hide();
-			$("#div-metodologia-danza").show();
+			$("#div-info-detallada-danza h2").text("METODOLOGÍA");
+			$("#div-info-detallada-danza p").html("El aula virtual de danza, “Cuerpo en Movimiento”, se compone de cinco secciones a través de las cuales se exploran conceptos vitales para la danza como forma artística y de expresión; estas son:<br><br>"+
+				"<ul>"+
+				"<li><strong>Conexión Corporal:</strong> enfocada en el reconocimiento corporal, los beneficios del movimiento y la actividad física.</li>"+
+				"<li><strong>Ritmo:</strong> busca desarrollar habilidades de coordinación, disociación y concentración en relación con conceptos musicales como tiempo y tempo, claves para el ejercicio de la danza.</li>"+
+				"<li><strong>Expresión:</strong> exploración dirigida a la comunicación de ideas, emociones y sensaciones a través del lenguaje corporal, vinculando imágenes, acciones y movimientos.</li>"+
+				"<li><strong>Espacio:</strong> propone acercarse al cuerpo en relación con el espacio, desde lugares convencionales y no convencionales.</li>"+
+				"<li><strong>Memoria:</strong> recorrido a través de las diversas técnicas, géneros y formas de expresión desarrolladas a lo largo de la historia.</li>"+
+				"</ul><br>"+
+				"En cada una de las secciones se establecen retos específicos en relación con las temáticas desarrolladas. Existen tres niveles de dificultad: básico, intermedio y avanzado; con el fin de incentivarlos a ir cada vez más allá, romper sus límites probar nuevas sensaciones y experiencias corporales.<br><br>"+
+				"Existen algunos conceptos y datos históricos claves presentes a lo largo del curso y son determinantes en la propuesta, estos se definen a profundidad en la biblioteca, por lo que les invitamos a consultarla en el transcurso de las secciones.<br><br>"+
+				"<strong>Interacción Virtual y Presencial</strong><br><br>"+
+				"Además de recibir la información y participar en los retos, tienen también la posibilidad de interactuar con otros participantes del Aula Virtual por medio de los foros y concursos, tanto en la plataforma como en redes sociales; con el fin de fomentar la retroalimentación sobre los procesos de exploración y creación desde el movimiento.<br><br>"+
+				"En algunos casos habrá también convocatorias para desarrollar retos presenciales, con el fin de trascender el espacio virtual y lograr una conexión en el espacio real, invitando a estos cuerpos diversos a “movernos juntos”; habitar y resignificar los espacios de la ciudad a través del cuerpo en movimiento.");
 			break;
 			case "btn_publico_objetivo_danza":
-			$("#div-creditos-danza").hide();
-			$("#div-introduccion-danza").hide();
-			$("#div-objetivos-danza").hide();
-			$("#div-metodologia-danza").hide();
-			$("#div-publico-objetivo-danza").show();
+			$("#div-info-detallada-danza h2").text("PÚBLICO OBJETIVO");
+			$("#div-info-detallada-danza p").html("El Aula Virtual “Cuerpo en Movimiento” está abierta para todos los que deseen explorar y/o ampliar conocimientos en relación con las prácticas corporales; niños, jóvenes y adultos pueden participar gracias a la variedad de actividades dirigidas al entrenamiento y exploración de habilidades/capacidades físicas y expresivas.<br><br>"+
+				"No es necesario que quienes van a tomar el curso tengan conocimientos previos en las temáticas que se abordan en las secciones dirigidas a la conexión corporal, al ritmo, a la expresión, al espacio y la memoria, sin embargo, todos deben contar con el manejo básico de computadores y/o dispositivos móviles con acceso a internet.");
 			break;
 			case "btn_creditos_danza":
-			$("#div-introduccion-danza").hide();
-			$("#div-objetivos-danza").hide();
-			$("#div-metodologia-danza").hide();
-			$("#div-publico-objetivo-danza").hide();
-			$("#div-creditos-danza").show();
+			$("#div-info-detallada-danza h2").text("CRÉDITOS");
+			$("#div-info-detallada-danza p").html("");
 			break;
 			default:
 		}
