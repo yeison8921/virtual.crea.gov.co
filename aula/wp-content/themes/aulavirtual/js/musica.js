@@ -97,7 +97,7 @@ jQuery(document).ready(function($){
 			$("#div-btn-mod-mus #btn-instrumentos").hide();
 			$("#div-sala-teorica").show();
 			limpiarInfoTeorica();
-			infoSalaTeorica("GUABINA", "En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales", "", "Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.", "guabina/cuchara.png");
+			infoSalaTeorica("GUABINA", "En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales", "", "Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.<audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/Cucharas_2_01.mp3' type='audio/mpeg'></audio>", "guabina/cuchara.png");
 			creacionBotonesSala("guabina-teorica");
 			$("#div-btn-mod-mus button").data("data-sala", "teorica");
 			$("#div-cua-sec-teo button").data("data-modulo", "guabina");
@@ -132,10 +132,10 @@ jQuery(document).ready(function($){
 		if($(this).data("data-modulo") == "guabina"){
 			switch($(this).attr("id")){
 				case "btn-ritmo-teorica":
-				infoSalaTeorica("RITMO", "", "guabina/imagen_notas.jpg", "", "");
+				infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/ritmo_guabina.mp4' type='video/mp4'></video>", "", "", ""); //guabina/imagen_notas.jpg
 				break;
 				case "btn-melodia-teorica":
-				infoSalaTeorica("LA RUANA", "", "guabina/melodia_la_ruana.png", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
+				infoSalaTeorica("LA RUANA", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/la_ruana_melodia.mp4' type='video/mp4'></video><br><a href='"+ $("#bloginfo").val() + "/musica/images/guabina/melodia_la_ruana.png' download='Melodia_La_Ruana'>Melodia La Ruana</a>", "", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
 					"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
 					"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
 					"GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.", "");
@@ -151,20 +151,20 @@ jQuery(document).ready(function($){
 		if($(this).data("data-modulo") == "pasillo"){
 			switch($(this).attr("id")){
 				case "btn-ritmo-teorica":
-				infoSalaTeorica("RITMO", "", "pasillo/ritmo.jpg", "", "pasillo/golpe_de_bajo.jpg");
+				infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/pasillo/ritmo_pasillo.mp4' type='video/mp4'></video>", "", "", ""); //("RITMO", "", "pasillo/ritmo.jpg", "", "pasillo/golpe_de_bajo.jpg");
 				break;
 				case "btn-melodia-teorica":
-				infoSalaTeorica("MELODÍA Y ARMONÍA", "", "pasillo/cachipay_1.jpg", "", "pasillo/cachipay_2.jpg");
+				infoSalaTeorica("MELODÍA Y ARMONÍA", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/pasillo/cachipay_melodia.mp4' type='video/mp4'></video>", "", "descargar imagen", ""); //("MELODÍA Y ARMONÍA", "", "pasillo/cachipay_1.jpg", "", "pasillo/cachipay_2.jpg");
 				break;
 			}
 		}
 		if($(this).data("data-modulo") == "bambuco"){
 			switch($(this).attr("id")){
 				case "btn-ritmo-teorica":
-				infoSalaTeorica("RITMO", "", "bambuco/golpes.png", "", "");
+				infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/bambuco/ritmo_bambuco.mp4' type='video/mp4'></video>", "", "", ""); //("RITMO", "", "bambuco/golpes.png", "", "");
 				break;
 				case "btn-melodia-teorica":
-				infoSalaTeorica("MELODÍA Y ARMONÍA", "", "bambuco/bochica_melodia_y_cifra_1.jpg", "", "bambuco/bochica_melodia_y_cifra_2.jpg");
+				infoSalaTeorica("MELODÍA Y ARMONÍA", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/bambuco/bochica_melodia.mp4' type='video/mp4'></video>", "", "descargar imagen", ""); //("MELODÍA Y ARMONÍA", "", "bambuco/bochica_melodia_y_cifra_1.jpg", "", "bambuco/bochica_melodia_y_cifra_2.jpg");
 				break;
 			}
 		}
@@ -187,7 +187,9 @@ jQuery(document).ready(function($){
 					"</div>", "", 2);
 				break;
 				case "btn-play-bandola":
-				infoSalaInteractiva("PLAY ALONG BANDOLA", "video", "", 2);
+				infoSalaInteractiva("PLAY ALONG BANDOLA", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xlq2c6EVhaw' allowfullscreen></iframe>"+
+					"</div>", "", 2);
 				break;
 				case "btn-karaoke":
 				infoSalaInteractiva("KARAOKE", "karaoke", "", 2);
