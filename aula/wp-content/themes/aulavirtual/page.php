@@ -160,8 +160,15 @@
               <p></p>
             </div>
             <div class="col-lg-6 col-md-6" id="div-ter-sec-teo" style="height: 55%;">
-              <img src="" class="img-responsive">
-              <p></p>
+              <div class="col-lg-6 col-md-6">
+                <img src="" class="img-responsive">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <p></p>
+              </div>
             </div>
             <div class="col-lg-12 col-md-12" id="div-cua-sec-teo" style="height: 10%;">
             </div>
