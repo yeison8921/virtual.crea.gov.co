@@ -163,12 +163,14 @@
               <div class="col-lg-6 col-md-6">
                 <img src="" class="img-responsive">
               </div>
-              <div class="col-lg-6 col-md-6">
-                
+              <div class="col-lg-6 col-md-6 div-audio">
               </div>
               <div class="col-lg-12 col-md-12">
                 <p></p>
               </div>
+            </div>
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-image-instrumentos">
+              <img src="" class="img-responsive">
             </div>
             <div class="col-lg-12 col-md-12" id="div-cua-sec-teo" style="height: 10%;">
             </div>
@@ -224,6 +226,18 @@
           </div>
 
           <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido" id="div-instrumentos" style="height: 100%;">
+            <div class="col-lg-12 col-md-12" id="div-tit-instrumentos" style="height: 15%;">
+              <h2 style="font-size: 35px; height: 80%"></h2>
+            </div>
+            <div></div>
+            <div class="col-lg-12 col-md-12" id="div-botones-instrumentos" style="height: 5%;">
+            </div>
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-img-instrumentos" style="height: 55%;">
+              <img src="" class="img-responsive">
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido" id="div-instrumentos" style="height: 100%;">
             <div class="col-lg-12 col-md-12" id="div-tit-instrumentos" style="height: 15%;">
               <h2 style="font-size: 35px; height: 80%"></h2>
             </div>
@@ -291,7 +305,7 @@
               <img src="">
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     <?php endif; ?>
     <?php if(is_page("Audiovisuales")) :?>

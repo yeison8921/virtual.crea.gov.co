@@ -94,9 +94,7 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-sala-teorica":
 			botonesLateralesSala("teorica");
-			$("#div-btn-mod-mus #btn-instrumentos").hide();
 			$("#div-sala-teorica").show();
-			limpiarInfoTeorica();
 			infoSalaTeorica("GUABINA", "En el caso de la guabina, el sincretismo musical vocal - instrumental-coreografía está asociado al torbellino, el canto es el elemento diferenciador por su relativa independencia de la ejecución instrumental. A juicio de los críticos - generalmente literatos del pasillo, del fandanguillo, del valse y del bambuco - basados en las distintas piezas particulares que se han “escrito” en Tolima, Huila, Boyacá, Santander y Cundinamarca, mucho se puede decir de la guabina como derivación de distintos aires. Las numerosas confusiones que se presentan de las denominaciones de la guabina, todas corresponden a músicos del Tolima, Huila, Boyacá, Santander y Cundinamarca, unas y otras presentan similitudes estructurales, rítmicas y coreográficas con otros aires nacionales", "", "Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.", "guabina/cuchara.png", "<audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/Cucharas_2_01.mp3' type='audio/mpeg'></audio>");
 			creacionBotonesSala("guabina-teorica");
 			$("#div-btn-mod-mus button").data("data-sala", "teorica");
@@ -104,14 +102,12 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-sala-interactiva":
 			botonesLateralesSala("interactiva");
-			limpiarInfoInteractiva();
 			infoSalaInteractiva("GUABINA", "Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.<br><br>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.", "<div class='embed-responsive embed-responsive-16by9'>"+
 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/wY5ON6FujAY' allowfullscreen></iframe>"+
 				"</div>", 1);
 			creacionBotonesSala("interactiva");
 			$("#div-btn-mod-mus button").data("data-sala", "interactiva");
 			$("#div-cua-sec-int button").data("data-modulo", "guabina");
-			//$("#div-btn-mod-mus #btn-instrumentos").show();
 			$("#div-sala-interactiva").show();
 			break;
 			case "btn-sala-general":
@@ -125,32 +121,50 @@ jQuery(document).ready(function($){
 		}
 	});
 
-$("#div-cua-sec-teo").on('click', 'button', function() {
-	$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
-	$("#div-cua-sec-teo button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
-	limpiarInfoTeorica();
-	if($(this).data("data-modulo") == "guabina"){
+	$("#div-instrumentos").on('click', 'button', function() {
+		$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
+		$("#div-botones-instrumentos button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
 		switch($(this).attr("id")){
-			case "btn-ritmo-teorica":
-			infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/ritmo_guabina.mp4' type='video/mp4'></video>", "", "", "guabina/imagen_notas.jpg"); 
+			case "btn-guitarra-teorica":
+			infoInstrumentos("Instrumentos Música Andina","guitarra/guitarra_esquema.png");
 			break;
-			case "btn-melodia-teorica":
-			infoSalaTeorica("LA RUANA", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/la_ruana_melodia.mp4' type='video/mp4'></video><br><a href='"+ $("#bloginfo").val() + "/musica/images/guabina/melodia_la_ruana.png' download='Melodia_La_Ruana'>Descargar Melodia La Ruana</a>", "", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
-				"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
-				"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
-				"GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.", "");
+			case "btn-tiple-teorica":
+			infoInstrumentos("Instrumentos Música Andina","tiple/tiple_esquema.png");
 			break;
-			case "btn-armonia-teorica":
-			infoSalaTeorica("LA RUANA", "", "guabina/armonia_la_ruana.jpg", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
-				"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
-				"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
-				"GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.", "");
+			case "btn-bandola-teorica":
+			infoInstrumentos("Instrumentos Música Andina","bandola/bandola_esquema.png");
 			break;
+			case "btn-otros-teorica":
+			infoInstrumentos("Instrumentos Música Andina","image");
+			break;
+		};
+	});
+
+	$("#div-cua-sec-teo").on('click', 'button', function() {
+		$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
+		$("#div-cua-sec-teo button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
+		if($(this).data("data-modulo") == "guabina"){
+			switch($(this).attr("id")){
+				case "btn-ritmo-teorica":
+				infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/ritmo_guabina.mp4' type='video/mp4'></video>", "", "", "guabina/imagen_notas.jpg"); 
+				break;
+				case "btn-melodia-teorica":
+				infoSalaTeorica("LA RUANA", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/la_ruana_melodia.mp4' type='video/mp4'></video><br><a href='"+ $("#bloginfo").val() + "/musica/images/guabina/melodia_la_ruana.png' download='Melodia_La_Ruana'>Descargar Melodia La Ruana</a>", "", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
+					"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
+					"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
+					"GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.", "");
+				break;
+				case "btn-armonia-teorica":
+				infoSalaTeorica("LA RUANA", "", "guabina/armonia_la_ruana.jpg", "ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.<br><br>"+
+					"ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.<br><br>"+
+					"CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.<br><br>"+
+					"GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.", "");
+				break;
+			}
 		}
-	}
-	if($(this).data("data-modulo") == "pasillo"){
-		switch($(this).attr("id")){
-			case "btn-ritmo-teorica":
+		if($(this).data("data-modulo") == "pasillo"){
+			switch($(this).attr("id")){
+				case "btn-ritmo-teorica":
 				infoSalaTeorica("RITMO", "<video width='500' controls><source src='"+ $("#bloginfo").val() + "/musica/videos/pasillo/ritmo_pasillo.mp4' type='video/mp4'></video>", "", "<a href='"+$("#bloginfo").val() + "/musica/images/pasillo/ritmo_pasillo.pdf' download='Ritmo_Pasillo'>Descargar Ritmo Pasillo</a>", "");
 				break;
 				case "btn-melodia-teorica":
@@ -170,316 +184,322 @@ $("#div-cua-sec-teo").on('click', 'button', function() {
 		}
 	});
 
-$("#div-cua-sec-int").on('click', 'button', function() {
-	$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
-	$("#div-cua-sec-int button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
-	limpiarInfoInteractiva();
-	if($(this).data('data-modulo') == "guabina"){
-		switch($(this).attr("id")){
-			case "btn-play-guitarra":
-			infoSalaInteractiva("PLAY ALONG GUITARRA", "<div class='embed-responsive embed-responsive-16by9'>"+
-				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/ivCvTEMq5bs' allowfullscreen></iframe>"+
-				"</div>", "", 2);
-			break;
-			case "btn-play-tiple":
-			infoSalaInteractiva("PLAY ALONG TIPLE", "<div class='embed-responsive embed-responsive-16by9'>"+
-				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8sFJkixKn8c' allowfullscreen></iframe>"+
-				"</div>", "", 2);
-			break;
-			case "btn-play-bandola":
-			infoSalaInteractiva("PLAY ALONG BANDOLA", "<div class='embed-responsive embed-responsive-16by9'>"+
-				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xlq2c6EVhaw' allowfullscreen></iframe>"+
-				"</div>", "", 2);
-			break;
-			case "btn-karaoke":
-			infoSalaInteractiva("KARAOKE", "karaoke", "", 2);
-			break;
-			case "btn-referentes-interactiva":
-			infoSalaInteractiva("REFERENTES GUABINA", "Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada", "", 2)
-			break;
+	$("#div-cua-sec-int").on('click', 'button', function() {
+		$(this).removeClass('btn-musica-s').addClass('btn-musica-t');
+		$("#div-cua-sec-int button").not(this).removeClass().addClass('btn btn-block btn-musica-s');
+		if($(this).data('data-modulo') == "guabina"){
+			switch($(this).attr("id")){
+				case "btn-play-guitarra":
+				infoSalaInteractiva("PLAY ALONG GUITARRA", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/ivCvTEMq5bs' allowfullscreen></iframe>"+
+					"</div>", "", 2);
+				break;
+				case "btn-play-tiple":
+				infoSalaInteractiva("PLAY ALONG TIPLE", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8sFJkixKn8c' allowfullscreen></iframe>"+
+					"</div>", "", 2);
+				break;
+				case "btn-play-bandola":
+				infoSalaInteractiva("PLAY ALONG BANDOLA", "<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xlq2c6EVhaw' allowfullscreen></iframe>"+
+					"</div>", "", 2);
+				break;
+				case "btn-karaoke":
+				infoSalaInteractiva("KARAOKE", "karaoke", "", 2);
+				break;
+				case "btn-referentes-interactiva":
+				infoSalaInteractiva("REFERENTES GUABINA", "Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada", "", 2)
+				break;
+			}
 		}
-	}
-	if($(this).data('data-modulo') == "pasillo"){
-		switch($(this).attr("id")){
-			case "btn-play-interactiva":
-			infoSalaInteractiva("PLAY ALONG CACHIPAY", "video", "", 2);
-			break;
-			case "btn-referentes-interactiva":
-			infoSalaInteractiva("REFERENTES PASILLO", "Aires de mi Tierra - Gustavo Gómez Ardila<br>La Gata Golosa - Fulgencio García<br>Amalia ... Joaquín Arias<br>Atardecer ... Carlos Viecco<br>Cachipay ... D.R.A.<br>Chispazo ... Pedro Morales Pino<br>Desde Lejos ... Bonifacio Bautista<br>El Pereirano ... Camilo Bedoya", "", 2)
-			break;
+		if($(this).data('data-modulo') == "pasillo"){
+			switch($(this).attr("id")){
+				case "btn-play-interactiva":
+				infoSalaInteractiva("PLAY ALONG CACHIPAY", "video", "", 2);
+				break;
+				case "btn-referentes-interactiva":
+				infoSalaInteractiva("REFERENTES PASILLO", "Aires de mi Tierra - Gustavo Gómez Ardila<br>La Gata Golosa - Fulgencio García<br>Amalia ... Joaquín Arias<br>Atardecer ... Carlos Viecco<br>Cachipay ... D.R.A.<br>Chispazo ... Pedro Morales Pino<br>Desde Lejos ... Bonifacio Bautista<br>El Pereirano ... Camilo Bedoya", "", 2)
+				break;
+			}
 		}
-	}
-	if($(this).data('data-modulo') == "bambuco"){
-		switch($(this).attr("id")){
-			case "btn-play-interactiva":
-			infoSalaInteractiva("PLAY ALONG BOCHICA", "video", "", 2);
-			break;
-			case "btn-referentes-interactiva":
-			infoSalaInteractiva("REFERENTES BAMBUCO", "Bambuquisimo ... León Cardona<br>Bachue ... Francisco Cristancho<br>Bohica ... Francisco Cristancho<br>Como P ́desenguayabar ... Jorge Olaya<br>El Sotareño ... Federico Diago", "", 2)
-			break;
+		if($(this).data('data-modulo') == "bambuco"){
+			switch($(this).attr("id")){
+				case "btn-play-interactiva":
+				infoSalaInteractiva("PLAY ALONG BOCHICA", "video", "", 2);
+				break;
+				case "btn-referentes-interactiva":
+				infoSalaInteractiva("REFERENTES BAMBUCO", "Bambuquisimo ... León Cardona<br>Bachue ... Francisco Cristancho<br>Bohica ... Francisco Cristancho<br>Como P ́desenguayabar ... Jorge Olaya<br>El Sotareño ... Federico Diago", "", 2)
+				break;
+			}
 		}
-	}
-});
+	});
 
-function botonesLateralesSala(sala){
-	$("#div-btn-mod-mus").html();
-	$("#div-btn-mod-mus").html('<br>'+
-		'<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">'+
-		'<a href="#" id="regresar" style="color: #333; text-decoration: none;">'+
-		'<i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>'+
-		'</a>'+
-		'</div>'
-		);
-
-	if(sala == "teorica" || sala == "interactiva"){
-		$("#div-btn-mod-mus").append(
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-t" id="btn-guabina">Guabina</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-pasillo">Pasillo</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-bambuco">Bambuco</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>'+
-			'</div>'+
+	function botonesLateralesSala(sala){
+		$("#div-btn-mod-mus").html();
+		$("#div-btn-mod-mus").html('<br>'+
+			'<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">'+
+			'<a href="#" id="regresar" style="color: #333; text-decoration: none;">'+
+			'<i class="fa fa-arrow-left fa-2x"><p style="font-size: 12px;">Regresar</p></i>'+
+			'</a>'+
 			'</div>'
 			);
-	}
-	if(sala == "general"){
-		$("#div-btn-mod-mus").append(
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-escala"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-t" id="btn-escala">Escala</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-ritmo"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-ritmo">Ritmo y Métrica</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-acordes"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-acordes">Acordes</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-funciones"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-funciones">Funciones Armónicas</button>'+
-			'</div>'+
-			'</div>'+
-			'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
-			'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
-			'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-armaduras"></i>'+
-			'</div>'+
-			'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
-			'<button class="btn btn-block btn-musica-s" id="btn-armaduras">Armaduras</button>'+
-			'</div>'+
-			'</div>'
-			);
-	}
-}
 
-/*Inicio Sala teorica*/
-function infoSalaTeorica(title, mainText, mainImg, secText, secImg, audio){
-	$("#div-pri-sec-teo h2").html(title);
-	$("#div-seg-sec-teo p").html(mainText);
-	if(mainImg != ""){
-		$("#div-seg-sec-teo img").attr("src", $("#bloginfo").val() + "/musica/images/"+mainImg);
-	}
-
-	if(secImg != ""){
-		$("#div-ter-sec-teo img").attr("src", $("#bloginfo").val() + "/musica/images/"+secImg);
-	}
-
-	if(audio != ""){
-		$($("#div-ter-sec-teo").children()[1]).html("").html(audio);
-	}
-
-	$("#div-ter-sec-teo p").html(secText);
-}
-
-function limpiarInfoTeorica(){
-	$("#div-pri-sec-teo h2").html("");
-	$("#div-seg-sec-teo p").html("");
-	$("#div-ter-sec-teo p").html("");
-	$("#div-seg-sec-teo img").attr("src", "");
-	$("#div-ter-sec-teo img").attr("src", "");
-}
-
-/*Fin Sala teorica*/
-
-/*Inicio Sala interactiva*/
-function infoSalaInteractiva(title, text, video, grid){
-	$("#div-pri-sec-int h2").html(title);
-	if(grid == 1){
-		$("#div-seg-sec-int").removeClass().addClass("col-lg-6 col-md-6");
-		$("#div-seg-sec-int").css("height", "55%");
-		$("#div-seg-sec-int p").html(text);
-		$("#div-ter-sec-int").removeClass().addClass("col-lg-6 col-md-6");
-		$("#div-ter-sec-int").css("height", "55%");
-		$("#div-ter-sec-int p").html(video);
-	}else{
-		$("#div-seg-sec-int").removeClass();
-		$("#div-seg-sec-int").css("height", "");
-		$("#div-ter-sec-int").removeClass().addClass("col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8");
-		$("#div-ter-sec-int").css("height", "55%");
-		$("#div-ter-sec-int p").html(text);
-	}
-}
-
-function limpiarInfoInteractiva(){
-	$("#div-pri-sec-int h2").html("");
-	$("#div-seg-sec-int p").html("");
-	$("#div-ter-sec-int p").html("");
-}
-
-/*Fin Sala interactiva*/
-
-/*Inicio Sala general*/
-function infoEscalas(title, text, img=""){
-	$("#div-pri-sec-gen h2").text(title);
-	$("#div-pri-sec-gen p").html(text);
-	if(img != "")
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/"+img);
-}
-
-function infoRitmo(mainTitle, mainText, mainImg, secTitle, secText, secImg, barText, buttonBar=0, buttons=0){
-	$("#div-pri-sec-gen h2").text(mainTitle);
-	$("#div-pri-sec-gen p").html(mainText);
-	$("#div-seg-sec-gen h2").text(secTitle);
-	$("#div-seg-sec-gen p").html(secText);
-	if(barText == ""){
-		$("#div-bar-gen p").html("");
-	}else{
-		$("#div-bar-gen").append(barText);
-	}
-	if(mainImg != ""){
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/ritmo/"+mainImg);
-	}
-	if(secImg != ""){
-		$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/ritmo/"+secImg);
-	}
-	if(buttonBar == 0){
-		$("#div-bar-gen button").hide();
-
-	}else{
-		$("#div-bar-gen button").show();
-	}
-	if(buttons == 0){
-		$("#div-pri-btn-sec-gen button").hide();
-		$("#div-seg-btn-sec-gen button").hide();
-		$("#div-ter-btn-sec-gen button").hide();
-	}else{
-		$("#div-pri-btn-sec-gen button").show();
-		$("#div-seg-btn-sec-gen button").show();
-		$("#div-ter-btn-sec-gen button").show();
-	}
-}
-
-function infoAcordes(title, mainText, mainImg, secText, secImg){
-	$("#div-pri-sec-gen h2").text(title);
-	$("#div-pri-sec-gen p").html(mainText);
-	$("#div-seg-sec-gen p").html(secText);
-	if(mainImg != ""){
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/"+mainImg);
-	}
-	if(secImg != ""){
-		$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/"+secImg);
-	}
-}
-
-function infoArmonicas(title, text, img, button){
-	$("#div-pri-sec-gen h2").text(title);
-	$("#div-pri-sec-gen p").html(text);
-	if(img != ""){
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/funciones/"+img);
-	}
-	if(button == ""){
-		$("#div-bar-gen button").hide();
-	}else{
-		$("#div-bar-gen button").attr("id", button)
-		$("#div-bar-gen button").show();
-	}
-}
-
-function infoArmaduras(title, mainText, mainImg, secText, secImg){
-	$("#div-pri-sec-gen h2").text(title);
-	$("#div-pri-sec-gen p").html(mainText);
-	$("#div-seg-sec-gen p").html(secText);
-	if(mainImg != ""){
-		$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+mainImg);
-	}
-	if(secImg != ""){
-		$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+secImg);
+		if(sala == "teorica" || sala == "interactiva"){
+			$("#div-btn-mod-mus").append(
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-guabina"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-t" id="btn-guabina">Guabina</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-pasillo"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-pasillo">Pasillo</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-bambuco"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-bambuco">Bambuco</button>'+
+				'</div>'+
+				'</div>');
+		}
+		if(sala == "teorica"){
+			$("#div-btn-mod-mus").append('<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-instrumentos"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-instrumentos">Instrumentos tradicionales</button>'+
+				'</div>'+
+				'</div>');
+		}
+		if(sala == "general"){
+			$("#div-btn-mod-mus").append(
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40%;">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-escala"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-t" id="btn-escala">Escala</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-ritmo"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-ritmo">Ritmo y Métrica</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-acordes"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-acordes">Acordes</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-funciones"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-funciones">Funciones Armónicas</button>'+
+				'</div>'+
+				'</div>'+
+				'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'+
+				'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">'+
+				'<i class="fas fa-2x fa-caret-right flecha-musica" id="flecha-armaduras"></i>'+
+				'</div>'+
+				'<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">'+
+				'<button class="btn btn-block btn-musica-s" id="btn-armaduras">Armaduras</button>'+
+				'</div>'+
+				'</div>'
+				);
+		}
 	}
 
-}
+	/*Inicio Sala teorica*/
+	function infoSalaTeorica(title, mainText, mainImg, secText, secImg, audio){
+		$("#div-pri-sec-teo h2").html("");
+		$("#div-seg-sec-teo p").html("");
+		$("#div-ter-sec-teo p").html("");
+		$("#div-ter-sec-teo .div-audio").html("");
+		$("#div-seg-sec-teo img").attr("src", "");
+		$("#div-ter-sec-teo img").attr("src", "");
 
-function limpiarInfoGeneral(){
-	$("#div-pri-sec-gen h2").html("");
-	$("#div-pri-sec-gen p").html("");
-	$("#div-pri-sec-gen img").attr("src", "");
-	$("#div-seg-sec-gen h2").html("");
-	$("#div-seg-sec-gen p").html("");
-	$("#div-seg-sec-gen img").attr("src", "");
-	$("#div-seg-btn-sec-gen a div").remove();
-}
-/*Fin Sala general*/
+		$("#div-pri-sec-teo h2").html(title);
+		$("#div-seg-sec-teo p").html(mainText);
+		if(mainImg != ""){
+			$("#div-seg-sec-teo img").attr("src", $("#bloginfo").val() + "/musica/images/"+mainImg);
+		}
+
+		if(secImg != ""){
+			$("#div-ter-sec-teo img").attr("src", $("#bloginfo").val() + "/musica/images/"+secImg);
+		}
+
+		if(audio != ""){
+			$("#div-ter-sec-teo .div-audio").html("").html(audio);
+		}
+
+		$("#div-ter-sec-teo p").html(secText);
+	}
+
+	/*Fin Sala teorica*/
+
+	/*Inicio Sala interactiva*/
+	function infoSalaInteractiva(title, text, video, grid){
+		$("#div-pri-sec-int h2").html("");
+		$("#div-seg-sec-int p").html("");
+		$("#div-ter-sec-int p").html("");
+
+		$("#div-pri-sec-int h2").html(title);
+		if(grid == 1){
+			$("#div-seg-sec-int").removeClass().addClass("col-lg-6 col-md-6");
+			$("#div-seg-sec-int").css("height", "55%");
+			$("#div-seg-sec-int p").html(text);
+			$("#div-ter-sec-int").removeClass().addClass("col-lg-6 col-md-6");
+			$("#div-ter-sec-int").css("height", "55%");
+			$("#div-ter-sec-int p").html(video);
+		}else{
+			$("#div-seg-sec-int").removeClass();
+			$("#div-seg-sec-int").css("height", "");
+			$("#div-ter-sec-int").removeClass().addClass("col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8");
+			$("#div-ter-sec-int").css("height", "55%");
+			$("#div-ter-sec-int p").html(text);
+		}
+	}
+	/*Fin Sala interactiva*/
+
+	/*Inicio Sala general*/
+	function infoEscalas(title, text, img=""){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(text);
+		if(img != "")
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/escala/"+img);
+	}
+
+	function infoRitmo(mainTitle, mainText, mainImg, secTitle, secText, secImg, barText, buttonBar=0, buttons=0){
+		$("#div-pri-sec-gen h2").text(mainTitle);
+		$("#div-pri-sec-gen p").html(mainText);
+		$("#div-seg-sec-gen h2").text(secTitle);
+		$("#div-seg-sec-gen p").html(secText);
+		if(barText == ""){
+			$("#div-bar-gen p").html("");
+		}else{
+			$("#div-bar-gen").append(barText);
+		}
+		if(mainImg != ""){
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/ritmo/"+mainImg);
+		}
+		if(secImg != ""){
+			$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/ritmo/"+secImg);
+		}
+		if(buttonBar == 0){
+			$("#div-bar-gen button").hide();
+
+		}else{
+			$("#div-bar-gen button").show();
+		}
+		if(buttons == 0){
+			$("#div-pri-btn-sec-gen button").hide();
+			$("#div-seg-btn-sec-gen button").hide();
+			$("#div-ter-btn-sec-gen button").hide();
+		}else{
+			$("#div-pri-btn-sec-gen button").show();
+			$("#div-seg-btn-sec-gen button").show();
+			$("#div-ter-btn-sec-gen button").show();
+		}
+	}
+
+	function infoAcordes(title, mainText, mainImg, secText, secImg){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(mainText);
+		$("#div-seg-sec-gen p").html(secText);
+		if(mainImg != ""){
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/"+mainImg);
+		}
+		if(secImg != ""){
+			$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/acordes/"+secImg);
+		}
+	}
+
+	function infoArmonicas(title, text, img, button){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(text);
+		if(img != ""){
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/funciones/"+img);
+		}
+		if(button == ""){
+			$("#div-bar-gen button").hide();
+		}else{
+			$("#div-bar-gen button").attr("id", button)
+			$("#div-bar-gen button").show();
+		}
+	}
+
+	function infoArmaduras(title, mainText, mainImg, secText, secImg){
+		$("#div-pri-sec-gen h2").text(title);
+		$("#div-pri-sec-gen p").html(mainText);
+		$("#div-seg-sec-gen p").html(secText);
+		if(mainImg != ""){
+			$("#div-pri-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+mainImg);
+		}
+		if(secImg != ""){
+			$("#div-seg-sec-gen img").attr("src", $("#bloginfo").val() + "/musica/images/armaduras/"+secImg);
+		}
+
+	}
+
+	function limpiarInfoGeneral(){
+		$("#div-pri-sec-gen h2").html("");
+		$("#div-pri-sec-gen p").html("");
+		$("#div-pri-sec-gen img").attr("src", "");
+		$("#div-seg-sec-gen h2").html("");
+		$("#div-seg-sec-gen p").html("");
+		$("#div-seg-sec-gen img").attr("src", "");
+		$("#div-seg-btn-sec-gen a div").remove();
+	}
+	/*Fin Sala general*/
+
+	function infoInstrumentos(title, imgIns){
+		$("#div-tit-instrumentos h2").empty();
+		$("#div-img-instrumentos img").attr("src", "");
+
+		$("#div-tit-instrumentos h2").text(title);
+
+		if(imgIns != "")
+			$("#div-img-instrumentos img").attr("src",  $("#bloginfo").val() + "/musica/images/instrumentos/"+imgIns);
+	}
 
 
-function infoBasicaInstrumentos(){
-	$("#div-tit-instrumentos h2").text("INSTRUMENTOS MUSICALES");
-	$("#img-1").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-2").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-3").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-4").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-5").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-bandola").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-marrana").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-cuchara").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-guaracha").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-	$("#img-esterilla").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-}
+// function infoBasicaInstrumentos(){
+// 	$("#div-tit-instrumentos h2").text("INSTRUMENTOS MUSICALES");
+// 	$("#img-1").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-2").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-3").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-4").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-5").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-bandola").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-marrana").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-cuchara").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-guaracha").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// 	$("#img-esterilla").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
+// }
 
-function limpiarInfoInstrumentos(){
-	$("#div-tit-instrumentos h2").empty();
-	$("#div-des-instrumentos p").empty();
-	$("#div-des-instrumentos img").attr("src", "");
-}
+// function limpiarInfoInstrumentos(){
+// 	$("#div-tit-instrumentos h2").empty();
+// 	$("#div-des-instrumentos p").empty();
+// 	$("#div-des-instrumentos img").attr("src", "");
+// }
 
 function creacionBotonesSala(seccion){
 	if(seccion == "guabina-teorica"){
@@ -490,6 +510,12 @@ function creacionBotonesSala(seccion){
 	if(seccion == "pasillo-teorica" || seccion == "bambuco-teorica"){
 		$("#div-cua-sec-teo").html("<div class='col-lg-offset-2 col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-ritmo-teorica'>Ritmo</button></div>"+
 			"<div class='col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>");
+	}
+	if(seccion == "instrumentos-teorica"){
+		$("#div-instrumentos #div-botones-instrumentos").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-guitarra-teorica'>Guitarra</button></div>"+
+			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-tiple-teorica'>Tiple</button></div>"+
+			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-bandola-teorica'>Bandola</button></div>"+
+			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-otros-teorica'>Otros</button></div>");
 	}
 	if(seccion == "interactiva"){
 		$("#div-cua-sec-int").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-guitarra'>Play Along Guitarra</button></div>"+
@@ -632,9 +658,14 @@ function creacionBotonesSala(seccion){
 		$("#div-btn-mod-mus button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
 		$(".contenido").hide();
 		if($(this).data('data-sala') == "teorica"){
-			limpiarInfoTeorica();
-			$("#div-cua-sec-teo button").removeClass().addClass("btn btn-block btn-musica-s");
-			$("#div-sala-teorica").show();
+			if($(this).attr('id') == "btn-guabina" || $(this).attr('id') == "btn-pasillo" || $(this).attr('id') == "btn-bambuco"){
+				$("#div-cua-sec-teo button").removeClass().addClass("btn btn-block btn-musica-s");
+				$("#div-sala-teorica").show();
+			}
+			if($(this).attr('id') == "btn-instrumentos"){
+				$("#div-instrumentos").show();
+			}
+
 			switch($(this).attr('id')){
 				case "btn-guabina":
 				creacionBotonesSala("guabina-teorica");
@@ -656,10 +687,13 @@ function creacionBotonesSala(seccion){
 					"Carácter Poli rítmico Hay acuerdo entre los folclóricos sobre el carácter poli rítmico del bambuco. Actualmente se habla de las fórmulas ¾ y 6/8, muy conocidas por nuestros trovadores, tipleros y guitarristas, que presentan grandes dificultades cuando se quiere orquestar debido a la síncopa.<br>"+
 					"Otro tipo de bambuco es el instrumental, que se toca en estudiantina (agrupación musical de cuerdas que emplea el tiple, la bandola y la guitarra).", "", "La esterilla es un instrumento tradicional colombiano, construido con cañutos o trozos de bambú (entre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.", "bambuco/esterilla.jpg", "<audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/Esterilla_01.mp3' type='audio/mpeg'></audio>");
 				break;
+				case "btn-instrumentos":
+				creacionBotonesSala("instrumentos-teorica");
+				infoInstrumentos("Instrumentos Música Andina","")
+				break;
 			}
 		}
 		if($(this).data('data-sala') == "interactiva"){
-			limpiarInfoInteractiva();
 			$("#div-cua-sec-int button").removeClass().addClass("btn btn-block btn-musica-s");
 			//creacionBotonesSala("interactiva");
 			$("#div-sala-interactiva").show();
@@ -683,10 +717,10 @@ function creacionBotonesSala(seccion){
 				$("#div-cua-sec-int button").data("data-modulo", "bambuco");
 				infoSalaInteractiva("BAMBUCO", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend placerat quam, at vestibulum dolor laoreet a. Curabitur a dictum erat, eget efficitur eros. Sed tincidunt volutpat ornare. Curabitur dignissim erat in ligula faucibus porta. Donec orci lectus, sollicitudin non turpis quis, ullamcorper consectetur erat. Nulla ac lectus ut eros convallis consectetur at a quam. Donec vitae maximus felis. Nunc tincidunt nisi id augue consectetur, id luctus arcu dapibus. In ut facilisis nulla. Aliquam viverra a risus vitae commodo. Sed sit amet nibh interdum, porttitor purus quis, tempus orci. Suspendisse non velit molestie, faucibus risus at, ultrices enim. Morbi libero diam, bibendum eget tempor quis, dapibus et lacus. Etiam eu dui at arcu fermentum iaculis bibendum id velit. Vivamus porta vulputate lorem ac mattis.", "video", 1);
 				break;
-				case "btn-instrumentos":
-				infoBasicaInstrumentos();
-				$("#div-des-instrumentos").hide();
-				break;
+				// case "btn-instrumentos":
+				// infoBasicaInstrumentos();
+				// $("#div-des-instrumentos").hide();
+				// break;
 			}
 		}
 		if($(this).data('data-sala') == "general"){
@@ -725,33 +759,33 @@ function creacionBotonesSala(seccion){
 		}
 	});
 	//
-	$("#div-instrumentos").on('click', 'img', function() {
-		$("#div-img-instrumentos").hide();
-		$("#div-des-instrumentos").show();
-		limpiarInfoInstrumentos();
-		switch($(this).attr('id')) {
-			case "img-marrana":
-			$("#div-tit-instrumentos h2").text("MARRANA");
-			$("#div-des-instrumentos p").html('Conocida también como zambumbía, puerca, farruco y puerca, es un tambor de fricción con varilla fija, el cual se fabrica con un calabazo o fruto seco de totumo,al que se le corta un sector para formarle boca en la parte superior; sobre esta boca, se coloca un aro de bejuco al que va atado un parche o cuero (puede ser de cerdo de monte, conejo, cordero o chivo) y éste, es atravesado por una varilla de madera, asegurada por dentro y por fuera. Este instrumento es empleado para tocar ritmos como rajaleñas y sanjuaneros, es muy popular en el departamento de Santander, en los conjuntos guabineros para la música del torbellino.  El nombre de este instrumento, se debe a la semejanza con el gruñido de un cerdo o marrano.<br>Ver: <a href="https://www.fundacionbat.com.co/instrumentos.php?IDDepartamento=52">Marrana 1</a> y <a href="http://www.ewakulak.com/index.php?option=com_content&task=view&id=437">Marrana 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=Ei2c9zp4tNU">Youtube</a>');
-			$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png");
-			break;
-			case "img-cuchara":
-			$("#div-tit-instrumentos h2").text("CUCHARAS");
-			$("#div-des-instrumentos p").html('Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión (entrechocandolas por su parte convexa) por acción de las dos manos: la una, sujetándolas (con el dedo índice de separador) y la otra, entrechocándolas con los dedos, palma, dorso, antebrazo o codo. Este instrumento fue muy usado para amenizar fiestas y reuniones, la cual, era una práctica muy frecuente en las clases populares. El sonido de las cucharas es muy similar al de las castañuelas (aunque no suenan exactamente igual). Existen varias técnicas y maneras de ejecución de éste instrumento, una de ellas, es golpearlas como si fueran palillos, otra, es coger ambas con una mano, y golpearlas contra la rodilla y la otra mano.<br>Ver: <a href="ahttp://www.tamborileros.com/tradiberia/idifono1.htm">Cucharas 1</a> y <a href="http://canteradesonidos.blogspot.com/2014/07/las-cucharas-como-instrumento-musical.html">Cucharas 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=95Jhfy38QKk">Youtube</a>');
-			$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
-			break;
-			case "img-guaracha":
-			$("#div-tit-instrumentos h2").text("GUARACHA");
-			$("#div-des-instrumentos p").html('Su nombre proviene de un ave, la cual canta en coro entre hembras y machos. La guacharaca es un instrumento musical de rascado que se compone de dos partes: la guacharaca misma (cuya superficie es corrugada) y un trinche o peine (construido con alambre duro y mango de madera, el cual se usa para frotar o “rascar” la superficie corrugada de la guacharaca.<br>Ver: <a href="https://portalvallenato.net/2013/07/29/la-historia-de-la-guacharaca/">Historia de la guaracha</a> y <a href="http://blogs.eltiempo.com/vallenateando/2005/09/06/la-guacharaca/">Guaracha - El Tiempo</a><br>Imagen: <a href="https://www.google.com.co/search?q=guacharacas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiti4em3KreAhWLvFMKHbyYBGwQ_AUIDigB&biw=1517&bih=695#imgrc=HHWh9SKhvbAjkM:">Imagen guaracha</a> <br>Audio y video: <a href="https://www.youtube.com/watch?v=tGrsesfTto8">Youtube</a>');
-			$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png");
-			break;
-			case "img-esterilla":
-			$("#div-tit-instrumentos h2").text("ESTERILLA");
-			$("#div-des-instrumentos p").html('Instrumento tradicional colombiano, construido con cañutos o trozos de bambú (en tre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.<br>Ver: <a href="https://culturatolimense.wordpress.com/category/instrumentos-folcloricos/">Esterilla 1</a> y <a href="https://www.google.com.co/search?q=esterillas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiC_qTb2KreAhUxvFkKHYCJDwoQ_AUIDigB&biw=1517&bih=695#imgrc=f6HFNsIO75OWCM">Esterilla 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=jDsUWn4cnoQ">Youtube</a>');
-			$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png");
-			break;
-		}
-	});
+	// $("#div-instrumentos").on('click', 'img', function() {
+	// 	$("#div-img-instrumentos").hide();
+	// 	$("#div-des-instrumentos").show();
+	// 	limpiarInfoInstrumentos();
+	// 	switch($(this).attr('id')) {
+	// 		case "img-marrana":
+	// 		$("#div-tit-instrumentos h2").text("MARRANA");
+	// 		$("#div-des-instrumentos p").html('Conocida también como zambumbía, puerca, farruco y puerca, es un tambor de fricción con varilla fija, el cual se fabrica con un calabazo o fruto seco de totumo,al que se le corta un sector para formarle boca en la parte superior; sobre esta boca, se coloca un aro de bejuco al que va atado un parche o cuero (puede ser de cerdo de monte, conejo, cordero o chivo) y éste, es atravesado por una varilla de madera, asegurada por dentro y por fuera. Este instrumento es empleado para tocar ritmos como rajaleñas y sanjuaneros, es muy popular en el departamento de Santander, en los conjuntos guabineros para la música del torbellino.  El nombre de este instrumento, se debe a la semejanza con el gruñido de un cerdo o marrano.<br>Ver: <a href="https://www.fundacionbat.com.co/instrumentos.php?IDDepartamento=52">Marrana 1</a> y <a href="http://www.ewakulak.com/index.php?option=com_content&task=view&id=437">Marrana 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=Ei2c9zp4tNU">Youtube</a>');
+	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png");
+	// 		break;
+	// 		case "img-cuchara":
+	// 		$("#div-tit-instrumentos h2").text("CUCHARAS");
+	// 		$("#div-des-instrumentos p").html('Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión (entrechocandolas por su parte convexa) por acción de las dos manos: la una, sujetándolas (con el dedo índice de separador) y la otra, entrechocándolas con los dedos, palma, dorso, antebrazo o codo. Este instrumento fue muy usado para amenizar fiestas y reuniones, la cual, era una práctica muy frecuente en las clases populares. El sonido de las cucharas es muy similar al de las castañuelas (aunque no suenan exactamente igual). Existen varias técnicas y maneras de ejecución de éste instrumento, una de ellas, es golpearlas como si fueran palillos, otra, es coger ambas con una mano, y golpearlas contra la rodilla y la otra mano.<br>Ver: <a href="ahttp://www.tamborileros.com/tradiberia/idifono1.htm">Cucharas 1</a> y <a href="http://canteradesonidos.blogspot.com/2014/07/las-cucharas-como-instrumento-musical.html">Cucharas 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=95Jhfy38QKk">Youtube</a>');
+	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
+	// 		break;
+	// 		case "img-guaracha":
+	// 		$("#div-tit-instrumentos h2").text("GUARACHA");
+	// 		$("#div-des-instrumentos p").html('Su nombre proviene de un ave, la cual canta en coro entre hembras y machos. La guacharaca es un instrumento musical de rascado que se compone de dos partes: la guacharaca misma (cuya superficie es corrugada) y un trinche o peine (construido con alambre duro y mango de madera, el cual se usa para frotar o “rascar” la superficie corrugada de la guacharaca.<br>Ver: <a href="https://portalvallenato.net/2013/07/29/la-historia-de-la-guacharaca/">Historia de la guaracha</a> y <a href="http://blogs.eltiempo.com/vallenateando/2005/09/06/la-guacharaca/">Guaracha - El Tiempo</a><br>Imagen: <a href="https://www.google.com.co/search?q=guacharacas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiti4em3KreAhWLvFMKHbyYBGwQ_AUIDigB&biw=1517&bih=695#imgrc=HHWh9SKhvbAjkM:">Imagen guaracha</a> <br>Audio y video: <a href="https://www.youtube.com/watch?v=tGrsesfTto8">Youtube</a>');
+	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png");
+	// 		break;
+	// 		case "img-esterilla":
+	// 		$("#div-tit-instrumentos h2").text("ESTERILLA");
+	// 		$("#div-des-instrumentos p").html('Instrumento tradicional colombiano, construido con cañutos o trozos de bambú (en tre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.<br>Ver: <a href="https://culturatolimense.wordpress.com/category/instrumentos-folcloricos/">Esterilla 1</a> y <a href="https://www.google.com.co/search?q=esterillas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiC_qTb2KreAhUxvFkKHYCJDwoQ_AUIDigB&biw=1517&bih=695#imgrc=f6HFNsIO75OWCM">Esterilla 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=jDsUWn4cnoQ">Youtube</a>');
+	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png");
+	// 		break;
+	// 	}
+	// });
 	//
 
 	$("#div-ter-sec-gen").on('click', 'a', function() {
