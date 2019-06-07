@@ -229,11 +229,24 @@
             <div class="col-lg-12 col-md-12" id="div-tit-instrumentos" style="height: 15%;">
               <h2 style="font-size: 35px; height: 80%"></h2>
             </div>
-            <div></div>
             <div class="col-lg-12 col-md-12" id="div-botones-instrumentos" style="height: 5%;">
             </div>
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-img-instrumentos" style="height: 55%;">
-              <img src="" class="img-responsive">
+            <div class="col-lg-12 col-md-12" id="div-img-instrumentos" style="height: 55%;">
+              <div class="col-lg-4 col-md-4" id="div-img-1">
+                <img src="">
+              </div>
+              <div class="col-lg-4 col-md-4" id="div-img-2">
+                <img src="">
+              </div>
+              <div class="col-lg-4 col-md-4" id="div-img-3">
+                <img src="">
+              </div>
+              <div class="col-lg-6 col-md-6" id="div-img-4">
+                <img src="">
+              </div>
+              <div class="col-lg-6 col-md-6" id="div-img-5">
+                <img src="">
+              </div>
             </div>
           </div>
 
