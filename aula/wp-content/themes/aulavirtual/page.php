@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
-            <div id="div-dropdown-modulo-musica">
+            <div class="div-dropdown-modulo">
               <div class="dropdown">
                 <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
                 <ul class="dropdown-menu btn-block">
@@ -331,29 +331,29 @@
     <?php if(is_page("Introducción aula danza")) :?>
       <div class="row" id="contenedor-index-danza">
         <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
-        <div class="row text-center" id="div-inicio-curso-danza">
-          <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_cuerpo_interdisciplinar.png" id="btn_cuerpo_interdisciplinar" width="250" class="img-responsive center-block"></a>
+        <div class="col-lg-offset-5 col-lg-2 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8" id="div-inicio-curso-danza">
+          <button class="btn btn-block btn-index-danza-pri" id="btn_cuerpo_movimiento">CUERPO EN MOVIENTO</button>
         </div>
-        <div id="div-encabezado-info-aula-danza" class="row" style="display: none;">
+        <div id="div-encabezado-info-aula-danza" class="row col-lg-offset-5 col-lg-2 col-md-offset-4 col-md-4" style="display: none;">
           <h2 style="color: white;"><center>CUERPO EN MOVIMIENTO</center></h2>
-          <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_iniciar_curso.png" id="btn_iniciar_curso" class="img-responsive center-block" width="250"></a>
+          <button class="btn btn-block btn-index-danza-pri" id="btn_iniciar_curso">INICIAR CURSO</button>
         </div>
         <div class="row"></div>        
         <div id="div-info-aula-danza" class="row" style="display: none;">
           <div class="col-lg-offset-1 col-lg-2 col-md-1-5">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_introduccion_danza.png" id="btn_introduccion_danza" class="img-responsive"></a>
+            <button class="btn btn-block btn-index-danza-sec" id="btn_introduccion_danza">Introducción</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_objetivos_danza.png" id="btn_objetivos_danza" class="img-responsive"></a>
+            <button class="btn btn-block btn-index-danza-sec" id="btn_objetivos_danza">Objetivos</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_metodologia_danza.png" id="btn_metodologia_danza" class="img-responsive"></a>
+            <button class="btn btn-block btn-index-danza-sec" id="btn_metodologia_danza">Metodología</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_publico_objetivo_danza.png" id="btn_publico_objetivo_danza" class="img-responsive"></a>
+            <button class="btn btn-block btn-index-danza-sec" id="btn_publico_objetivo_danza">Público Objetivo</button>
           </div>
           <div class="col-lg-2 col-md-1-5">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_creditos_danza.png" id="btn_creditos_danza" class="img-responsive"></a>
+            <button class="btn btn-block btn-index-danza-sec" id="btn_creditos_danza">Créditos</button>
           </div>
         </div>
         <!-- Inicio div info detallada danza -->
@@ -362,31 +362,20 @@
             <h2 style="text-align: right;"><strong></strong></h2>
             <p></p>
           </div>
-          <div id="div-btn-inicio-danza" class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" style="display: none; width: 216px;">
-            <img src="<?php bloginfo('template_url'); ?>/danza/images/btn_inicio_danza.png" name="btn_inicio_danza" class="img-responsive">
+          <div id="div-btn-inicio-danza" class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" style="display: none;">
+            <button class="btn btn-block btn-index-danza-sec">INICIO</button>
           </div>
         </div>
-        <div class="row" id="div-sel-modulo" style="display: none;">
-          <div id="div-dropdown-modulo-danza">
-            <!-- <div class="dropdown">
-              <button class="btn btn-unsel dropdown-toggle" type="button" data-toggle="dropdown">Selecciona un módulo<span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#"><button type="button" class="btn-unsel btn-block">Conexión Corporal</button></a></li>
-                <li><a href="#"><button type="button" class="btn-unsel btn-block">Ritmo</button></a></li>
-                <li><a href="#"><button type="button" class="btn-unsel btn-block">Expresión</button></a></li>
-                <li><a href="#"><button type="button" class="btn-unsel btn-block">Espacio</button></a></li>
-                <li><a href="#"><button type="button" class="btn-unsel btn-block">Memoria</button></a></li>
-              </ul>
-            </div> -->
+        <div class="row col-lg-offset-5 col-lg-2 col-md-offset-4 col-md-4" id="div-sel-modulo-danza" style="display: none;">
+          <div class="div-dropdown-modulo">
             <div class="dropdown">
-              <img class="btn dropdown-toggle img-responsive" src="<?php bloginfo('template_url'); ?>/danza/images/seleccion_modulo.png" alt="dropdown image" data-toggle="dropdown">
-              <ul class="dropdown-menu">
-                <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/cuerpo_imagen.png" alt="cuerpo_imagen" class="img-responsive"></a></li>
-                <li><a href="<?php bloginfo('url'); ?>/aula-danza"><img src="<?php bloginfo('template_url'); ?>/danza/images/cuerpo_movimiento.png" class="img-responsive"></a></li>
-                <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/cuerpo_palabra.png" class="img-responsive"></a></li>
-                <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/cuerpo_sonido.png" class="img-responsive"></a></li>
-                <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/cuerpo_tecnologia.png" class="img-responsive"></a></li>
-                <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/danza/images/laboratorio_de_creacion.png" class="img-responsive"></a></li>
+              <button class="btn btn-block btn-index-danza-pri dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
+              <ul class="dropdown-menu btn-block">
+                <li><button class="btn btn-block btn-index-danza-pri" id="btn-modulo-conexion-danza">Conexión Corporal</button></li>
+                <li><button class="btn btn-block btn-index-danza-pri">Ritmo</button></li>
+                <li><button class="btn btn-block btn-index-danza-pri">Expresión</button></li>
+                <li><button class="btn btn-block btn-index-danza-pri">Espacio</button></li>
+                <li><button class="btn btn-block btn-index-danza-pri">Memoria</button></li>
               </ul>
             </div>
           </div>
@@ -420,19 +409,29 @@
           </div>
           <div class="div-modulos">
             <div class="col-xs-6 col-sm-offset-2 col-sm-3 col-md-offset-0 col-md-1-5 col-lg-offset-1 col-lg-2">
-              <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="img_mod_reconocimiento" class="img-responsive"></center></a>
+              <center><img src="<?php bloginfo('template_url'); ?>/danza/images/muneca_reconocimiento.png" class="img-responsive" id="btn-mod-reconocimiento"></center>
+              <button class="btn btn-block btn-index-danza-sec">Propiocepción</button>
+              <!-- <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_reconocimiento_corporal.png" id="img_mod_reconocimiento" class="img-responsive"></center></a> -->
             </div>
             <div class="col-xs-6 col-sm-offset-2 col-sm-3 col-md-offset-0 col-md-1-5 col-lg-offset-0 col-lg-2">
-              <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="img_mod_movimientos" class="img-responsive"></center></a>
+              <center><img src="<?php bloginfo('template_url'); ?>/danza/images/muneca_movimientos.png" class="img-responsive" id="btn-mod-movimientos"></center>
+              <button class="btn btn-block btn-index-danza-sec">Respiración</button>
+              <!-- <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_movimientos_universales.png" id="img_mod_movimientos" class="img-responsive"></center></a> -->
             </div>
             <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
-              <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="img_mod_equilibrio" class="img-responsive"></center></a>
+              <center><img src="<?php bloginfo('template_url'); ?>/danza/images/muneca_equilibrio.png" class="img-responsive" id="btn-mod-equilibrio"></center>
+              <button class="btn btn-block btn-index-danza-sec">Beneficios del movimiento</button>
+              <!-- <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_equilibrio_puntos_de_apoyo.png" id="img_mod_equilibrio" class="img-responsive"></center></a> -->
             </div>
             <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
-              <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="img_mod_giros" class="img-responsive"></center></a>
+              <center><img src="<?php bloginfo('template_url'); ?>/danza/images/muneca_giros.png" class="img-responsive" id="btn-mod-giros"></center>
+              <button class="btn btn-block btn-index-danza-sec">Técnicas alternativas</button>
+              <!-- <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_giros_y_saltos.png" id="img_mod_giros" class="img-responsive"></center></a> -->
             </div>
             <div class="col-xs-4 col-sm-4 col-md-1-5 col-lg-2">
-              <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="img_mod_direcciones" class="img-responsive"></center></a>
+              <center><img src="<?php bloginfo('template_url'); ?>/danza/images/muneca_direcciones.png" class="img-responsive" id="btn-mod-direcciones"></center>
+              <button class="btn btn-block btn-index-danza-sec">?</button>
+              <!-- <a href="#"><center><img src="<?php bloginfo('template_url'); ?>/danza/images/btn_direcciones_y_desplazamientos.png" id="img_mod_direcciones" class="img-responsive"></center></a> -->
             </div>        
           </div>
           <div class="div-con-mod" style="display: none;">

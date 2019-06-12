@@ -267,6 +267,32 @@ label{
 
 /*********************/
 
+.btn-index-danza-pri {
+  background-color: #ffffff;
+  border-radius: 7px;
+  border-color: #803335;
+  color: #581508;
+  border-width: 3px;
+  height: 44px;
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.btn-index-danza-sec{
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-color: #803335;
+  color: #581508;
+  border-width: 0.5px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.btn-index-danza-pri:hover, .btn-index-danza-pri:focus, .btn-index-danza-sec:hover, .btn-index-danza-sec:focus{
+  text-decoration: none !important;
+  color: #581508 !important;
+}
+
 .btn-unsel{
   background-color: #ffffff;
   border-radius: 10px;
@@ -286,7 +312,6 @@ label{
   height: 30px;
   margin-bottom: 20px;
 }
-
 
 .navbar{
   background-color: #ff3c36;
@@ -413,33 +438,6 @@ table.dataTable.no-footer{
   transform: translate(-50%,-50%);
 }
 
-/*#div-dropdown-modulo-danza .dropdown-menu{
-  padding: 0px 0px;
-  margin: 0px 0px 0px;
-  background-color: #fff0;
-  border: 0px solid #ccc;
-  border: 0px solid rgba(0,0,0,.15);
-  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
-  box-shadow: 0 0px 0px rgba(0,0,0,.175);
-}
-#div-dropdown-modulo-danza .dropdown-menu>li>a {
-  padding: 1px 0px;
-}
-
-#div-dropdown-modulo-danza .btn-unsel {
-  background-color: #ffffff;
-  border-radius: 5px;
-  border-color: #581508;
-  color: #581508;
-  border-width: 2px;
-  height: 30px;
-
-}
-
-#div-dropdown-modulo-danza .dropdown .btn {
-  padding: 0px 5px;
-}*/
-
 #div-dropdown-modulo-danza .dropdown-menu {
   padding: 0px 0;
   margin: 0px 0 0;
@@ -501,7 +499,7 @@ table.dataTable.no-footer{
   top: 5%;
 }
 
-#div-sel-modulo{
+#div-sel-modulo-danza{
   top: 50%;
   position: relative;
 }
@@ -584,10 +582,11 @@ table.dataTable.no-footer{
  text-align: center;
 }
 
-#div-dropdown-modulo-musica .dropdown-menu {
+.div-dropdown-modulo .dropdown-menu {
   background-color: transparent;
   border: 0px solid transparent;
 }
+
 #contenedor-aula-musica a:hover{
   text-decoration: none;
   color: inherit;
