@@ -321,6 +321,22 @@
         </div> -->
       </div>
     <?php endif; ?>
+
+    <?php if(is_page("Introducción aula audiovisuales")) :?>
+      <div class="row col-lg-offset-1 col-lg-10" id="contenedor-index-audiovisuales">
+        <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-2 text-center"><a href="#">INTRODUCCIÓN</a></div>
+          <div class="col-lg-2 text-center"><a href="#">OBJETIVOS</a></div>
+          <div class="col-lg-2 text-center"><a href="#">PÚBLICO OBJETIVO</a></div>
+          <div class="col-lg-2 text-center"><a href="#">METODOLOGÍA</a></div>
+          <div class="col-lg-2 text-center"><a href="#">CRÉDITOS</a></div>
+          <div class="col-lg-1"></div>
+        </div>
+      </div>
+    <?php endif; ?>
+
+
     <?php if(is_page("Audiovisuales")) :?>
     <?php endif; ?>
     <?php if(is_page("Creación literaria")) :?>

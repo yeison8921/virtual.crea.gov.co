@@ -16,7 +16,7 @@
         Artes electrónicas</a>
       </div>
       <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
+        <a href="<?php bloginfo('url'); ?>/introduccion-aula-audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
         Audiovisuales</a>
       </div>
       <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">

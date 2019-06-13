@@ -563,6 +563,15 @@ table.dataTable.no-footer{
   background-size: cover;
 }
 
+#contenedor-index-audiovisuales{
+  background-image: url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  height: 850px;
+  background-position: center;
+  background-repeat: no-repeat;
+ /* background-size: cover;*/
+}
+
 #contenedor-aula-musica{
   background-image: url('musica/images/fondo_modulos_musica.jpg');
   background-position: left top;
@@ -706,3 +715,17 @@ table.dataTable.no-footer{
 
 
 /*Fin estilos aula música
+
+/*Inicio estilos aula audiovisuales*/
+
+#div-info-basica-audiovisales{
+  position: relative;
+  top: 90%;
+}
+
+#div-info-basica-audiovisales a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+/*Fin estilos aula audiovisuales*/
