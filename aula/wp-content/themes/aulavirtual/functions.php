@@ -40,6 +40,9 @@ function aula_cargar_scripts(){
     if(is_page("Introducción aula artes plásticas")){
         wp_enqueue_script( 'artes-plasticas', get_template_directory_uri(). '/js/artes_plasticas.js',array(),false,true);
     }
+    if(is_page("Introducción aula audiovisuales")){
+        wp_enqueue_script( 'audiovisuales', get_template_directory_uri(). '/js/audiovisuales.js',array(),false,true);
+    }
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script( 'funciones' , get_template_directory_uri() . '/js/funciones.js',array(),false,true);
     //wp_enqueue_script( 'notas' , get_template_directory_uri() . '/js/notas.js',array(),false,true);

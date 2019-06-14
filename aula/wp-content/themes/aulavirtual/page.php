@@ -323,15 +323,38 @@
     <?php endif; ?>
 
     <?php if(is_page("Introducción aula audiovisuales")) :?>
+      <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
       <div class="row col-lg-offset-1 col-lg-10" id="contenedor-index-audiovisuales">
+        <div class="col-lg-12" id="div-desplazamiento" style="display: none;">
+          <div class="col-lg-offset-1 col-lg-1">
+            <h3><a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a></h3>
+          </div>
+          <div  class="col-lg-offset-8 col-lg-1">
+            <h3><a href="#" id="btn-videoteca" style="color: white;">VIDEOTECA</a></h3>
+          </div>
+        </div>
         <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-2 text-center"><a href="#">INTRODUCCIÓN</a></div>
-          <div class="col-lg-2 text-center"><a href="#">OBJETIVOS</a></div>
-          <div class="col-lg-2 text-center"><a href="#">PÚBLICO OBJETIVO</a></div>
-          <div class="col-lg-2 text-center"><a href="#">METODOLOGÍA</a></div>
-          <div class="col-lg-2 text-center"><a href="#">CRÉDITOS</a></div>
-          <div class="col-lg-1"></div>
+          <div class="col-lg-offset-1 col-lg-2 text-center"><h3><a href="#" id="btn-introduccion">INTRODUCCIÓN</a></h3></div>
+          <div class="col-lg-2 text-center"><h3><a href="#" id="btn-objetivos">OBJETIVOS</a></h3></div>
+          <div class="col-lg-2 text-center"><h3><a href="#" id="btn-publico">PÚBLICO OBJETIVO</a></h3></div>
+          <div class="col-lg-2 text-center"><h3><a href="#" id="btn-metodologia">METODOLOGÍA</a></h3></div>
+          <div class="col-lg-2 text-center"><h3><a href="#" id="btn-creditos">CRÉDITOS</a></h3></div>
+        </div>
+        <div id="div-oculto" style="position: relative; top: 50%; height: 241px; width: 320px; left: 40%;">
+          <a href="#" id="btn-oculto">
+            <div style="height: 241px; width: 320px;"></div>
+          </a>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
+          <div class="col-lg-12 text-center" id="div-tid-audivisuales" style="height: 150px;">
+            <h1></h1>
+          </div>
+          <div class="col-lg-offset-1 col-lg-10 text-center" id="div-cid-audivisuales" style="background-color: #3f6c67; color: white; font-size: 26px; height: 600px;">
+            <p></p>
+          </div>
+          <div class="col-lg-offset-1 col-lg-10 text-center">
+            <h3><a href="#" id="btn-regresar">REGRESAR</a></h3>
+          </div>
         </div>
       </div>
     <?php endif; ?>
