@@ -207,9 +207,6 @@ jQuery(document).ready(function($){
 				case "btn-karaoke":
 				infoSalaInteractiva("KARAOKE", "karaoke", "", 2);
 				break;
-				/*case "btn-referentes-interactiva":
-				infoSalaInteractiva("REFERENTES GUABINA", "Los Guaduales - Jorge Villamil<br>Guabinita Santandereana - Pedro Morales Pino<br>A bordo de tu voz - Luz marina Posada", "", 2)
-				break;*/
 			}
 		}
 		if($(this).data('data-modulo') == "pasillo"){
@@ -217,9 +214,6 @@ jQuery(document).ready(function($){
 				case "btn-play-interactiva":
 				infoSalaInteractiva("PLAY ALONG CACHIPAY", "video", "", 2);
 				break;
-				/*case "btn-referentes-interactiva":
-				infoSalaInteractiva("REFERENTES PASILLO", "Aires de mi Tierra - Gustavo Gómez Ardila<br>La Gata Golosa - Fulgencio García<br>Amalia ... Joaquín Arias<br>Atardecer ... Carlos Viecco<br>Cachipay ... D.R.A.<br>Chispazo ... Pedro Morales Pino<br>Desde Lejos ... Bonifacio Bautista<br>El Pereirano ... Camilo Bedoya", "", 2)
-				break;*/
 			}
 		}
 		if($(this).data('data-modulo') == "bambuco"){
@@ -227,9 +221,6 @@ jQuery(document).ready(function($){
 				case "btn-play-interactiva":
 				infoSalaInteractiva("PLAY ALONG BOCHICA", "video", "", 2);
 				break;
-				/*case "btn-referentes-interactiva":
-				infoSalaInteractiva("REFERENTES BAMBUCO", "Bambuquisimo ... León Cardona<br>Bachue ... Francisco Cristancho<br>Bohica ... Francisco Cristancho<br>Como P ́desenguayabar ... Jorge Olaya<br>El Sotareño ... Federico Diago", "", 2)
-				break;*/
 			}
 		}
 	});
@@ -518,177 +509,157 @@ jQuery(document).ready(function($){
 	}
 
 
-// function infoBasicaInstrumentos(){
-// 	$("#div-tit-instrumentos h2").text("INSTRUMENTOS MUSICALES");
-// 	$("#img-1").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-2").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-3").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-4").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-5").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-bandola").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-marrana").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-cuchara").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-guaracha").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// 	$("#img-esterilla").attr("src", $("#bloginfo").val() + "/musica/images/bambuco/instrumento_1.png");
-// }
+	function creacionBotonesSala(seccion){
+		if(seccion == "guabina-teorica"){
+			$("#div-cua-sec-teo").html("<div class='col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-ritmo-teorica'>Ritmo</button></div>"+
+				"<div class='col-lg-offset-1 col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>"+
+				"<div class='col-lg-offset-1 col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-armonia-teorica'>Armonía</button></div>");
+		}
+		if(seccion == "pasillo-teorica" || seccion == "bambuco-teorica"){
+			$("#div-cua-sec-teo").html("<div class='col-lg-offset-2 col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-ritmo-teorica'>Ritmo</button></div>"+
+				"<div class='col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>");
+		}
+		if(seccion == "instrumentos-teorica"){
+			$("#div-instrumentos #div-botones-instrumentos").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-guitarra-teorica'>Guitarra</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-tiple-teorica'>Tiple</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-bandola-teorica'>Bandola</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-otros-teorica'>Otros</button></div>");
+		}
+		if(seccion == "interactiva"){
+			$("#div-cua-sec-int").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-guitarra'>Play Along Guitarra</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-tiple'>Play Along Tiple</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-bandola'>Play Along Bandola</button></div>"+
+				"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-karaoke'>Karaoke</button></div>");
+		}
 
-// function limpiarInfoInstrumentos(){
-// 	$("#div-tit-instrumentos h2").empty();
-// 	$("#div-des-instrumentos p").empty();
-// 	$("#div-des-instrumentos img").attr("src", "");
-// }
+		if(seccion == "referentes"){
+			$("#div-cua-sec-int").html("");
+		}
 
-function creacionBotonesSala(seccion){
-	if(seccion == "guabina-teorica"){
-		$("#div-cua-sec-teo").html("<div class='col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-ritmo-teorica'>Ritmo</button></div>"+
-			"<div class='col-lg-offset-1 col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>"+
-			"<div class='col-lg-offset-1 col-lg-3'><button class='btn btn-block btn-musica-s' id='btn-armonia-teorica'>Armonía</button></div>");
-	}
-	if(seccion == "pasillo-teorica" || seccion == "bambuco-teorica"){
-		$("#div-cua-sec-teo").html("<div class='col-lg-offset-2 col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-ritmo-teorica'>Ritmo</button></div>"+
-			"<div class='col-lg-4'><button class='btn btn-block btn-musica-s' id='btn-melodia-teorica'>Melodía</button></div>");
-	}
-	if(seccion == "instrumentos-teorica"){
-		$("#div-instrumentos #div-botones-instrumentos").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-guitarra-teorica'>Guitarra</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-tiple-teorica'>Tiple</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-bandola-teorica'>Bandola</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-otros-teorica'>Otros</button></div>");
-	}
-	if(seccion == "interactiva"){
-		$("#div-cua-sec-int").html("<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-guitarra'>Play Along Guitarra</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-tiple'>Play Along Tiple</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-play-bandola'>Play Along Bandola</button></div>"+
-			"<div class='col-lg-3 col-md-3'><button class='btn btn-block btn-musica-s' id='btn-karaoke'>Karaoke</button></div>");
-	}
-
-	if(seccion == "referentes"){
-		$("#div-cua-sec-int").html("");
+		if(seccion == "escala"){
+			$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-do' style='height: 12%;'>Escala Do Mayor</button>"+
+				"<button class='btn btn-block btn-musica-s' id='btn-escala-sol' style='height: 12%;'>Escala Sol Mayor</button>"+
+				"<button class='btn btn-block btn-musica-s' id='btn-escala-re' style='height: 12%;'>Escala Re Mayor</button>");
+			$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
+		}
+		if(seccion == "ritmo"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas' style='height: 100%;'>Métricas de<br>compas simple</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-figuras' style='height: 100%;'>Figuras musicales</button>");
+			$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas-utilizadas' style='height: 12%; display: none;'>Métricas<br>más utiilizadas</button>");
+			$("#div-pri-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dos-cuartos' style='height: 80%; display: none;'>2/4</button>");
+			$("#div-seg-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-tres-cuartos' style='height: 80%; display: none;'>3/4</button>");
+			$("#div-ter-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatro-cuartos' style='height: 80%; display: none;'>4/4</button>");
+		}
+		if(seccion == "acordes"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
+		}
+		if(seccion == "funciones"){
+			$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-tonica' style='height: 100%;'>Tónica</button>");
+			$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-subdominante' style='height: 100%;'>Subdominante</button>");
+			$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dominante' style='height: 100%;'>Dominante</button>");
+			$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' style='height: 12%; display: none;'>Acordes</button>");
+		}
 	}
 
-	if(seccion == "escala"){
-		$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-escala-do' style='height: 12%;'>Escala Do Mayor</button>"+
-			"<button class='btn btn-block btn-musica-s' id='btn-escala-sol' style='height: 12%;'>Escala Sol Mayor</button>"+
-			"<button class='btn btn-block btn-musica-s' id='btn-escala-re' style='height: 12%;'>Escala Re Mayor</button>");
-		$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-estructura' style='height: 100%;'>Estructura de la <br>Escala Mayor</button>");
-	}
-	if(seccion == "ritmo"){
-		$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas' style='height: 100%;'>Métricas de<br>compas simple</button>");
-		$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-figuras' style='height: 100%;'>Figuras musicales</button>");
-		$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' id='btn-metricas-utilizadas' style='height: 12%; display: none;'>Métricas<br>más utiilizadas</button>");
-		$("#div-pri-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dos-cuartos' style='height: 80%; display: none;'>2/4</button>");
-		$("#div-seg-btn-sec-gen").append("<button class='btn btn-block btn-musica-s' id='btn-tres-cuartos' style='height: 80%; display: none;'>3/4</button>");
-		$("#div-ter-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatro-cuartos' style='height: 80%; display: none;'>4/4</button>");
-	}
-	if(seccion == "acordes"){
-		$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-triadas' style='height: 100%;'>Triadas</button>");
-		$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-cuatriadas' style='height: 100%;'>Cuatriadas</button>");
-	}
-	if(seccion == "funciones"){
-		$("#div-cua-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-tonica' style='height: 100%;'>Tónica</button>");
-		$("#div-qui-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-subdominante' style='height: 100%;'>Subdominante</button>");
-		$("#div-sex-btn-sec-gen").html("<button class='btn btn-block btn-musica-s' id='btn-dominante' style='height: 100%;'>Dominante</button>");
-		$("#div-bar-gen").html("<button class='btn btn-block btn-musica-s' style='height: 12%; display: none;'>Acordes</button>");
-	}
-}
+	$("#div-sala-general").on('click', 'button', function() {
+		limpiarInfoGeneral();
+		$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
+		$("#div-ter-sec-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
+		$("#div-cua-sec-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
+		$("#div-bar-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
+		switch($(this).attr("id")){
+			case "btn-estructura":
+			infoEscalas("ESTRUCTURA DE LA ESCALA MAYOR", "Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
+			break;
+			case "btn-escala-do":
+			infoEscalas("ESCALA DE DO MAYOR", "Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.", "Nota_Do_Mayor.jpg" );
+			break;
+			case "btn-escala-sol":
+			infoEscalas("ESCALA DE SOL MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).", "Nota_Sol_Mayor.jpg");
+			break;
+			case "btn-escala-re":
+			infoEscalas("ESCALA DE RE MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).", "Nota_Re_Mayor.jpg");
+			break;
+			case "btn-metricas":
+			infoRitmo("", "<br><br>La métrica está representada por un fraccionario que aparece al inicio de la pieza musical."+
+				"<br><br>El número que está en la parte superior del fraccionario indica el número de pulsos por compás", "fraccion.png", "", "<br><br>El número que está en la parte inferior del fraccionario indica la figura que ocupa cada uno de esos pulsos en compás simple.", "", "", 1, "");
+			break;
+			case "btn-metricas-utilizadas":
+			infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
+				"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "", "", "", 1, 1);
+			break;
+			case "btn-dos-cuartos":
+			infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
+				"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran dos pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.", "", "", 1, 1);
 
-$("#div-sala-general").on('click', 'button', function() {
-	limpiarInfoGeneral();
-	$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
-	$("#div-ter-sec-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
-	$("#div-cua-sec-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
-	$("#div-bar-gen button").not(this).removeClass().addClass("btn btn-block btn-musica-s");
-	switch($(this).attr("id")){
-		case "btn-estructura":
-		infoEscalas("ESTRUCTURA DE LA ESCALA MAYOR", "Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala");
-		break;
-		case "btn-escala-do":
-		infoEscalas("ESCALA DE DO MAYOR", "Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.", "Nota_Do_Mayor.jpg" );
-		break;
-		case "btn-escala-sol":
-		infoEscalas("ESCALA DE SOL MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  fa# (Primer sostenido).", "Nota_Sol_Mayor.jpg");
-		break;
-		case "btn-escala-re":
-		infoEscalas("ESCALA DE RE MAYOR", "Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota  do# (Segundo sostenido).", "Nota_Re_Mayor.jpg");
-		break;
-		case "btn-metricas":
-		infoRitmo("", "<br><br>La métrica está representada por un fraccionario que aparece al inicio de la pieza musical."+
-			"<br><br>El número que está en la parte superior del fraccionario indica el número de pulsos por compás", "fraccion.png", "", "<br><br>El número que está en la parte inferior del fraccionario indica la figura que ocupa cada uno de esos pulsos en compás simple.", "", "", 1, "");
-		break;
-		case "btn-metricas-utilizadas":
-		infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
-			"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "", "", "", 1, 1);
-		break;
-		case "btn-dos-cuartos":
-		infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
-			"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran dos pulsos de negra por compás.<br>"+
-			"Unidad de compás: blanca.<br>"+
-			"Unidad de pulso: negra.<br>"+
-			"Unidad de primera división: corchea.<br>"+
-			"Unidad de segunda división: semicorchea.", "", "", 1, 1);
-
-		break;
-		case "btn-tres-cuartos":
-		infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
-			"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran tres pulsos de negra por compás.<br>"+
-			"Unidad de compás: blanca con puntillo.<br>"+
-			"Unidad de pulso: negra.<br>"+
-			"Unidad de primera división: corchea.<br>"+
-			"Unidad de segunda división: semicorchea.", "", "", 1, 1);
-		break;
-		case "btn-cuatro-cuartos":
-		infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
-			"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran cuatro pulsos de negra por compás.<br>"+
-			"Unidad de compás: redonda.<br>"+
-			"Unidad de pulso: negra.<br>"+
-			"Unidad de primera división: corchea.<br>"+
-			"Unidad de segunda división: semicorchea.<br>", "", "<p><br>También encontramos las métricas:<br>"+
-			"2/16, 3/16, 4/16<br>"+
-			"2/8, 3/8, 4/8<br>"+
-			"2/2, 3/2, 4/2</p>", 1, 1);
-		break;
-		case "btn-figuras":
-		infoRitmo("", "Todas las figuras musicales tienen un número que las representa así:"+
-			"<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>8 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/corchea.png' height='90'>   Corchea</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>2 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/blanca.png' height='90'>   Blanca</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>16 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/semicorchea.png' height='90'>   Semicorchea</div>"+
-			"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>4 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/negra.png' height='90'>   Negra</div>", "", "", "", "", "", "", "");
-		break;
-		case "btn-triadas":
-		$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
-		$("#ref-ade-pag").html("<div class='fd'></div>");
-		$("#ref-ade-pag").data("data-pagina", "dos");
-		infoAcordes("TRIADAS", "Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.", "triadas.png", "<br><br>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.<br><br>"+
-			"Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.", "");
-		break;
-		case "btn-cuatriadas":
-		$("#div-seg-btn-sec-gen").data("data-tema", "cuatriadas");
-		$("#ref-ade-pag").html("<div class='fd'></div>");
-		$("#ref-ade-pag").data("data-pagina", "dos");
-		infoAcordes("", "Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.<br><br>"+
-			"A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos  y en el siguiente gráfico  sus respectivos nombres.<br><br>"+
-			"Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.", "cuatriadas.png", "", "");
-		break;
-		case "btn-tonica":
-		infoArmonicas("TÓNICA", "Representada por el número romano I, debido a que su nota fundamental es el primer grado de la escala. Se denomina “Tónica” porque es el acorde del primer grado el que nos indica cuál es la tonalidad.", "tonica.png", "btn-acordes-tonica");
-		break;
-		case "btn-subdominante":
-		infoArmonicas("SUB DOMINANTE", "Representada por el número romano IV, debido a que su nota fundamental es el cuarto grado de la escala.", "subdominante.png", "btn-acordes-subdominante");
-		break;
-		case "btn-dominante":
-		infoArmonicas("DOMINANTE", "Representada por el número romano V, debido a que su nota fundamental es el quinto grado de la escala.", "dominante.png", "btn-acordes-dominante");
-		break;
-		case "btn-acordes-tonica":
-		infoArmonicas("TÓNICA", "En esta región se ubicarán los acordes de I, iii y vi grado por contener dentro de su estructura la nota “mi”, que es la que le da el carácter de Mayor al acorde de Tónica. Auditivamente  estos acordes se sienten como el punto de reposo, descanso o final.", "acordes_tonica.png", "acordes-tonica");
-		break;
-		case "btn-acordes-subdominante":
-		infoArmonicas("SUB DOMINANTE", "Además del IV grado incluirá el acorde del ii grado. Auditivamente son acordes que pueden conducir tanto a los de tónica como a los de dominante.", "acordes_subdominante.png", "acordes-subdominante");
-		break;
-		case "btn-acordes-dominante":
-		infoArmonicas("DOMINANTE", "Estará conformada también por los acordes del V y vii grado disminuido. Auditivamente estos acordes ayudan a definir la tonalidad ya que crean una tensión que resuelve generalmente a la tónica.", "acordes_dominante.png", "acordes-dominante");
-		break;
-	}
-});
+			break;
+			case "btn-tres-cuartos":
+			infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
+				"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran tres pulsos de negra por compás.<br>"+
+				"Unidad de compás: blanca con puntillo.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.", "", "", 1, 1);
+			break;
+			case "btn-cuatro-cuartos":
+			infoRitmo("", "En cada una de las métricas existen unidades de compás, pulso, primera y segunda división.<br><br>"+
+				"A continuación, veremos las métricas más utilizadas en compás simple.", "", "", "Métrica en la que se encuentran cuatro pulsos de negra por compás.<br>"+
+				"Unidad de compás: redonda.<br>"+
+				"Unidad de pulso: negra.<br>"+
+				"Unidad de primera división: corchea.<br>"+
+				"Unidad de segunda división: semicorchea.<br>", "", "<p><br>También encontramos las métricas:<br>"+
+				"2/16, 3/16, 4/16<br>"+
+				"2/8, 3/8, 4/8<br>"+
+				"2/2, 3/2, 4/2</p>", 1, 1);
+			break;
+			case "btn-figuras":
+			infoRitmo("", "Todas las figuras musicales tienen un número que las representa así:"+
+				"<br><br><br><div class='col-lg-6 col-md-6' style='font-size: 25px;'>1 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/redonda.png' height='45'>   Redonda</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>8 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/corchea.png' height='90'>   Corchea</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>2 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/blanca.png' height='90'>   Blanca</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>16 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/semicorchea.png' height='90'>   Semicorchea</div>"+
+				"<div class='col-lg-6 col-md-6' style='font-size: 25px;'>4 = <img src='"+ $("#bloginfo").val() + "/musica/images/ritmo/negra.png' height='90'>   Negra</div>", "", "", "", "", "", "", "");
+			break;
+			case "btn-triadas":
+			$("#div-seg-btn-sec-gen").data("data-tema", "triadas");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			infoAcordes("TRIADAS", "Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.", "triadas.png", "<br><br>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.<br><br>"+
+				"Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.", "");
+			break;
+			case "btn-cuatriadas":
+			$("#div-seg-btn-sec-gen").data("data-tema", "cuatriadas");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			infoAcordes("", "Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.<br><br>"+
+				"A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos  y en el siguiente gráfico  sus respectivos nombres.<br><br>"+
+				"Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.", "cuatriadas.png", "", "");
+			break;
+			case "btn-tonica":
+			infoArmonicas("TÓNICA", "Representada por el número romano I, debido a que su nota fundamental es el primer grado de la escala. Se denomina “Tónica” porque es el acorde del primer grado el que nos indica cuál es la tonalidad.", "tonica.png", "btn-acordes-tonica");
+			break;
+			case "btn-subdominante":
+			infoArmonicas("SUB DOMINANTE", "Representada por el número romano IV, debido a que su nota fundamental es el cuarto grado de la escala.", "subdominante.png", "btn-acordes-subdominante");
+			break;
+			case "btn-dominante":
+			infoArmonicas("DOMINANTE", "Representada por el número romano V, debido a que su nota fundamental es el quinto grado de la escala.", "dominante.png", "btn-acordes-dominante");
+			break;
+			case "btn-acordes-tonica":
+			infoArmonicas("TÓNICA", "En esta región se ubicarán los acordes de I, iii y vi grado por contener dentro de su estructura la nota “mi”, que es la que le da el carácter de Mayor al acorde de Tónica. Auditivamente  estos acordes se sienten como el punto de reposo, descanso o final.", "acordes_tonica.png", "acordes-tonica");
+			break;
+			case "btn-acordes-subdominante":
+			infoArmonicas("SUB DOMINANTE", "Además del IV grado incluirá el acorde del ii grado. Auditivamente son acordes que pueden conducir tanto a los de tónica como a los de dominante.", "acordes_subdominante.png", "acordes-subdominante");
+			break;
+			case "btn-acordes-dominante":
+			infoArmonicas("DOMINANTE", "Estará conformada también por los acordes del V y vii grado disminuido. Auditivamente estos acordes ayudan a definir la tonalidad ya que crean una tensión que resuelve generalmente a la tónica.", "acordes_dominante.png", "acordes-dominante");
+			break;
+		}
+	});
 	//
 	$("#div-btn-mod-mus").on('click', 'button', function() {
 		$(this).removeClass("btn-musica-s").addClass("btn-musica-t");
@@ -809,116 +780,87 @@ $("#div-sala-general").on('click', 'button', function() {
 			}
 		}
 	});
-	//
-	// $("#div-instrumentos").on('click', 'img', function() {
-	// 	$("#div-img-instrumentos").hide();
-	// 	$("#div-des-instrumentos").show();
-	// 	limpiarInfoInstrumentos();
-	// 	switch($(this).attr('id')) {
-	// 		case "img-marrana":
-	// 		$("#div-tit-instrumentos h2").text("MARRANA");
-	// 		$("#div-des-instrumentos p").html('Conocida también como zambumbía, puerca, farruco y puerca, es un tambor de fricción con varilla fija, el cual se fabrica con un calabazo o fruto seco de totumo,al que se le corta un sector para formarle boca en la parte superior; sobre esta boca, se coloca un aro de bejuco al que va atado un parche o cuero (puede ser de cerdo de monte, conejo, cordero o chivo) y éste, es atravesado por una varilla de madera, asegurada por dentro y por fuera. Este instrumento es empleado para tocar ritmos como rajaleñas y sanjuaneros, es muy popular en el departamento de Santander, en los conjuntos guabineros para la música del torbellino.  El nombre de este instrumento, se debe a la semejanza con el gruñido de un cerdo o marrano.<br>Ver: <a href="https://www.fundacionbat.com.co/instrumentos.php?IDDepartamento=52">Marrana 1</a> y <a href="http://www.ewakulak.com/index.php?option=com_content&task=view&id=437">Marrana 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=Ei2c9zp4tNU">Youtube</a>');
-	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/marrana.png");
-	// 		break;
-	// 		case "img-cuchara":
-	// 		$("#div-tit-instrumentos h2").text("CUCHARAS");
-	// 		$("#div-des-instrumentos p").html('Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión (entrechocandolas por su parte convexa) por acción de las dos manos: la una, sujetándolas (con el dedo índice de separador) y la otra, entrechocándolas con los dedos, palma, dorso, antebrazo o codo. Este instrumento fue muy usado para amenizar fiestas y reuniones, la cual, era una práctica muy frecuente en las clases populares. El sonido de las cucharas es muy similar al de las castañuelas (aunque no suenan exactamente igual). Existen varias técnicas y maneras de ejecución de éste instrumento, una de ellas, es golpearlas como si fueran palillos, otra, es coger ambas con una mano, y golpearlas contra la rodilla y la otra mano.<br>Ver: <a href="ahttp://www.tamborileros.com/tradiberia/idifono1.htm">Cucharas 1</a> y <a href="http://canteradesonidos.blogspot.com/2014/07/las-cucharas-como-instrumento-musical.html">Cucharas 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=95Jhfy38QKk">Youtube</a>');
-	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/cuchara.png");
-	// 		break;
-	// 		case "img-guaracha":
-	// 		$("#div-tit-instrumentos h2").text("GUARACHA");
-	// 		$("#div-des-instrumentos p").html('Su nombre proviene de un ave, la cual canta en coro entre hembras y machos. La guacharaca es un instrumento musical de rascado que se compone de dos partes: la guacharaca misma (cuya superficie es corrugada) y un trinche o peine (construido con alambre duro y mango de madera, el cual se usa para frotar o “rascar” la superficie corrugada de la guacharaca.<br>Ver: <a href="https://portalvallenato.net/2013/07/29/la-historia-de-la-guacharaca/">Historia de la guaracha</a> y <a href="http://blogs.eltiempo.com/vallenateando/2005/09/06/la-guacharaca/">Guaracha - El Tiempo</a><br>Imagen: <a href="https://www.google.com.co/search?q=guacharacas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiti4em3KreAhWLvFMKHbyYBGwQ_AUIDigB&biw=1517&bih=695#imgrc=HHWh9SKhvbAjkM:">Imagen guaracha</a> <br>Audio y video: <a href="https://www.youtube.com/watch?v=tGrsesfTto8">Youtube</a>');
-	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/guaracha.png");
-	// 		break;
-	// 		case "img-esterilla":
-	// 		$("#div-tit-instrumentos h2").text("ESTERILLA");
-	// 		$("#div-des-instrumentos p").html('Instrumento tradicional colombiano, construido con cañutos o trozos de bambú (en tre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.<br>Ver: <a href="https://culturatolimense.wordpress.com/category/instrumentos-folcloricos/">Esterilla 1</a> y <a href="https://www.google.com.co/search?q=esterillas+instrumento+musical&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiC_qTb2KreAhUxvFkKHYCJDwoQ_AUIDigB&biw=1517&bih=695#imgrc=f6HFNsIO75OWCM">Esterilla 2</a><br>Audio y video: <a href="https://www.youtube.com/watch?v=jDsUWn4cnoQ">Youtube</a>');
-	// 		$("#div-des-instrumentos img").attr("src", $("#bloginfo").val() + "/musica/images/guabina/esterilla.png");
-	// 		break;
-	// 	}
-	// });
-	//
 
-	$("#div-ter-sec-gen").on('click', 'a', function() {
-		limpiarInfoGeneral();
-		if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas" || $("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
-			creacionBotonesSala("acordes");
+$("#div-ter-sec-gen").on('click', 'a', function() {
+	limpiarInfoGeneral();
+	if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas" || $("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
+		creacionBotonesSala("acordes");
+	}
+	if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas"){
+		switch($(this).data("data-pagina")){
+			case "uno":
+			infoAcordes("TRIADAS", "Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.", "triadas.png", "<br><br>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.<br><br>"+
+				"Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.", "");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			break;
+			case "dos":
+			infoAcordes("", 'De esta manera Do es la primera nota de la triada y se llamars "Tónica".<br>'+
+				'La nota del medio es Mi y es el tercer grado de la escala de Do mayor, su nombre "Mediante".<br>'+
+				'Y la quinta nota, Sol quien a su vez es el quinto grado de la escala de Do Mayor tiene por nombre "Dominante"'+
+				'Vemos también en esta imagen que la distancia que se genera entre I y III grado y III y V grado es un intervalo de tercera, y que entre el II y el V grado hay un intervalo de quinta.<br>'+
+				'La relación entre las notas en el acorde y la clase de intervalos que se crean (mayores o menores), te dicen que clase de acorde triada estás tocando, mayor, menor o disminuido.<br><br>'+
+				'Intervalos que se forman en la escala de Do mayor', "triadas_2.png", "", "");
+			$("#ref-ade-pag").data("data-pagina", "tres");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			$("#ref-atr-pag").data("data-pagina", "uno");
+			$("#ref-atr-pag").html("<div class='fi'></div>");
+			break;
+			case "tres":
+			infoAcordes("", "Intervalos en los acordes mayores, menores y disminuidos que se forman en la escala Mayor.", "triadas_3.png", "Acordes de tres sonidos (Triadas) de la escala de Do Mayor con numeración y carácter", "triadas_4.png");
+			$("#ref-ade-pag").data("data-pagina", "cuatro");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			$("#ref-atr-pag").data("data-pagina", "dos");
+			$("#ref-atr-pag").html("<div class='fi'></div>");
+			break;
+			case "cuatro":
+			infoAcordes("", "Acordes de tres sonidos de la escala de Do Mayor con nombres de cada uno:", "triadas_5.png", "Según los anteriores ejemplos, podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
+				"<ul>"+
+				"<li>Acordes Mayores: I, IV y V grado</li>"+
+				"<li>Acordes menores: ii, iii y vi grado</li>"+
+				"<li>Acordes disminuidos: vii grado</li>"+
+				"</ul>", "");
+			$("#ref-atr-pag").data("data-pagina", "tres");
+			$("#ref-atr-pag").html("<div class='fi'></div>");
+			break;
 		}
-		if($("#div-seg-btn-sec-gen").data("data-tema") == "triadas"){
-			switch($(this).data("data-pagina")){
-				case "uno":
-				infoAcordes("TRIADAS", "Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.", "triadas.png", "<br><br>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.<br><br>"+
-					"Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.", "");
-				$("#ref-ade-pag").data("data-pagina", "dos");
-				$("#ref-ade-pag").html("<div class='fd'></div>");
-				break;
-				case "dos":
-				infoAcordes("", 'De esta manera Do es la primera nota de la triada y se llamars "Tónica".<br>'+
-					'La nota del medio es Mi y es el tercer grado de la escala de Do mayor, su nombre "Mediante".<br>'+
-					'Y la quinta nota, Sol quien a su vez es el quinto grado de la escala de Do Mayor tiene por nombre "Dominante"'+
-					'Vemos también en esta imagen que la distancia que se genera entre I y III grado y III y V grado es un intervalo de tercera, y que entre el II y el V grado hay un intervalo de quinta.<br>'+
-					'La relación entre las notas en el acorde y la clase de intervalos que se crean (mayores o menores), te dicen que clase de acorde triada estás tocando, mayor, menor o disminuido.<br><br>'+
-					'Intervalos que se forman en la escala de Do mayor', "triadas_2.png", "", "");
-				$("#ref-ade-pag").data("data-pagina", "tres");
-				$("#ref-ade-pag").html("<div class='fd'></div>");
-				$("#ref-atr-pag").data("data-pagina", "uno");
-				$("#ref-atr-pag").html("<div class='fi'></div>");
-				break;
-				case "tres":
-				infoAcordes("", "Intervalos en los acordes mayores, menores y disminuidos que se forman en la escala Mayor.", "triadas_3.png", "Acordes de tres sonidos (Triadas) de la escala de Do Mayor con numeración y carácter", "triadas_4.png");
-				$("#ref-ade-pag").data("data-pagina", "cuatro");
-				$("#ref-ade-pag").html("<div class='fd'></div>");
-				$("#ref-atr-pag").data("data-pagina", "dos");
-				$("#ref-atr-pag").html("<div class='fi'></div>");
-				break;
-				case "cuatro":
-				infoAcordes("", "Acordes de tres sonidos de la escala de Do Mayor con nombres de cada uno:", "triadas_5.png", "Según los anteriores ejemplos, podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
-					"<ul>"+
-					"<li>Acordes Mayores: I, IV y V grado</li>"+
-					"<li>Acordes menores: ii, iii y vi grado</li>"+
-					"<li>Acordes disminuidos: vii grado</li>"+
-					"</ul>", "");
-				$("#ref-atr-pag").data("data-pagina", "tres");
-				$("#ref-atr-pag").html("<div class='fi'></div>");
-				break;
-			}
+	}
+	if($("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
+		switch($(this).data("data-pagina")){
+			case "uno":
+			infoAcordes("", "Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.<br><br>"+
+				"A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos  y en el siguiente gráfico  sus respectivos nombres.<br><br>"+
+				"Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.", "cuatriadas.png", "", "");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			break;
+			case "dos":
+			infoAcordes("", "Acordes de cuatro sonidos de la escala de Do Mayor con nombres de cada uno.", "cuatriadas_2.png", "Podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
+				"<ul>"+
+				"<li>Acordes Mayores Delta7: I y IV</li>"+
+				"<li>Acordes Mayores7: V</li>"+
+				"<li>Acordes menores7: ii, iii y vi</li>"+
+				"<li>Acordes semidisminuidos: vii</li>"+
+				"</ul>", "");
+			$("#ref-atr-pag").data("data-pagina", "uno");
+			$("#ref-atr-pag").html("<div class='fi'></div>");
+			break;
 		}
-		if($("#div-seg-btn-sec-gen").data("data-tema") == "cuatriadas"){
-			switch($(this).data("data-pagina")){
-				case "uno":
-				infoAcordes("", "Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.<br><br>"+
-					"A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos  y en el siguiente gráfico  sus respectivos nombres.<br><br>"+
-					"Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.", "cuatriadas.png", "", "");
-				$("#ref-ade-pag").data("data-pagina", "dos");
-				$("#ref-ade-pag").html("<div class='fd'></div>");
-				break;
-				case "dos":
-				infoAcordes("", "Acordes de cuatro sonidos de la escala de Do Mayor con nombres de cada uno.", "cuatriadas_2.png", "Podemos determinar entonces que los grados de una escala mayor conforman los siguientes acordes:<br><br>"+
-					"<ul>"+
-					"<li>Acordes Mayores Delta7: I y IV</li>"+
-					"<li>Acordes Mayores7: V</li>"+
-					"<li>Acordes menores7: ii, iii y vi</li>"+
-					"<li>Acordes semidisminuidos: vii</li>"+
-					"</ul>", "");
-				$("#ref-atr-pag").data("data-pagina", "uno");
-				$("#ref-atr-pag").html("<div class='fi'></div>");
-				break;
-			}
+	}
+	if($("#div-seg-btn-sec-gen").data("data-tema") == "armaduras"){
+		switch($(this).data("data-pagina")){
+			case "uno":
+			infoArmaduras("ARMADURAS", "La armadura, es el conjunto de alteraciones (sostenidos o bemoles), situadas a la derecha de la clave, en el pentagramay, es la encargada de indicarnos la tonalidad del tema o canción que estemos trabajando.", "becuadro1.png", "La armadura, permite a los músicos ahorrar la escritura de alteraciones durante toda la partitura.<br>"+
+				"El orden de los sostenidos siempre es el mismo de todas las armaduras: FA, DO, SOL, RE, LA, MI, SI.", "becuadro1,1.png");
+			$("#ref-ade-pag").data("data-pagina", "dos");
+			$("#ref-ade-pag").html("<div class='fd'></div>");
+			break;
+			case "dos":
+			infoArmaduras("ARMADURAS", "El orden de los bemoles, es inverso al de los sostenidos: SI, MI, LA, RE, SOL, DO, FA.", "orden_de_los_bemoles.png", "Se puede utilizar un becuadro, para anular el efecto de la armadura en una nota:", "becuadro.png");
+			$("#ref-atr-pag").data("data-pagina", "uno");
+			$("#ref-atr-pag").html("<div class='fi'></div>");
+			break;
 		}
-		if($("#div-seg-btn-sec-gen").data("data-tema") == "armaduras"){
-			switch($(this).data("data-pagina")){
-				case "uno":
-				infoArmaduras("ARMADURAS", "La armadura, es el conjunto de alteraciones (sostenidos o bemoles), situadas a la derecha de la clave, en el pentagramay, es la encargada de indicarnos la tonalidad del tema o canción que estemos trabajando.", "becuadro1.png", "La armadura, permite a los músicos ahorrar la escritura de alteraciones durante toda la partitura.<br>"+
-					"El orden de los sostenidos siempre es el mismo de todas las armaduras: FA, DO, SOL, RE, LA, MI, SI.", "becuadro1,1.png");
-				$("#ref-ade-pag").data("data-pagina", "dos");
-				$("#ref-ade-pag").html("<div class='fd'></div>");
-				break;
-				case "dos":
-				infoArmaduras("ARMADURAS", "El orden de los bemoles, es inverso al de los sostenidos: SI, MI, LA, RE, SOL, DO, FA.", "orden_de_los_bemoles.png", "Se puede utilizar un becuadro, para anular el efecto de la armadura en una nota:", "becuadro.png");
-				$("#ref-atr-pag").data("data-pagina", "uno");
-				$("#ref-atr-pag").html("<div class='fi'></div>");
-				break;
-			}
-		}
-	});
+	}
+});
 });

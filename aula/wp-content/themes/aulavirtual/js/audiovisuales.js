@@ -1,4 +1,39 @@
 jQuery(document).ready(function($){
+	if ($(window).height() <= 890) {
+		tamano("610px");
+	}
+
+	if ($(window).height() >= 891) {
+		tamano("850px");
+	}
+
+	$(window).on('resize', function() {
+		if ($(this).height() <= 890) {
+			tamano("610px");
+		}
+		if ($(this).height() >= 891) {
+			tamano("850px");
+		}
+	});
+
+	function tamano(height){
+		fondo_1 = {
+			'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_introduccion_audiovisuales.jpg")',
+			"background-size": 'auto "'+height+"'",
+			"background-color": ""
+		};
+		fondo_2 = {
+			'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_modulos_audiovisuales.jpg")',
+			"background-size": 'auto "'+height+"'",
+			"background-color": ""
+		};
+		fondo_3 = {
+			'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_videoteca_audiovisuales.jpg")',
+			"background-size": 'auto "'+height+"'",
+			"background-color": ""
+		}
+	}
+
 	$("#contenedor-index-audiovisuales a").click(function(){
 		if($(this).attr('id') == "btn-introduccion" || $(this).attr('id') == "btn-objetivos" || $(this).attr('id') == "btn-metodologia" || $(this).attr('id') == "btn-publico" || $(this).attr('id') == "btn-creditos") {
 			$("#div-info-basica-audiovisales").hide();
@@ -38,17 +73,14 @@ jQuery(document).ready(function($){
 			$("#div-info-detallada-audiovisuales p").html("").html("");
 			break;
 			case "btn-regresar":
-			$("#contenedor-index-audiovisuales").css('background-image', 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_introduccion_audiovisuales.jpg")');
+			$("#contenedor-index-audiovisuales").css(fondo_1);
 			$("#div-info-basica-audiovisales").show();
 			$("#div-oculto").show();
 			$("#div-info-detallada-audiovisuales").hide();
 			break;
 			case "btn-oculto":
 			$("#div-info-basica-audiovisales").hide();
-			$("#contenedor-index-audiovisuales").css({
-				'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_2_audiovisuales.jpg")',
-				"background-color": ""
-			});
+			$("#contenedor-index-audiovisuales").css(fondo_2);
 			$("#div-desplazamiento").show();
 			$("#div-oculto").hide();
 			break;
@@ -57,25 +89,19 @@ jQuery(document).ready(function($){
 				$("#div-info-basica-audiovisales").show();
 				$("#div-desplazamiento").hide();
 				$("#div-oculto").show();
-				$("#contenedor-index-audiovisuales").css({
-					'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_introduccion_audiovisuales.jpg")',
-				});
+				$("#contenedor-index-audiovisuales").css(fondo_1);
 			}
 			if($(this).attr("data-pagina") == 2){
 				$("#btn-regresar-principal").attr("data-pagina", 1);
 				$("#btn-videoteca").show();
-				$("#contenedor-index-audiovisuales").css({
-					'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_2_audiovisuales.jpg")',
-				});
+				$("#contenedor-index-audiovisuales").css(fondo_2);
 			}
 			break;
 			case "btn-videoteca":
 			$("#btn-regresar-principal").attr("data-pagina", 2);
 			$("#div-desplazamiento").show();
 			$("#btn-videoteca").hide();
-			$("#contenedor-index-audiovisuales").css({
-				'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_videoteca_audiovisuales.jpg")',
-			});
+			$("#contenedor-index-audiovisuales").css(fondo_3);
 			break;
 		}
 	});

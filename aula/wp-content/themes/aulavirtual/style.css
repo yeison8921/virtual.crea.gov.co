@@ -563,15 +563,6 @@ table.dataTable.no-footer{
   background-size: cover;
 }
 
-#contenedor-index-audiovisuales{
-  background-image: url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 850px;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover;*/
-}
-
 #contenedor-aula-musica{
   background-image: url('musica/images/fondo_modulos_musica.jpg');
   background-position: left top;
@@ -717,6 +708,53 @@ table.dataTable.no-footer{
 /*Fin estilos aula música
 
 /*Inicio estilos aula audiovisuales*/
+
+#contenedor-index-audiovisuales{
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  background-image: url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');
+}
+
+#div-cid-audivisuales{
+  background-color: #3f6c67;
+}
+
+@media (min-height: 0px) and (max-height: 890px){
+  #contenedor-index-audiovisuales{
+    background-size: auto 610px;
+    height: 610px;
+  } 
+  #contenedor-index-audiovisuales a, #div-cid-audivisuales{
+    font-size: 16px;
+  }
+  #div-tid-audivisuales{
+    height: 150px; 
+  }
+  #div-cid-audivisuales{
+    height: 360px;
+    color: white;
+  }
+}
+
+@media (min-height: 891px) and (max-height: 1200px) {
+  #contenedor-index-audiovisuales{
+    background-size: auto 850px;
+    height: 850px;
+  }
+  #contenedor-index-audiovisuales a, #div-cid-audivisuales{
+    font-size: 24px;
+  }
+  #div-tid-audivisuales{
+    height: 150px; 
+  }
+  #div-cid-audivisuales{
+    height: 600px;
+    color: white;
+  } 
+}
+
+
 
 #div-info-basica-audiovisales{
   position: relative;
