@@ -564,37 +564,37 @@
 
       <?php if(is_page("Introducción aula artes plásticas")) :?>
         <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-        <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10" id="contenedor-index-artes-plasticas" style="height: 900px;"> <!-- height: 100vh; -->
-
-          <div class="col-lg-12 col-md-12" id="div-index" style="height: 600px">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png" id="img-titulo" class="img-responsive" style="margin:auto; margin-top: 12%"></a> 
-            <!-- <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png" class="img-responsive" style="margin:auto;"> -->
-            <!-- <div class="col-lg-12 col-md-12 img-responsive" id="div-index" style="border-style: solid; border-color: black; height: 700px;">
-              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png" class="img-responsive" style="margin:auto;">
-            </div> -->
+        <div class="col-lg-12" id="contenedor-index-artes-plasticas">
+          <div class="text-center" id="div-img-viaje">
+            <a href="#"><img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png"></a>
           </div>
-          <div id="btns-intro-aap" class="col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10">
-            <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-              <img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_intro_normal.png">
+          <div class="col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10" id="btns-intro-aap">
+            <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 text-center">
+              <a href="#"><img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_intro_normal.png"></a>
               <p>Introducción</p>
             </div>
-            <div class="col-lg-2 col-md-2">
-              <img id="img-objetivos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_objetivos_normal.png">
+            <div class="col-lg-2 col-md-2 text-center">
+              <a href="#"><img id="img-objetivos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_objetivos_normal.png"></a>
               <p>Objetivos</p>
             </div>
-            <div class="col-lg-2 col-md-2">
-              <img id="img-publico-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_publico_normal.png">
+            <div class="col-lg-2 col-md-2 text-center">
+              <a href="#"><img id="img-publico-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_publico_normal.png"></a>
               <p>Público objetivo</p>
             </div>
-            <div class="col-lg-2 col-md-2">
-              <img id="img-metodologia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png">
+            <div class="col-lg-2 col-md-2 text-center">
+              <a href="#"><img id="img-metodologia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png"></a>
               <p>Metodología</p>
             </div>
-            <div class="col-lg-2 col-md-2">
-              <img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_creditos_normal.png">
+            <div class="col-lg-2 col-md-2 text-center">
+              <a href="#"><img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_creditos_normal.png"></a>
               <p>Créditos</p>
             </div>
           </div>
+
+          <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-aap" style="display: none;">
+            <p></p>
+          </div>
+  
           <div class="col-lg-12 col-md-12" id="uno" style="display: none; height: 800px">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <a href="#">
