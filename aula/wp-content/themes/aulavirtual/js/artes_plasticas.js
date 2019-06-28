@@ -21,56 +21,32 @@ jQuery(document).ready(function($){
 	function tamano(height){
 		fondo_principal = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_index_artes_plasticas.png")',
-			"background-size": 'auto "'+height+"'",	
 		};
 		fondo_introduccion = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_introduccion.jpg")',
-			"background-size": 'auto "'+height+"'",	
 		}
 		fondo_objetivos = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_objetivos.jpg")',
-			"background-size": 'auto "'+height+"'",	
 		}
 		fondo_publico = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_publico.jpg")',
-			"background-size": 'auto "'+height+"'",	
 		}
 		fondo_metodologia = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_metodologia.jpg")',
-			"background-size": 'auto "'+height+"'",	
 		}
 		fondo_creditos = {
 			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_creditos.jpg")',
-			"background-size": 'auto "'+height+"'",	
 		}
-
 	}
 
-	$("#div-img-viaje").css(fondo_principal);
-
-
-	$("#uno").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondo.png")',
-		'background-size': 'cover',
-		'background-repeat': 'no-repeat',
-		'width' : '100%'
-	});
-
-	$("#dos").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/introduccion/fondo.png")',
-		'background-size': 'cover',
-		'background-repeat': 'no-repeat',
-		'width' : '100%'
-	});
-
-	$("#tres").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/introduccion/segunda imagen.png")',
-		'background-repeat': 'no-repeat',
-		'background-position': 'center',
-		'background-size': 'contain',
-		'width' : '100%',
-		'height': '100%'
-	});
+	// $("#tres").css({
+	// 	'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/introduccion/segunda imagen.png")',
+	// 	'background-repeat': 'no-repeat',
+	// 	'background-position': 'center',
+	// 	'background-size': 'contain',
+	// 	'width' : '100%',
+	// 	'height': '100%'
+	// });
 
 	$("#cuatro").css({
 		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/observaciones_lupa/fondo.png")',
@@ -89,13 +65,13 @@ jQuery(document).ready(function($){
 	});
 
 	$("#contenedor-index-artes-plasticas").on("click", "img", function() {
-		if($(this).attr("id") == "img-titulo"){
-			$("#div-index").hide();
+		if($(this).attr("id") == "img-viaje"){
+			$("#div-img-viaje").hide();
 			$("#btns-intro-aap").hide();
-			$("#uno").show();
+			$("#div-mapa-mundi").show();
 		}
-		if($(this).attr("id") == "img-mapa"){
-			$("#uno").hide();
+		if($(this).attr("id") == "img-colombia"){
+			$("#div-mapa-mundi").hide();
 			$("#dos").show();
 		}
 		if($(this).attr("id") == "img-observacion"){
@@ -149,9 +125,9 @@ jQuery(document).ready(function($){
 
 	$(".img-atras").click(function(){
 		if($(this).data("atras") == "index"){
-			$("#div-index").show();
+			$("#div-img-viaje").show();
 			$("#btns-intro-aap").show();
-			$("#uno").hide();
+			$("#div-info-detallada-aap").hide();
 		}
 		if($(this).data("atras") == "uno"){
 			$("#dos").hide();
@@ -171,19 +147,19 @@ jQuery(document).ready(function($){
 	$("#btns-intro-aap img").mouseover(function() {
 		switch($(this).attr("id")){
 			case "img-intro-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_sobre.png");
 			break;
 			case "img-objetivos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_sobre.png");
 			break;
 			case "img-publico-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_sobre.png");
 			break;
 			case "img-metodologia-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_sobre.png");
 			break;
 			case "img-creditos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_color.png");
+			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_sobre.png");
 			break;
 		}
 	})
@@ -252,8 +228,12 @@ jQuery(document).ready(function($){
 			break;
 			case "img-objetivos-aap":
 			$("#div-info-detallada-aap").css(fondo_objetivos);
-			$("#div-info-detallada-aap p").html("").html("Objetivo general: Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público."+
-				"Objetivos específicos:<br><br>"+
+			// $("#div-info-detallada-aap p").css({
+			// 	"left": "45%",
+			// 	"right": "20%"
+			// });
+			$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
+				"Objetivos específicos:<br>"+
 				"<ol>"+
 				"<li>Mediar desde las experiencias visuales de los usuarios en relación a un contexto artístico  contemporáneo basados en  diversos  referentes del medio plástico visual.</li>"+
 				"<li>Fomentar espacios de pensamiento creativo frente a la sensibilidad estética y la apreciación plástica y visual.</li>"+

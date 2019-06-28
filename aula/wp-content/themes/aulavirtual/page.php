@@ -564,9 +564,11 @@
 
       <?php if(is_page("Introducción aula artes plásticas")) :?>
         <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-        <div class="col-lg-12" id="contenedor-index-artes-plasticas">
+        <div class="row" id="contenedor-index-artes-plasticas">
           <div class="text-center" id="div-img-viaje">
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png"></a>
+            <a href="#">
+              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png" id="img-viaje">
+            </a>
           </div>
           <div class="col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10" id="btns-intro-aap">
             <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 text-center">
@@ -590,50 +592,57 @@
               <p>Créditos</p>
             </div>
           </div>
-
-          <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-aap" style="display: none;">
-            <p></p>
-          </div>
-  
-          <div class="col-lg-12 col-md-12" id="uno" style="display: none; height: 800px">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+          <div id="div-info-detallada-aap" style="display: none;">
+            <div class="col-lg-12">
               <a href="#">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="index"></a>
-              </div>
-              <a href="#">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/imagen.png" id="img-mapa" class="img-responsive" style="margin: auto;">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="index">
               </a>
-              <!-- <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/mapa_colombia.png" class="img-responsive" style="position: absolute; top: 372px; left: 533px;"> -->
             </div>
-            <div class="col-lg-12 col-md-12" id="dos" style="display: none; height: 800px;">
-              <div class="col-lg-12 col-md-12" id="tres">
-                <div class="col-lg-12 col-md-12">
+            <div class="col-lg-offset-1 col-lg-10" style="height: 80%">
+              <p></p>
+            </div>
+          </div>
+          <div class="col-lg-12 text-center" id="div-mapa-mundi" style="display: none;">
+            <div class="col-lg-12">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="index">
+              </a>
+            </div>
+            <div id="div-colombia">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/mapa_colombia.png" id="img-colombia">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-12 text-center" id="dos" style="display: none;">
+            <!-- <div class="col-lg-12 col-md-12" id="tres"> -->
+              <div class="col-lg-12">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="uno">
+                </a>
+              </div>
+              <!-- <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="contenido" style="margin-top: 20%">
+                <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
                   <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="uno">
+                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" class="img-responsive">
+                  </a>
+                  <br>
+                  <br>
+                  <br>
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" class="img-responsive">
+                </div>
+                <div class="col-lg-3 col-md-3">
+                  <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-observacion" class="img-responsive">
                   </a>
                 </div>
-                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="contenido" style="margin-top: 20%">
-                  <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
-                    <a href="#">
-                      <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" class="img-responsive">
-                    </a>
-                    <br>
-                    <br>
-                    <br>
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" class="img-responsive">
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <a href="#">
-                      <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-observacion" class="img-responsive">
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <a href="#">
-                      <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" class="img-responsive">
-                    </a>
-                  </div>
+                <div class="col-lg-3 col-md-3">
+                  <a href="#">
+                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" class="img-responsive">
+                  </a>
                 </div>
-              </div>
+              </div> -->
+              <!-- </div> -->
             </div>
             <div class="col-lg-12 col-md-12" id="cuatro" style="height: 800px; display: none;">
               <div class="col-lg-12 col-md-12" id="cinco">
