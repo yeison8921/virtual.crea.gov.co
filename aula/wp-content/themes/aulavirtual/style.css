@@ -792,11 +792,15 @@ table.dataTable.no-footer{
   background-image: url("artes_plasticas/images/imagen.png"), url("artes_plasticas/images/fondo.png");
 }
 
-#dos{
+#div-modulos-aap{
   background-image: url("artes_plasticas/images/introduccion/segunda imagen.png"), url("artes_plasticas/images/introduccion/fondo.png");
 }
 
-#div-mapa-mundi, #dos {
+#div-lupa{
+  background-image: url("artes_plasticas/images/observaciones_lupa/pergamino_lupa.png"), url("artes_plasticas/images/introduccion/fondo.png");
+}
+
+#div-mapa-mundi, #div-modulos-aap, #div-lupa {
   background-position: 50% 50%, center;
   background-repeat: no-repeat, no-repeat;
 }
@@ -810,7 +814,7 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 0px) and (max-height: 890px){
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #dos {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-lupa {
     height: 610px;
   }
   #div-img-viaje, #div-colombia {
@@ -835,7 +839,8 @@ table.dataTable.no-footer{
     right: 40%;
     top: 15%;
   }
-  #div-mapa-mundi, #dos {
+
+  #div-mapa-mundi, #div-modulos-aap, #div-lupa {
     background-size: auto 545px, cover;
   }
 
@@ -846,10 +851,43 @@ table.dataTable.no-footer{
     width: 25px;
     transition: all 0.7s ease;
   }
+
+  #div-imgs-modulos-app img{
+    position: absolute;
+    width: 90px;
+  }
+
+  #div-imgs-modulos-app #img-brujula{
+    top: 220px;
+    left: 290px;
+  }
+
+  #div-imgs-modulos-app #img-lupa{
+    top: 260px;
+    left: 405px;
+  }
+
+  #div-imgs-modulos-app #img-compas{
+    top: 220px;
+    left: 525px;
+  }
+
+  #div-imgs-modulos-app #img-telescopio{
+    top: 350px;
+    left: 290px;
+  }
+
+  #img-comic{
+    height: 400px;
+  }
+
+  .mover-comic{
+    height: 100px;
+  }
 }
 
 @media (min-height: 891px) and (max-height: 1200px) {
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #dos {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-lupa {
     height: 850px;
   }
   #div-img-viaje, #div-colombia {
@@ -881,8 +919,40 @@ table.dataTable.no-footer{
     width: 40px;
     transition: all 0.7s ease;
   }
-  #div-mapa-mundi, #dos {
+  #div-mapa-mundi, #div-modulos-aap, #div-lupa {
     background-size: auto, cover;
+  }
+  #div-imgs-modulos-app {
+    position: relative;
+    top: 35%;
+  }
+
+  #div-imgs-modulos-app img{
+    position: absolute;
+  }
+
+  #div-imgs-modulos-app #img-brujula{
+    left: 26%;
+    top: 30px;
+  }
+
+  #div-imgs-modulos-app #img-lupa{
+    left: 42%;
+    top: 85px;
+  }
+
+  #div-imgs-modulos-app #img-compas{
+    left: 62%;
+    top: 30px;
+  }
+
+  #div-imgs-modulos-app #img-telescopio{
+    left: 26%;
+    top: 200px;
+  }
+
+  #img-comic{
+    height: 600px;
   }
 }
 

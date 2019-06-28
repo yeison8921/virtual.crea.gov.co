@@ -614,88 +614,84 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-12 text-center" id="dos" style="display: none;">
-            <!-- <div class="col-lg-12 col-md-12" id="tres"> -->
-              <div class="col-lg-12">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="uno">
-                </a>
-              </div>
-              <!-- <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="contenido" style="margin-top: 20%">
-                <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" class="img-responsive">
-                  </a>
-                  <br>
-                  <br>
-                  <br>
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" class="img-responsive">
-                </div>
-                <div class="col-lg-3 col-md-3">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-observacion" class="img-responsive">
-                  </a>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" class="img-responsive">
-                  </a>
-                </div>
-              </div> -->
-              <!-- </div> -->
+          <div class="col-lg-12 text-center" id="div-modulos-aap" style="display: none;">
+            <div class="col-lg-12">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="mapa-mundi">
+              </a>
             </div>
-            <div class="col-lg-12 col-md-12" id="cuatro" style="height: 800px; display: none;">
-              <div class="col-lg-12 col-md-12" id="cinco">
-                <div class="col-lg-12 col-md-12">
-                  <a href="#">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="dos">
-                  </a>
-                </div>
-                <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
-                  <div class="col-lg-3 col-md-3">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_linea_normal.png" id="img-linea" class="img-responsive">
-                    <p>Línea</p>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_color_normal.png" id="img-color" class="img-responsive">
-                    <p>Color</p>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_gesto_normal.png" id="img-gesto" class="img-responsive">
-                    <p>Gesto</p>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png" id="img-creatividad" class="img-responsive">
-                    <p>Creatividad</p>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="div-imgs-modulos-app">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula">
+              </a>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-lupa">
+              </a>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" id="img-compas">
+              </a>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" id="img-telescopio">
+              </a>
             </div>
-            <div class="col-lg-12 col-md-12" id="div-comic" style="height: 600px; display: none;">
-              <div class="col-lg-12 col-md-12">
+          </div>
+          <div class="col-lg-12 col-md-12" id="div-lupa" style="display: none;">
+            <div class="col-lg-12 col-md-12">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
+              </a>
+            </div>
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
+              <div class="col-lg-3 col-md-3">
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_linea_normal.png" id="img-linea">
                 </a>
+                <p>Línea</p>
               </div>
-              <div class="col-lg-12 col-md-12 text-center" id="div-imagenes-comic">
-                <img src="" id="img-comic" style="height: 80%;">
+              <div class="col-lg-3 col-md-3">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_color_normal.png" id="img-color">
+                </a>
+                <p>Color</p>
               </div>
-              <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center" id="btns-mover-comic">
+              <div class="col-lg-3 col-md-3">
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_atras.png" id="img-atras-comic" data-pagina="0" data-comic="" data-total="">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_gesto_normal.png" id="img-gesto">
                 </a>
+                <p>Gesto</p>
+              </div>
+              <div class="col-lg-3 col-md-3">
                 <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_siguiente.png" id="img-siguiente-comic" data-pagina="1" data-comic="" data-total="">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png" id="img-creatividad">
                 </a>
+                <p>Creatividad</p>
               </div>
             </div>
           </div>
-        <?php endif; ?>
+          <div class="col-lg-12 col-md-12" id="div-comic" style="display: none;">
+            <div class="col-lg-12 col-md-12">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="">
+              </a>
+            </div>
+            <div class="col-lg-12 col-md-12 text-center" id="div-imagenes-comic">
+              <img src="" id="img-comic">
+            </div>
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 text-center" id="btns-mover-comic">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_atras.png" class="mover-comic" id="img-atras-comic" data-pagina="0" data-comic="" data-total="">
+              </a>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/img_siguiente.png" class="mover-comic" id="img-siguiente-comic" data-pagina="1" data-comic="" data-total="">
+              </a>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
 
-        <?php the_content(); ?>
-      <?php endwhile; endif; ?>
+      <?php the_content(); ?>
+    <?php endwhile; endif; ?>
 
-    </div>
-    <!--fin contenido -->
-    <?php get_footer(); ?>
+  </div>
+  <!--fin contenido -->
+  <?php get_footer(); ?>

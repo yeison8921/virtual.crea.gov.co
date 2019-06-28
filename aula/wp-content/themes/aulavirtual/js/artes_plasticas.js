@@ -39,31 +39,6 @@ jQuery(document).ready(function($){
 		}
 	}
 
-	// $("#tres").css({
-	// 	'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/introduccion/segunda imagen.png")',
-	// 	'background-repeat': 'no-repeat',
-	// 	'background-position': 'center',
-	// 	'background-size': 'contain',
-	// 	'width' : '100%',
-	// 	'height': '100%'
-	// });
-
-	$("#cuatro").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/observaciones_lupa/fondo.png")',
-		'background-repeat': 'no-repeat',
-		'background-size': 'cover',
-		'width' : '100%',
-	});
-
-	$("#cinco").css({
-		'background-image': 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/observaciones_lupa/pergamino_lupa.png")',
-		'background-repeat': 'no-repeat',
-		'background-position': 'center',
-		'background-size': 'contain',
-		'width' : '100%',
-		'height': '100%'
-	});
-
 	$("#contenedor-index-artes-plasticas").on("click", "img", function() {
 		if($(this).attr("id") == "img-viaje"){
 			$("#div-img-viaje").hide();
@@ -72,33 +47,35 @@ jQuery(document).ready(function($){
 		}
 		if($(this).attr("id") == "img-colombia"){
 			$("#div-mapa-mundi").hide();
-			$("#dos").show();
+			$("#div-modulos-aap").show();
 		}
-		if($(this).attr("id") == "img-observacion"){
-			$("#dos").hide();
-			$("#cuatro").show();
+		if($(this).attr("id") == "img-lupa"){
+			$("#div-modulos-aap").hide();
+			$("#div-lupa").show();
 		}
 		if($(this).attr("id") == "img-brujula"){
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_1.jpg");
-			$("#div-comic .img-atras").data("atras", "dos");
+			$("#div-comic .img-atras").data("atras", "modulos");
 			$("#btns-mover-comic img").data("comic", "brujula");
-			$("#btns-mover-comic img").data("total", "15");
-			$("#dos").hide();
+			$("#btns-mover-comic img").data("total", "11");
+			$("#div-modulos-aap").hide();
 		}
 		if($(this).attr("id") == "img-creatividad"){
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_1.jpg");
-			$("#div-comic .img-atras").data("atras", "cuatro");
 			$("#btns-mover-comic img").data("comic", "creatividad");
 			$("#btns-mover-comic img").data("total", "8");
-			$("#cuatro").hide();
 		}
 		if($(this).attr("id") == "img-linea"){
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_1.jpg");
-			$("#div-comic .img-atras").data("atras", "cuatro");
 			$("#btns-mover-comic img").data("comic", "linea");
 			$("#btns-mover-comic img").data("total", "9");
-			$("#cuatro").hide();
 		}
+
+		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
+			$("#div-comic .img-atras").data("atras", "lupa");
+			$("#div-lupa").hide();
+		}
+
 		if($(this).attr("id") == "img-brujula" || $(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
 			num_pag = 1;
 			$("#div-comic").show();
@@ -128,19 +105,20 @@ jQuery(document).ready(function($){
 			$("#div-img-viaje").show();
 			$("#btns-intro-aap").show();
 			$("#div-info-detallada-aap").hide();
+			$("#div-mapa-mundi").hide();
 		}
-		if($(this).data("atras") == "uno"){
-			$("#dos").hide();
-			$("#uno").show();
+		if($(this).data("atras") == "mapa-mundi"){
+			$("#div-modulos-aap").hide();
+			$("#div-mapa-mundi").show();
 		}
-		if($(this).data("atras") == "dos"){
+		if($(this).data("atras") == "modulos"){
+			$("#div-modulos-aap").show();
 			$("#div-comic").hide();
-			$("#cuatro").hide();
-			$("#dos").show();
+			$("#div-lupa").hide();
 		}
-		if($(this).data("atras") == "cuatro"){
+		if($(this).data("atras") == "lupa"){
+			$("#div-lupa").show();
 			$("#div-comic").hide();
-			$("#cuatro").show();
 		}
 	});
 
@@ -228,10 +206,10 @@ jQuery(document).ready(function($){
 			break;
 			case "img-objetivos-aap":
 			$("#div-info-detallada-aap").css(fondo_objetivos);
-			// $("#div-info-detallada-aap p").css({
-			// 	"left": "45%",
-			// 	"right": "20%"
-			// });
+			$("#div-info-detallada-aap p").css({
+				"left": "45%",
+				"right": "20%"
+			});
 			$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
 				"Objetivos específicos:<br>"+
 				"<ol>"+
