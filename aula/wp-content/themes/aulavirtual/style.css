@@ -796,11 +796,11 @@ table.dataTable.no-footer{
   background-image: url("artes_plasticas/images/introduccion/segunda imagen.png"), url("artes_plasticas/images/introduccion/fondo.png");
 }
 
-#div-lupa{
-  background-image: url("artes_plasticas/images/observaciones_lupa/pergamino_lupa.png"), url("artes_plasticas/images/introduccion/fondo.png");
+#div-sub-modulos{
+  background-image: url("artes_plasticas/images/submodulos/pergamino.png"), url("artes_plasticas/images/submodulos/fondo.png");
 }
 
-#div-mapa-mundi, #div-modulos-aap, #div-lupa {
+#div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
   background-position: 50% 50%, center;
   background-repeat: no-repeat, no-repeat;
 }
@@ -814,7 +814,7 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 0px) and (max-height: 890px){
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-lupa {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos {
     height: 610px;
   }
   #div-img-viaje, #div-colombia {
@@ -840,7 +840,7 @@ table.dataTable.no-footer{
     top: 15%;
   }
 
-  #div-mapa-mundi, #div-modulos-aap, #div-lupa {
+  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
     background-size: auto 545px, cover;
   }
 
@@ -887,7 +887,7 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 891px) and (max-height: 1200px) {
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-lupa {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios {
     height: 850px;
   }
   #div-img-viaje, #div-colombia {
@@ -919,7 +919,7 @@ table.dataTable.no-footer{
     width: 40px;
     transition: all 0.7s ease;
   }
-  #div-mapa-mundi, #div-modulos-aap, #div-lupa {
+  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
     background-size: auto, cover;
   }
   #div-imgs-modulos-app {

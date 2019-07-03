@@ -49,9 +49,12 @@ jQuery(document).ready(function($){
 			$("#div-mapa-mundi").hide();
 			$("#div-modulos-aap").show();
 		}
-		if($(this).attr("id") == "img-lupa"){
+		if($(this).attr("id") == "img-lupa" || $(this).attr("id") == "img-compas"){
 			$("#div-modulos-aap").hide();
-			$("#div-lupa").show();
+			$("#div-sub-modulos").show();
+		}
+		if($(this).attr("id") == "img-lupa"){
+			$("#div-sub-modulos img").data("ejercicio", "comic");
 		}
 		if($(this).attr("id") == "img-brujula"){
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_1.jpg");
@@ -60,25 +63,59 @@ jQuery(document).ready(function($){
 			$("#btns-mover-comic img").data("total", "11");
 			$("#div-modulos-aap").hide();
 		}
+		if($(this).attr("id") == "img-compas"){
+			$("#div-sub-modulos img").data("ejercicio", "ejercicio");
+		}
 		if($(this).attr("id") == "img-creatividad"){
-			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_1.jpg");
-			$("#btns-mover-comic img").data("comic", "creatividad");
-			$("#btns-mover-comic img").data("total", "8");
+			if($(this).data("ejercicio") == "comic"){
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/creatividad/img_viñeta_1.jpg");
+				$("#btns-mover-comic img").data("comic", "creatividad");
+				$("#btns-mover-comic img").data("total", "8");
+			}
+			if($(this).data("ejercicio") == "ejercicio"){
+				$($("#div-ejercicios div")[1]).html("").html("¡¡¡LLEGO EL MOMENTO!!!");
+				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_creatividad.png");
+				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-4.jpg");
+			}
+		}
+		if($(this).attr("id") == "img-gesto"){
+			if($(this).data("ejercicio") == "ejercicio"){
+				$($("#div-ejercicios div")[1]).html("").html("DIBUJO POR TIEMPO");
+				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_gesto.png");
+				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-2.jpg");
+			}
+		}
+		if($(this).attr("id") == "img-color"){
+			if($(this).data("ejercicio") == "ejercicio"){
+				$($("#div-ejercicios div")[1]).html("").html("PLANOS DE COLOR");
+				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_color.png");
+				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-3.jpg");
+			}
 		}
 		if($(this).attr("id") == "img-linea"){
-			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_1.jpg");
-			$("#btns-mover-comic img").data("comic", "linea");
-			$("#btns-mover-comic img").data("total", "9");
+			if($(this).data("ejercicio") == "comic"){
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/linea/img_viñeta_1.jpg");
+				$("#btns-mover-comic img").data("comic", "linea");
+				$("#btns-mover-comic img").data("total", "9");
+			}
+			if($(this).data("ejercicio") == "ejercicio"){
+				$($("#div-ejercicios div")[1]).html("").html("LÍNEA CONTINUA");
+				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_linea.png");
+				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-1.jpg");
+			}
 		}
-
-		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
-			$("#div-comic .img-atras").data("atras", "lupa");
-			$("#div-lupa").hide();
+		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-gesto" || $(this).attr("id") == "img-color"){
+			$("#div-comic .img-atras").data("atras", "submodulos");
+			$("#div-sub-modulos").hide();
+			if($(this).data("ejercicio") == "ejercicio"){
+				$("#div-ejercicios").show();
+			}
 		}
-
 		if($(this).attr("id") == "img-brujula" || $(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
-			num_pag = 1;
-			$("#div-comic").show();
+			if($(this).data("ejercicio") == "comic"){
+				$("#div-comic").show();
+				num_pag = 1;
+			}
 		}
 	});
 
@@ -114,11 +151,12 @@ jQuery(document).ready(function($){
 		if($(this).data("atras") == "modulos"){
 			$("#div-modulos-aap").show();
 			$("#div-comic").hide();
-			$("#div-lupa").hide();
+			$("#div-sub-modulos").hide();
 		}
-		if($(this).data("atras") == "lupa"){
-			$("#div-lupa").show();
+		if($(this).data("atras") == "submodulos"){
+			$("#div-sub-modulos").show();
 			$("#div-comic").hide();
+			$("#div-ejercicios").hide();
 		}
 	});
 

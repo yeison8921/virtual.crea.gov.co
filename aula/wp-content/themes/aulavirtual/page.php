@@ -622,7 +622,7 @@
             </div>
             <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="div-imgs-modulos-app">
               <a href="#">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" data-ejercicio="comic">
               </a>
               <a href="#">
                 <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-lupa">
@@ -635,7 +635,37 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12" id="div-lupa" style="display: none;">
+          <div class="col-lg-12 col-md-12" id="div-sub-modulos" style="display: none;">
+            <div class="col-lg-12 col-md-12">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
+              </a>
+            </div>
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
+              <div class="col-lg-3 col-md-3">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_gesto.png" id="img-gesto" data-ejercicio="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_color.png" id="img-color" data-ejercicio="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-3">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_creatividad.png" id="img-creatividad" data-ejercicio="">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-12 col-md-12" id="div-lupa" style="display: none;">
             <div class="col-lg-12 col-md-12">
               <a href="#">
                 <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
@@ -667,7 +697,7 @@
                 <p>Creatividad</p>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-lg-12 col-md-12" id="div-comic" style="display: none;">
             <div class="col-lg-12 col-md-12">
               <a href="#">
@@ -686,12 +716,46 @@
               </a>
             </div>
           </div>
-        </div>
-      <?php endif; ?>
+          <div class="col-lg-12 col-md-12" id="div-ejercicios" style="display: none;">
+            <div class="col-lg-1 col-md-1" style="height: 10%;">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="submodulos">
+              </a>
+            </div>
+            <div class="col-lg-11 col-md-11 text-center" style="height: 10%; font-size: 50px;"></div>
+            <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
+              <p>Objetivos</p>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
+              <p>Materiales</p>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
+              <p>Paso a paso</p>
+            </div>
+            <div class="col-lg-3 col-md-3 text-right" style="height: 80%;">
+              <img src="" id="img-pajaro" style="margin-top: 200px;">
+            </div>
+            <div class="col-lg-9 col-md-9" style="height: 65%;"></div>
+            <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 25px;">
+              <div class="col-lg-6 col-md-6 text-right">
+                <span>Realiza tu dibujo</span>
+                <a href="#">
+                  <img src="">
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <a href="#">
+                  <img src="">
+                </a>
+                <span>Sube tu dibujo al foro</span></div>
+              </div>
+            </div>
+          </div>
+        <?php endif; ?>
 
-      <?php the_content(); ?>
-    <?php endwhile; endif; ?>
+        <?php the_content(); ?>
+      <?php endwhile; endif; ?>
 
-  </div>
-  <!--fin contenido -->
-  <?php get_footer(); ?>
+    </div>
+    <!--fin contenido -->
+    <?php get_footer(); ?>
