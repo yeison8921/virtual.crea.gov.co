@@ -77,7 +77,7 @@ jQuery(document).ready(function($){
 				$($("#div-ejercicios div")[1]).html("").html("LÍNEA CONTINUA");
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_linea.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-1.jpg");
-				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/forum/topic/ejercicio-linea-continua");
+				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-linea-continua");
 			}
 		}
 
@@ -86,7 +86,7 @@ jQuery(document).ready(function($){
 				$($("#div-ejercicios div")[1]).html("").html("DIBUJO POR TIEMPO");
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_gesto.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-2.jpg");
-				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/forum/topic/ejercicio-dibujo-por-tiempo");
+				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-dibujo-por-tiempo");
 			}
 		}
 
@@ -95,7 +95,7 @@ jQuery(document).ready(function($){
 				$($("#div-ejercicios div")[1]).html("").html("PLANOS DE COLOR");
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_color.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-3.jpg");
-				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/forum/topic/ejercicio-plano-de-color");
+				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-plano-de-color");
 			}
 		}
 
@@ -109,7 +109,7 @@ jQuery(document).ready(function($){
 				$($("#div-ejercicios div")[1]).html("").html("¡¡¡LLEGO EL MOMENTO!!!");
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_creatividad.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-4.jpg");
-				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/forum/topic/ejercicio-llego-el-momento");
+				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-llego-el-momento");
 			}
 		}
 		
