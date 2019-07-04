@@ -563,6 +563,7 @@
       <?php endif; ?>
 
       <?php if(is_page("Introducción aula artes plásticas")) :?>
+        <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
         <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
         <div class="row" id="contenedor-index-artes-plasticas">
           <div class="text-center" id="div-img-viaje">
@@ -739,12 +740,12 @@
             <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 25px;">
               <div class="col-lg-6 col-md-6 text-right">
                 <span>Realiza tu dibujo</span>
-                <a href="#">
+                <a href="https://sketch.io/sketchpad" target="_blank">
                   <img src="">
                 </a>
               </div>
               <div class="col-lg-6 col-md-6">
-                <a href="#">
+                <a href="#" id="a-foro" target="_blank">
                   <img src="">
                 </a>
                 <span>Sube tu dibujo al foro</span></div>
