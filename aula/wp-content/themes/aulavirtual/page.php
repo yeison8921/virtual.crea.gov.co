@@ -647,58 +647,28 @@
                 <a href="#">
                   <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">
                 </a>
+                <span>Línea</span>
               </div>
               <div class="col-lg-3 col-md-3">
                 <a href="#">
                   <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_gesto.png" id="img-gesto" data-ejercicio="">
                 </a>
+                <span>Gesto</span>
               </div>
               <div class="col-lg-3 col-md-3">
                 <a href="#">
                   <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_color.png" id="img-color" data-ejercicio="">
                 </a>
+                <span>Color</span>
               </div>
               <div class="col-lg-3 col-md-3">
                 <a href="#">
                   <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_creatividad.png" id="img-creatividad" data-ejercicio="">
                 </a>
+                <span>Creatividad</span>
               </div>
             </div>
           </div>
-
-          <!-- <div class="col-lg-12 col-md-12" id="div-lupa" style="display: none;">
-            <div class="col-lg-12 col-md-12">
-              <a href="#">
-                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
-              </a>
-            </div>
-            <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
-              <div class="col-lg-3 col-md-3">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_linea_normal.png" id="img-linea">
-                </a>
-                <p>Línea</p>
-              </div>
-              <div class="col-lg-3 col-md-3">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_color_normal.png" id="img-color">
-                </a>
-                <p>Color</p>
-              </div>
-              <div class="col-lg-3 col-md-3">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_gesto_normal.png" id="img-gesto">
-                </a>
-                <p>Gesto</p>
-              </div>
-              <div class="col-lg-3 col-md-3">
-                <a href="#">
-                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png" id="img-creatividad">
-                </a>
-                <p>Creatividad</p>
-              </div>
-            </div>
-          </div> -->
           <div class="col-lg-12 col-md-12" id="div-comic" style="display: none;">
             <div class="col-lg-12 col-md-12">
               <a href="#">
@@ -717,7 +687,8 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12" id="div-ejercicios" style="display: none;">
+
+          <!-- <div class="col-lg-12 col-md-12" id="div-ejercicios" style="display: none;">
             <div class="col-lg-1 col-md-1" style="height: 10%;">
               <a href="#">
                 <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="submodulos">
@@ -725,19 +696,63 @@
             </div>
             <div class="col-lg-11 col-md-11 text-center" style="height: 10%; font-size: 50px;"></div>
             <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
-              <p>Objetivos</p>
+              <a href="#" id="objetivos" data-info="">Objetivos</a>
             </div>
             <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
-              <p>Materiales</p>
+              <a href="#" id="materiales" data-info="">Materiales</a>
             </div>
             <div class="col-lg-4 col-md-4 text-center"style="height: 10%; font-size: 35px;">
-              <p>Paso a paso</p>
+              <a href="#" id="paso" data-info="">Paso a paso</a>
             </div>
             <div class="col-lg-3 col-md-3 text-right" style="height: 80%;">
               <img src="" id="img-pajaro" style="margin-top: 200px;">
             </div>
-            <div class="col-lg-9 col-md-9" style="height: 65%;"></div>
+            <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 65%;"></div>
             <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 25px;">
+              <div class="col-lg-6 col-md-6 text-right">
+                <span>Realiza tu dibujo</span>
+                <a href="https://sketch.io/sketchpad" target="_blank">
+                  <img src="">
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <a href="#" id="a-foro" target="_blank">
+                  <img src="">
+                </a>
+                <span>Sube tu dibujo al foro</span></div>
+              </div>
+            </div> -->
+
+            <div class="col-lg-12 col-md-12" id="div-ejercicios" style="display: none;">
+              <div class="col-lg-1 col-md-1" style="height: 10%; border-style: solid; border-color: black;">
+                <a href="#">
+                  <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="submodulos">
+                </a>
+              </div>
+              <div class="col-lg-11 col-md-11 text-center" style="height: 10%; font-size: 50px; border-style: solid; border-color: black;"></div>
+              <div class="col-lg-3 col-md-3 text-right" style="height: 90%; border-style: solid; border-color: black;">
+                <img src="" id="img-pajaro" style="margin-top: 200px; border-style: solid; border-color: black;">
+              </div>
+              <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 75%; border-style: solid; border-color: black;">
+                <p><strong>Objetivo:</strong><br>Descubrir las variables posibles de la línea para generar conciencia sobre las diferentes formas de construir dibujo.</p>
+                <p><strong>Materiales:</strong>
+                  <ul>
+                    <li>Lápiz, tajalápiz, borrador.</li>
+                    <li>Hoja bond 1/8.</li>
+                  </ul>
+                </p>
+                <p><strong>Paso a Paso:</strong>
+                  <ol>
+                   <li>Realizaremos un retrato, para esto piensa en una persona que tengas en tu memoria y que quieras dibujar.</li> 
+                   <li>Para realizar este dibujo no debes levantar la mano en ningún momento, ni separar las líneas, tu dibujó será una línea continua.</li> 
+                   <li>Puedes recurrir a mover la hoja e incluso dibujar con la mano contraria.</li> 
+                   <li>Mientras dibujas juega a trasladarte en el formato de la hoja, no hay necesidad de dibujar en orden las partes del rostro, puedes empezar con el ojo y con la línea continua dirigirte al mentón y luego al cabello.</li> 
+                   <li>Es importante soltar la mano y no apoyarla sobre el papel para que tengas mayor movilidad, utiliza todo el formato de la hoja.</li> 
+                   <li>Acompaña tu dibujo con música. El sonido influye en nuestros sentidos y te ayudará a darle ritmo, movimiento y fluidez a tu línea.</li> 
+                 </ol>
+               </p>
+             </div>
+             <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 25px; border-style: solid; border-color: black;">
               <div class="col-lg-6 col-md-6 text-right">
                 <span>Realiza tu dibujo</span>
                 <a href="https://sketch.io/sketchpad" target="_blank">

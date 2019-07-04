@@ -78,6 +78,7 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_linea.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-1.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-linea-continua");
+				$("#div-ejercicios a").data("info", "linea");
 			}
 		}
 
@@ -87,6 +88,7 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_gesto.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-2.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-dibujo-por-tiempo");
+				$("#div-ejercicios a").data("info", "gesto");
 			}
 		}
 
@@ -96,6 +98,7 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_color.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-3.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-plano-de-color");
+				$("#div-ejercicios a").data("info", "color");
 			}
 		}
 
@@ -110,10 +113,9 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_creatividad.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-4.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-llego-el-momento");
+				$("#div-ejercicios a").data("info", "creatividad");
 			}
 		}
-		
-		
 		
 		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-gesto" || $(this).attr("id") == "img-color"){
 			$("#div-comic .img-atras").data("atras", "submodulos");
@@ -148,6 +150,25 @@ $("#btns-mover-comic").on("click", "img", function() {
 	}
 });
 
+$("#div-ejercicios a").on("click", function() {
+	if($(this).attr("id") == "objetivos"){
+		switch($(this).data("info")){
+			case "linea":
+			$("#div-info-ejercicio").html("").html("Descubrir las variables posibles de la línea para generar conciencia sobre las diferentes formas de construir dibujo.");
+			break;
+			case "gesto":
+			$("#div-info-ejercicio").html("").html("Desarrollar trazos sueltos que contengan expresividad, conservando las formas generales del objeto que se va a dibujar.");
+			break;
+			case "color":
+			$("#div-info-ejercicio").html("").html("Leer visualmente y comprender la composición de las imágenes desde sus planos de color.");
+			break;
+			case "creatividad":
+			$("#div-info-ejercicio").html("").html("");
+			break;
+		}
+	}
+});
+
 $(".img-atras").click(function(){
 	if($(this).data("atras") == "index"){
 		$("#div-img-viaje").show();
@@ -168,6 +189,7 @@ $(".img-atras").click(function(){
 		$("#div-sub-modulos").show();
 		$("#div-comic").hide();
 		$("#div-ejercicios").hide();
+		$("#div-info-ejercicio").html("");
 	}
 });
 
