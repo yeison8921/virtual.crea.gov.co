@@ -78,7 +78,23 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_linea.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-1.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-linea-continua");
-				$("#div-ejercicios a").data("info", "linea");
+				$("#div-info-ejercicio").html("").html("<p><strong>Objetivo:</strong><br>Descubrir las variables posibles de la línea para generar conciencia sobre las diferentes formas de construir dibujo.</p>"
+					+"<p><strong>Materiales:</strong>"
+					+"<ul>"
+					+"<li>Lápiz, tajalápiz, borrador.</li>"
+					+"<li>Hoja bond 1/8.</li>"
+					+"</ul>"
+					+"</p>"
+					+"<p><strong>Paso a Paso:</strong>"
+					+"<ol>"
+					+"<li>Realizaremos un retrato, para esto piensa en una persona que tengas en tu memoria y que quieras dibujar.</li> "
+					+"<li>Para realizar este dibujo no debes levantar la mano en ningún momento, ni separar las líneas, tu dibujó será una línea continua.</li> "
+					+"<li>Puedes recurrir a mover la hoja e incluso dibujar con la mano contraria.</li> "
+					+"<li>Mientras dibujas juega a trasladarte en el formato de la hoja, no hay necesidad de dibujar en orden las partes del rostro, puedes empezar con el ojo y con la línea continua dirigirte al mentón y luego al cabello.</li> "
+					+"<li>Es importante soltar la mano y no apoyarla sobre el papel para que tengas mayor movilidad, utiliza todo el formato de la hoja.</li> "
+					+"<li>Acompaña tu dibujo con música. El sonido influye en nuestros sentidos y te ayudará a darle ritmo, movimiento y fluidez a tu línea.</li> "
+					+"</ol>"
+					+"</p>");
 			}
 		}
 
@@ -88,7 +104,23 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_gesto.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-2.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-dibujo-por-tiempo");
-				$("#div-ejercicios a").data("info", "gesto");
+				$("#div-info-ejercicio").html("").html("<p><strong>Objetivo:</strong><br>Desarrollar trazos sueltos que contengan expresividad, conservando las formas generales del objeto que se va a dibujar.</p>"
+					+"<p><strong>Materiales:</strong>"
+					+"<ul>"
+					+"<li>Lápiz, tajalápiz, borrador.</li>"
+					+"<li>Hoja bond.</li>"
+					+"<li>Cronómetro.</li>"
+					+"<li>Regla.</li>"
+					+"<li>Modelo (objeto que se tenga a la mano como electrodoméstico, silla, florero, ropa, etc.)</li>"
+					+"</ul>"
+					+"</p>"
+					+"<p><strong>Paso a paso:</strong>"
+					+"<ol>"
+					+"<li>Elige un modelo real que tengas a mano, puede ser una silla, un electrodoméstico o algo que te interese dibujar.</li>"
+					+"<li>Divide una hoja bond en 8 partes iguales y prepara el cronómetro.</li>"
+					+"<li>Como lo indica la tabla, en cada parte elaborarás el mismo dibujo durante el tiempo indicado y observando cuidadosamente el modelo.</li>"
+					+"</ol>"
+					+"</p>");
 			}
 		}
 
@@ -98,7 +130,24 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_color.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-3.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-plano-de-color");
-				$("#div-ejercicios a").data("info", "color");
+				$("#div-info-ejercicio").html("").html("<p><strong>Objetivo:</strong><br>Leer visualmente y comprender la composición de las imágenes desde sus planos de color.</p>"
+					+"<p><strong>Materiales:</strong>"
+					+"<ul>"
+					+"<li>Lápiz, tajalápiz, borrador.</li>"
+					+"<li>Papel Durex, bond o acuarela.</li>"
+					+"<li>Colores o pintura acrílica.</li>"
+					+"<li>Pincel, paleta de mezcla.</li>"
+					+"</ul>"
+					+"</p>"
+					+"<p><strong>Paso a paso:</strong>"
+					+"<ol>"
+					+"<li>Elige una imagen a color, puede ser una fotografía de una persona o un animal.</li>"
+					+"<li>Selecciona los 5 colores que predominan en la imagen.</li>"
+					+"<li>Realiza el croquis de la imagen en una hoja aparte.</li>"
+					+"<li>Sectoriza los colores dentro del croquis.</li>"
+					+"<li>Pinta o colorea de forma plana cada sector delineado.</li>"
+					+"</ol>"
+					+"</p>");
 			}
 		}
 
@@ -116,7 +165,7 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios a").data("info", "creatividad");
 			}
 		}
-		
+
 		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-gesto" || $(this).attr("id") == "img-color"){
 			$("#div-comic .img-atras").data("atras", "submodulos");
 			$("#div-sub-modulos").hide();
@@ -146,25 +195,6 @@ $("#btns-mover-comic").on("click", "img", function() {
 			num_pag++;
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
 			$(this).attr("data-pagina", num_pag);
-		}
-	}
-});
-
-$("#div-ejercicios a").on("click", function() {
-	if($(this).attr("id") == "objetivos"){
-		switch($(this).data("info")){
-			case "linea":
-			$("#div-info-ejercicio").html("").html("Descubrir las variables posibles de la línea para generar conciencia sobre las diferentes formas de construir dibujo.");
-			break;
-			case "gesto":
-			$("#div-info-ejercicio").html("").html("Desarrollar trazos sueltos que contengan expresividad, conservando las formas generales del objeto que se va a dibujar.");
-			break;
-			case "color":
-			$("#div-info-ejercicio").html("").html("Leer visualmente y comprender la composición de las imágenes desde sus planos de color.");
-			break;
-			case "creatividad":
-			$("#div-info-ejercicio").html("").html("");
-			break;
 		}
 	}
 });
@@ -303,3 +333,4 @@ $("#btns-intro-aap img").click(function(){
 	}
 });
 });
+
