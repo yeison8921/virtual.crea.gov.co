@@ -271,10 +271,13 @@
               <div class="col-lg-2 text-center"><a href="#" id="btn-metodologia">METODOLOGÍA</a></div>
               <div class="col-lg-2 text-center"><a href="#" id="btn-creditos">CRÉDITOS</a></div>
             </div>
-            <div id="div-oculto" style="position: relative; top: 50%; height: 241px; width: 320px; left: 40%;">
-              <a href="#" id="btn-oculto">
-                <div style="height: 241px; width: 320px;"></div>
-              </a>
+            <div class="col-lg-12" style="top: 457px; padding-left: 55px;">
+              <div id="link-oculto" style="width: 120px; margin: auto;">
+                <!-- <a  href="#" style="border-style: solid; border-color: black;"> -->
+                  <img id="p-i" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png" height="100px">
+                  <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png" height="100px">
+                <!-- </a> -->
+              </div>
             </div>
             <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
               <div class="col-lg-12 text-center" id="div-tid-audivisuales">

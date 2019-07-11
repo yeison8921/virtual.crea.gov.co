@@ -714,6 +714,7 @@ table.dataTable.no-footer{
   background-repeat: no-repeat;
   font-family: 'Local Van Condensed Regular', Regular !important;
   background-image: url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');
+  /*background-image: url('audiovisuales/images/puerta_derecha.png'), url('audiovisuales/images/puerta_izquierda.png'), url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');*/
 }
 
 #div-cid-audivisuales{
@@ -751,6 +752,23 @@ table.dataTable.no-footer{
   #div-cid-audivisuales{
     height: 600px;
     color: white;
+  }
+  #link-oculto:hover>#p-i{
+    transform:translate(-50px);
+    transition: all 0.7s ease;
+  }
+
+  #link-oculto:hover>#p-d{
+    transform:translate(50px);
+    transition: all 0.7s ease;
+  } 
+
+  #p-i{
+    transition: all 0.7s ease;
+  }
+
+  #p-d{
+    transition: all 0.7s ease;
   } 
 }
 
