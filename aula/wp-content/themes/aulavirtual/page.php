@@ -256,6 +256,7 @@
         <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
         <div class="row">
           <div class="col-lg-12" id="contenedor-index-audiovisuales">
+            <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondo_introduccion_audiovisuales.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
             <div class="col-lg-12" id="div-desplazamiento" style="display: none;">
               <div class="col-lg-offset-2 col-lg-1">
                 <a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a>
@@ -264,20 +265,22 @@
                 <a href="#" id="btn-videoteca" style="color: white;">VIDEOTECA</a>
               </div>
             </div>
+            <div class="col-lg-12 col-md-12" id="div-oculto">
+              <a id="btn-oculto" href="#">
+                <div id="link-oculto"></div>
+                <div id="link-oculto2">
+                  <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png" style="position: absolute;    height: 107px;    margin: -5px -5px;">                  
+                  <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png" style="position: absolute;margin-left: 54px;    height: 107px;    margin-top: -5px;">
+                  <img src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png" style="position: absolute;z-index: -9;height: 109px;margin: -5px -5px;">
+                </div>
+              </a>
+            </div>
             <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
               <div class="col-lg-offset-1 col-lg-2 text-center"><a href="#" id="btn-introduccion">INTRODUCCIÓN</a></div>
               <div class="col-lg-2 text-center"><a href="#" id="btn-objetivos">OBJETIVOS</a></div>
               <div class="col-lg-2 text-center"><a href="#" id="btn-publico">PÚBLICO OBJETIVO</a></div>
               <div class="col-lg-2 text-center"><a href="#" id="btn-metodologia">METODOLOGÍA</a></div>
               <div class="col-lg-2 text-center"><a href="#" id="btn-creditos">CRÉDITOS</a></div>
-            </div>
-            <div class="col-lg-12" style="top: 457px; padding-left: 55px;">
-              <div id="link-oculto" style="width: 120px; margin: auto;">
-                <!-- <a  href="#" style="border-style: solid; border-color: black;"> -->
-                  <img id="p-i" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png" height="100px">
-                  <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png" height="100px">
-                <!-- </a> -->
-              </div>
             </div>
             <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
               <div class="col-lg-12 text-center" id="div-tid-audivisuales">
@@ -288,6 +291,27 @@
               </div>
               <div class="col-lg-offset-1 col-lg-10 text-center">
                 <a href="#" id="btn-regresar">REGRESAR</a>
+              </div>
+            </div>
+            <div id="div-rollover" style="display: none;">
+              <div id="div-principios" style="height: 100px; width: 120px; position: relative; top: 50%; left: 67%; transform: skew(172deg,189deg)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal-rollover" role="dialog">
+          <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
+                <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+                <div></div>
+              </div>
+              <div class="modal-body text-center" style="background-color: #24273a;">
+              </div>
+              <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
+                <div class="col-lg-offset-2 col-lg-8">
+                </div>
               </div>
             </div>
           </div>

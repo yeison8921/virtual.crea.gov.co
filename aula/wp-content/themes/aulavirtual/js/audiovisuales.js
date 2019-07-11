@@ -1,24 +1,43 @@
 jQuery(document).ready(function($){
 
-	fondo_1 = {
-		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_introduccion_audiovisuales.jpg")',
-	};
 	fondo_2 = {
-		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_modulos_audiovisuales.jpg")',
+		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_rollover_1.jpg")',
 	};
 	fondo_3 = {
 		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_videoteca_audiovisuales.jpg")',
 	}
 
+	$("#div-rollover div").click(function() {
+		switch($(this).attr("id")){
+			case "div-principios":
+			$("#div-rollover").css({'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_rollover_principios.jpg")'})
+			$("#modal-rollover").modal('show');
+			$(".modal-header div").html("").html("<h4 class='modal-title text-center' style='color:white; font-size: 50px;'><strong>EL DUEÑO DE LA LUZ</strong></h4>")
+			$(".modal-body").html("").html("<iframe width='660' height='415' src='https://www.youtube.com/embed/hewadP1sTic' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+			$(".modal-footer").children().html("").html("<a id='link-reto' href='#'><h4 class='modal-title' style='color:white; font-size: 30px;'><strong>RETO</strong></h4></a>");
+			break;
+		}
+	});
+
+	$(".modal-footer").on("click","#link-reto", function(){
+		console.log("this");
+		$(".modal-header div").html("").html("<h4 class='modal-title text-center' style='color:white; font-size: 50px;'><strong>RETO</strong></h4>")
+		$(".modal-body").html("").html("<iframe width='660' height='415' src='https://www.youtube.com/embed/v7lN69Qv1qQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+		$(".modal-footer").children().html("").html("<h4 class='modal-title' style='color:white; font-size: 30px;'><strong>FORO</strong></h4>");
+
+	});
+
 	$("#contenedor-index-audiovisuales a").click(function(){
+		$("#img-camara").hide();
+		$("#div-oculto").hide();
+		$("#div-info-basica-audiovisales").hide();
+		$("#div-info-detallada-audiovisuales").hide();
+		$("#contenedor-index-audiovisuales").css({"background-color":""});
+		$("#div-rollover").hide();
+		$("#contenedor-index-audiovisuales").css({'background-image': ""});
 		if($(this).attr('id') == "btn-introduccion" || $(this).attr('id') == "btn-objetivos" || $(this).attr('id') == "btn-metodologia" || $(this).attr('id') == "btn-publico" || $(this).attr('id') == "btn-creditos") {
-			$("#div-info-basica-audiovisales").hide();
-			$("#div-oculto").hide();
 			$("#div-info-detallada-audiovisuales").show();
-			$("#contenedor-index-audiovisuales").css({
-				"background-image": "url()",
-				"background-color": "#5cdfcf"
-			});
+			$("#contenedor-index-audiovisuales").css({"background-color":"#5cdfcf"});
 		}
 		switch($(this).attr('id')){
 			case "btn-introduccion":
@@ -48,29 +67,30 @@ jQuery(document).ready(function($){
 			$("#div-info-detallada-audiovisuales h1").text("").text("CRÉDITOS");
 			$("#div-info-detallada-audiovisuales p").html("").html("");
 			break;
+
 			case "btn-regresar":
-			$("#contenedor-index-audiovisuales").css(fondo_1);
+			$("#img-camara").show();
 			$("#div-info-basica-audiovisales").show();
 			$("#div-oculto").show();
-			$("#div-info-detallada-audiovisuales").hide();
 			break;
+
 			case "btn-oculto":
-			$("#div-info-basica-audiovisales").hide();
-			$("#contenedor-index-audiovisuales").css(fondo_2);
+			$("#div-rollover").show();
+			$("#div-rollover").css(fondo_2);
 			$("#div-desplazamiento").show();
-			$("#div-oculto").hide();
 			break;
 			case "btn-regresar-principal":
 			if($(this).attr("data-pagina") == 1){
 				$("#div-info-basica-audiovisales").show();
 				$("#div-desplazamiento").hide();
+				$("#img-camara").show();
 				$("#div-oculto").show();
-				$("#contenedor-index-audiovisuales").css(fondo_1);
 			}
 			if($(this).attr("data-pagina") == 2){
 				$("#btn-regresar-principal").attr("data-pagina", 1);
 				$("#btn-videoteca").show();
-				$("#contenedor-index-audiovisuales").css(fondo_2);
+				$("#div-rollover").show();
+				$("#div-rollover").css(fondo_2);
 			}
 			break;
 			case "btn-videoteca":

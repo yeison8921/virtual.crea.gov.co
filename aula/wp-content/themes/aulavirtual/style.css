@@ -709,12 +709,10 @@ table.dataTable.no-footer{
 
 /*Inicio estilos aula audiovisuales*/
 
-#contenedor-index-audiovisuales{
+#contenedor-index-audiovisuales, #div-rollover{
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Local Van Condensed Regular', Regular !important;
-  background-image: url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');
-  /*background-image: url('audiovisuales/images/puerta_derecha.png'), url('audiovisuales/images/puerta_izquierda.png'), url('audiovisuales/images/fondo_introduccion_audiovisuales.jpg');*/
 }
 
 #div-cid-audivisuales{
@@ -739,7 +737,7 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 891px) and (max-height: 1200px) {
-  #contenedor-index-audiovisuales{
+  #contenedor-index-audiovisuales, #div-rollover{
     background-size: auto 850px;
     height: 850px;
   }
@@ -753,28 +751,52 @@ table.dataTable.no-footer{
     height: 600px;
     color: white;
   }
-  #link-oculto:hover>#p-i{
-    transform:translate(-50px);
+  #link-oculto{
+    width: 165px;
+    height: 108px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 18px;
+    z-index: 99
+  }
+  #link-oculto:hover ~ #link-oculto2 #p-i{
+    transform:translate(-40px);
     transition: all 0.7s ease;
   }
-
-  #link-oculto:hover>#p-d{
-    transform:translate(50px);
+  #link-oculto:hover ~ #link-oculto2 #p-d{
+    transform:translate(40px);
     transition: all 0.7s ease;
   } 
-
-  #p-i{
+  #p-i, #p-d{
     transition: all 0.7s ease;
   }
+  #link-oculto2{
+    z-index: -999;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 60px;
+  }
+}
 
-  #p-d{
-    transition: all 0.7s ease;
-  } 
+@media (min-width: 1200px){
+ #div-oculto{
+  top: 491px;
+  padding-left: 55px;
+}
+
 }
 
 #div-info-basica-audiovisales{
   position: relative;
-  top: 90%;
+  top: 80%;
 }
 
 #contenedor-index-audiovisuales a{
