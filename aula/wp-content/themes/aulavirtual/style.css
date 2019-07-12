@@ -720,7 +720,7 @@ table.dataTable.no-footer{
 }
 
 @media (min-height: 0px) and (max-height: 890px){
-  #contenedor-index-audiovisuales{
+  #contenedor-index-audiovisuales, #div-rollover{
     background-size: auto 610px;
     height: 610px;
   } 
@@ -733,6 +733,69 @@ table.dataTable.no-footer{
   #div-cid-audivisuales{
     height: 360px;
     color: white;
+  }
+  #div-info-basica-audiovisales{
+    position: relative;
+    top: 75%;
+  }
+  #div-oculto{
+    top: 334px;
+    padding-left: 55px;
+  }
+  #link-oculto{
+    width: 120px;
+    height: 108px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 18px;
+    z-index: 99
+  }
+  #link-oculto:hover ~ #link-oculto2 #p-i{
+    transform:translate(-30px);
+    transition: all 0.7s ease;
+  }
+  #link-oculto:hover ~ #link-oculto2 #p-d{
+    transform: translate(30px);
+    transition: all 0.7s ease;
+  }
+  #link-oculto2{
+    z-index: -999;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 60px;
+  }
+  #circulo{
+    position: absolute;
+    z-index: -9;
+    height: 77px;
+    margin: 16px 9px;
+  }
+  #p-i{
+    margin: 16px 10px;
+  }
+  #p-d{
+    margin: 16px 50px;
+  }
+  #p-i, #p-d{
+    position: absolute;
+    height: 75px;
+    transition: all 0.7s ease;
+  }
+  #div-principios{
+    height: 100px;
+    width: 110px;
+    position: relative;
+    top: 47%;
+    left: 63%;
+    transform: skew(172deg,189deg);
   }
 }
 
@@ -751,6 +814,10 @@ table.dataTable.no-footer{
     height: 600px;
     color: white;
   }
+  #div-oculto{
+    top: 491px;
+    padding-left: 55px;
+  }
   #link-oculto{
     width: 165px;
     height: 108px;
@@ -767,11 +834,26 @@ table.dataTable.no-footer{
     transition: all 0.7s ease;
   }
   #link-oculto:hover ~ #link-oculto2 #p-d{
-    transform:translate(40px);
+    transform: translate(40px);
     transition: all 0.7s ease;
-  } 
+  }
+  #p-i{
+    margin: -5px -5px;
+  }
+  #p-d{
+    margin-left: 54px;
+    margin-top: -5px;
+  }
   #p-i, #p-d{
+    position: absolute;
+    height: 107px;
     transition: all 0.7s ease;
+  }
+  #circulo{
+    position: absolute;
+    z-index: -9;
+    height: 109px;
+    margin: -5px -5px;
   }
   #link-oculto2{
     z-index: -999;
@@ -784,20 +866,21 @@ table.dataTable.no-footer{
     margin: auto;
     padding-left: 60px;
   }
+  #div-principios{
+    height: 100px;
+    width: 120px;
+    position: relative;
+    top: 50%;
+    left: 67%;
+    transform: skew(172deg,189deg);
+  }
+  #div-info-basica-audiovisales{
+    position: relative;
+    top: 80%;
+  }
 }
 
-@media (min-width: 1200px){
- #div-oculto{
-  top: 491px;
-  padding-left: 55px;
-}
 
-}
-
-#div-info-basica-audiovisales{
-  position: relative;
-  top: 80%;
-}
 
 #contenedor-index-audiovisuales a{
   text-decoration: none;

@@ -257,7 +257,7 @@
         <div class="row">
           <div class="col-lg-12" id="contenedor-index-audiovisuales">
             <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondo_introduccion_audiovisuales.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
-            <div class="col-lg-12" id="div-desplazamiento" style="display: none;">
+            <div class="col-lg-offset-1 col-lg-10" id="div-desplazamiento" style="display: none;">
               <div class="col-lg-offset-2 col-lg-1">
                 <a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a>
               </div>
@@ -269,9 +269,9 @@
               <a id="btn-oculto" href="#">
                 <div id="link-oculto"></div>
                 <div id="link-oculto2">
-                  <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png" style="position: absolute;    height: 107px;    margin: -5px -5px;">                  
-                  <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png" style="position: absolute;margin-left: 54px;    height: 107px;    margin-top: -5px;">
-                  <img src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png" style="position: absolute;z-index: -9;height: 109px;margin: -5px -5px;">
+                  <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png">                  
+                  <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png">
+                  <img id="circulo" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png">
                 </div>
               </a>
             </div>
@@ -294,7 +294,7 @@
               </div>
             </div>
             <div id="div-rollover" style="display: none;">
-              <div id="div-principios" style="height: 100px; width: 120px; position: relative; top: 50%; left: 67%; transform: skew(172deg,189deg)"></div>
+              <div id="div-principios"></div>
             </div>
           </div>
         </div>
