@@ -20,10 +20,9 @@ jQuery(document).ready(function($){
 	});
 
 	$(".modal-footer").on("click","#link-reto", function(){
-		console.log("this");
 		$(".modal-header div").html("").html("<h4 class='modal-title text-center' style='color:white; font-size: 50px;'><strong>RETO</strong></h4>")
 		$(".modal-body").html("").html("<iframe width='660' height='415' src='https://www.youtube.com/embed/v7lN69Qv1qQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-		$(".modal-footer").children().html("").html("<h4 class='modal-title' style='color:white; font-size: 30px;'><strong>FORO</strong></h4>");
+		$(".modal-footer").children().html("").html("<a id='link-foro' target='_blank' href='"+ $("#url").val() + "/foro-audiovisuales/topic/reto-fotografia'><h4 class='modal-title' style='color:white; font-size: 30px;'><strong>FORO</strong></h4></a>");
 
 	});
 

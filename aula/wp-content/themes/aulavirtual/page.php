@@ -253,6 +253,7 @@
       <?php endif; ?>
 
       <?php if(is_page("Introducción aula audiovisuales")) :?>
+        <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
         <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
         <div class="row">
           <div class="col-lg-12" id="contenedor-index-audiovisuales">
