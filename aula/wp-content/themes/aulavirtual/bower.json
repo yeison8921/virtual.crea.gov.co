@@ -1,0 +1,22 @@
+{
+  "name": "aula_virtual_crea",
+  "description": "Dependencias aula virtual crea",
+  "main": "",
+  "authors": [
+    "Yeison Briceño"
+  ],
+  "license": "MIT",
+  "homepage": "https://virtual.crea.gov.co",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v3.3.7",
+    "jquery": "^3.4.1"
+  }
+}

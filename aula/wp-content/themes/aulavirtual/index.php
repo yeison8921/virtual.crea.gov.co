@@ -1,59 +1,81 @@
 <?php get_header(); ?>
 <div class="container-fluid">
-  <div class="row bg">
-    <div class="row col-lg-offset-5 col-md-offset-1 index-titulo">
-      <h1 style="text-align: left;">Aula Virtual</h1>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/introduccion-aula-artes-plasticas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_plasticas.png"><br>
-        Artes plásticas</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/arte-dramatico" ><img src="<?php bloginfo('template_url'); ?>/images/icono_arte_dramatico.png"><br>
-        Arte dramático</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/artes-electronicas" ><img src="<?php bloginfo('template_url'); ?>/images/icono_artes_eletronicas.png"><br>
-        Artes electrónicas</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/introduccion-aula-audiovisuales" ><img src="<?php bloginfo('template_url'); ?>/images/icono_audiovisuales.png"><br>
-        Audiovisuales</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/creacion-literaria" ><img src="<?php bloginfo('template_url'); ?>/images/icono_creacion_literatura.png"><br>
-        Creación literaria</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza" ><img src="<?php bloginfo('template_url'); ?>/images/icono_danza.png"><br>
-        Danza</a>
-      </div>
-      <div class="col-lg-1-7 col-md-1-7 col-xs-1-6-12 col-xs-12 col-sm-1-7">
-        <a href="<?php bloginfo('url'); ?>/introduccion-aula-musica" ><img src="<?php bloginfo('template_url'); ?>/images/icono_musica.png"><br>
-        Música</a>
-      </div>
-    </div>
-    <?php get_footer(); ?>
-  </div>
-</div>
+  <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+  <section id="carousel">
+    <div class="row">
+      <div id="carousel-index" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active slide-index" id="slide1"></div>
+          <div class="item slide-index" id="slide2"></div>
+          <div class="item slide-index" id="slide3"></div>
+          <div class="item slide-index" id="slide4"></div>
+          <div class="col-lg-12" style="position: absolute; top: 5%;">
+            <div class="col-lg-offset-2 col-lg-8 col-md-12" id="div-logo-index">
+              <div style="float: left;">
+               <img src="<?php bloginfo('template_url'); ?>/index/Logo_crea.png" style="height: 80px;">
+             </div>
+             <div style="float: right;">
+              <h3><strong>Nosotros</strong></h3>
+              <?php wp_nav_menu(array(
+                'container' => 'div',
+                'items_wrap' => '<ul>%3$s</ul>',
+                'theme_location' => 'nosotros'
+              )); ?>
+            </div>
+          </div>
+          <div class='col-lg-offset-5 col-lg-2 col-md-offset-4 col-md-4 text-center' id="div-titulo-index">
+            <h1>Aula Virtual</h1>
+            <hr>
+            <h2>Áreas artísticas</h2>
+          </div>
 
-<!-- Código para mostrar entradas
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div class="col-12 col-sm-6 col-md-4 mb-3">
-    <div class="card">
-      <a href="<?php the_permalink(); ?>">
-        <?php if(has_post_thumbnail()){
-          the_post_thumbnail('post-thumbnails', array('class' => 'card-img-top img-responsive'));
-        }?>
-      </a>
-      <div class="card-body">
-        <a href="<?php the_permalink(); ?>"><h4 class="card-title"><?php the_title(); ?></h4></a>
-        <p class="card-text"><?php the_excerpt(); ?></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted"><?php echo get_the_date(); ?> / <?php the_category(', '); ?> / <?php the_author(); ?></small>
+          <div class='col-lg-12 col-md-12 text-center' id="div-areas-index">
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_musica.png" id="img-musica" width="120px">
+                <span>Música<br>&nbsp</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_plasticas.png" id="img-plasticas" width="120px">
+                <span>Artes<br>plásticas</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_literatura.png" id="img-literatura" width="120px">
+                <span>Creación<br>literaria</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_danza.png" id="img-danza" width="120px">
+                <span>Danza<br>&nbsp</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_dramatico.png" id="img-dramatico" width="120px">
+                <span>Arte<br>dramático</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_audiovisuales.png" id="img-audiovisuales" width="120px">
+                <span>Audiovisuales<br>&nbsp</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/index/normal_electronicas.png" id="img-electronicas" width="120px">
+                <span>Artes<br>electrónicas</span>
+              </a>
+            </div>
+          </div>  
+        </div>
       </div>
     </div>
   </div>
-<?php endwhile; endif; ?>
-Fin código para mostrar entradas -->
-<!-- <?php get_footer(); ?> -->
+</section>
+<?php get_footer(); ?>

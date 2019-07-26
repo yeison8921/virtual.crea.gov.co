@@ -27,212 +27,289 @@ Tags: aula, virtual, CREA, idartes, artistica
 
 /*********** Grid **********/
 
-html, body {
-  height: 100%; /*Fixes the height to 100% of the viewport*/
-}
+/*html, body {
+  height: 900px
+  }*/
+/*
 
 body {
   min-height: 1000px;
   padding-top: 50px;
-}
+  }*/
 
-.bg{
-  background-image: url("images/ip5.png");
-}
-
-#contenedor-index-danza{
-  background-image: url('danza/images/fondo_aula_danza - copia.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 700px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#contenedor-aula-danza{
-  background-image: url('danza/images/fondo_aula_modulos_2.jpg');
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 750px;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 18px;
-  color: #591508;
-}
-
-.tit-enc{
-  color: #425c2f;
-  font-family: 'Local Van Condensed Bold' !important;
-  font-size: 50px;
-}
-
-@media (min-width: 1200px){
-  .col-lg-1-7{
-    width: 14%;
-    float: left;
-    text-align: center;
+  body{
+    font-family: 'Local Van Condensed Regular', Regular !important;
   }
+
   .bg{
-    height: 900px;
+    background-image: url("images/ip5.png");
+  }
+
+  #contenedor-index-danza{
+    background-image: url('danza/images/fondo_aula_danza - copia.jpg');
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    height: 700px;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .div-con-gir-uno{
-    overflow: auto;
-    height: 500px;
-  }
-}
 
-@media (min-width: 992px){
-  .btn-unsel, .btn-sel{
-    font-size: 18px;
-  }
-  .div-con-rec-uno .btn, .div-con-rec-dos .btn{
-    width: 350px;
-  }
-  .div-con-rec-uno, .div-con-rec-dos{
-    height: 500px;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 992px){
-  .btn-unsel .btn-sel{
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .col-md-1-7{
-    width: 14%;
-    position: left;
-    float: left;
-    text-align: center;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .col-md-1-7{
-    width: 14%;
-    float: left;
-    text-align: center;
-  }
-  .col-md-1-5{
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .col-sm-1-7{
-    width: 14%;
-    float: left;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px){
-  .col-xs-1-6{
-    width: 33%;
-    text-align: center;
-  }
-  .col-xs-1-6-12{
-    width: 100%;
-    text-align: center;
-  }
-  #contenedor-aula-musica{
-    height: 100%;
-  }
-  .tit-enc{
-    font-size: 45px;
-  }
-}
-
-@media (min-width: 769px){
-  #contenedor-aula-musica{
-    height: 100vh;
-  }
-  .tit-enc{
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 767px){
-  .col-xs-12{
-    width: 100%;
-    text-align: center;
-  }
-  #div-logo-bogota, #div-logo-crea{
-    display: none;
-  }
-
-}
-
-@media (min-width: 0px) and (max-width: 1200px){
-  .bg{
-    height: 100vh;
-    background-position: center;
+  #contenedor-aula-danza{
+    background-image: url('danza/images/fondo_aula_modulos_2.jpg');
+    background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: scroll;
+    height: 750px;
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    font-size: 18px;
+    color: #591508;
   }
-}
 
-/*********** Estilo index **********/
+  .tit-enc{
+    color: #425c2f;
+    font-family: 'Local Van Condensed Bold' !important;
+    font-size: 50px;
+  }
 
-.index-titulo{
-  position: relative;
-  top: 150px;
-  text-align: center;
-  color: white;
-}
-.index-titulo img{
-  width: 70px;
-}
+  @media (min-width: 1200px){
+    .col-lg-1-7{
+      width: 14%;
+      float: left;
+      text-align: center;
+    }
+    .bg{
+      height: 900px;
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .div-con-gir-uno{
+      overflow: auto;
+      height: 500px;
+    }
+  }
 
-.index-titulo a{
-  color: white;
-  text-decoration: none;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 16px;
-}
+  @media (min-width: 992px){
+    .btn-unsel, .btn-sel{
+      font-size: 18px;
+    }
+    .div-con-rec-uno .btn, .div-con-rec-dos .btn{
+      width: 350px;
+    }
+    .div-con-rec-uno, .div-con-rec-dos{
+      height: 500px;
+    }
+  }
 
-.index-menu {
-  position: relative;
-  color: white;
-  top: 35%;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 16px;
-}
+  @media (min-width: 0px) and (max-width: 992px){
+    .btn-unsel .btn-sel{
+      font-size: 15px;
+    }
+  }
 
-.index-menu ul{
-  list-style-type: none;
-  padding-left: 0;
-}
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    .col-md-1-7{
+      width: 14%;
+      position: left;
+      float: left;
+      text-align: center;
+    }
+  }
 
-.index-menu li a{
-  text-decoration: none;
-  color: white;
-  text-align: left;
-}
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .col-md-1-7{
+      width: 14%;
+      float: left;
+      text-align: center;
+    }
+    .col-md-1-5{
+      width: 20%;
+      float: left;
+    }
+  }
 
-.index-logos{
-  top: 32%;
-}
+  @media (min-width: 768px) and (max-width: 992px) {
+    .col-sm-1-7{
+      width: 14%;
+      float: left;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px){
+    .col-xs-1-6{
+      width: 33%;
+      text-align: center;
+    }
+    .col-xs-1-6-12{
+      width: 100%;
+      text-align: center;
+    }
+    #contenedor-aula-musica{
+      height: 100%;
+    }
+    .tit-enc{
+      font-size: 45px;
+    }
+  }
+
+  @media (min-width: 769px){
+    #contenedor-aula-musica{
+      height: 100vh;
+    }
+    .tit-enc{
+      font-size: 50px;
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 767px){
+    .col-xs-12{
+      width: 100%;
+      text-align: center;
+    }
+    #div-logo-bogota, #div-logo-crea{
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 0px) and (max-width: 1200px){
+    .bg{
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: scroll;
+    }
+  }
+
+  /*********** Estilo index **********/
+
+  .index-titulo{
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: white;
+  }
+  .index-titulo img{
+    width: 70px;
+  }
+
+  .index-titulo a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    font-size: 16px;
+  }
+
+  .index-menu {
+    position: relative;
+    color: white;
+    top: 35%;
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    font-size: 16px;
+  }
+
+  .index-menu ul{
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .index-menu li a{
+    text-decoration: none;
+    color: white;
+    text-align: left;
+  }
+
+  .index-logos{
+    top: 32%;
+  }
 
 
-h1{
-  font-family: 'Local Van Condensed Bold' !important;
-  font-size: 80px;
-}
-label{
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 14px;
-}
+  h1{
+    font-family: 'Local Van Condensed Bold' !important;
+    font-size: 80px;
+  }
+  label{
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    font-size: 14px;
+  }
 
-/*********** Estilo footer **********/
+  /*********** Estilo footer **********/
 
-.bg .footer{
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  #slide1{
+    background-image: url('index/Foto_back_1.jpg');
+  }
+
+  #slide2{
+    background-image: url('index/Foto_back_2.jpg');
+  }
+
+  #slide3{
+    background-image: url('index/Foto_back_3.png');
+  }
+
+  #slide4{
+    background-image: url('index/Foto_back_4.png');
+  }
+
+  .slide-index{
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+  }
+
+  #div-areas-index div{
+    display: inline-block;
+  }
+
+  #div-areas-index span{
+    display: block;
+  }
+
+  #div-areas-index a{
+    text-decoration: none;
+    color: white;
+  }
+
+  #div-titulo-index{
+    color: white;
+  }
+
+  hr{
+    border: 1px solid #b1d400;
+  }
+
+  #div-logo-index{
+    color: white;
+  }
+
+  #div-logo-index ul{
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  #div-logo-index li a{
+    text-decoration: none;
+    color: white;
+    text-align: left;
+  }
+
+  .carousel-inner > .item {
+    height: 700px;
+  }
+
+  #footer{
+    background-image: url('index/Footer_back.png');
+    color: white;
+    height: 185px;
+  }
+
+/*.bg .footer{
   background-color: transparent;
   position: relative;
   top: 30%;
@@ -263,213 +340,213 @@ label{
 
 .footer address a:hover{
   color: black;
-}
+  }*/
 
-/*********************/
+  /*********************/
 
-.btn-index-danza-pri {
-  background-color: #ffffff;
-  border-radius: 7px;
-  border-color: #803335;
-  color: #581508;
-  border-width: 3px;
-  height: 44px;
-  font-size: 22px;
-  margin-bottom: 2px;
-}
+  .btn-index-danza-pri {
+    background-color: #ffffff;
+    border-radius: 7px;
+    border-color: #803335;
+    color: #581508;
+    border-width: 3px;
+    height: 44px;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
 
-.btn-index-danza-sec{
-  background-color: #ffffff;
-  border-radius: 8px;
-  border-color: #803335;
-  color: #581508;
-  border-width: 0.5px;
-  height: 35px;
-  font-size: 20px;
-}
+  .btn-index-danza-sec{
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-color: #803335;
+    color: #581508;
+    border-width: 0.5px;
+    height: 35px;
+    font-size: 20px;
+  }
 
-.btn-index-danza-pri:hover, .btn-index-danza-pri:focus, .btn-index-danza-sec:hover, .btn-index-danza-sec:focus{
-  text-decoration: none !important;
-  color: #581508 !important;
-}
+  .btn-index-danza-pri:hover, .btn-index-danza-pri:focus, .btn-index-danza-sec:hover, .btn-index-danza-sec:focus{
+    text-decoration: none !important;
+    color: #581508 !important;
+  }
 
-.btn-unsel{
-  background-color: #ffffff;
-  border-radius: 10px;
-  color: #581508;
-  border-color:#666666;
-  border-width: 0.5px;
-  height: 30px;
-  margin-bottom: 20px;
-}
+  .btn-unsel{
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #581508;
+    border-color:#666666;
+    border-width: 0.5px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
 
-.btn-sel{
-  background-color: #ea7178; 
-  border-radius: 10px; 
-  color: #ffffff; 
-  border-color:#5e2d30; 
-  border-width: 0.5px; 
-  height: 30px;
-  margin-bottom: 20px;
-}
+  .btn-sel{
+    background-color: #ea7178; 
+    border-radius: 10px; 
+    color: #ffffff; 
+    border-color:#5e2d30; 
+    border-width: 0.5px; 
+    height: 30px;
+    margin-bottom: 20px;
+  }
 
-.navbar{
-  background-color: #ff3c36;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 26px;
-  border-color: #ff3c36;
-}
+  .navbar{
+    background-color: #ff3c36;
+    font-family: 'Local Van Condensed Regular', Regular !important;
+    font-size: 26px;
+    border-color: #ff3c36;
+  }
 
-.navbar-nav li a{
-  border-radius: 5px;
-  color:white !important;
-}
+  .navbar-nav li a{
+    border-radius: 5px;
+    color:white !important;
+  }
 
-.navbar-nav li a:hover{
-  background-color: #cd2924 !important;
-  border-radius: 5px;
-}
-.navbar-brand{
-  color:white !important;
-  font-size: 26px;
-}
+  .navbar-nav li a:hover{
+    background-color: #cd2924 !important;
+    border-radius: 5px;
+  }
+  .navbar-brand{
+    color:white !important;
+    font-size: 26px;
+  }
 
-.p-modal{
-  background-color: rgba(33, 156, 211, 1);
-  color:white;
-  font-size: 16px;
-  border-radius: 5px;
-  text-align: center;
+  .p-modal{
+    background-color: rgba(33, 156, 211, 1);
+    color:white;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
 
-}
+  }
 
-.b-index{
-  margin-top: 30px;
-}
+  .b-index{
+    margin-top: 30px;
+  }
 
-table.dataTable thead th, table.dataTable thead td{
-  border-bottom: 1px solid #999  !important;
-}
-table.dataTable.no-footer{
-  border-bottom: 1px solid #999 !important;
-}
+  table.dataTable thead th, table.dataTable thead td{
+    border-bottom: 1px solid #999  !important;
+  }
+  table.dataTable.no-footer{
+    border-bottom: 1px solid #999 !important;
+  }
 
-#map{
-  width: 100%;
-  height: 400px;
-}
-
-
-/*Estilos index aula danza */
-#div-inicio-curso-danza{
-  top: 50%;
-  position: relative;
-}
-
-#div-encabezado-info-aula-danza{
-  position: relative;
-  top: 40%;
-}
-
-#div-info-aula-danza {
-  position: relative;
-  top: 55%;
-}
-
-#div-info-detallada-danza p{
-  overflow: auto;
-  height: 400px;
-}
-
-#div-info-detallada-danza h2{
-  color: white;
-}
-
-#div-info-detallada-danza{
-  top: 15%;
-  font-size: 18px;
-}
-/* Fin estilos index aula danza*/
+  #map{
+    width: 100%;
+    height: 400px;
+  }
 
 
-/*Estilos aula danza */
-#div-regresar-modulo{
-  text-align: left;
-  padding-left: 30px;
-}
+  /*Estilos index aula danza */
+  #div-inicio-curso-danza{
+    top: 50%;
+    position: relative;
+  }
 
-#div-video-aula-danza{
-  position: relative;
-  top: 7%;
-}
+  #div-encabezado-info-aula-danza{
+    position: relative;
+    top: 40%;
+  }
 
-#div-modulos-aula-danza{
-  position: relative;
-  top: 15%;
-}
+  #div-info-aula-danza {
+    position: relative;
+    top: 55%;
+  }
 
-#div-reconocimiento-corporal{
-  position: relative;
-  top: 10%;
-  height: 100%;
-}
+  #div-info-detallada-danza p{
+    overflow: auto;
+    height: 400px;
+  }
 
-#div-actividades-reconocimiento-corporal{
-  position: relative;
-  top: -5%;
-}
+  #div-info-detallada-danza h2{
+    color: white;
+  }
 
-#div-video-reconocimiento-corporal{
-  position: relative;
-  top: -40px;
-}
-#div-rompecabezas-reconocimiento-corporal{
-  position: relative;
-  top: -40px;
-  height: 630px;
-}
+  #div-info-detallada-danza{
+    top: 15%;
+    font-size: 18px;
+  }
+  /* Fin estilos index aula danza*/
 
-/* Fin estilos aula danza*/
 
-#div-dropdown-modulo-danza {
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
+  /*Estilos aula danza */
+  #div-regresar-modulo{
+    text-align: left;
+    padding-left: 30px;
+  }
 
-#div-dropdown-modulo-danza .dropdown-menu {
-  padding: 0px 0;
-  margin: 0px 0 0;
-  background-color: #fff0;
-  border: 0px solid #ccc;
-  border: 0px solid rgba(0,0,0,.15);
-  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
-  box-shadow: 0 0px 0px rgba(0,0,0,.175);
-}
+  #div-video-aula-danza{
+    position: relative;
+    top: 7%;
+  }
 
-#div-dropdown-modulo-danza .dropdown-menu>li>a {
-  padding: 1px 0px;
-}
-#div-dropdown-modulo-danza .btn {
-  padding: 0px 0px;
-}
+  #div-modulos-aula-danza{
+    position: relative;
+    top: 15%;
+  }
 
-.img-padding{
-  padding-bottom: 10px;
-}
+  #div-reconocimiento-corporal{
+    position: relative;
+    top: 10%;
+    height: 100%;
+  }
 
-#div-mod-enc{
- background-image: url('danza/images/header.jpg');
- background-position: left top;
- background-repeat: no-repeat;
- background-size: cover;
- display: flex;
- align-items: center;
- height: 80px;
-}
+  #div-actividades-reconocimiento-corporal{
+    position: relative;
+    top: -5%;
+  }
 
-.div-modulos img{
+  #div-video-reconocimiento-corporal{
+    position: relative;
+    top: -40px;
+  }
+  #div-rompecabezas-reconocimiento-corporal{
+    position: relative;
+    top: -40px;
+    height: 630px;
+  }
+
+  /* Fin estilos aula danza*/
+
+  #div-dropdown-modulo-danza {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #div-dropdown-modulo-danza .dropdown-menu {
+    padding: 0px 0;
+    margin: 0px 0 0;
+    background-color: #fff0;
+    border: 0px solid #ccc;
+    border: 0px solid rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
+    box-shadow: 0 0px 0px rgba(0,0,0,.175);
+  }
+
+  #div-dropdown-modulo-danza .dropdown-menu>li>a {
+    padding: 1px 0px;
+  }
+  #div-dropdown-modulo-danza .btn {
+    padding: 0px 0px;
+  }
+
+  .img-padding{
+    padding-bottom: 10px;
+  }
+
+  #div-mod-enc{
+   background-image: url('danza/images/header.jpg');
+   background-position: left top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   height: 80px;
+ }
+
+ .div-modulos img{
   height: 220px;
 }
 

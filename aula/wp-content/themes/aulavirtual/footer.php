@@ -1,4 +1,4 @@
-<footer class="footer">
+<!-- <footer class="footer">
 	<div class="container-fluid">
 		<div class="col-lg-offset-5 col-lg-7">
 			<div class="col-lg-3 col-md-3 col-sm-3">
@@ -30,7 +30,16 @@
 			<img src="<?php bloginfo('template_url'); ?>/images/logo-alcaldia-header.png">
 		</div>
 	</div>
-</footer>
+</footer> -->
+<div class="row" id="footer">
+	<div class="col-lg-12 text-center" style="margin-top: 40px;">
+		<img src="<?php bloginfo('template_url'); ?>/index/Logo_alcaldía.png">
+	</div>
+	<div class="col-lg-12 text-center" style="margin-top: 30px;">
+		<p><strong>Contáctanos</strong> Dirección: Carrera 8 # 15 - 46 / Teléfono: (571) - 3795750 / Email: contactenos@idartes.gov.co</p>
+	</div>
+</div>
 <?php wp_footer(); ?>
+</div>
 </body>
 </html>
