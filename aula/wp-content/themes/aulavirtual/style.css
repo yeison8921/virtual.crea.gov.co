@@ -260,7 +260,7 @@ body {
   .slide-index{
     background-position: center;
     background-repeat: no-repeat;
-    /*background-size: cover;*/
+    background-size: cover;
   }
 
   #div-areas-index div{
