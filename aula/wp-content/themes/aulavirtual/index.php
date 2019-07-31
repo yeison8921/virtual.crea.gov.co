@@ -37,7 +37,7 @@
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="<?php bloginfo('url'); ?>/introduccion-aula-artes-plasticas">
                 <img src="<?php bloginfo('template_url'); ?>/index/normal_plasticas.png" id="img-plasticas" width="120px">
                 <span>Artes<br>plásticas</span>
               </a>

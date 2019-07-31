@@ -106,6 +106,11 @@ jQuery(document).ready(function($){
 		}
 
 		if($(this).attr("id") == "img-color"){
+			if($(this).data("ejercicio") == "comic"){
+				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/color/img_viñeta_1.jpg");
+				$("#btns-mover-comic img").data("comic", "color");
+				$("#btns-mover-comic img").data("total", "14");
+			}
 			if($(this).data("ejercicio") == "ejercicio"){
 				$($("#div-ejercicios div")[1]).html("").html("PLANOS DE COLOR");
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_color.png");
@@ -154,7 +159,7 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios").show();
 			}
 		}
-		if($(this).attr("id") == "img-brujula" || $(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea"){
+		if($(this).attr("id") == "img-brujula" || $(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-color"){
 			if($(this).data("ejercicio") == "comic"){
 				$("#div-comic").show();
 				num_pag = 1;
