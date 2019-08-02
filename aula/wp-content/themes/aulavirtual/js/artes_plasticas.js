@@ -148,7 +148,35 @@ jQuery(document).ready(function($){
 				$("#div-ejercicios img").not(".img-atras").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/submodulos/img_creatividad.png");
 				$("#div-ejercicios #img-pajaro").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/fondo-ejercicio-4.jpg");
 				$("#div-ejercicios #a-foro").attr("href", $("#url").val() + "/foros/topic/ejercicio-llego-el-momento");
-				$("#div-ejercicios a").data("info", "creatividad");
+				$("#div-info-ejercicio").html("").html("<p>Junto a Viaticum realizaremos un ejercicio en el que pondrás en práctica todo lo aprendido, teniendo en cuenta los 3 elementos:</p>"+
+					"<ul>"+
+					"<li>Punto y Línea</li>"+
+					"<li>Gesto</li>"+
+					"<li>Color</li>"+
+					"</ul>"+
+					"<p><strong>EN ESTA OCASIÓN ELABORAREMOS UN AUTORRETRATO</strong></p>"+
+					"</p>El autorretrato implica observarnos detenidamente, conocernos, expresar emociones, y sobre todo, fascinarnos con nuestra geografía corporal.</p>"+
+					"<p>Materiales</p>"+
+					"<ul>"+
+					"<li>Hojas Bond Blancas 1/8</li>"+
+					"<li>Lápiz HB, tajalápiz, borrador y Colores</li>"+
+					"<li>Un espejo</li>"+
+					"</ul>"+
+					""+
+					"<p>¡Comencemos a volar!</p>"+
+					"<ol>"+
+					"<li>Durante este ejercicio, necesitaremos que te observes constantemente en un espejo.</li>"+
+					"<li>Define que quieres en tu autorretrato, ¿cómo quieres representarte, que gestos, que sensaciones quieres transmitir?</li>"+
+					"<li>Una vez ya tengas definido como quieres dibujarte… ¡comenzamos!</li>"+
+					"<li>Con el lápiz, dibuja suavemente el contorno: La forma de tu cara, el pelo, los ojos y la nariz.</li>"+
+					"<li>Ve definiendo las líneas de tu rostro que sean más fuertes, aumenta la presión del lápiz en estos lugares.</li>"+
+					"<li>Suelta la línea, no te preocupes por la perfección. Recuerda el gesto, tu impronta, tu estilo, eso es lo que hará de tu dibujo, una obra de arte única."+
+					"<p></p><p><strong>Antes de continuar tómale una foto, es importante registrar tu proceso para compartirlo.</strong></p></li>"+
+					"<li>Una vez ya tengas una estructura de líneas que te guste, te invitamos a explorar con el color. Para esta ocasión te proponemos colorear de forma firme, para lograr planos de color en tu rostro, al mejor estilo de Beatriz Gonzales o Carlos Villabón.</li>"+
+					"<li>Usa colores fuertes y acordes a la sensación que quieres transmitir.</li>"+
+					"<li>Comparte tu resultado en nuestra galería de fotos, para que toda la comunidad de Aula Virtual pueda disfrutar de tu creación.</li>"+
+					"</ol>");
+				//$("#div-ejercicios a").data("info", "creatividad");
 			}
 		}
 
@@ -286,6 +314,10 @@ $("#btns-intro-aap img").click(function(){
 	$("#div-img-viaje").hide();
 	$("#btns-intro-aap").hide();
 	$("#div-info-detallada-aap").show();
+	$("#div-info-detallada-aap p").css({
+		"left": "",
+		"right": ""
+	});
 	switch($(this).attr("id")){
 		case "img-intro-aap":
 		$("#div-info-detallada-aap").css(fondo_introduccion);
@@ -295,7 +327,7 @@ $("#btns-intro-aap img").click(function(){
 		$("#div-info-detallada-aap").css(fondo_objetivos);
 		$("#div-info-detallada-aap p").css({
 			"left": "45%",
-			"right": "20%"
+			"right": "25%"
 		});
 		$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
 			"Objetivos específicos:<br>"+

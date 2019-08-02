@@ -989,7 +989,7 @@ body {
 }
 
 #div-mapa-mundi{
-  background-image: url("artes_plasticas/images/imagen.png"), url("artes_plasticas/images/fondo.png");
+  background-image: url("artes_plasticas/images/imagen.png");
 }
 
 #div-modulos-aap{
@@ -1001,8 +1001,8 @@ body {
 }
 
 #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
-  background-position: 50% 50%, center;
-  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 #div-img-viaje img:hover, #div-colombia img:hover{
@@ -1034,7 +1034,7 @@ body {
     background-size: auto 580px;
   }
   #div-info-detallada-aap p{
-    font-size: 20px;
+    font-size: 17px;
     left: 27%;
     right: 40%;
     top: 15%;
@@ -1046,41 +1046,40 @@ body {
 
   #div-colombia img {
     position: relative;
-    top: 155px;
-    left: -67px;
+    top: 53%;
+    left: -8%;
     width: 25px;
     transition: all 0.7s ease;
   }
-
+  #div-pergamino img {
+    width: 200px;
+    position: absolute;
+    top: 75%;
+    left: 58%;
+  }
   #div-imgs-modulos-app img{
     position: absolute;
     width: 90px;
   }
-
   #div-imgs-modulos-app #img-brujula{
     top: 220px;
     left: 290px;
   }
-
   #div-imgs-modulos-app #img-lupa{
     top: 260px;
     left: 405px;
   }
-
   #div-imgs-modulos-app #img-compas{
     top: 220px;
     left: 525px;
   }
-
   #div-imgs-modulos-app #img-telescopio{
     top: 350px;
     left: 290px;
   }
-
   #img-comic{
     height: 400px;
   }
-
   .mover-comic{
     height: 100px;
   }
@@ -1107,17 +1106,22 @@ body {
     height: 20%
   }
   #div-info-detallada-aap p {
-    font-size: 25px;
+    font-size: 23px;
     left: 20%;
     right: 40%;
     top: 20%;
   }
   #div-colombia img {
     position: relative;
-    top: 245px;
-    left: -85px;
+    top: 57%;
+    left: -11%;
     width: 40px;
     transition: all 0.7s ease;
+  }
+  #div-pergamino{
+    position: absolute;
+    top: 70%;
+    left: 63%;
   }
   #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
     background-size: auto, cover;

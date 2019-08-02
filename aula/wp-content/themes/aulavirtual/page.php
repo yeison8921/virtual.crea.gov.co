@@ -642,6 +642,11 @@
                 <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/mapa_colombia.png" id="img-colombia">
               </a>
             </div>
+            <div id="div-pergamino">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/pergamino.png" id="img-pergamino">
+              </a>
+            </div>
           </div>
           <div class="col-lg-12 text-center" id="div-modulos-aap" style="display: none;">
             <div class="col-lg-12">
@@ -725,9 +730,9 @@
             <div class="col-lg-3 col-md-3 text-right" style="height: 90%;">
               <img src="" id="img-pajaro" style="margin-top: 200px;">
             </div>
-            <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 75%;">
+            <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 70%; font-size: 23px; overflow-y: scroll;">
             </div>
-            <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 25px;">
+            <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 23px; padding-top: 20px;">
               <div class="col-lg-6 col-md-6 text-right">
                 <span>Realiza tu dibujo</span>
                 <a href="https://sketch.io/sketchpad" target="_blank">
