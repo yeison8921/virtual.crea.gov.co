@@ -1,5 +1,29 @@
   <?php get_header(); ?>
   <!--Inicio Contenido -->
+  <style type="text/css">
+    .letra{
+      padding-right: 15px;
+      color: white;
+      font-size: 54px;
+      font-weight:bold;
+      text-shadow:5px 5px 10px black;
+    }
+    .letra::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      background: white;
+      width: 5px;
+      height: 174px;
+      left: 98%;
+      top: 5px;
+      box-shadow:5px 5px 10px black;
+    }
+    .span-titulo{
+      display: block;
+      margin-bottom: -20px;
+    }
+  </style>
   <div class="container-fluid">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <!-- <h2><?php the_title(); ?></h2>-->
@@ -44,8 +68,44 @@
         </div>
       <?php endif; ?>
       <?php if(is_page("Introducción aula música")) :?>
-        <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
-        <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+       <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+       <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+       <div class="row" id="div-cim">
+        <div class="text-center" style="background-color: #bed903; height: 50px;">Aula de música</div>
+        <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+          <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-2">
+            <button class="btn btn-block btn-n-mus"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
+          </div>
+          <div class="col-lg-offset-8 col-lg-1 col-md-offset-6 col-md-2">
+            <button class="btn btn-block btn-n-mus">Iniciar&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 text-right" style="">
+            <div>
+              <p class="letra" style="padding-bottom: 50px;">
+                <span class="span-titulo">SALONES</span>
+                <span class="span-titulo">INTERACTIVOS</span>
+                <span class="span-titulo">DE MÚSICA</span>
+              </p>
+            </div>
+            <div>
+              <button class="btn btn-block btn-n-mus" id="btn-introduccion">Introducción</button>
+              <button class="btn btn-block btn-n-mus" id="btn-objetivos">Objetivos</button>
+              <button class="btn btn-block btn-n-mus" id="btn-metodologia">Metodología</button>
+              <button class="btn btn-block btn-n-mus" id="btn-publico">Nuestro público</button>
+              <button class="btn btn-block btn-n-mus" id="btn-creditos">Créditos</button>
+            </div>
+          </div>
+          <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="div-ccpm">
+          <div id="div-iim">
+            <div id="div-tcp" style="font-size: 40px;"></div>
+            <div id="div-icp" style="font-size: 30px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!--
         <div class="row" id="contenedor-index-musica">
           <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8" id="div-botones-inicio">
             <button class="btn btn-block btn-musica-s" id="btn-salones">SALONES INTERACTIVOS DE MÚSICA</button>
@@ -93,7 +153,7 @@
           <div class="row col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4" id="div-sel-modulo-musica" style="display: none;">
             <div class="div-dropdown-modulo">
               <div class="dropdown">
-                <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --></button>
+                <button class="btn btn-block btn-musica-d dropdown-toggle" type="button" data-toggle="dropdown">SELECCIONA UN MÓDULO<!-- <i class="fas fa-caret-down"></i> --><!-- </button>
                 <ul class="dropdown-menu btn-block">
                   <li><button class="btn btn-block btn-musica-d">Andina</button></li>
                   <li><button class="btn btn-block btn-musica-d">Llanero</button></li>
@@ -104,7 +164,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       <?php endif; ?>
       <?php if(is_page("Música")) :?>
         <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">

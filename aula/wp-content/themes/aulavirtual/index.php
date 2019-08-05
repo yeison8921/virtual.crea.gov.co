@@ -31,7 +31,7 @@
 
           <div class='col-lg-12 col-md-12 text-center' id="div-areas-index">
             <div>
-              <a href="#">
+              <a href="<?php bloginfo('url'); ?>/introduccion-aula-musica">
                 <img src="<?php bloginfo('template_url'); ?>/index/normal_musica.png" id="img-musica" width="120px">
                 <span>Música<br>&nbsp</span>
               </a>

@@ -587,7 +587,62 @@ body {
 
 
 /*Estilos aula música*/
-.contenido{
+
+#div-cim{
+  height: 720px;
+  background-image: url('musica/images/index/fondo_index.jpg');
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-n-mus{
+  background-color: #bed903;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-n-mus:hover{
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+#div-ccpm{
+  color: white;
+  background-color: #000000b5;
+  border-radius: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#div-iim{
+  height: 450px;
+  overflow-y: scroll;
+}
+
+#div-iim::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  background-color: #F5F5F5;
+}
+
+#div-iim::-webkit-scrollbar{
+  width: 15px;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+}
+
+#div-iim::-webkit-scrollbar-thumb{
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+/*.contenido{
   display: none;
 }
 
@@ -668,117 +723,113 @@ body {
   text-decoration: none;
   color: inherit;
 }
-/*
-.btn-musica-s:hover {
-  color: inherit !important;
-  text-decoration: none !important;
+
+
+.btn-musica-t:hover, .btn-musica-t:focus  {
+  color: #ffffff !important;
+  text-decoration: !important;
+}
+
+#div-botones-inicio{
+  top: 50%;
+  position: relative;
+}
+
+#div-info-aula-musica{
+  top: 65%;
+  position: relative;
+}
+
+#div-sel-modulo-musica{
+  top: 50%;
+  position: relative;
+}
+
+.btn-musica-p{
+  background-color: white; 
+  font-size: 30px;
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 2.5px; 
+  height: 45px;
+  margin-bottom: 20px;
+  font-size: 1.5vw;
+}
+
+.btn-musica-s{
+  background-color: white; 
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 0.5px; 
+  margin-bottom: 20px;
+
+}
+
+.btn-musica-t, .btn-musica-s:hover{
+  background-color: #121a1c; 
+  border-radius: 10px; 
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.btn-musica-d{
+  background-color: white; 
+  font-size: 30px;
+  border-radius: 10px; 
+  color: #08580f; 
+  border-color: #08580f; 
+  border-width: 2.5px; 
+  height: 45px;
+  margin-bottom: 2px;
+  font-size: 1.5vw;
+}
+
+#div-info-detallada-musica{
+  text-align: left;
+  top: 5%;
+}
+
+#div-info-andina > div > h2, #con-idm > h2{
+  font-size: 45px;
+  color: #16a20f;
+  text-align: right;
+}
+
+#div-info-andina > div > p{
+  color: #403938;
+  text-align: right;
+}
+
+#contenedor-aula-musica > div > div > a{
+  text-decoration: none;
+}
+
+.flecha-musica{
+  color: #ffffff;
+  display: none;
+}
+
+#div-btn-mod-mus{
+  background: #98f89f;
+}
+
+.fd{
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #121a1c;
+}
+
+.fi{
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  border-right:20px solid #121a1c; 
   }*/
-
-  .btn-musica-t:hover, .btn-musica-t:focus  {
-    color: #ffffff !important;
-    text-decoration: !important;
-  }
-
-  #div-botones-inicio{
-    top: 50%;
-    position: relative;
-  }
-
-  #div-info-aula-musica{
-    top: 65%;
-    position: relative;
-  }
-
-  #div-sel-modulo-musica{
-    top: 50%;
-    position: relative;
-  }
-
-  .btn-musica-p{
-    background-color: white; 
-    font-size: 30px;
-    border-radius: 10px; 
-    color: #08580f; 
-    border-color: #08580f; 
-    border-width: 2.5px; 
-    height: 45px;
-    margin-bottom: 20px;
-    font-size: 1.5vw;
-  }
-
-  .btn-musica-s{
-    background-color: white; 
-    border-radius: 10px; 
-    color: #08580f; 
-    border-color: #08580f; 
-    border-width: 0.5px; 
-    margin-bottom: 20px;
-
-  }
-
-  .btn-musica-t, .btn-musica-s:hover{
-    background-color: #121a1c; 
-    border-radius: 10px; 
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-
-  .btn-musica-d{
-    background-color: white; 
-    font-size: 30px;
-    border-radius: 10px; 
-    color: #08580f; 
-    border-color: #08580f; 
-    border-width: 2.5px; 
-    height: 45px;
-    margin-bottom: 2px;
-    font-size: 1.5vw;
-  }
-
-  #div-info-detallada-musica{
-    text-align: left;
-    top: 5%;
-  }
-
-  #div-info-andina > div > h2, #con-idm > h2{
-    font-size: 45px;
-    color: #16a20f;
-    text-align: right;
-  }
-
-  #div-info-andina > div > p{
-    color: #403938;
-    text-align: right;
-  }
-
-  #contenedor-aula-musica > div > div > a{
-    text-decoration: none;
-  }
-
-  .flecha-musica{
-    color: #ffffff;
-    display: none;
-  }
-
-  #div-btn-mod-mus{
-    background: #98f89f;
-  }
-
-  .fd{
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #121a1c;
-  }
-
-  .fi{
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
-    border-right:20px solid #121a1c; 
-  }
 
 
 
