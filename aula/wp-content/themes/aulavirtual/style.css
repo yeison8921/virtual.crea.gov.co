@@ -303,45 +303,30 @@ body {
     height: 700px;
   }
 
-  #footer{
+  .footer{
+    padding-top: 20px;
     background-image: url('index/Footer_back.png');
     color: white;
-    height: 185px;
+    height: 240px;
+    font-family: 'Local Van Condensed Regular', Regular !important;
   }
 
-/*.bg .footer{
-  background-color: transparent;
-  position: relative;
-  top: 30%;
-}
+  .footer ul{
+    list-style-type: none;
+    padding-left: 0;
+  }
 
-.footer{
-  background-color: rgb(230, 63, 57);
-  color: white;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  font-size: 16px;
-}
+  .footer li a, .footer address a{
+    text-decoration: none;
+  }
 
-.footer ul{
-  list-style-type: none;
-  padding-left: 0;
-}
+  .footer li a{
+    color: white;
+  }
 
-.footer li a{
-  text-decoration: none;
-  color: white;
-  text-align: left;
-}
-
-.footer address a{
-  color: white;
-  text-decoration: none;
-}
-
-.footer address a:hover{
-  color: black;
-  }*/
-
+  .footer address a, .footer address a:hover, .color-green-footer{
+    color: #b1d400;
+  }
   /*********************/
 
   .btn-index-danza-pri {
@@ -601,6 +586,7 @@ body {
   background-color: #bed903;
   border-radius: 15px;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .btn-n-mus:hover{
@@ -609,7 +595,43 @@ body {
   cursor: pointer;
 }
 
-#div-ccpm{
+#header-musica{
+  background-color: #bed903;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.titulo-musica{
+  padding-right: 15px;
+  color: white;
+  font-size: 54px;
+  font-weight:bold;
+  text-shadow:5px 5px 10px black;
+}
+.titulo-musica::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  width: 5px;
+  height: 174px;
+  left: 98%;
+  top: 5px;
+  box-shadow:5px 5px 10px black;
+  padding-bottom: 50px;
+}
+.span-titulo{
+  display: block;
+  margin-bottom: -20px;
+}
+
+#navegacion-musica{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contenedor-info-basica-musica{
   color: white;
   background-color: #000000b5;
   border-radius: 15px;
@@ -619,24 +641,24 @@ body {
   padding-bottom: 50px;
 }
 
-#div-iim{
+#mini-contenedor-info-basica-musica{
   height: 450px;
   overflow-y: scroll;
 }
 
-#div-iim::-webkit-scrollbar-track{
+#mini-contenedor-info-basica-musica::-webkit-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 15px;
   background-color: #F5F5F5;
 }
 
-#div-iim::-webkit-scrollbar{
+#mini-contenedor-info-basica-musica::-webkit-scrollbar{
   width: 15px;
   background-color: #F5F5F5;
   border-radius: 15px;
 }
 
-#div-iim::-webkit-scrollbar-thumb{
+#mini-contenedor-info-basica-musica::-webkit-scrollbar-thumb{
   border-radius: 15px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #555;

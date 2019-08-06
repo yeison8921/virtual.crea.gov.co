@@ -1,29 +1,5 @@
   <?php get_header(); ?>
   <!--Inicio Contenido -->
-  <style type="text/css">
-    .letra{
-      padding-right: 15px;
-      color: white;
-      font-size: 54px;
-      font-weight:bold;
-      text-shadow:5px 5px 10px black;
-    }
-    .letra::after {
-      content: " ";
-      display: block;
-      position: absolute;
-      background: white;
-      width: 5px;
-      height: 174px;
-      left: 98%;
-      top: 5px;
-      box-shadow:5px 5px 10px black;
-    }
-    .span-titulo{
-      display: block;
-      margin-bottom: -20px;
-    }
-  </style>
   <div class="container-fluid">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <!-- <h2><?php the_title(); ?></h2>-->
@@ -71,8 +47,8 @@
        <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
        <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
        <div class="row" id="div-cim">
-        <div class="text-center" style="background-color: #bed903; height: 50px;">Aula de música</div>
-        <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="text-center" id="header-musica">Aula de música</div>
+        <div class="row" id="navegacion-musica">
           <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-2">
             <button class="btn btn-block btn-n-mus"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
           </div>
@@ -81,9 +57,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 text-right" style="">
+          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 text-right">
             <div>
-              <p class="letra" style="padding-bottom: 50px;">
+              <p class="titulo-musica">
                 <span class="span-titulo">SALONES</span>
                 <span class="span-titulo">INTERACTIVOS</span>
                 <span class="span-titulo">DE MÚSICA</span>
@@ -97,10 +73,10 @@
               <button class="btn btn-block btn-n-mus" id="btn-creditos">Créditos</button>
             </div>
           </div>
-          <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="div-ccpm">
-          <div id="div-iim">
-            <div id="div-tcp" style="font-size: 40px;"></div>
-            <div id="div-icp" style="font-size: 30px;"></div>
+          <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="contenedor-info-basica-musica">
+          <div id="mini-contenedor-info-basica-musica">
+            <div id="titulo-info-basica-musica" style="font-size: 40px;"></div>
+            <div id="contenido-info-basica-musica" style="font-size: 20px;"></div>
           </div>
         </div>
       </div>
