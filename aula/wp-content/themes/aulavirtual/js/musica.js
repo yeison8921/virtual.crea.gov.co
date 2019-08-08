@@ -1,5 +1,9 @@
 jQuery(document).ready(function($){
+	$("#titulo-info-basica-musica").html("").html("Introducción");
+	$("#contenido-info-basica-musica").html("").html("¡Bienvenidos! En estas salas encontrarán herramientas prácticas que les ayudarán a conocer los ritmos de la música colombiana. Escuchando, tocando e interactuando.");
 	$("#div-cim").on("click", "button", function(){
+		$(this).removeClass("btn-n-mus").addClass("btn-h-mus");
+		$("#div-cim button").not(this).removeClass().addClass("btn btn-block btn-n-mus");
 		switch($(this).attr('id')){
 			case "btn-introduccion":
 			$("#titulo-info-basica-musica").html("").html("Introducción");
@@ -36,6 +40,11 @@ jQuery(document).ready(function($){
 			case "btn-creditos":
 			$("#titulo-info-basica-musica").html("").html("Créditos");
 			$("#contenido-info-basica-musica").html("").html();
+			break;
+			case "btn-regresar":
+			window.location.href=$("#blog-info").val();
+			break;
+			case "btn-iniciar":
 			break;
 		}
 	});

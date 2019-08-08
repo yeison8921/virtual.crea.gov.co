@@ -8,7 +8,7 @@
   <title>Aula Virtual CREA</title>
   <?php wp_head(); ?>
 </head>
-<body> <!-- <?php body_class() ?> -->
+<body <?php body_class(); ?>>
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
@@ -29,4 +29,5 @@
       )); ?>
     </div>
   </nav>
+  <div class="container-fluid">
 

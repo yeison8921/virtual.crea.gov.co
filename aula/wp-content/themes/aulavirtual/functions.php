@@ -18,7 +18,6 @@ function aula_cargar_scripts(){
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js',array(),false,true);
     wp_enqueue_script('index', get_template_directory_uri() . '/js/index.js',array(),false,true);
 
-
     if(is_page("Artes electrónicas") || is_page("Consulta mapa artes electrónicas")){
         $map_api_key = 'AIzaSyCPjto4XGyWcmoIMfdp0g3QRgo5ByAW-L8';
         wp_enqueue_script('google-maps-api', esc_url( add_query_arg( 'key', $map_api_key.'&callback=initMap', '//maps.googleapis.com/maps/api/js' )), array(), null, true );

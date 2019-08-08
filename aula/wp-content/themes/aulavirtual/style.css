@@ -303,28 +303,31 @@ body {
     height: 700px;
   }
 
-  .footer{
+  #footer{
     padding-top: 20px;
     background-image: url('index/Footer_back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
-    height: 240px;
+    /*height: 240px;*/
     font-family: 'Local Van Condensed Regular', Regular !important;
   }
 
-  .footer ul{
+  #footer ul{
     list-style-type: none;
     padding-left: 0;
   }
 
-  .footer li a, .footer address a{
+  #footer li a, #footer address a{
     text-decoration: none;
   }
 
-  .footer li a{
+  #footer li a{
     color: white;
   }
 
-  .footer address a, .footer address a:hover, .color-green-footer{
+  #footer address a, #footer address a:hover, .color-green-footer{
     color: #b1d400;
   }
   /*********************/
@@ -574,19 +577,33 @@ body {
 /*Estilos aula música*/
 
 #div-cim{
-  height: 720px;
+  /*height: 720px;*/
   background-image: url('musica/images/index/fondo_index.jpg');
   font-family: 'Local Van Condensed Regular', Regular !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 50px;
+}
+
+.btn-n-mus, .btn-h-mus{
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.btn-h-mus.focus, .btn-h-mus:focus, .btn-h-mus:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .btn-n-mus{
   background-color: #bed903;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  font-size: 20px;
+}
+
+.btn-h-mus{
+  background-color: #000000;
+  color: white;
 }
 
 .btn-n-mus:hover{
@@ -608,6 +625,7 @@ body {
   font-size: 54px;
   font-weight:bold;
   text-shadow:5px 5px 10px black;
+  padding-bottom: 20px;
 }
 .titulo-musica::after {
   content: "";
@@ -644,6 +662,7 @@ body {
 #mini-contenedor-info-basica-musica{
   height: 450px;
   overflow-y: scroll;
+  padding-right: 50px;
 }
 
 #mini-contenedor-info-basica-musica::-webkit-scrollbar-track{
