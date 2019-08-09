@@ -49,7 +49,7 @@
           <button class="btn btn-block btn-n-mus" id="btn-regresar" data-atras="introduccion"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
         </div>
       </div>
-      <div style="padding-top: 100px;">
+      <div id="div-seleccion-curso-musica" style="padding-top: 100px;">
         <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3 col-sm-4 text-right">
           <div>
             <p class="titulo-curso-musica">
@@ -80,10 +80,44 @@
               </p>
             </div>
           </div>
+          <div id="div-botones-salas-musica">
+            <button class="btn btn-block btn-n-mus" id="btn-teorica" data-curso="">Sala teórica</button>
+            <button class="btn btn-block btn-n-mus" id="btn-interctiva" data-curso="">Sala interactiva</button>
+            <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="">Sala general</button>
+          </div>
+        </div>
+      </div>
+      <div id="div-contenido-sala-musica" style="padding-top: 100px; display: none;">
+        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
           <div>
-            <button class="btn btn-block btn-n-mus" id="btn-teorica">Sala teórica</button>
-            <button class="btn btn-block btn-n-mus" id="btn-interctiva">Sala interactiva</button>
-            <button class="btn btn-block btn-n-mus" id="btn-general">Sala general</button>
+            <p class="titulo-curso-musica">
+              <span class="span-titulo">&nbsp;</span>
+            </p>
+          </div>
+          <div id="div-botones-sala">
+            <button class="btn btn-block btn-h-mus" id="btn-guabina" data-sala="">Guabina</button>
+            <button class="btn btn-block btn-n-mus" id="btn-pasillo" data-sala="">Pasillo</button>
+            <button class="btn btn-block btn-n-mus" id="btn-bambuco" data-sala="">Bambuco</button>
+            <button class="btn btn-block btn-n-mus" id="btn-instrumentos" data-sala="">Instrumentos tradicionales</button>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <div class="contenedor-info-basica-musica">
+            <div class="mini-contenedor-info-basica-musica">
+              <div class="titulo-info-basica-musica"></div>
+              <div class="contenido-info-basica-musica"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12" id="div-subbotones-sala" style="padding-top: 50px;">
+          <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
+            <button class="btn btn-block btn-n-mus" id="btn-ritmo" data-opcion="">Ritmo</button>
+          </div>
+          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+            <button class="btn btn-block btn-n-mus" id="btn-melodia" data-opcion="">Melodía</button>
+          </div>
+          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+            <button class="btn btn-block btn-n-mus" id="btn-armonia" data-opcion="">Armonía</button>
           </div>
         </div>
       </div>
