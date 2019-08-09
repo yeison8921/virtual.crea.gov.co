@@ -575,10 +575,16 @@ body {
 
 
 /*Estilos aula música*/
-
 #div-cim{
-  /*height: 720px;*/
   background-image: url('musica/images/index/fondo_index.jpg');
+}
+
+#div-ccm{
+  background-image: url('musica/images/index/fondo_index_curso.jpg');
+  /*height: 720px;*/
+}
+
+#div-cim, #div-ccm{
   font-family: 'Local Van Condensed Regular', Regular !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -612,14 +618,14 @@ body {
   cursor: pointer;
 }
 
-#header-musica{
+.header-musica{
   background-color: #bed903;
   height: 50px;
   font-size: 24px;
   line-height: 50px;
 }
 
-.titulo-musica{
+.titulo-index-musica, .titulo-curso-musica{
   padding-right: 15px;
   color: white;
   font-size: 54px;
@@ -627,7 +633,8 @@ body {
   text-shadow:5px 5px 10px black;
   padding-bottom: 20px;
 }
-.titulo-musica::after {
+
+.titulo-index-musica::after {
   content: "";
   display: block;
   position: absolute;
@@ -639,17 +646,25 @@ body {
   box-shadow:5px 5px 10px black;
   padding-bottom: 50px;
 }
+
 .span-titulo{
   display: block;
   margin-bottom: -20px;
 }
 
-#navegacion-musica{
+.titulo-info-basica-musica{
+  font-size: 40px;
+}
+.contenido-info-basica-musica{
+  font-size: 20px;
+}
+
+.navegacion-musica{
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-#contenedor-info-basica-musica{
+.contenedor-info-basica-musica{
   color: white;
   background-color: #000000b5;
   border-radius: 15px;
@@ -659,25 +674,25 @@ body {
   padding-bottom: 50px;
 }
 
-#mini-contenedor-info-basica-musica{
+.mini-contenedor-info-basica-musica{
   height: 450px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-right: 50px;
 }
 
-#mini-contenedor-info-basica-musica::-webkit-scrollbar-track{
+.mini-contenedor-info-basica-musica::-webkit-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 15px;
   background-color: #F5F5F5;
 }
 
-#mini-contenedor-info-basica-musica::-webkit-scrollbar{
+.mini-contenedor-info-basica-musica::-webkit-scrollbar{
   width: 15px;
   background-color: #F5F5F5;
   border-radius: 15px;
 }
 
-#mini-contenedor-info-basica-musica::-webkit-scrollbar-thumb{
+.mini-contenedor-info-basica-musica::-webkit-scrollbar-thumb{
   border-radius: 15px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #555;

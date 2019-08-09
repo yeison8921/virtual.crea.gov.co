@@ -18,7 +18,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo home_url() ?>">Aula Virtual</a>
+        <a class="navbar-brand" href="<?php echo home_url() ?>">Aula Virtual <i class="fas fa-home"></i></a>
       </div>
       <?php wp_nav_menu(array(
         'theme_location' => 'principal',
