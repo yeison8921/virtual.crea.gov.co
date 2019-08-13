@@ -1,6 +1,6 @@
 <?php ?>
 <div class="row" id="footer">
-	<div class="col-lg-offset-1 col-lg-3 col-md-4 text-left col-sm-6">
+	<div class="col-lg-offset-1 col-lg-3 col-md-4 col-sm-4 col-xs-12 text-left">
 		<h3 class="color-green-footer">Áreas artísticas</h3>
 		<?php wp_nav_menu(array(
 			'container' => 'div',
@@ -8,11 +8,11 @@
 			'theme_location' => 'footer'
 		)); ?>
 	</div>
-	<div class="col-lg-4 col-md-4 hidden-sm text-center">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
 		<img src="<?php bloginfo('template_url'); ?>/index/Logo_alcaldía.png" class="img-responsive">
 		<p>Instituto Distrital de las Artes - IDARTES</p>
 	</div>
-	<div class="col-lg-3 col-md-4 col-sm-6 text-right">
+	<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
 		<h3 class="color-green-footer">Nosotros</h3>
 		<?php wp_nav_menu(array(
 			'container' => 'div',
