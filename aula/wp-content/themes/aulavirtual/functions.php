@@ -41,6 +41,9 @@ function aula_cargar_scripts(){
     if(is_page("Introducción aula música") || is_page("Música")){
         wp_enqueue_script( 'musica', get_template_directory_uri(). '/js/musica.js',array(),false,true);
     }
+    if(is_page("Música 2")){
+        wp_enqueue_script( 'musica2', get_template_directory_uri(). '/js/musica_old.js',array(),false,true);
+    }
     if(is_page("Introducción aula artes plásticas")){
         wp_enqueue_script( 'artes-plasticas', get_template_directory_uri(). '/js/artes_plasticas.js',array(),false,true);
     }

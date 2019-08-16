@@ -31,12 +31,35 @@ jQuery(document).ready(function($){
 		}
 
 		if($(this).attr('id') == "btn-ritmo" || $(this).attr('id') == "btn-melodia" || $(this).attr('id') == "btn-armonia"){
-			$("#btn-"+$(this).attr('data-opcion')).removeClass().addClass("btn btn-block btn-h-mus");
+			$("#btn-"+$(this).attr('data-genero')).removeClass().addClass("btn btn-block btn-h-mus");
 		}
 
 		if($(this).attr('id') == "btn-llanera" || $(this).attr('id') == "btn-pacifico" || $(this).attr('id') == "btn-atlantico" || $(this).attr('id') == "btn-carranga"){
 			$("#div-botones-salas-musica").hide();
 		}
+
+		if ($(this).attr("id") == "btn-tiple" || $(this).attr("id") == "btn-guitarra" || $(this).attr("id") == "btn-voz" || $(this).attr("id") == "btn-bandola"){
+			if($(this).attr("data-fuente").indexOf("guabina") != -1){
+				$("#btn-guabina").removeClass().addClass("btn btn-block btn-h-mus");
+			}
+			if($(this).attr("data-fuente").indexOf("pasillo") != -1){
+				$("#btn-pasillo").removeClass().addClass("btn btn-block btn-h-mus");
+			}
+			if($(this).attr("data-fuente") == "guabina-ritmo"){
+				$("#btn-ritmo").removeClass().addClass("btn btn-block btn-h-mus");
+			}
+			if($(this).attr("data-fuente") == "guabina-armonia"){
+				$("#btn-armonia").removeClass().addClass("btn btn-block btn-h-mus");
+			}
+			if($(this).attr("data-fuente") == "pasillo-ritmo"){
+				$("#btn-ritmo").removeClass().addClass("btn btn-block btn-h-mus");
+			}
+		}
+
+		if ($(this).attr("id") == "btn-voz" || $(this).attr("id") == "btn-bandola"){;
+			$("#btn-melodia").removeClass().addClass("btn btn-block btn-h-mus");
+		}
+
 		switch($(this).attr('id')){
 			case "btn-introduccion":
 			infoIntroduccion("Introducción", "<p>¡Hola a todos!</p>"+
@@ -88,7 +111,7 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-guabina":
 			if($(this).attr("data-sala") == "teorica"){
-				$("#div-subbotones-sala button").attr("data-opcion", "guabina");
+				$("#div-subbotones-sala button").attr("data-genero", "guabina");
 				infoSalaTeorica("La Guabina", "<div class='col-lg-6 col-md-12'>"+
 					"<p>Aire andino de origen campesino, al parecer nacido en Antioquia desde los albores del siglo XIX, con ascendencia europea y con adaptaciones regionales muy sugerentes. Sobre su nombre no existe definición; se habla de la existencia de un pez guabina en los Llanos, y muy apreciado en Cuba por su carne.</p>"+
 					"<p>Es otra de las danzas y cantos típicos del folklore musical andino, muy extendida en los departamentos de Santander, Boyacá, Tolima, Huila y antiguamente en Antioquia. Aún cuando el ritmo es común, en cada departamento la guabina adquiere una melodía especial. Su formato instrumental típico está conformado por el tiple, requinto, la bandola el chucho o guache.</p>"+
@@ -102,7 +125,7 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-pasillo":
 			if($(this).attr("data-sala") == "teorica"){
-				$("#div-subbotones-sala button").attr("data-opcion", "pasillo");
+				$("#div-subbotones-sala button").attr("data-genero", "pasillo");
 				infoSalaTeorica("El Pasillo", "<p>Este es otro de los bailes folclóricos andinos que se hicieron populares en el siglo XIX. Es una de las variantes del vals europeo, convertido en aire de pasillo, por su ritmo más rápido.</p>"+
 					"<p>Con algunas variaciones rítmicas en el bajo y en el acompañamiento armónico, su tempo puede ser lento a moderado, generalmente vocal, con letras de amor y desilusión. y en algunas regiones con tiempos más rápidos  que da como resultado el Pasillo fiestero.</p>"+
 					"CRUZ GONZÁLEZ, Miguel A.: Folclore, Música y Nación. El papel del bambuco en la construcción de lo colombiano. NOMADAS (COL.) núm. 17,2002, pp.222. Universidad Central. Bogotá, Colombia.</p>","", 1);
@@ -119,7 +142,7 @@ jQuery(document).ready(function($){
 				$("#div-contenido-sala-musica").show();
 				$("#div-botones-sala #btn-guabina").removeClass("btn-n-mus").addClass("btn-h-mus");
 				$("#div-botones-sala button").attr("data-sala", "teorica");
-				$("#div-subbotones-sala button").attr("data-opcion", "guabina");
+				$("#div-subbotones-sala button").attr("data-genero", "guabina");
 				infoSalaTeorica("La Guabina", "<div class='col-lg-6 col-md-12'>"+
 					"<p>Aire andino de origen campesino, al parecer nacido en Antioquia desde los albores del siglo XIX, con ascendencia europea y con adaptaciones regionales muy sugerentes. Sobre su nombre no existe definición; se habla de la existencia de un pez guabina en los Llanos, y muy apreciado en Cuba por su carne.</p>"+
 					"<p>Es otra de las danzas y cantos típicos del folklore musical andino, muy extendida en los departamentos de Santander, Boyacá, Tolima, Huila y antiguamente en Antioquia. Aún cuando el ritmo es común, en cada departamento la guabina adquiere una melodía especial. Su formato instrumental típico está conformado por el tiple, requinto, la bandola el chucho o guache.</p>"+
@@ -136,46 +159,140 @@ jQuery(document).ready(function($){
 			case "btn-general":
 			break;
 			case "btn-ritmo":
-			if($(this).attr("data-opcion") == "guabina"){
-				infoSalaTeorica("Ritmo Tiple", "<p>A continuación te presentamos el ritmo de la guabina en el tiple.</p>"+
-					"<p><div class='col-lg-8 col-md-12'>"+
+			if($(this).attr("data-genero") == "guabina"){
+				infoSalaTeorica("Ritmo Tiple", "<p><div class='col-lg-8 col-md-12'>"+
 					"<div class='embed-responsive embed-responsive-16by9'>"+
 					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ'></iframe>"+
 					"</div></div></p>"+
 					"<div class='col-lg-4 col-md-12'>"+
-					"<button class='btn btn-block btn-n-mus'>Tiple</button>"+
-					"<button class='btn btn-block btn-n-mus'>Guitarra</button>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='guabina-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='guabina-ritmo'>Guitarra</button>"+
+					"</div>");
+			}
+			if($(this).attr("data-genero") == "pasillo"){
+				infoSalaTeorica("Ritmo Pasillo Tiple", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk'></iframe>"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='pasillo-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='pasillo-ritmo'>Guitarra</button>"+
 					"</div>");
 			}
 			break;
 			case "btn-melodia":
-			if($(this).attr("data-opcion") == "guabina"){
-				infoSalaTeorica("La Ruana", "<div class='col-lg-6 col-md-12'>"+
-					"<p><div class='embed-responsive embed-responsive-16by9'>"+
-					"<video class='embed-responsive-item'><source src='"+ $("#bloginfo").val() + "/musica/videos/guabina/la_ruana_melodia.mp4' type='video/mp4'></video>"+
-					"</div></p>"+
-					"<p><a href='"+ $("#bloginfo").val() + "/musica/images/guabina/melodia_la_ruana.png' download='Melodia_La_Ruana'>Descargar Melodia La Ruana  <i class='fas fa-download'></i></a></p>"+
-					"</div>"+
-					"<div class='col-lg-6 col-md-12'>"+
-					"<p>ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.</p>"+
-					"<p>ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.</p>"+
-					"<p>CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.</p>"+
-					"<p>GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.</p>"+
+			if($(this).attr("data-genero") == "guabina"){
+				infoSalaTeorica("Melodía - Voz", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc'></iframe>"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-voz'>Voz</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-bandola'>Bandola</button>"+
 					"</div>");
 			}
 			break;
 			case "btn-armonia":
-			if($(this).attr("data-opcion") == "guabina"){
-				infoSalaTeorica("La Ruana", "<div class='col-lg-6 col-md-12'>"+
-					"<p><div class='embed-responsive embed-responsive-16by9'>"+
-					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/c1yuvkCoCZA'></iframe>"+
-					"</div></p></div>"+
-					"<div class='col-lg-6 col-md-12'>"+
-					"<p>ESTROFA 1 Cuando nací, mi mamá me dio una ruana, pa que la usara el domingo y todita la semana, y todita la semana.</p>"+
-					"<p>ESTROFA 2 Ahora crecí, pero no creció mi ruana, mi mamá quiere agrandarla, con dos ovillos de lana, con dos ovillos de lana.</p>"+
-					"<p>CORO: Iiii... hoy le digo a mi mamá, que no me agrande,  la ruana, que la deje quietecita, Hasta que nazca mi hermana,  en un mes y una semana, en un mes y una semana.</p>"+
-					"<p>GUÍA 1: Canto sobre la melodía Guabina-Torbellino. Intervalos 3ra menor, 5ta justa, 8va justa y grados conjuntos de la escala mayor.</p>");
+			if($(this).attr("data-genero") == "guabina"){
+				infoSalaTeorica("Armonía - Guitarra", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"video"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='guabina-armonia'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='guabina-armonia'>Guitarra</button>"+
+					"</div>");
 			}
+			break;
+			case "btn-tiple":
+			if($(this).attr("data-fuente") == "guabina-ritmo"){
+				infoSalaTeorica("Ritmo Tiple", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ'></iframe>"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='guabina-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='guabina-ritmo'>Guitarra</button>"+
+					"</div>");
+			}
+			if($(this).attr("data-fuente") == "guabina-armonia"){
+				infoSalaTeorica("Armonía - Guitarra", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"video"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='guabina-armonia'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='guabina-armonia'>Guitarra</button>"+
+					"</div>");
+			}
+			if($(this).attr("data-fuente") == "pasillo-ritmo"){
+				infoSalaTeorica("Ritmo Pasillo Tiple", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk'></iframe>"+
+					"</div></div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-tiple' data-fuente='pasillo-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-guitarra' data-fuente='pasillo-ritmo'>Guitarra</button>"+
+					"</div>");
+			}
+			break;
+			case "btn-guitarra":
+			if($(this).attr("data-fuente") == "guabina-ritmo"){
+				infoSalaTeorica("Ritmo guitarra", "<p>A continuación te presentamos el ritmo de la guabina en la guitarra.</p>"+
+					"<p><div class='col-lg-8 col-md-12'>"+
+					"video"+
+					"</div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-tiple' data-fuente='guabina-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-guitarra' data-fuente='guabina-ritmo'>Guitarra</button>"+
+					"</div>");
+			}
+			if($(this).attr("data-fuente") == "guabina-armonia"){
+				infoSalaTeorica("Armonía - Guitarra", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/c1yuvkCoCZA'></iframe>"+
+					"</div>"+
+					"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_armonia.pdf' alt='Armonía_La_Ruana' download>Armonía La Ruana</a></p>"+
+					"</div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-tiple' data-fuente='guabina-armonia'>Tiple</button>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-guitarra' data-fuente='guabina-armonia'>Guitarra</button>"+
+					"</div>");
+			}
+			if($(this).attr("data-fuente") == "pasillo-ritmo"){
+				infoSalaTeorica("Ritmo Pasillo Guitarra", "<p><div class='col-lg-8 col-md-12'>"+
+					"<div class='embed-responsive embed-responsive-16by9'>"+
+					"video"+
+					"</div>"+
+					"</div></p>"+
+					"<div class='col-lg-4 col-md-12'>"+
+					"<button class='btn btn-block btn-n-mus' id='btn-tiple' data-fuente='pasillo-ritmo'>Tiple</button>"+
+					"<button class='btn btn-block btn-h-mus' id='btn-guitarra' data-fuente='pasillo-ritmo'>Guitarra</button>"+
+					"</div>");
+			}
+			
+			break;
+			case "btn-voz":
+			infoSalaTeorica("Melodía - Voz", "<p><div class='col-lg-8 col-md-12'>"+
+				"<div class='embed-responsive embed-responsive-16by9'>"+
+				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc'></iframe>"+
+				"</div>"+
+				"<p>link</p>"+
+				"</div></p>"+
+				"<div class='col-lg-4 col-md-12'>"+
+				"<button class='btn btn-block btn-h-mus' id='btn-voz'>Voz</button>"+
+				"<button class='btn btn-block btn-n-mus' id='btn-bandola'>Bandola</button>"+
+				"</div>");
+			break;
+			case "btn-bandola":
+			infoSalaTeorica("Bandola - Voz", "<p><div class='col-lg-8 col-md-12'>"+
+				"<p>video</p>"+
+				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_bandola.pdf' alt='Melodía_La_Ruana_Bandola'download>Melodía - La Bandola</a></p>"+
+				"</div></p>"+
+				"<div class='col-lg-4 col-md-12'>"+
+				"<button class='btn btn-block btn-n-mus' id='btn-voz'>Voz</button>"+
+				"<button class='btn btn-block btn-h-mus' id='btn-bandola'>Bandola</button>"+
+				"</div>");
 			break;
 			case "btn-regresar":
 			if($(this).attr("data-atras") == "index"){
