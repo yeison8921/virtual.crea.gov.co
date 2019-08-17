@@ -111,7 +111,7 @@
           </div>
         </div>
         <div class="col-lg-12 col-md-12" id="div-subbotones-sala" style="padding-top: 50px;">
-          <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
+          <!-- <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
             <button class="btn btn-block btn-n-mus" id="btn-ritmo" data-genero="">Ritmo</button>
           </div>
           <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
@@ -119,7 +119,7 @@
           </div>
           <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
             <button class="btn btn-block btn-n-mus" id="btn-armonia" data-genero="">Armonía</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
