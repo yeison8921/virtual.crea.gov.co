@@ -82,7 +82,7 @@
           </div>
           <div id="div-botones-salas-musica">
             <button class="btn btn-block btn-n-mus" id="btn-teorica" data-curso="andina">Sala teórica</button>
-            <button class="btn btn-block btn-n-mus" id="btn-interctiva" data-curso="andina">Sala interactiva</button>
+            <button class="btn btn-block btn-n-mus" id="btn-interactiva" data-curso="andina">Sala interactiva</button>
             <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="andina">Sala general</button>
             <button class="btn btn-block btn-n-mus" id="btn-laboratorio" data-curso="andina">Laboratorio</button>
           </div>
@@ -96,10 +96,6 @@
             </p>
           </div>
           <div id="div-botones-sala">
-            <button class="btn btn-block btn-h-mus" id="btn-guabina" data-sala="">Guabina</button>
-            <button class="btn btn-block btn-n-mus" id="btn-pasillo" data-sala="">Pasillo</button>
-            <button class="btn btn-block btn-n-mus" id="btn-bambuco" data-sala="">Bambuco</button>
-            <button class="btn btn-block btn-n-mus" id="btn-instrumentos" data-sala="">Instrumentos</button>
           </div>
         </div>
         <div class="col-lg-8 col-md-9">
@@ -111,15 +107,6 @@
           </div>
         </div>
         <div class="col-lg-12 col-md-12" id="div-subbotones-sala" style="padding-top: 50px;">
-          <!-- <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
-            <button class="btn btn-block btn-n-mus" id="btn-ritmo" data-genero="">Ritmo</button>
-          </div>
-          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-            <button class="btn btn-block btn-n-mus" id="btn-melodia" data-genero="">Melodía</button>
-          </div>
-          <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-            <button class="btn btn-block btn-n-mus" id="btn-armonia" data-genero="">Armonía</button>
-          </div> -->
         </div>
       </div>
     </div>
