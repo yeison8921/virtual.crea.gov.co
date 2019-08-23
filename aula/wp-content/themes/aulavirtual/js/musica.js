@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
 	 			$("#div-botones-sala").append("<button class='btn btn-block btn-h-mus' id='btn-escala' data-sala=''>Escala</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-ritmometrica' data-sala=''>Ritmo y métrica</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-acordes' data-sala=''>Acordes</button>"+
-	 				"<button class='btn btn-block btn-n-mus' id='btn-funciones-armonicas' data-sala=''>Funciones Armónicas</button>"+
+	 				"<button class='btn btn-block btn-n-mus' id='btn-funcionesarmonicas' data-sala=''>Funciones Armónicas</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-armaduras' data-sala=''>Armaduras</button>");
 	 		}
 	 		if(sala == "laboratorio"){
@@ -458,9 +458,9 @@ jQuery(document).ready(function($){
 	 			"<p>En esta ocasión veremos acordes de 3 sonidos llamados TRIADAS y de 4 sonidos llamados comúnmente CUATRIADAS, ambos para la tonalidad Mayor.</p>",
 	 			"", "texto", "acordes", $(this).attr("id"), "general-acordes");
 	 		break;
-	 		case "btn-funciones-armonicas":
+	 		case "btn-funcionesarmonicas":
 	 		infoSalaTeorica("Funciones Armónicas", "<p>Las funciones armónicas son regiones de la tonalidad que nos permiten entender la relación existente entre los acordes que la componen.</p>"+
-	 			"<p>Existen tres funciones armónicas tanto en tonalidad Mayor como en tonalidad menor.</p>", "", "texto", "funciones-armonicas", $(this).attr("id"), "general-funciones-armonicas");
+	 			"<p>Existen tres funciones armónicas tanto en tonalidad Mayor como en tonalidad menor.</p>", "", "texto", "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
 	 		break;
 	 		case "btn-estructura-escala":
 	 		infoSalaTeorica("Estructura de la escala mayor", "<p>Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala.</p>",
@@ -501,14 +501,62 @@ jQuery(document).ready(function($){
 	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/fraccion.png' class='img-responsive'></p>"+
 	 			"<p>El número que está en la parte inferior del fraccionario indica la figura que ocupa cada uno de esos pulsos en compás simple.<p>",
 	 			"<button class='btn btn-block btn-n-mus'>Métricas más utilizadas</button>", 3, "ritmometrica", $(this).attr("id"), "general-ritmometrica");
-
 	 		break;
 	 		case "btn-figuras":
 	 		infoSalaTeorica("&nbsp", "<p>Todas las figuras musicales tienen un número que las representa así:</p>"+
-	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/redonda.png' class='img-responsive'>Redonda</p>"+
-	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/redonda.png' class='img-responsive'>Redonda</p>"+
+	 			"<p>1 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/redonda.png'> Redonda</p>"+
+	 			"<p>2 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/blanca.png'> Blanca</p>"+
+	 			"<p>4 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/negra.png'> Negra</p>"+
+	 			"<p>8 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/corchea.png'> Corchea</p>"+
+	 			"<p>16 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/semicorchea.png'> Semicorchea</p>"+
 	 			"",
 	 			"<button class='btn btn-block btn-n-mus'>Métricas más utilizadas</button>", "texto", "ritmometrica", $(this).attr("id"), "general-ritmometrica");
+	 		break;
+	 		case "btn-triadas":
+	 		infoSalaTeorica("Triadas", "<p>Acordes TRIADAS: Entre los sonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.</p>"+
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/acordes/triadas.png' class='img-responsive'></p>"+
+	 			"<p>En la imagen anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.</p>"+
+	 			"<p>Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.</p>",
+	 			"", "texto", "acordes", $(this).attr("id"), "general-acordes");
+	 		break;
+	 		case "btn-cuatriadas":
+	 		infoSalaTeorica("Triadas", "<p>Estos acordes se construyen sobre la misma base de los acordes TRIADA vistos en los ejemplos anteriores. Adicionalmente se agrega un intervalo más de tercera, para quedar así con cuatro sonidos. Así, entre los sonidos de cada acorde existe un intervalo de 3ª, quedando conformado por una nota base, un intervalo de tercera, un intervalo de quinta y un intervalo de séptima.</p>"+
+	 			"<p>A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos y en el siguiente gráfico sus respectivos nombres.</p>"+
+	 			"<p>Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.</p>"+
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/acordes/cuatriadas.png' class='img-responsive'></p>",
+	 			"", "texto", "acordes", $(this).attr("id"), "general-acordes");
+	 		break;
+	 		case "btn-tonica":
+	 		infoSalaTeorica("Tónica", "<p>Representada por el número romano I, debido a que su nota fundamental es el primer grado de la escala. Se denomina “Tónica” porque es el acorde del primer grado el que nos indica cuál es la tonalidad.</p>"+
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/tonica.png' class='img-responsive'></p>",
+	 			"<button class='btn btn-block btn-n-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-tonica'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		break;
+	 		case "btn-subdominante":
+	 		infoSalaTeorica("Sub dominante", "<p>Representada por el número romano IV, debido a que su nota fundamental es el cuarto grado de la escala..</p>"+
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/subdominante.png' class='img-responsive'></p>",
+	 			"<button class='btn btn-block btn-n-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-subdominante'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		break;
+	 		case "btn-dominante":
+	 		infoSalaTeorica("Dominante", "<p>Representada por el número romano V, debido a que su nota fundamental es el quinto grado de la escala.</p>"+
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/dominante.png' class='img-responsive'></p>",
+	 			"<button class='btn btn-block btn-n-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-dominante'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		break;
+	 		case "btn-subacordes":
+	 		if($(this).attr("data-genero-sonido") == "funcionesarmonicas-tonica"){
+	 			infoSalaTeorica("Tónica", "<p>En esta región se ubicarán los acordes de I, iii y vi grado por contener dentro de su estructura la nota “mi”, que es la que le da el carácter de Mayor al acorde de Tónica. Auditivamente estos acordes se sienten como el punto de reposo, descanso o final.</p>"+
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/acordes_tonica.png' class='img-responsive'></p>",
+	 				"<button class='btn btn-block btn-h-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-tonica'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		}
+	 		if($(this).attr("data-genero-sonido") == "funcionesarmonicas-subdominante"){
+	 			infoSalaTeorica("Sub dominante", "<p>Además del IV grado incluirá el acorde del ii grado. Auditivamente son acordes que pueden conducir tanto a los de tónica como a los de dominante.</p>"+
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/acordes_subdominante.png' class='img-responsive'></p>",
+	 				"<button class='btn btn-block btn-h-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-subdominante'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		}
+	 		if($(this).attr("data-genero-sonido") == "funcionesarmonicas-dominante"){
+	 			infoSalaTeorica("Dominante", "<p>Estará conformada también por los acordes del V y vii grado disminuido. Auditivamente estos acordes ayudan a definir la tonalidad ya que crean una tensión que resuelve generalmente a la tónica.</p>"+
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/acordes_dominante.png' class='img-responsive'></p>",
+	 				"<button class='btn btn-block btn-h-mus' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-dominante'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
+	 		}
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
@@ -529,7 +577,7 @@ jQuery(document).ready(function($){
 	 	if($(this).hasClass('sub-boton')){
 	 		$("#btn-"+$(this).attr('data-sala-genero').split("-")[1]).removeClass().addClass("btn btn-block btn-h-mus");
 	 	}
-	 	if ($(this).attr("id") == "btn-tiple" || $(this).attr("id") == "btn-guitarra" || $(this).attr("id") == "btn-voz" || $(this).attr("id") == "btn-bandola" || $(this).attr("id") == "btn-do-mayor" || $(this).attr("id") == "btn-sol-mayor" || $(this).attr("id") == "btn-re-mayor"){
+	 	if ($(this).attr("id") == "btn-tiple" || $(this).attr("id") == "btn-guitarra" || $(this).attr("id") == "btn-voz" || $(this).attr("id") == "btn-bandola" || $(this).attr("id") == "btn-do-mayor" || $(this).attr("id") == "btn-sol-mayor" || $(this).attr("id") == "btn-re-mayor" || $(this).attr("id") == "btn-subacordes"){
 	 		$("#btn-"+$(this).attr("data-genero-sonido").split("-")[0]).removeClass("btn-n-mus").addClass("btn-h-mus");
 	 		$("#btn-"+$(this).attr("data-genero-sonido").split("-")[1]).removeClass("btn-n-mus").addClass("btn-h-mus");
 	 	}
