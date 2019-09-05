@@ -24,11 +24,19 @@ jQuery(document).ready(function($){
 		if($(this).attr("id") == "img-viaje"){
 			$("#div-img-viaje").hide();
 			$("#btns-intro-aap").hide();
-			$("#div-mapa-mundi").show();
 		}
 		if($(this).attr("id") == "img-colombia"){
 			$("#div-mapa-mundi").hide();
 			$("#div-modulos-aap").show();
+		}
+		if($(this).attr("id") == "img-pergamino"){
+			$("#div-mapa-mundi").hide();
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/pergamino/img_viñeta_1.jpg");
+			$("#div-comic .img-atras").data("atras", "mapa-mundi");
+			$("#btns-mover-comic img").data("comic", "pergamino");
+			$("#btns-mover-comic img").data("total", "15");
+			$("#div-comic").show();
+			num_pag = 1;
 		}
 		if($(this).attr("id") == "img-lupa" || $(this).attr("id") == "img-compas"){
 			$("#div-modulos-aap").hide();
@@ -222,6 +230,7 @@ $(".img-atras").click(function(){
 	}
 	if($(this).data("atras") == "mapa-mundi"){
 		$("#div-modulos-aap").hide();
+		$("#div-comic").hide();
 		$("#div-mapa-mundi").show();
 	}
 	if($(this).data("atras") == "modulos"){

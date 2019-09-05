@@ -1,13 +1,13 @@
 jQuery(document).ready(function($){
 
 	function infoIntroduccion(title, text) {
-		$(".titulo-info-basica-musica").html("").html(title);
-		$(".contenido-info-basica-musica").html("").html(text);
+		$(".titulo-info-basica").html("").html(title);
+		$(".contenido-info-basica").html("").html(text);
 	}
 
 	function infoModulo(title, text, data){
-		$(".titulo-info-basica-musica").html("").html(title);
-		$(".contenido-info-basica-musica").html("").html(text);
+		$(".titulo-info-basica").html("").html(title);
+		$(".contenido-info-basica").html("").html(text);
 		$("#div-botones-salas-musica button").attr("data-curso", data);
 	}
 
@@ -122,7 +122,7 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "escala":
 	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4'>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-estructura-escala' data-sala-genero=''>Estructura de la escala mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-estructuraescala' data-sala-genero='escala'>Estructura de la escala mayor</button>"+
 	 			"</div>");
 	 		break;
 	 		case "ritmometrica":
@@ -154,16 +154,16 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "instrumentos":
 	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton' id='' data-sala-genero=''>Guitarra</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-guitarra' data-sala-genero=''>Guitarra</button>"+
 	 			"</div>"+
 	 			"<div class='col-lg-3 col-md-3'>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton' id='' data-sala-genero=''>Tiple</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-tiple' data-sala-genero=''>Tiple</button>"+
 	 			"</div>"+
 	 			"<div class='col-lg-3 col-md-3'>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton' id='' data-sala-genero=''>Bandola</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-bandola' data-sala-genero=''>Bandola</button>"+
 	 			"</div>"+
 	 			"<div class='col-lg-3 col-md-3'>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton' id='' data-sala-genero=''>Otros</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-otros' data-sala-genero=''>Otros</button>"+
 	 			"</div>");
 	 		break;
 	 		default:
@@ -186,6 +186,20 @@ jQuery(document).ready(function($){
 	 	infoModulo("Andina", "<p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.</p>"+
 	 		"<p>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "+'"música andina"'+" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>", "andina");
 	 }
+	 $(".contenido-info-basica-musica").on({
+	 	mouseover: function(){
+	 		switch($(this).attr("id")){
+	 			case "clavijas":
+	 			$(".contenido-info-basica-musica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/clavijas.png");
+	 			break;
+	 		}
+	 	},
+	 	mouseout: function(){
+	 		$(".contenido-info-basica-musica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png");
+
+	 	} 
+
+	 }, "li");
 	 $(".contenedor").on("click", "button", function(){
 	 	$(this).removeClass("btn-n-mus").addClass("btn-h-mus");
 	 	$(".contenedor button").not(this).removeClass().addClass("btn btn-block btn-n-mus");
@@ -341,9 +355,7 @@ jQuery(document).ready(function($){
 	 			infoSalaTeorica("Escala", "<p>Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”.</p>"+
 	 				"<p>La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).</p>"+
 	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/escala/grados_escala.png' class='img-responsive'></p>",
-	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", "", "general-escala");
+	 				"", "texto", "escala", "", "general-escala");
 	 		}
 	 		break;
 	 		case "btn-ritmo":
@@ -528,9 +540,7 @@ jQuery(document).ready(function($){
 	 		infoSalaTeorica("Escala", "<p>Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”.</p>"+
 	 			"<p>La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).</p>"+
 	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/escala/grados_escala.png' class='img-responsive'></p>",
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", "", "general-escala");
+	 			"", "texto", "escala", "", "general-escala");
 	 		break;
 	 		case "btn-ritmometrica":
 	 		infoSalaTeorica("Ritmo", "<p>Duración de los sonidos musicales ordenados de acuerdo a la métrica de cada compás.</p>"+
@@ -551,11 +561,11 @@ jQuery(document).ready(function($){
 	 			"<p>Existen tres funciones armónicas tanto en tonalidad Mayor como en tonalidad menor.</p>"+
 	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/funciones_armonicas.png'></p>", "", "texto", "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
 	 		break;
-	 		case "btn-estructura-escala":
+	 		case "btn-estructuraescala":
 	 		infoSalaTeorica("Estructura de la escala mayor", "<p>Está conformada por cinco intervalos (Distancias) de tono y dos de semitono, comprendidos entre ocho notas, y distribuidos de la siguiente manera entre los grados de la escala.</p>",
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala-estructuraescala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
 	 		break; 
 	 		case "btn-armaduras":
 	 		infoSalaTeorica("Armaduras", "<p>La armadura, es el conjunto de alteraciones (sostenidos o bemoles), situadas a la derecha de la clave, en el pentagramay, es la encargada de indicarnos la tonalidad del tema o canción que estemos trabajando.</p>"+
@@ -568,27 +578,27 @@ jQuery(document).ready(function($){
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lGzbLp_rdRU'></iframe>"+
 	 			"</div></p>",
-	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
+	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala-estructuraescala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
 	 		break;
 	 		case "btn-sol-mayor":
 	 		infoSalaTeorica("Escala de SOL mayor", "<p>Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota fa# (Primer sostenido).</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/LFKh0d_amGc'></iframe>"+
 	 			"</div></p>",
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
+	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala-estructuraescala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
 	 		break;
 	 		case "btn-re-mayor":
 	 		infoSalaTeorica("Escala de RE mayor", "<p>Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota do# (Segundo sostenido).</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/DC88WSDTTh0'></iframe>"+
 	 			"</div></p>",
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala'>Escala Do Mayor</button>"+
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala'>Escala Sol Mayor</button>"+
-	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
+	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala-estructuraescala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
 	 		break;
 	 		case "btn-metricas-compas":
 	 		infoSalaTeorica("&nbsp", "<p>La métrica está representada por un fraccionario que aparece al inicio de la pieza musical.</p>"+
@@ -656,6 +666,32 @@ jQuery(document).ready(function($){
 	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/funciones/acordes_dominante.png' class='img-responsive'></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-subacordes' data-genero-sonido='funcionesarmonicas-dominante'>Acordes</button>", 3, "funciones-armonicas", $(this).attr("id"), "general-funcionesarmonicas");
 	 		}
+	 		break;
+	 		case "btn-ins-guitarra":
+	 		infoSalaTeorica("Instrumentos música andina", "<ul class='instrumentos'>"+
+	 			"<li id='clavijas'>Clavijas</li>"+
+	 			"<li>Cabeza o clavijero</li>"+
+	 			"<li>Hueso o cejuela</li>"+
+	 			"<li>Diapasón</li>"+
+	 			"<li>Trastes</li>"+
+	 			"<li>Filetes</li>"+
+	 			"<li>Cuerdas</li>"+
+	 			"<li>Roseta</li>"+
+	 			"<li>Boca</li>"+
+	 			"<li>Cuerpo o tapa armónica</li>"+
+	 			"<li>Costados o aros</li>"+
+	 			"<li>Hueso del puente</li>"+
+	 			"<li>Puente</li>"+
+	 			"</ul>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400' id='algo'", 2, "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		break;
+	 		case "btn-ins-tiple":
+	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		break;
+	 		case "btn-ins-bandola":
+	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		break;
+	 		case "btn-ins-otros":
+	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){

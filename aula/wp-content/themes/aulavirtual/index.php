@@ -39,7 +39,7 @@
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza">
               <img src="<?php bloginfo('template_url'); ?>/index/normal_danza.png" id="img-danza">
               <span>Danza<br>&nbsp</span>
             </a>

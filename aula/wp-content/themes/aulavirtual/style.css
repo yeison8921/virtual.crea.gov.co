@@ -241,81 +241,155 @@ hr{
   margin-bottom: -20px;
 }
 
-.titulo-info-basica-musica{
-  font-size: 40px;
-}
-
-.contenido-info-basica-musica{
+/*.contenido-info-basica-musica{
   font-size: 20px;
-}
+  }*/
 
-@media (min-width: 992px) and (max-width: 1200px){
-  .contenido-info-basica-musica{
+  @media (min-width: 992px) and (max-width: 1200px){
+  /*.contenido-info-basica-musica{
     font-size: 17px;
-  }
-  .btn-n-mus, .btn-h-mus{
+    }*/
+    .btn-n-mus, .btn-h-mus{
+      font-size: 17px;
+    }
+    .titulo-curso-musica{
+      padding-right: 0px;
+      color: white;
+      font-size: 28px;
+    }
+    .span-titulo{
+      margin-bottom: -10px;
+    }
+/*  .contenido-info-basica-musica{
     font-size: 17px;
+    }*/
   }
-  .titulo-curso-musica{
-    padding-right: 0px;
+
+  .contenedor-info-basica-musica{
     color: white;
-    font-size: 28px;
+    background-color: #000000b5;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
-  .span-titulo{
-    margin-bottom: -10px;
+
+  audio{
+    width: 100%;  
   }
-  .contenido-info-basica-musica{
-    font-size: 17px;
+
+  /** Fin estilos para aula música **/
+
+  /** Inicio estilos para aula danza **/
+
+  #div-cid{
+    background-image: url('danza/images/index/fondo_index.png');
   }
-}
+
+/*#div-ccm{
+  background-image: url('musica/images/index/fondo_index_curso.jpg');
+  }*/
+
+  #div-cid/*, #div-ccm*/{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+  }
+
+  .header-danza{
+    background-color: #2a80c8;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  .btn-n-dan, .btn-h-dan{
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .btn-h-dan.focus, .btn-h-dan:focus, .btn-h-dan:hover{
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .btn-n-dan{
+    background-color: #2a80c8;
+  }
+
+  .btn-h-dan{
+    background-color: #000000;
+    color: white;
+  }
+
+  .btn-n-dan:hover{
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+  }
+
+  /** Fin estilos para aula danza **/
 
 
-.navegacion-musica{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+  /** Inicio estilos comunes **/
 
-.contenedor-info-basica-musica{
-  color: white;
-  background-color: #000000b5;
-  border-radius: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+  .navegacion-curso{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
-.mini-contenedor-info-basica-musica{
-  height: 450px;
-  overflow-y: auto;
-  padding-right: 50px;
-}
+  .titulo-info-basica{
+    font-size: 40px;
+  }
 
-.mini-contenedor-info-basica-musica::-webkit-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 15px;
-  background-color: #F5F5F5;
-}
+  .mini-contenedor-info-basica{
+    height: 450px;
+    overflow-y: auto;
+    padding-right: 50px;
+  }
 
-.mini-contenedor-info-basica-musica::-webkit-scrollbar{
-  width: 15px;
-  background-color: #F5F5F5;
-  border-radius: 15px;
-}
+  .mini-contenedor-info-basica::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    background-color: #F5F5F5;
+  }
 
-.mini-contenedor-info-basica-musica::-webkit-scrollbar-thumb{
-  border-radius: 15px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #555;
-}
+  .mini-contenedor-info-basica::-webkit-scrollbar{
+    width: 15px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+  }
 
-audio{
-  width: 100%;  
-}
+  .mini-contenedor-info-basica::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
 
-/** Fin estilos para aula música **/
+  .contenido-info-basica{
+    font-size: 20px;
+  }
 
-/*********** Grid **********/
+  @media (min-width: 992px) and (max-width: 1200px){
+    .contenido-info-basica{
+      font-size: 17px;
+    }
+    /*.btn-n-mus, .btn-h-mus{
+      font-size: 17px;
+      }*/
+      .contenido-info-basica{
+        font-size: 17px;
+      }
+    }
+
+
+    /** Fin estilos comunes **/
+
+
+    /*********** Grid **********/
 
 /*html, body {
   height: 900px
@@ -1133,7 +1207,7 @@ body {
 }
 
 #div-img-viaje{
-  background-image: url('artes_plasticas/images/index/fondo_index_artes_plasticas.png');
+  background-image: url('artes_plasticas/images/index/fondo_index_artes_plasticas.jpg');
 }
 
 #contenedor-index-artes-plasticas, #div-img-viaje, #div-info-detallada-aap{
@@ -1150,7 +1224,7 @@ body {
 }
 
 #div-mapa-mundi{
-  background-image: url("artes_plasticas/images/imagen.png");
+  background-image: url("artes_plasticas/images/imagen.jpg");
 }
 
 #div-modulos-aap{
@@ -1207,7 +1281,7 @@ body {
 
   #div-colombia img {
     position: relative;
-    top: 53%;
+    top: 51%;
     left: -8%;
     width: 25px;
     transition: all 0.7s ease;
@@ -1215,8 +1289,8 @@ body {
   #div-pergamino img {
     width: 200px;
     position: absolute;
-    top: 75%;
-    left: 58%;
+    top: 67%;
+    left: 60%;
   }
   #div-imgs-modulos-app img{
     position: absolute;
@@ -1274,8 +1348,8 @@ body {
   }
   #div-colombia img {
     position: relative;
-    top: 57%;
-    left: -11%;
+    top: 55%;
+    left: -10%;
     width: 40px;
     transition: all 0.7s ease;
   }

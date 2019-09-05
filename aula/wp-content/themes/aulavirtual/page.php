@@ -1,11 +1,88 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php if(is_page("Introducción aula danza")) :?>
+    <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+    <div class="row contenedor" id="div-cid">
+      <div class="text-center header-danza">Aula de danza</div>
+      <div class="navegacion-curso">
+        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2">
+          <button class="btn btn-block btn-n-dan" id="btn-regresar" data-atras="index"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
+        </div>
+        <div class="col-lg-offset-6 col-lg-2 col-md-offset-6 col-md-2 col-sm-offset-6 col-sm-2">
+          <button class="btn btn-block btn-n-dan" id="btn-iniciar">Iniciar&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+      </div>
+      <div>
+        <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 col-sm-offset-2 col-sm-8 text-right">
+          <div>
+            <p class="titulo-index-musica">
+              <span class="span-titulo">CUERPO EN</span>
+              <span class="span-titulo">MOVIMIENTO</span>
+              <span class="span-titulo">&nbsp</span>
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-block btn-h-dan" id="btn-introduccion">Introducción</button>
+            <button class="btn btn-block btn-n-dan" id="btn-objetivos">Objetivos</button>
+            <button class="btn btn-block btn-n-dan" id="btn-metodologia">Metodología</button>
+            <button class="btn btn-block btn-n-dan" id="btn-publico">Nuestro público</button>
+            <button class="btn btn-block btn-n-dan" id="btn-creditos">Créditos</button>
+          </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
+          <div class="mini-contenedor-info-basica">
+            <div class="titulo-info-basica"></div>
+            <div class="contenido-info-basica"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+  <?php if(is_page("Danza")) :?>
+    <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
+    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+    <div class="row contenedor" id="div-cid">
+      <div class="text-center header-danza">Aula de danza</div>
+      <div class="navegacion-curso">
+        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2">
+          <button class="btn btn-block btn-n-dan" id="btn-regresar" data-atras="introduccion"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
+        </div>
+        <div class="col-lg-offset-6 col-lg-2 col-md-offset-6 col-md-2 col-sm-offset-6 col-sm-2">
+          <button class="btn btn-block btn-n-dan" id="btn-iniciar">Iniciar&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+      </div>
+      <div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3 col-sm-offset-2 col-sm-8 text-right">
+          <div>
+            <p class="titulo-index-musica">
+              <span class="span-titulo">SELECCIONA</span>
+              <span class="span-titulo">UN MÓDULO</span>
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-block btn-h-dan" id="btn-conexion">Conexión corporal</button>
+            <button class="btn btn-block btn-n-dan" id="btn-ritmo">Ritmo</button>
+            <button class="btn btn-block btn-n-dan" id="btn-expresion">Expresión</button>
+            <button class="btn btn-block btn-n-dan" id="btn-espacio">Espacio</button>
+            <button class="btn btn-block btn-n-dan" id="btn-memoria">Memoria</button>
+          </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
+          <div class="mini-contenedor-info-basica">
+            <div class="titulo-info-basica"></div>
+            <div class="contenido-info-basica"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
   <?php if(is_page("Introducción aula música")) :?>
     <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
     <div class="row contenedor" id="div-cim">
       <div class="text-center header-musica">Aula de música</div>
-      <div class="navegacion-musica">
+      <div class="navegacion-curso">
         <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2">
           <button class="btn btn-block btn-n-mus" id="btn-regresar" data-atras="index"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
         </div>
@@ -31,9 +108,9 @@
           </div>
         </div>
         <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
-          <div class="mini-contenedor-info-basica-musica">
-            <div class="titulo-info-basica-musica"></div>
-            <div class="contenido-info-basica-musica"></div>
+          <div class="mini-contenedor-info-basica">
+            <div class="titulo-info-basica"></div>
+            <div class="contenido-info-basica"></div>
           </div>
         </div>
       </div>
@@ -44,7 +121,7 @@
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
     <div class="row contenedor" id="div-ccm">
       <div class="text-center header-musica">Aula de música</div>
-      <div class="navegacion-musica">
+      <div class="navegacion-curso">
         <div class="col-lg-offset-1 col-lg-2 col-md-3 col-sm-3">
           <button class="btn btn-block btn-n-mus" id="btn-regresar" data-atras="introduccion"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
         </div>
@@ -66,9 +143,9 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-4 contenedor-info-basica-musica">
-          <div class="mini-contenedor-info-basica-musica">
-            <div class="titulo-info-basica-musica"></div>
-            <div class="contenido-info-basica-musica"></div>
+          <div class="mini-contenedor-info-basica">
+            <div class="titulo-info-basica"></div>
+            <div class="contenido-info-basica"></div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-4">
@@ -100,159 +177,13 @@
         </div>
         <div class="col-lg-8 col-md-9">
           <div class="contenedor-info-basica-musica">
-            <div class="mini-contenedor-info-basica-musica">
-              <div class="titulo-info-basica-musica"></div>
-              <div class="contenido-info-basica-musica"></div>
+            <div class="mini-contenedor-info-basica">
+              <div class="titulo-info-basica"></div>
+              <div class="contenido-info-basica"></div>
             </div>
           </div>
         </div>
         <div class="col-lg-12 col-md-12" id="div-subbotones-sala" style="padding-top: 50px;">
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
-
-  <?php if(is_page("Música 2")) :?>
-    <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
-    <input type="hidden" value="<?php bloginfo('template_url'); ?>" id="bloginfo">
-    <div class="row" id="contenedor-aula-musica">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-mod-enc-mus">
-        <div class="col-lg-1 col-md-1 col-sm-2 text-center" id="div-logo-bogota">
-          <img src="<?php bloginfo('template_url'); ?>/images/logo_bogota.png">
-        </div>
-        <div class="col-lg-offset-3 col-lg-4 col-md-offset-2 col-md-6 col-sm-8 col-xs-12 text-center">
-          <h2 class="tit-enc"><strong>MÚSICA ANDINA</strong></h2>
-        </div>
-        <div class="col-lg-offset-3 col-lg-1 col-md-offset-1 col-md-1 col-sm-2 text-center" id="div-logo-crea">
-          <img src="<?php bloginfo('template_url'); ?>/images/logo_crea.png">
-        </div>
-      </div>
-      <div class="col-lg-offset-4 col-lg-7 col-md-offset-3 col-md-8 col-sm-12 col-xs-12" id="div-info-andina">
-        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <h2>La Música Andina</h2>
-          <p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.<br><br>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "música andina" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="div-salas">
-          <div class="col-lg-offset-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-            <a href="#" id="btn-sala-teorica">
-              <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_teorica.png">
-              <button class="btn btn-block btn-musica-s">Sala Teórica</button>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-            <a href="#" id="btn-sala-interactiva">
-              <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_interactiva.png">
-              <button class="btn btn-block btn-musica-s">Sala Interactiva</button>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 text-right">
-            <a href="#" id="btn-sala-general">
-              <img src="<?php bloginfo('template_url'); ?>/musica/images/icono_sala_general.png">
-              <button class="btn btn-block btn-musica-s">Sala General</button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" id="div-btn-mod-mus" style="height: 100%; display: none;">
-      </div>
-
-      <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-teorica" style="height: 100%;">
-        <div class="col-lg-12 col-md-12" id="div-pri-sec-teo" style="height: 15%;">
-          <h2 style="font-size: 35px;"></h2>
-        </div>
-        <div class="col-lg-6 col-md-6" id="div-seg-sec-teo" style="height: 55%;">
-          <img src="" class="img-responsive">
-          <p></p>
-        </div>
-        <div class="col-lg-6 col-md-6" id="div-ter-sec-teo" style="height: 55%;">
-          <div class="col-lg-6 col-md-6">
-            <img src="" class="img-responsive">
-          </div>
-          <div class="col-lg-6 col-md-6 div-audio">
-          </div>
-          <div class="col-lg-12 col-md-12">
-            <p></p>
-          </div>
-        </div>
-        <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6" id="div-image-instrumentos">
-          <img src="" class="img-responsive">
-        </div>
-        <div class="col-lg-12 col-md-12" id="div-cua-sec-teo" style="height: 10%;">
-        </div>
-      </div>
-
-      <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-interactiva" style="height: 100%;">
-        <div class="col-lg-12 col-md-12" id="div-pri-sec-int" style="height: 15%;">
-          <h2 style="font-size: 35px;"></h2>
-        </div>
-        <div id="div-seg-sec-int">
-          <p></p>
-        </div>
-        <div id="div-ter-sec-int">
-          <p></p>
-        </div>
-        <div class="col-lg-12 col-md-12" id="div-cua-sec-int" style="height: 10%;">
-        </div>
-      </div>
-      
-      <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido text-modulo" id="div-sala-general" style="height: 100%;">
-        <div class="col-lg-9 col-md-8" style="height: 80%;">
-          <div class="col-lg-12 col-md-12" id="div-pri-sec-gen" style="height: 40%;">
-            <h2 style="font-size: 35px;"></h2>
-            <p></p>
-            <img src="" class="img-responsive">
-          </div>
-          <div class="col-lg-12 col-md-12" id="div-seg-sec-gen" style="height: 40%;">
-            <h2 style="font-size: 35px;"></h2>
-            <p></p>
-            <img src="" class="img-responsive">
-          </div>
-          <div class="col-lg-12 col-md-12" id="div-ter-sec-gen" style="height: 10%;">
-            <div class="col-lg-4 col-md-4 text-center" id="div-pri-btn-sec-gen" style="height: 100%;">
-            </div>
-            <div class="col-lg-4 col-md-4 text-center" id="div-seg-btn-sec-gen" style="height: 100%;">
-              <a class="col-lg-6 col-md-6" href="#" id="ref-atr-pag"></a>
-              <a class="col-lg-6 col-md-6" href="#" id="ref-ade-pag"></a>
-            </div>
-            <div class="col-lg-4 col-md-4 text-center" id="div-ter-btn-sec-gen" style="height: 100%;">
-            </div>
-          </div>
-          <div class="col-lg-12 col-md-12" id="div-cua-sec-gen" style="height: 10%; ">
-            <div class="col-lg-4 col-md-4 text-center" id="div-cua-btn-sec-gen" style="height: 100%;">
-            </div>
-            <div class="col-lg-4 col-md-4 text-center" id="div-qui-btn-sec-gen" style="height: 100%;">
-            </div>
-            <div class="col-lg-4 col-md-4 text-center" id="div-sex-btn-sec-gen" style="height: 100%;">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4" id="div-bar-gen" style="height: 65%; margin-top: 20%;">
-        </div>
-      </div>
-
-      <div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-7 contenido" id="div-instrumentos" style="height: 100%;">
-        <div class="col-lg-12 col-md-12" id="div-tit-instrumentos" style="height: 15%;">
-          <h2 style="font-size: 35px; height: 80%"></h2>
-        </div>
-        <div class="col-lg-12 col-md-12" id="div-botones-instrumentos" style="height: 5%;">
-        </div>
-        <div class="col-lg-12 col-md-12" id="div-img-instrumentos" style="height: 55%;">
-          <div class="col-lg-4 col-md-4" id="div-img-1">
-            <img src="">
-          </div>
-          <div class="col-lg-4 col-md-4" id="div-img-2">
-            <img src="">
-          </div>
-          <div class="col-lg-4 col-md-4" id="div-img-3">
-            <img src="">
-          </div>
-          <div class="col-lg-6 col-md-6" id="div-img-4">
-            <img src="">
-          </div>
-          <div class="col-lg-6 col-md-6" id="div-img-5">
-            <img src="">
-          </div>
         </div>
       </div>
     </div>
@@ -263,7 +194,7 @@
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
     <div class="row" id="contenedor-index-artes-plasticas">
       <div class="text-center" id="div-img-viaje">
-        <a href="#">
+        <a href="<?php bloginfo('url'); ?>/artes-plasticas">
           <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/titulo.png" id="img-viaje">
         </a>
       </div>
@@ -299,10 +230,17 @@
           <p></p>
         </div>
       </div>
-      <div class="col-lg-12 text-center" id="div-mapa-mundi" style="display: none;">
+    </div>
+  <?php endif; ?>
+
+  <?php if(is_page("Artes plásticas")) :?>
+    <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
+    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+    <div class="row" id="contenedor-index-artes-plasticas">
+      <div class="col-lg-12 text-center" id="div-mapa-mundi">
         <div class="col-lg-12">
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="index">
+          <a href="<?php bloginfo('url'); ?>/introduccion-aula-artes-plasticas">
+            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive">
           </a>
         </div>
         <div id="div-colombia">
