@@ -30,7 +30,7 @@
             <button class="btn btn-block btn-n-dan" id="btn-creditos">Créditos</button>
           </div>
         </div>
-        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica">
           <div class="mini-contenedor-info-basica">
             <div class="titulo-info-basica"></div>
             <div class="contenido-info-basica"></div>
@@ -42,7 +42,7 @@
   <?php if(is_page("Danza")) :?>
     <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-    <div class="row contenedor" id="div-cid">
+    <div class="row contenedor" id="div-ccd">
       <div class="text-center header-danza">Aula de danza</div>
       <div class="navegacion-curso">
         <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2">
@@ -52,27 +52,48 @@
           <button class="btn btn-block btn-n-dan" id="btn-iniciar">Iniciar&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
         </div>
       </div>
-      <div>
+      <div id="div-seleccion-curso-danza" style="padding-top: 100px;">
         <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3 col-sm-offset-2 col-sm-8 text-right">
           <div>
-            <p class="titulo-index-musica">
+            <p class="titulo-curso-musica">
               <span class="span-titulo">SELECCIONA</span>
               <span class="span-titulo">UN MÓDULO</span>
             </p>
           </div>
           <div>
-            <button class="btn btn-block btn-h-dan" id="btn-conexion">Conexión corporal</button>
-            <button class="btn btn-block btn-n-dan" id="btn-ritmo">Ritmo</button>
-            <button class="btn btn-block btn-n-dan" id="btn-expresion">Expresión</button>
-            <button class="btn btn-block btn-n-dan" id="btn-espacio">Espacio</button>
-            <button class="btn btn-block btn-n-dan" id="btn-memoria">Memoria</button>
+            <button class="btn btn-block btn-n-dan" id="btn-conexion" data-curso="">Conexión corporal</button>
+            <button class="btn btn-block btn-n-dan" id="btn-ritmo" data-curso="">Ritmo</button>
+            <button class="btn btn-block btn-n-dan" id="btn-expresion" data-curso="">Expresión</button>
+            <button class="btn btn-block btn-n-dan" id="btn-espacio" data-curso="">Espacio</button>
+            <button class="btn btn-block btn-n-dan" id="btn-memoria" data-curso="">Memoria</button>
           </div>
         </div>
-        <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
+        <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-2 col-sm-8 contenedor-info-basica">
           <div class="mini-contenedor-info-basica">
             <div class="titulo-info-basica"></div>
             <div class="contenido-info-basica"></div>
           </div>
+        </div>
+      </div>
+      <div id="div-contenido-sala-danza" style="padding-top: 100px; display: none;">
+        <div class="col-lg-offset-1 col-lg-2 col-md-3">
+          <div>
+            <p class="titulo-curso-musica">
+              <span class="span-titulo">&nbsp;</span>
+            </p>
+          </div>
+          <div id="div-botones-sala">
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-9">
+          <div class="contenedor-info-basica">
+            <div class="mini-contenedor-info-basica">
+              <div class="titulo-info-basica"></div>
+              <div class="contenido-info-basica"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12" id="div-subbotones-sala" style="padding-top: 50px;">
         </div>
       </div>
     </div>
@@ -107,7 +128,7 @@
             <button class="btn btn-block btn-n-mus" id="btn-creditos">Créditos</button>
           </div>
         </div>
-        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica-musica">
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 contenedor-info-basica">
           <div class="mini-contenedor-info-basica">
             <div class="titulo-info-basica"></div>
             <div class="contenido-info-basica"></div>
@@ -142,7 +163,7 @@
             <button class="btn btn-block btn-n-mus" id="btn-carranga">Carranga</button>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-4 contenedor-info-basica-musica">
+        <div class="col-lg-4 col-md-6 col-sm-4 contenedor-info-basica">
           <div class="mini-contenedor-info-basica">
             <div class="titulo-info-basica"></div>
             <div class="contenido-info-basica"></div>
@@ -176,7 +197,7 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-9">
-          <div class="contenedor-info-basica-musica">
+          <div class="contenedor-info-basica">
             <div class="mini-contenedor-info-basica">
               <div class="titulo-info-basica"></div>
               <div class="contenido-info-basica"></div>
@@ -188,7 +209,6 @@
       </div>
     </div>
   <?php endif; ?>
-
   <?php if(is_page("Introducción aula artes plásticas")) :?>
     <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
@@ -232,7 +252,6 @@
       </div>
     </div>
   <?php endif; ?>
-
   <?php if(is_page("Artes plásticas")) :?>
     <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
@@ -281,7 +300,7 @@
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
           </a>
         </div>
-        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 17%">
+        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 12%">
           <div class="col-lg-3 col-md-3">
             <a href="#">
               <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">

@@ -2,22 +2,22 @@ jQuery(document).ready(function($){
 	num_pag = 1;
 
 	fondo_principal = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_index_artes_plasticas.png")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_index_artes_plasticas.png")',
 	};
 	fondo_introduccion = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_introduccion.jpg")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_introduccion.jpg")',
 	}
 	fondo_objetivos = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_objetivos.jpg")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_objetivos.jpg")',
 	}
 	fondo_publico = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_publico.jpg")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_publico.jpg")',
 	}
 	fondo_metodologia = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_metodologia.jpg")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_metodologia.jpg")',
 	}
 	fondo_creditos = {
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/index/fondo_creditos.jpg")',
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_creditos.jpg")',
 	}
 	
 	$("#contenedor-index-artes-plasticas").on("click", "img", function() {

@@ -58,21 +58,21 @@ jQuery(document).ready(function($){
 	 */
 
 	 function infoSalaTeorica(title, mainText, secText, grid, botonesHorizontales, botonHover, data){
-	 	$(".titulo-info-basica-musica").html("").html(title);
+	 	$(".titulo-info-basica").html("").html(title);
 	 	switch(grid){
 	 		case 1:
-	 		$(".contenido-info-basica-musica").html("").html("<div class='col-lg-offset-2 col-lg-8 col-md-12'>"+mainText+"</div>");
+	 		$(".contenido-info-basica").html("").html("<div class='col-lg-offset-2 col-lg-8 col-md-12'>"+mainText+"</div>");
 	 		break;
 	 		case 2:
-	 		$(".contenido-info-basica-musica").html("").html("<div class='col-lg-6 col-md-12'>"+mainText+"</div>"+
+	 		$(".contenido-info-basica").html("").html("<div class='col-lg-6 col-md-12'>"+mainText+"</div>"+
 	 			"<div class='col-lg-6 col-md-12'>"+secText+"</div>");
 	 		break;
 	 		case 3:
-	 		$(".contenido-info-basica-musica").html("").html("<div class='col-lg-8 col-md-12'>"+mainText+"</div>"+
+	 		$(".contenido-info-basica").html("").html("<div class='col-lg-8 col-md-12'>"+mainText+"</div>"+
 	 			"<div class='col-lg-4 col-md-12'>"+secText+"</div>");
 	 		break;
 	 		case "texto":
-	 		$(".contenido-info-basica-musica").html("").html("<div class='col-lg-12 col-md-12'>"+mainText+"</div>");
+	 		$(".contenido-info-basica").html("").html("<div class='col-lg-12 col-md-12'>"+mainText+"</div>");
 	 		break;
 	 	}
 	 	switch(botonesHorizontales){
@@ -181,16 +181,18 @@ jQuery(document).ready(function($){
 
 	 var pagina = window.location.href;
 	 if(pagina.indexOf("introduccion") != -1){
-	 	infoIntroduccion("Introducción", "¡Bienvenidos! En estas salas encontrarán herramientas prácticas que les ayudarán a conocer los ritmos de la música colombiana. Escuchando, tocando e interactuando.");
+	 	infoIntroduccion("Introducción", "<p>¡Hola a todos!</p>"+
+	 		"<p>Bienvenidos a esta experiencia virtual en donde la música colombiana se apoderará de tus sentidos y tu mente, y donde encontrarás diferentes salas con herramientas prácticas que te ayudarán a conocer algunos ritmos de nuestra música, escuchando, tocando e interactuando con los contenidos desarrollados para ti.</p>"+
+	 		"<p>Te invitamos a recorrer nuestras diferentes salas y a conocer y apropiarte de nuestros bellos ritmos colombianos.</p>");
 	 }else{
 	 	infoModulo("Andina", "<p>Es un término que se aplica a una gama muy vasta de géneros musicales originados en los Andes sudamericanos. Esta área incluye principalmente los andes del Perú y Bolivia; sierras de Ecuador, noroeste de Argentina, norte de Chile y suroeste de Colombia y Venezuela.</p>"+
 	 		"<p>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "+'"música andina"'+" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>", "andina");
 	 }
-	 $(".contenido-info-basica-musica").on({
+	 $(".contenido-info-basica").on({
 	 	mouseover: function(){
 	 		switch($(this).attr("id")){
 	 			case "clavijas":
-	 			$(".contenido-info-basica-musica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/clavijas.png");
+	 			$(".contenido-info-basica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/clavijas.png");
 	 			break;
 	 		}
 	 	},
@@ -328,6 +330,9 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-teorica":
 	 		if($(this).attr("data-curso") == "andina"){
+	 			$("#div-ccm").css({
+	 				"background-image": 'url("'+ $("#bloginfo").val() + '/musica/images/fondos/fondo_sala_teorica.jpg")',
+	 			});
 	 			botonesLaterales("andina", "teorica");
 	 			$("#div-botones-sala button").attr("data-sala", "teorica");
 	 			infoSalaTeorica("La Guabina", "<p>Aire andino de origen campesino, al parecer nacido en Antioquia desde los albores del siglo XIX, con ascendencia europea y con adaptaciones regionales muy sugerentes. Sobre su nombre no existe definición; se habla de la existencia de un pez guabina en los Llanos, y muy apreciado en Cuba por su carne.</p>"+
@@ -339,6 +344,9 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-interactiva":
 	 		if($(this).attr("data-curso") == "andina"){
+	 			$("#div-ccm").css({
+	 				"background-image": 'url("'+ $("#bloginfo").val() + '/musica/images/fondos/fondo_sala_interactiva.jpg")',
+	 			});
 	 			botonesLaterales("andina", "interactiva");
 	 			$("#div-botones-sala button").attr("data-sala", "interactiva");
 	 			infoSalaTeorica("La Guabina", "<p>Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.</p>"+
@@ -349,9 +357,12 @@ jQuery(document).ready(function($){
 	 		}
 	 		break;
 	 		case "btn-general":
-	 		botonesLaterales("andina", "general");
-	 		$("#div-botones-sala button").attr("data-sala", "general");
 	 		if($(this).attr("data-curso") == "andina"){
+	 			$("#div-ccm").css({
+	 				"background-image": 'url("'+ $("#bloginfo").val() + '/musica/images/fondos/fondo_sala_general.jpg")',
+	 			});
+	 			botonesLaterales("andina", "general");
+	 			$("#div-botones-sala button").attr("data-sala", "general");
 	 			infoSalaTeorica("Escala", "<p>Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”.</p>"+
 	 				"<p>La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).</p>"+
 	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/escala/grados_escala.png' class='img-responsive'></p>",
