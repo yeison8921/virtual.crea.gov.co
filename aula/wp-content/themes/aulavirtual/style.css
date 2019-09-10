@@ -1218,11 +1218,11 @@ body {
 
 /*#div-modulos-aap{
   background-image: url("artes_plasticas/images/fondos/fondo_instrumentos.png"), url("artes_plasticas/images/introduccion/fondo.png");
-}*/
+  }*/
 
-#div-sub-modulos{
-  background-image: url("artes_plasticas/images/fondos/fondo_actividades.jpg");
-}
+/*#div-sub-modulos{
+  background-image: url("artes_plasticas/images/fondos/fondo_lupa.jpg");
+  }*/
 
 /*#div-sub-modulos{
   background-image: url("artes_plasticas/images/submodulos/pergamino.png"), url("artes_plasticas/images/submodulos/fondo.png");
@@ -1239,6 +1239,10 @@ body {
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
   transition: all 0.7s ease;
+}
+
+#div-compas-oculto:hover{
+  cursor: pointer;
 }
 
 @media (min-height: 0px) and (max-height: 890px){

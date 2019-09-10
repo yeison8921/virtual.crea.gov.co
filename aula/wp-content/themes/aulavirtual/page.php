@@ -295,31 +295,35 @@
         </div>
       </div>
       <div class="col-lg-12 col-md-12" id="div-sub-modulos" style="display: none;">
+        <div id="div-compas-oculto" style="width: 250px; height: 420px; transform: skew(-15deg); position: absolute; left: 56%; top: 20%;">
+        </div>
         <div class="col-lg-12 col-md-12">
           <a href="#">
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
           </a>
         </div>
-        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8" style="margin-top: 12%">
-          <div class="col-lg-3 col-md-3">
+        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8">
+          <div class="col-lg-3 col-md-3" id="div-linea">
             <a href="#">
               <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">
             </a>
             <span>Línea</span>
           </div>
-          <div class="col-lg-3 col-md-3">
+          <div class="col-lg-3 col-md-3" id="div-gesto">
             <a href="#">
               <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_gesto.png" id="img-gesto" data-ejercicio="">
             </a>
             <span>Gesto</span>
           </div>
-          <div class="col-lg-3 col-md-3">
+        </div>
+        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8">
+          <div class="col-lg-3 col-md-3" id="div-color">
             <a href="#">
               <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_color.png" id="img-color" data-ejercicio="">
             </a>
             <span>Color</span>
           </div>
-          <div class="col-lg-3 col-md-3">
+          <div class="col-lg-3 col-md-3" id="div-creatividad">
             <a href="#">
               <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_creatividad.png" id="img-creatividad" data-ejercicio="">
             </a>

@@ -38,9 +38,24 @@ jQuery(document).ready(function($){
 			$("#div-comic").show();
 			num_pag = 1;
 		}
-		if($(this).attr("id") == "img-lupa" || $(this).attr("id") == "img-compas"){
+		if($(this).attr("id") == "img-lupa"){
+			$("#div-sub-modulos").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_lupa.jpg")',
+			});
 			$("#div-modulos-aap").hide();
 			$("#div-sub-modulos").show();
+			$($("#div-sub-modulos").children()[2]).css({
+				"margin-top": "15%",
+				"left": "5%"
+			})
+			$($("#div-sub-modulos").children()[3]).css({
+				"left": "5%"
+			})
+			$("#div-linea").show();
+			$("#div-gesto").show();
+			$("#div-color").show();
+			$("#div-creatividad").show();
+			$("#div-compas-oculto").hide();
 		}
 		if($(this).attr("id") == "img-lupa"){
 			$("#div-sub-modulos img").data("ejercicio", "comic");
@@ -53,6 +68,20 @@ jQuery(document).ready(function($){
 			$("#div-modulos-aap").hide();
 		}
 		if($(this).attr("id") == "img-compas"){
+			$("#div-sub-modulos").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas.jpg")',
+			});
+			$($("#div-sub-modulos").children()[2]).css({
+				"margin-top": "15%",
+				"left": "5%"
+			})
+			$("#div-modulos-aap").hide();
+			$("#div-sub-modulos").show();
+			$("#div-linea").hide();
+			$("#div-gesto").hide();
+			$("#div-color").hide();
+			$("#div-creatividad").hide();
+			$("#div-compas-oculto").show();
 			$("#div-sub-modulos img").data("ejercicio", "ejercicio");
 		}
 
@@ -317,6 +346,26 @@ $("#cinco img")
 		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png");
 		break;
 	}
+});
+
+$("#div-compas-oculto").click(function(){
+	$("#div-sub-modulos").css({
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas_2.jpg")',
+	});
+	$("#div-modulos-aap").hide();
+	$("#div-sub-modulos").show();
+	$($("#div-sub-modulos").children()[2]).css({
+		"margin-top": "10%",
+		"left": "8%"
+	})
+	$($("#div-sub-modulos").children()[3]).css({
+		"left": "8%"
+	})
+	$("#div-linea").show();
+	$("#div-gesto").show();
+	$("#div-color").show();
+	$("#div-creatividad").show();
+	$("#div-compas-oculto").hide();
 });
 
 $("#btns-intro-aap img").click(function(){
