@@ -44,22 +44,18 @@ jQuery(document).ready(function($){
 			});
 			$("#div-modulos-aap").hide();
 			$("#div-sub-modulos").show();
-			$($("#div-sub-modulos").children()[2]).css({
+			$($("#div-sub-modulos").children()[1]).show();
+			$($("#div-sub-modulos").children()[2]).show();
+			$($("#div-sub-modulos").children()[1]).css({
 				"margin-top": "15%",
 				"left": "5%"
 			})
-			$($("#div-sub-modulos").children()[3]).css({
+			$($("#div-sub-modulos").children()[2]).css({
 				"left": "5%"
 			})
-			$("#div-linea").show();
-			$("#div-gesto").show();
-			$("#div-color").show();
-			$("#div-creatividad").show();
-			$("#div-compas-oculto").hide();
-		}
-		if($(this).attr("id") == "img-lupa"){
 			$("#div-sub-modulos img").data("ejercicio", "comic");
 		}
+
 		if($(this).attr("id") == "img-brujula"){
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/brujula/img_viñeta_1.jpg");
 			$("#div-comic .img-atras").data("atras", "modulos");
@@ -71,18 +67,27 @@ jQuery(document).ready(function($){
 			$("#div-sub-modulos").css({
 				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas.jpg")',
 			});
+			$($("#div-sub-modulos").children()[1]).show();
+			$($("#div-sub-modulos").children()[2]).show();
+			$($("#div-sub-modulos").children()[1]).css({
+				"margin-top": "10%",
+				"left": "8%"
+			})
 			$($("#div-sub-modulos").children()[2]).css({
-				"margin-top": "15%",
-				"left": "5%"
+				"left": "8%"
 			})
 			$("#div-modulos-aap").hide();
 			$("#div-sub-modulos").show();
-			$("#div-linea").hide();
-			$("#div-gesto").hide();
-			$("#div-color").hide();
-			$("#div-creatividad").hide();
-			$("#div-compas-oculto").show();
 			$("#div-sub-modulos img").data("ejercicio", "ejercicio");
+		}
+		if($(this).attr("id") == "img-telescopio"){
+			$("#div-sub-modulos").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_telescopio.jpg")',
+			});
+			$("#div-modulos-aap").hide();
+			$("#div-sub-modulos").show();
+			$($("#div-sub-modulos").children()[1]).hide();
+			$($("#div-sub-modulos").children()[2]).hide();
 		}
 
 		if($(this).attr("id") == "img-linea"){
@@ -247,6 +252,10 @@ $("#btns-mover-comic").on("click", "img", function() {
 			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
 			$(this).attr("data-pagina", num_pag);
 		}
+		if(num_pag == $(this).data("total")){
+			console.log("this");
+		}
+
 	}
 });
 
@@ -347,27 +356,6 @@ $("#cinco img")
 		break;
 	}
 });
-
-$("#div-compas-oculto").click(function(){
-	$("#div-sub-modulos").css({
-		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas_2.jpg")',
-	});
-	$("#div-modulos-aap").hide();
-	$("#div-sub-modulos").show();
-	$($("#div-sub-modulos").children()[2]).css({
-		"margin-top": "10%",
-		"left": "8%"
-	})
-	$($("#div-sub-modulos").children()[3]).css({
-		"left": "8%"
-	})
-	$("#div-linea").show();
-	$("#div-gesto").show();
-	$("#div-color").show();
-	$("#div-creatividad").show();
-	$("#div-compas-oculto").hide();
-});
-
 $("#btns-intro-aap img").click(function(){
 	$("#div-img-viaje").hide();
 	$("#btns-intro-aap").hide();
