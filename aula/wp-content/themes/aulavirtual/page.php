@@ -183,6 +183,7 @@
             <button class="btn btn-block btn-n-mus" id="btn-interactiva" data-curso="andina">Sala interactiva</button>
             <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="andina">Sala general</button>
             <button class="btn btn-block btn-n-mus" id="btn-laboratorio" data-curso="andina">Laboratorio</button>
+            <button class="btn btn-block btn-n-mus" id="btn-proximamente" data-curso="andina" disabled style="display: none;">Próximamente</button>
           </div>
         </div>
       </div>
@@ -335,6 +336,7 @@
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="">
           </a>
         </div>
+        <div id="div-comic-oculto" data-comic=""></div>
         <div class="col-lg-12 col-md-12 text-center" id="div-imagenes-comic">
           <img src="" id="img-comic">
         </div>
@@ -357,7 +359,7 @@
         <div class="col-lg-3 col-md-3 text-right" style="height: 90%;">
           <img src="" id="img-pajaro" style="margin-top: 200px;">
         </div>
-        <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 70%; font-size: 23px; overflow-y: scroll;">
+        <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 70%; font-size: 23px; overflow-y: auto;">
         </div>
         <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 23px; padding-top: 20px;">
           <div class="col-lg-6 col-md-6 text-right">

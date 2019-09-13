@@ -1390,6 +1390,18 @@ body {
   #img-comic{
     height: 600px;
   }
+
+  #div-comic-oculto{
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    transform: skew(-20deg);
+    left: 53%;
+    position: absolute;
+    top: 22%;
+    z-index: 1;
+    display: none;
+  }
 }
 
 /*Fin estilos aula audiovisuales*/

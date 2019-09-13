@@ -190,23 +190,26 @@ jQuery(document).ready(function($){
 	 }
 	 $(".contenido-info-basica").on({
 	 	mouseover: function(){
-	 		switch($(this).attr("id")){
-	 			case "clavijas":
-	 			$(".contenido-info-basica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/clavijas.png");
-	 			break;
-	 		}
+	 		$(".contenido-info-basica #img-guitarra").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/"+$(this).attr("id")+".png");
+	 		$(".contenido-info-basica #img-tiple").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/tiple/"+$(this).attr("id")+".png");
+	 		$(".contenido-info-basica #img-bandola").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/bandola/"+$(this).attr("id")+".png");
 	 	},
-	 	mouseout: function(){
-	 		$(".contenido-info-basica-musica #algo").attr("src", $("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png");
-
-	 	} 
-
 	 }, "li");
 	 $(".contenedor").on("click", "button", function(){
 	 	$(this).removeClass("btn-n-mus").addClass("btn-h-mus");
 	 	$(".contenedor button").not(this).removeClass().addClass("btn btn-block btn-n-mus");
 	 	if($(this).attr('id') == "btn-llanera" || $(this).attr('id') == "btn-pacifico" || $(this).attr('id') == "btn-atlantico" || $(this).attr('id') == "btn-carranga"){
-	 		$("#div-botones-salas-musica").hide();
+	 		$("#btn-teorica").hide();
+	 		$("#btn-interactiva").hide();
+	 		$("#btn-general").hide();
+	 		$("#btn-laboratorio").hide();
+	 		$("#btn-proximamente").show();
+	 	}else{
+	 		$("#btn-teorica").show();
+	 		$("#btn-interactiva").show();
+	 		$("#btn-general").show();
+	 		$("#btn-laboratorio").show();
+	 		$("#btn-proximamente").hide();
 	 	}
 	 	if($(this).attr('id') == "btn-teorica" || $(this).attr('id') == "btn-interactiva" || $(this).attr('id') == "btn-general"){
 	 		$("#btn-regresar").attr("data-atras", "modulo");
@@ -254,16 +257,16 @@ jQuery(document).ready(function($){
 	 			"<p>El término se usa a menudo como sinónimo del estilo musical típico del altiplano e interpretado generalmente por aymaras, quechuas y otros pueblos de dicha región, estilo caracterizado por melodías nostálgicas y evocativas interpretadas con flautas de caña y charangos. Pero en sentido estricto la expresión "+'"música andina"'+" englobaría no sólo esta música sino también los restantes estilos y formaciones instrumentales presentes a lo largo y ancho de la geografía andina.</p>", "andina");
 	 		break;
 	 		case "btn-llanera":
-	 		infoModulo("Llanera", "", "llanera");
+	 		infoModulo("Llanera", "<p>La música llanera, viene de la mezcla de influencias españolas e indígenas. La estructura rítmica es una combinación de ritmos ternario y compuesto, pero como es un descendiente del Vals se escribe en un tiempo de 3/4. El conjunto típico de música llanera está compuesto de tres instrumentos: el Cuatro que es una guitarra pequeña de cuatro cuerdas y da soporte rítmico y armónico a la música llanera; las Maracas o Capachos que están también a cargo del soporte rítmico y son el único instrumento de percusión en el Joropo, y el Arpa que está a cargo de la melodía y contra melodía; normalmente a estos tres instrumentos se les suma el bajo eléctrico.</p>", "llanera");
 	 		break;
 	 		case "btn-pacifico":
-	 		infoModulo("Pacifico", "", "pacifico");
+	 		infoModulo("Pacifico", "<p>Aunque la música afrocolombiana de la costa Pacífica presenta en mayor medida herencias de tradiciones africanas, también exhibe pervivencias de raigambres indígenas y españolas que fueron adaptadas por los afros descendientes de la región.</p>", "pacifico");
 	 		break;
 	 		case "btn-atlantico":
-	 		infoModulo("Atlántico", "", "atlantico");
+	 		infoModulo("Atlántico", "<p>La música del Caribe es la agrupación de músicas, cantos y danzas de América Central y del Caribe, esta región también abarca las partes costeras de Venezuela y Colombia. Surgieron de la unión de ritmos europeos, africanos y nativos en distintas zonas, como parte del mestizaje americano.</p>", "atlantico");
 	 		break;
 	 		case "btn-carranga":
-	 		infoModulo("Carranga", "", "carranga");
+	 		infoModulo("Carranga", "<p>La carranga, música carranguera o música campesina, es un género de música folclórica surgida en la región andina colombiana, más exactamente en el departamento de Boyacá en los años 70, de mano del compositor Jorge Velosa​ y los Carrangueros de Ráquira.</p>", "carranga");
 	 		break;
 	 		case "btn-guabina":
 	 		if($(this).attr("data-sala") == "teorica"){
@@ -291,8 +294,13 @@ jQuery(document).ready(function($){
 	 				"<p>La guaracha es un instrumento musical idiófono de raspado utilizado mayormente en el vallenato. Se fabrica, entre otros, de caña o de lata.</p>", 2, 2, $(this).attr("id"), "teorica-pasillo");
 	 		}
 	 		if($(this).attr("data-sala") == "interactiva"){
-	 			infoSalaTeorica("El Pasillo", "<p>El texto del pasillo</p>",
-	 				"<p>Video</p>", 2, "tocar", "", "interactiva-pasillo");
+	 			infoSalaTeorica("El Pasillo", "<p>Pasillos del estilo de “Rondinella”, “La gata golosa” y “Patasdilo”, eran los más solicitados por las personas y los más escuchados en las tertulias santafereñas.</p>"+
+	 				"<p>Hay dos tipos de pasillo: el fiestero instrumental, que es el más característico de las fiestas populares bailes de casorio y de garrote y el pasillo lento, generalmente vocal, que trata en sus letras temas de amor, desilusión, luto y nostalgia.</p>"+
+	 				"<p>Según el historiador Javier Ocampo, el pasillo colombiano presenta semejanzas con el vals de Venezuela, el sanjuanito de ecuador y el valsecito de costa rica.</p>"+
+	 				"<p>CIFUENTES, LUIS JAIRO. (2009). Colombia: Identidades y tradiciones, de: <a href='http://identidadyfolclorcolombiano.blogspot.com/' target='_blank'>http://identidadyfolclorcolombiano.blogspot.com/</a></p>",
+	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PUe8kuK6WAU'></iframe>"+
+	 				"</div></p>", 2, "tocar", "", "interactiva-pasillo");
 	 		}
 	 		break;
 	 		case "btn-bambuco":
@@ -305,8 +313,11 @@ jQuery(document).ready(function($){
 	 				"<h3>Esterilla</h3><p>Es un instrumento tradicional colombiano, construido con cañutos o trozos de bambú (entre 10 y 15 cm de largo), unidos en ambos extremos, por una cabuya o pita, que sirve también para sujetarlo con las manos. El instrumento se toca doblándolo y frotándolo contra sí mismo.</p>", 2, 2, $(this).attr("id"), "teorica-bambuco");
 	 		}
 	 		if($(this).attr("data-sala") == "interactiva"){
-	 			infoSalaTeorica("El Bambuco", "<p>El texto del bambuco</p>",
-	 				"<p>Video</p>", 2, "tocar", "", "interactiva-bambuco");
+	 			infoSalaTeorica("El Bambuco", "<p>El bambuco es el aire folklórico mestizo más típico de la zona andina colombiana, y es por esencia la danza nacional más representativa. Su instrumento fundamental es el tiple.</p>"+
+	 				"<p>OCAMPO LÓPEZ, Javier. El folclor y los bailes típicos colombianos. Manizales, Colombia. Biblioteca de Escritores Caldenses. </p>",
+	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/eWoIeRze4W0'></iframe>"+
+	 				"</div></p>", 2, "tocar", "", "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-instrumentos":
@@ -350,7 +361,8 @@ jQuery(document).ready(function($){
 	 			botonesLaterales("andina", "interactiva");
 	 			$("#div-botones-sala button").attr("data-sala", "interactiva");
 	 			infoSalaTeorica("La Guabina", "<p>Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.</p>"+
-	 				"<p>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.</p>",
+	 				"<p>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.</p>"+
+	 				"<p>La región Andina, de: <a href='https://www.colombia.com/colombia-info/folclor-y-tradiciones/bailes-y-trajes-por-regiones/region-andina/' target='_blank'>Región Andina Colombia.com</a></p>",
 	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo'></iframe>"+
 	 				"</div></p>", 2, 4, "", "interactiva-guabina");
@@ -482,7 +494,9 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-melodia'>Bandola</button>", 3, 3, $(this).attr("id"), "teorica-guabina");
 	 		break;
 	 		case "btn-bandola":
-	 		infoSalaTeorica("Bandola - Voz", "<p>video</p>"+
+	 		infoSalaTeorica("Bandola - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_2zTWzYUgtI'></iframe>"+
+	 			"</div></p>"+
 	 			"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_bandola.pdf' alt='Melodía_La_Ruana_Bandola' download>Melodía - La Bandola <i class='fas fa-download'></i></a></p>",
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-voz' data-genero-sonido='guabina-melodia'>Voz</button>"+
 	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-melodia'>Bandola</button>", 3, 3, $(this).attr("id"), "teorica-guabina");
@@ -522,7 +536,7 @@ jQuery(document).ready(function($){
 	 		case "btn-along-bandola":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
 	 			infoSalaTeorica("Toca con la pista - de la Bandola - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xlq2c6EVhaw'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/KEm4i4lDUvM'></iframe>"+
 	 				"</div></p>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
@@ -620,12 +634,7 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-figuras":
 	 		infoSalaTeorica("&nbsp", "<p>Todas las figuras musicales tienen un número que las representa así:</p>"+
-	 			"<p>1 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/redonda.png'> Redonda</p>"+
-	 			"<p>2 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/blanca.png'> Blanca</p>"+
-	 			"<p>4 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/negra.png'> Negra</p>"+
-	 			"<p>8 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/corchea.png'> Corchea</p>"+
-	 			"<p>16 = <img src='"+$("#bloginfo").val() +"/musica/images/ritmo/semicorchea.png'> Semicorchea</p>"+
-	 			"",
+	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/notas_musicales.png'></p>",
 	 			"<button class='btn btn-block btn-n-mus'>Métricas más utilizadas</button>", "texto", "ritmometrica", $(this).attr("id"), "general-ritmometrica");
 	 		break;
 	 		case "btn-triadas":
@@ -681,28 +690,59 @@ jQuery(document).ready(function($){
 	 		case "btn-ins-guitarra":
 	 		infoSalaTeorica("Instrumentos música andina", "<ul class='instrumentos'>"+
 	 			"<li id='clavijas'>Clavijas</li>"+
-	 			"<li>Cabeza o clavijero</li>"+
-	 			"<li>Hueso o cejuela</li>"+
-	 			"<li>Diapasón</li>"+
-	 			"<li>Trastes</li>"+
-	 			"<li>Filetes</li>"+
-	 			"<li>Cuerdas</li>"+
-	 			"<li>Roseta</li>"+
-	 			"<li>Boca</li>"+
-	 			"<li>Cuerpo o tapa armónica</li>"+
-	 			"<li>Costados o aros</li>"+
-	 			"<li>Hueso del puente</li>"+
-	 			"<li>Puente</li>"+
-	 			"</ul>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400' id='algo'", 2, "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 			"<li id='cabeza'>Cabeza o clavijero</li>"+
+	 			"<li id='cejuela'>Hueso o cejuela</li>"+
+	 			"<li id='diapason'>Diapasón</li>"+
+	 			"<li id='trastes'>Trastes</li>"+
+	 			"<li id='filetes'>Filetes</li>"+
+	 			"<li id='cuerdas'>Cuerdas</li>"+
+	 			"<li id='roseta'>Roseta</li>"+
+	 			"<li id='boca'>Boca</li>"+
+	 			"<li id='cuerpo'>Cuerpo o tapa armónica</li>"+
+	 			"<li id='costados'>Costados o aros</li>"+
+	 			"<li id='hueso'>Hueso del puente</li>"+
+	 			"<li id='puente'>Puente</li>"+
+	 			"</ul>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400' id='img-guitarra'>", 2, "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-tiple":
-	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		infoSalaTeorica("Instrumentos música andina", "<ul class='instrumentos'>"+
+	 			"<li id='clavijas'>Clavijas</li>"+
+	 			"<li id='clavijero'>Clavijero</li>"+
+	 			"<li id='cejuela'>Hueso o cejuela</li>"+
+	 			"<li id='diapason'>Diapasón</li>"+
+	 			"<li id='trastes'>Trastes</li>"+
+	 			"<li id='mastil'>Mástil</li>"+
+	 			"<li id='cuerdas'>Cuerdas</li>"+
+	 			"<li id='boca'>Boca</li>"+
+	 			"<li id='cuerpo'>Cuerpo o tapa armónica</li>"+
+	 			"<li id='costados'>Costados o aros</li>"+
+	 			"<li id='puente'>Puente</li>"+
+	 			"</ul>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/tiple/tiple.png' height='400' id='img-tiple'>", 2, "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-bandola":
-	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		infoSalaTeorica("Instrumentos música andina", "<ul class='instrumentos'>"+
+	 			"<li id='clavijas'>Clavijas</li>"+
+	 			"<li id='clavijero'>Clavijero</li>"+
+	 			"<li id='contraste'>Contraste</li>"+
+	 			"<li id='diapason'>Diapasón</li>"+
+	 			"<li id='trastes'>Trastes</li>"+
+	 			"<li id='boquilla'>Boquilla</li>"+
+	 			"<li id='aro'>Aro</li>"+
+	 			"<li id='hueso'>Hueso</li>"+
+	 			"<li id='pontezuela'>Pontezuela</li>"+
+	 			"<li id='boca'>Boca</li>"+
+	 			"<li id='rabiza'>Rabiza (Tira cuerdas)</li>"+
+	 			"<li id='taco'>Taco</li>"+
+	 			"<li id='puente'>Puente</li>"+
+	 			"<li id='tapa'>Tapa</li>"+
+	 			"</ul>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/bandola/bandola.png' height='400' id='img-bandola'>", 2, "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-otros":
-	 		infoSalaTeorica("Instrumentos música andina", "<img src='alkjasd'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		infoSalaTeorica("Instrumentos música andina", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' width='400'>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/cucharas.png' width='400'>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/esterilla.png' width='400'>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/guacharaca.png' width='400'>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/marrana.png' width='400'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
