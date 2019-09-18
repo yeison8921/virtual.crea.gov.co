@@ -260,6 +260,10 @@ audio{
   width: 100%;  
 }
 
+.instrumentos span{
+  cursor: pointer;
+}
+
 /** Fin estilos para aula música **/
 
 /** Inicio estilos para aula danza **/
@@ -280,7 +284,7 @@ audio{
 }
 
 .header-danza{
-  background-color: #2a80c8;
+  background-color: #FD8951;
   height: 50px;
   font-size: 24px;
   line-height: 50px;
@@ -298,7 +302,7 @@ audio{
 }
 
 .btn-n-dan{
-  background-color: #2a80c8;
+  background-color: #FD8951;
 }
 
 .btn-h-dan{

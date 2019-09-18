@@ -214,7 +214,7 @@ jQuery(document).ready(function($){
 					$("#btns-mover-comic img").data("total", "10");
 				}
 				if($(this).attr("id") == "img-gesto"){
-					$("#btns-mover-comic img").data("total", "15");
+					$("#btns-mover-comic img").data("total", "10");
 				}
 				if($(this).attr("id") == "img-color"){
 					$("#btns-mover-comic img").data("total", "15");
@@ -245,7 +245,7 @@ jQuery(document).ready(function($){
 				$(this).attr("data-pagina", num_pag);
 			}
 			if(num_pag == $(this).data("total")){
-				if($(this).data("comic") == "linea" || $(this).data("comic") == "color" || $(this).data("comic") == "creatividad"){
+				if($(this).data("comic") == "linea" || $(this).data("comic") == "color" || $(this).data("comic") == "creatividad" || $(this).data("comic") == "gesto"){
 					$("#div-comic-oculto").show();
 					$("#div-comic-oculto").data("comic", $(this).data("comic"));
 				}
@@ -254,7 +254,7 @@ jQuery(document).ready(function($){
 	});
 
 	$("#div-comic-oculto").click(function(){
-		infoEjercicio($(this).data("comic"));
+		
 	})
 
 	$(".img-atras").click(function(){

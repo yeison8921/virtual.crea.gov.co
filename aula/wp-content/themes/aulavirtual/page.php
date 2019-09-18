@@ -183,7 +183,7 @@
             <button class="btn btn-block btn-n-mus" id="btn-interactiva" data-curso="andina">Sala interactiva</button>
             <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="andina">Sala general</button>
             <button class="btn btn-block btn-n-mus" id="btn-laboratorio" data-curso="andina">Laboratorio</button>
-            <button class="btn btn-block btn-n-mus" id="btn-proximamente" data-curso="andina" disabled style="display: none;">Próximamente</button>
+            <button class="btn btn-block btn-n-mus" id="btn-foros" data-curso="andina">Foros</button>
           </div>
         </div>
       </div>
