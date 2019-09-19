@@ -110,36 +110,36 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-metodologia":
 	 		infoIntroduccion("Metodología", "<p>El curso está compuesto por cinco secciones a través de las que se desarrollan diversos conceptos y actividades, estos son:</p>"+
-	 			"<div class='row'><div class='col-lg-3'>"+
+	 			"<p><div class='row'><div class='col-lg-3'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/metodologia/conexion.png' height='100'>"+
 	 			"</div>"+
 	 			"<div class='col-lg-9'>"+
 	 			"Conexión Corporal: enfocada en el reconocimiento corporal, los beneficios del movimiento y la actividad física."+
-	 			"</div></div>"+
-	 			"<div class='row'><div class='col-lg-3'>"+
+	 			"</div></div></p>"+
+	 			"<p><div class='row'><div class='col-lg-3'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/metodologia/ritmo.png' height='100'>"+
 	 			"</div>"+
 	 			"<div class='col-lg-9'>"+
 	 			"Ritmo: busca desarrollar habilidades de coordinación, disociación y concentración en relación con conceptos musicales como tiempo y tempo, claves para el ejercicio de la danza."+
-	 			"</div></div>"+
-	 			"<div class='row'><div class='col-lg-3'>"+
+	 			"</div></div></p>"+
+	 			"<p><div class='row'><div class='col-lg-3'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/metodologia/expresion.png' height='100'>"+
 	 			"</div>"+
 	 			"<div class='col-lg-9'>"+
 	 			"Expresión: exploración dirigida a la comunicación de ideas, emociones y sensaciones a través del lenguaje corporal, vinculando imágenes, acciones y movimientos."+
-	 			"</div></div>"+
-	 			"<div class='row'><div class='col-lg-3'>"+
+	 			"</div></div></p>"+
+	 			"<p><div class='row'><div class='col-lg-3'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/metodologia/espacio.png' height='100'>"+
 	 			"</div>"+
 	 			"<div class='col-lg-9'>"+
 	 			"Espacio: propone acercarse al cuerpo en relación con el espacio, desde lugares convencionales y no convencionales."+
-	 			"</div></div>"+
-	 			"<div class='row'><div class='col-lg-3'>"+
+	 			"</div></div></p>"+
+	 			"<p><div class='row'><div class='col-lg-3'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/metodologia/memoria.png' height='100'>"+
 	 			"</div>"+
 	 			"<div class='col-lg-9'>"+
 	 			"Memoria: recorrido a través de las diversas técnicas, géneros y formas de expresión desarrolladas a lo largo de la historia."+
-	 			"</div></div>"+
+	 			"</div></div></p>"+
 	 			"<p>En cada una de las secciones se proponen retos para motivarlos a romper sus límites, probar nuevas sensaciones y experiencias corporales.</p>");
 	 		break;
 	 		case "btn-publico":

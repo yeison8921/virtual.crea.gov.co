@@ -254,7 +254,22 @@ jQuery(document).ready(function($){
 	});
 
 	$("#div-comic-oculto").click(function(){
-		
+		$("#div-sub-modulos").css({
+			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas.jpg")',
+		});
+		$($("#div-sub-modulos").children()[1]).show();
+		$($("#div-sub-modulos").children()[2]).show();
+		$($("#div-sub-modulos").children()[1]).css({
+			"margin-top": "10%",
+			"left": "8%"
+		})
+		$($("#div-sub-modulos").children()[2]).css({
+			"left": "8%"
+		})
+		$("#div-modulos-aap").hide();
+		$("#div-comic").hide();
+		$("#div-sub-modulos").show();
+		$("#div-sub-modulos img").data("ejercicio", "ejercicio");
 	})
 
 	$(".img-atras").click(function(){
@@ -322,39 +337,6 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	$("#cinco img")
-	.mouseover(function() {
-		switch($(this).attr("id")){
-			case "img-linea":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_linea_color.png");
-			break;
-			case "img-color":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_color_color.png");
-			break;
-			case "img-gesto":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_gesto_color.png");
-			break;
-			case "img-creatividad":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_creatividad_color.png");
-			break;
-		}
-	})
-	.mouseout(function() {
-		switch($(this).attr("id")){
-			case "img-linea":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_linea_normal.png");
-			break;
-			case "img-color":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_color_normal.png");
-			break;
-			case "img-gesto":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_gesto_normal.png");
-			break;
-			case "img-creatividad":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/observaciones_lupa/img_creatividad_normal.png");
-			break;
-		}
-	});
 	$("#btns-intro-aap img").click(function(){
 		$("#div-img-viaje").hide();
 		$("#btns-intro-aap").hide();
@@ -391,7 +373,33 @@ jQuery(document).ready(function($){
 			break;
 			case "img-creditos-aap":
 			$("#div-info-detallada-aap").css(fondo_creditos);
-			$("#div-info-detallada-aap p").html("").html("");
+			$("#div-info-detallada-aap p").html("").html("Créditos");
+			// $("#div-info-detallada-aap p").html("").html("<p><strong>Creadores Contenido Aula Virtual:</strong>"+
+			// 	"José Manuel Valero Mendieta"+
+			// 	"Juan Sebastián Testa Ramírez"+
+			// 	"Delmi Joanna Martínez Albarracín"+
+			// 	"Reinaldo Castro Rojas"+
+			// 	"Stefany Layton Cuervo"+
+			// 	"Laura Nathalia Pérez Céspedes"+
+			// 	"Olga Yohana Chaparro Rodríguez"+
+			// 	"<strong>Producción de contenidos:</strong>"+
+			// 	"Tatiana Múnera"+
+			// 	"<strong>Diseño gráfico e ilustraciones:</strong>"+
+			// 	"José Valero y Juan Sebastián Testa"+
+			// 	"<strong>Programación:</strong>"+
+			// 	"Yeison Briceño"+
+			// 	"<strong>Asesor pedagógico:</strong>"+
+			// 	"Marcela Jiménez"+
+			// 	"Lia Estefanía García"+
+			// 	"Sary Constanza Murillo"+
+			// 	"<strong>Coordinación programa Crea:</strong>"+
+			// 	"Leonardo Garzón"+
+			// 	"<strong>Coordinación SIF:</strong>"+
+			// 	"Miguel Andrés Salas"+
+			// 	"<strong>Subdirección de formación artistica</strong>"+
+			// 	"Idartes"+
+			// 	"Alcaldía de Bogotá"+
+			// 	"2019</p>");
 			break;
 		}
 	});

@@ -33,27 +33,27 @@
             </a>
           </div>
           <div>
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/index/normal_literatura.png" id="img-literatura">
-              <span>Creación<br>literaria</span>
-            </a>
-          </div>
-          <div>
             <a href="<?php bloginfo('url'); ?>/introduccion-aula-danza">
               <img src="<?php bloginfo('template_url'); ?>/index/normal_danza.png" id="img-danza">
               <span>Danza<br>&nbsp</span>
             </a>
           </div>
           <div>
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/index/normal_dramatico.png" id="img-dramatico">
-              <span>Arte<br>dramático</span>
+            <a href="<?php bloginfo('url'); ?>/introduccion-aula-audiovisuales">
+              <img src="<?php bloginfo('template_url'); ?>/index/normal_audiovisuales.png" id="img-audiovisuales">
+              <span>Audiovisuales<br>&nbsp</span>
             </a>
           </div>
           <div>
             <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/index/normal_audiovisuales.png" id="img-audiovisuales">
-              <span>Audiovisuales<br>&nbsp</span>
+              <img src="<?php bloginfo('template_url'); ?>/index/normal_literatura.png" id="img-literatura">
+              <span>Creación<br>literaria</span>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="<?php bloginfo('template_url'); ?>/index/normal_dramatico.png" id="img-dramatico">
+              <span>Arte<br>dramático</span>
             </a>
           </div>
           <div>

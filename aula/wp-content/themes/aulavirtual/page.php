@@ -378,6 +378,70 @@
       </div>
     </div>
   <?php endif; ?>
+  <?php if(is_page("Introducción aula audiovisuales")) :?>
+    <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
+    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+    <div class="row">
+      <div class="col-lg-12" id="contenedor-index-audiovisuales">
+        <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondo_introduccion_audiovisuales.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
+        <div class="col-lg-offset-1 col-lg-10" id="div-desplazamiento" style="display: none;">
+          <div class="col-lg-offset-2 col-lg-1">
+            <a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a>
+          </div>
+          <div  class="col-lg-offset-6 col-lg-1">
+            <a href="#" id="btn-videoteca" style="color: white;">VIDEOTECA</a>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12" id="div-oculto">
+          <a id="btn-oculto" href="#">
+            <div id="link-oculto"></div>
+            <div id="link-oculto2">
+              <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png">                  
+              <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png">
+              <img id="circulo" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png">
+            </div>
+          </a>
+        </div>
+        <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
+          <div class="col-lg-offset-1 col-lg-2 text-center"><a href="#" id="btn-introduccion">INTRODUCCIÓN</a></div>
+          <div class="col-lg-2 text-center"><a href="#" id="btn-objetivos">OBJETIVOS</a></div>
+          <div class="col-lg-2 text-center"><a href="#" id="btn-publico">PÚBLICO OBJETIVO</a></div>
+          <div class="col-lg-2 text-center"><a href="#" id="btn-metodologia">METODOLOGÍA</a></div>
+          <div class="col-lg-2 text-center"><a href="#" id="btn-creditos">CRÉDITOS</a></div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
+          <div class="col-lg-12 text-center" id="div-tid-audivisuales">
+            <h1></h1>
+          </div>
+          <div class="col-lg-offset-1 col-lg-10 text-center" id="div-cid-audivisuales">
+            <p></p>
+          </div>
+          <div class="col-lg-offset-1 col-lg-10 text-center">
+            <a href="#" id="btn-regresar">REGRESAR</a>
+          </div>
+        </div>
+        <div id="div-rollover" style="display: none;">
+          <div id="div-principios"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-rollover" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
+            <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+            <div></div>
+          </div>
+          <div class="modal-body text-center" style="background-color: #24273a;">
+          </div>
+          <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
+            <div class="col-lg-offset-2 col-lg-8">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <?php the_content(); ?>
 <?php endwhile; endif; ?>

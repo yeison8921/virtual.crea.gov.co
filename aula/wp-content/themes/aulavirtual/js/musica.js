@@ -467,8 +467,12 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-explicaciones":
 	 		if($(this).attr("data-sala-genero") == "teorica-guabina"){
-	 			infoSalaTeorica("Explicaciones", "texto 1",
-	 				"texto 2", 2, "guabina", $(this).attr("id"), "teorica-guabina");
+	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0'></iframe>"+
+	 				"</div></p>",
+	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-explicaciones'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		}
 	 		break;
 	 		case "btn-tiple":
@@ -493,6 +497,14 @@ jQuery(document).ready(function($){
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='bambuco-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='bambuco-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-bambuco");
 	 		}
+	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
+	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/wdKrryrpArg'></iframe>"+
+	 				"</div></p>",
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
+	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-explicaciones'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
+	 		}
 	 		break;
 	 		case "btn-guitarra":
 	 		if($(this).attr("data-genero-sonido") == "guabina-ritmo"){
@@ -501,6 +513,14 @@ jQuery(document).ready(function($){
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-ritmo'>Guitarra</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
+	 		}
+	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
+	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0'></iframe>"+
+	 				"</div></p>",
+	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-explicaciones'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "pasillo-ritmo"){
 	 			infoSalaTeorica("Ritmo Pasillo Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
@@ -526,12 +546,22 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-melodia'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		break;
 	 		case "btn-bandola":
-	 		infoSalaTeorica("Bandola - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_2zTWzYUgtI'></iframe>"+
-	 			"</div></p>"+
-	 			"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_bandola.pdf' alt='Melodía_La_Ruana_Bandola' download>Melodía - La Bandola <i class='fas fa-download'></i></a></p>",
-	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-voz' data-genero-sonido='guabina-melodia'>Voz</button>"+
-	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-melodia'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
+	 		if($(this).attr("data-genero-sonido") == "guabina-melodia"){
+	 			infoSalaTeorica("Bandola - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_2zTWzYUgtI'></iframe>"+
+	 				"</div></p>"+
+	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_bandola.pdf' alt='Melodía_La_Ruana_Bandola' download>Melodía - La Bandola <i class='fas fa-download'></i></a></p>",
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-voz' data-genero-sonido='guabina-melodia'>Voz</button>"+
+	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-melodia'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
+	 		}
+	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
+	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TVgPBIibUPk'></iframe>"+
+	 				"</div></p>",
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
+	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-bandola' data-genero-sonido='guabina-explicaciones'>Bandola</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
+	 		}
 	 		break;
 	 		case "btn-along-guitarra":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
@@ -577,7 +607,9 @@ jQuery(document).ready(function($){
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
-	 			infoSalaTeorica("Toca con la pista - de la bandola - La Ruana", "<p>video</p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
+	 			infoSalaTeorica("Toca con la pista - de la bandola - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/WwdPuue0LH8'></iframe>"+
+	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-karaoke":
