@@ -201,6 +201,16 @@ jQuery(document).ready(function($){
 			$($("#div-sub-modulos").children()[2]).hide();
 		}
 
+		if($(this).attr("id") == "img-certificado"){
+			$("#div-sub-modulos").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_certificado.jpg")',
+			});
+			$("#div-modulos-aap").hide();
+			$("#div-sub-modulos").show();
+			$($("#div-sub-modulos").children()[1]).hide();
+			$($("#div-sub-modulos").children()[2]).hide();
+		}
+
 		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-color" || $(this).attr("id") == "img-gesto"){
 			$("#div-comic .img-atras").data("atras", "submodulos");
 			$("#div-sub-modulos").hide();
@@ -228,152 +238,158 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	$("#btns-mover-comic").on("click", "img", function() {
-		if($(this).attr("id") == "img-atras-comic"){
-			if(num_pag > 1){
-				num_pag--;
-				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
-				$("#img-siguiente-comic").attr("data-pagina", num_pag);
-				$("#div-comic-oculto").hide();
+$("#btns-mover-comic").on("click", "img", function() {
+	if($(this).attr("id") == "img-atras-comic"){
+		if(num_pag > 1){
+			num_pag--;
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
+			$("#img-siguiente-comic").attr("data-pagina", num_pag);
+			$("#div-comic-oculto").hide();
+		}
+	}
+	if($(this).attr("id") == "img-siguiente-comic"){
+		if(num_pag < $(this).data("total")){
+			$("#img-atras-comic").attr("data-pagina", num_pag);
+			num_pag++;
+			$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
+			$(this).attr("data-pagina", num_pag);
+		}
+		if(num_pag == $(this).data("total")){
+			if($(this).data("comic") == "linea" || $(this).data("comic") == "color" || $(this).data("comic") == "creatividad" || $(this).data("comic") == "gesto"){
+				$("#div-comic-oculto").show();
+				$("#div-comic-oculto").data("comic", $(this).data("comic"));
 			}
 		}
-		if($(this).attr("id") == "img-siguiente-comic"){
-			if(num_pag < $(this).data("total")){
-				$("#img-atras-comic").attr("data-pagina", num_pag);
-				num_pag++;
-				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).data("comic")+"/img_viñeta_"+num_pag+".jpg");
-				$(this).attr("data-pagina", num_pag);
-			}
-			if(num_pag == $(this).data("total")){
-				if($(this).data("comic") == "linea" || $(this).data("comic") == "color" || $(this).data("comic") == "creatividad" || $(this).data("comic") == "gesto"){
-					$("#div-comic-oculto").show();
-					$("#div-comic-oculto").data("comic", $(this).data("comic"));
-				}
-			}
-		}
-	});
+	}
+});
 
-	$("#div-comic-oculto").click(function(){
-		$("#div-sub-modulos").css({
-			"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas.jpg")',
-		});
-		$($("#div-sub-modulos").children()[1]).show();
-		$($("#div-sub-modulos").children()[2]).show();
-		$($("#div-sub-modulos").children()[1]).css({
-			"margin-top": "10%",
-			"left": "8%"
-		})
-		$($("#div-sub-modulos").children()[2]).css({
-			"left": "8%"
-		})
+$("#div-comic-oculto").click(function(){
+	$("#div-sub-modulos").css({
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_compas.jpg")',
+	});
+	$($("#div-sub-modulos").children()[1]).show();
+	$($("#div-sub-modulos").children()[2]).show();
+	$($("#div-sub-modulos").children()[1]).css({
+		"margin-top": "10%",
+		"left": "8%"
+	})
+	$($("#div-sub-modulos").children()[2]).css({
+		"left": "8%"
+	})
+	$("#div-modulos-aap").hide();
+	$("#div-comic").hide();
+	$("#div-sub-modulos").show();
+	$("#div-sub-modulos img").data("ejercicio", "ejercicio");
+})
+
+$(".img-atras").click(function(){
+	if($(this).data("atras") == "index"){
+		$("#div-img-viaje").show();
+		$("#btns-intro-aap").show();
+		$("#div-info-detallada-aap").hide();
+		$("#div-mapa-mundi").hide();
+	}
+	if($(this).data("atras") == "mapa-mundi"){
 		$("#div-modulos-aap").hide();
 		$("#div-comic").hide();
+		$("#div-mapa-mundi").show();
+	}
+	if($(this).data("atras") == "modulos"){
+		$("#div-modulos-aap").show();
+		$("#div-comic").hide();
+		$("#div-sub-modulos").hide();
+	}
+	if($(this).data("atras") == "submodulos"){
+		$("#div-comic-oculto").hide();
 		$("#div-sub-modulos").show();
-		$("#div-sub-modulos img").data("ejercicio", "ejercicio");
-	})
+		$("#div-comic").hide();
+		$("#div-ejercicios").hide();
+		$("#div-info-ejercicio").html("");
+	}
+});
 
-	$(".img-atras").click(function(){
-		if($(this).data("atras") == "index"){
-			$("#div-img-viaje").show();
-			$("#btns-intro-aap").show();
-			$("#div-info-detallada-aap").hide();
-			$("#div-mapa-mundi").hide();
-		}
-		if($(this).data("atras") == "mapa-mundi"){
-			$("#div-modulos-aap").hide();
-			$("#div-comic").hide();
-			$("#div-mapa-mundi").show();
-		}
-		if($(this).data("atras") == "modulos"){
-			$("#div-modulos-aap").show();
-			$("#div-comic").hide();
-			$("#div-sub-modulos").hide();
-		}
-		if($(this).data("atras") == "submodulos"){
-			$("#div-comic-oculto").hide();
-			$("#div-sub-modulos").show();
-			$("#div-comic").hide();
-			$("#div-ejercicios").hide();
-			$("#div-info-ejercicio").html("");
-		}
+$("#btns-intro-aap img").mouseover(function() {
+	switch($(this).attr("id")){
+		case "img-intro-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_sobre.png");
+		break;
+		case "img-objetivos-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_sobre.png");
+		break;
+		case "img-publico-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_sobre.png");
+		break;
+		case "img-metodologia-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_sobre.png");
+		break;
+		case "img-creditos-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_sobre.png");
+		break;
+		case "img-bibliografia-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_sobre.png");
+		break;
+	}
+})
+.mouseout(function() {
+	switch($(this).attr("id")){
+		case "img-intro-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_normal.png");
+		break;
+		case "img-objetivos-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_normal.png");
+		break;
+		case "img-publico-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_normal.png");
+		break;
+		case "img-metodologia-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_normal.png");
+		break;
+		case "img-creditos-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_normal.png");
+		break;
+		case "img-bibliografia-aap":
+		$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_normal.png");
+		break;
+	}
+});
+
+$("#btns-intro-aap img").click(function(){
+	$("#div-img-viaje").hide();
+	$("#btns-intro-aap").hide();
+	$("#div-info-detallada-aap").show();
+	$("#div-info-detallada-aap p").css({
+		"left": "",
+		"right": ""
 	});
-
-	$("#btns-intro-aap img").mouseover(function() {
-		switch($(this).attr("id")){
-			case "img-intro-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_sobre.png");
-			break;
-			case "img-objetivos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_sobre.png");
-			break;
-			case "img-publico-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_sobre.png");
-			break;
-			case "img-metodologia-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_sobre.png");
-			break;
-			case "img-creditos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_sobre.png");
-			break;
-		}
-	})
-	.mouseout(function() {
-		switch($(this).attr("id")){
-			case "img-intro-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_intro_normal.png");
-			break;
-			case "img-objetivos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_objetivos_normal.png");
-			break;
-			case "img-publico-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_publico_normal.png");
-			break;
-			case "img-metodologia-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_metodologia_normal.png");
-			break;
-			case "img-creditos-aap":
-			$(this).attr("src", $("#bloginfo").val() + "/artes_plasticas/images/index/img_creditos_normal.png");
-			break;
-		}
-	});
-
-	$("#btns-intro-aap img").click(function(){
-		$("#div-img-viaje").hide();
-		$("#btns-intro-aap").hide();
-		$("#div-info-detallada-aap").show();
+	switch($(this).attr("id")){
+		case "img-intro-aap":
+		$("#div-info-detallada-aap").css(fondo_introduccion);
+		$("#div-info-detallada-aap p").html("").html("La experiencia aula virtual está planteada como un viaje en el que Viaticum, nuestro personaje acompañante, introduce al espectador a diferentes aspectos de las artes plásticas y visuales como: punto y línea, color y gesto finalizando en un proceso de creación autónomo.<br><br>El aula virtual de artes plásticas y visuales se proyecta en un espacio de acercamiento a procesos creativos enfocados en la generación de imágenes que comuniquen ideas o sensaciones.");
+		break;
+		case "img-objetivos-aap":
+		$("#div-info-detallada-aap").css(fondo_objetivos);
 		$("#div-info-detallada-aap p").css({
-			"left": "",
-			"right": ""
+			"left": "45%",
+			"right": "25%"
 		});
-		switch($(this).attr("id")){
-			case "img-intro-aap":
-			$("#div-info-detallada-aap").css(fondo_introduccion);
-			$("#div-info-detallada-aap p").html("").html("La experiencia aula virtual está planteada como un viaje en el que Viaticum, nuestro personaje acompañante, introduce al espectador a diferentes aspectos de las artes plásticas y visuales como: punto y línea, color y gesto finalizando en un proceso de creación autónomo.<br><br>El aula virtual de artes plásticas y visuales se proyecta en un espacio de acercamiento a procesos creativos enfocados en la generación de imágenes que comuniquen ideas o sensaciones.");
-			break;
-			case "img-objetivos-aap":
-			$("#div-info-detallada-aap").css(fondo_objetivos);
-			$("#div-info-detallada-aap p").css({
-				"left": "45%",
-				"right": "25%"
-			});
-			$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
-				"Objetivos específicos:<br>"+
-				"<ol>"+
-				"<li>Mediar desde las experiencias visuales de los usuarios en relación a un contexto artístico  contemporáneo basados en  diversos  referentes del medio plástico visual.</li>"+
-				"<li>Fomentar espacios de pensamiento creativo frente a la sensibilidad estética y la apreciación plástica y visual.</li>"+
-				"</ol>");
-			break;
-			case "img-publico-aap":
-			$("#div-info-detallada-aap").css(fondo_publico);
-			$("#div-info-detallada-aap p").html("").html("Esta plataforma o espacio virtual está diseñado para cualquier persona que quiera explorar o acercarse a las artes plásticas y visuales.");
-			break;
-			case "img-metodologia-aap":
-			$("#div-info-detallada-aap").css(fondo_metodologia);
-			$("#div-info-detallada-aap p").html("").html("Virtual pedagógica, interactiva y creativa que invita al usuario a vivir una experiencia dinámica en la apropiación de conocimiento y la aplicabilidad del mismo.");
-			break;
-			case "img-creditos-aap":
-			$("#div-info-detallada-aap").css(fondo_creditos);
-			$("#div-info-detallada-aap p").html("").html("Créditos");
+		$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
+			"Objetivos específicos:<br>"+
+			"<ol>"+
+			"<li>Mediar desde las experiencias visuales de los usuarios en relación a un contexto artístico  contemporáneo basados en  diversos  referentes del medio plástico visual.</li>"+
+			"<li>Fomentar espacios de pensamiento creativo frente a la sensibilidad estética y la apreciación plástica y visual.</li>"+
+			"</ol>");
+		break;
+		case "img-publico-aap":
+		$("#div-info-detallada-aap").css(fondo_publico);
+		$("#div-info-detallada-aap p").html("").html("Esta plataforma o espacio virtual está diseñado para cualquier persona que quiera explorar o acercarse a las artes plásticas y visuales.");
+		break;
+		case "img-metodologia-aap":
+		$("#div-info-detallada-aap").css(fondo_metodologia);
+		$("#div-info-detallada-aap p").html("").html("Virtual pedagógica, interactiva y creativa que invita al usuario a vivir una experiencia dinámica en la apropiación de conocimiento y la aplicabilidad del mismo.");
+		break;
+		case "img-creditos-aap":
+		$("#div-info-detallada-aap").css(fondo_creditos);
+		$("#div-info-detallada-aap p").html("").html("Créditos");
 			// $("#div-info-detallada-aap p").html("").html("<p><strong>Creadores Contenido Aula Virtual:</strong>"+
 			// 	"José Manuel Valero Mendieta"+
 			// 	"Juan Sebastián Testa Ramírez"+

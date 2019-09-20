@@ -80,7 +80,9 @@ jQuery(document).ready(function($){
 	 		"<p>¿Se imaginan cómo sería el mundo si todos estuviéramos más conectados con nuestro cuerpo?</p>"+
 	 		"<p>¡Bienvenidos!</p>");
 	 }else{
-	 	infoModulo("Cuerpo movimiento", "<p><video width='750' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "conexion");
+	 	infoModulo("Cuerpo movimiento", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 		"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Ngf-gMzOvsM'></iframe>"+
+	 		"</div></p>", "conexion");
 	 }
 
 	 $(".contenedor").on("click", "button", function(){
@@ -176,10 +178,17 @@ jQuery(document).ready(function($){
 	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>", "video", 2, "conexion", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-propiocepcion":
-	 		infoSala("Propiocepción","<p>Texto 1</p>", "<p>Texto 2</p>", 2, "conexion", "", "conexion-propiocepcion");
+	 		infoSala("Propiocepción","<p>Seguramente habrás escuchado sobre los cinco sentidos de los que se habla habitualmente: vista, tacto, olfato, oído y gusto, así como su función para los seres humanos; pero, ¿sabías que además existen sentidos adicionales? Estos nos permiten percibir sensaciones relacionadas con la temperatura, el espacio, el equilibrio e incluso el dolor.</p>"+
+	 			"<p>Uno de estos sentidos adicionales se llama PROPIOCEPCIÓN y es la capacidad de sentir el propio cuerpo. Además de darnos información sobre dónde y cómo están ubicadas las partes específicas sin necesidad de utilizar la vista, la propiocepción nos ayuda a crear una imagen del cuerpo en relación al espacio que habitamos; ser conscientes de la postura corporal, la dirección y rango de movimientos que hacemos a diario como girar, saltar, agacharnos, esquivar objetos o personas de manera eficiente y sin provocar lesiones.</p>"+
+	 			"<p>A continuación te invitamos a participar en unos retos para explorar y mejorar tu propiocepción.</p>", "", "texto", "conexion", "", "conexion-propiocepcion");
 	 		break;
 	 		case "btn-respiracion":
-	 		infoSala("Respiración","<p>Texto 1</p>", "<p>Texto 2</p>", 2, "conexion", "", "conexion-respiracion");
+	 		infoSala("Respiración","<p>Inhala... Exhala... Inhala… Exhala…</p>"+
+	 			"<p>Respirar es brindarle a nuestro cuerpo una recarga de energía, como si la respiración fuera ese cargador que pone nuestra batería al 100% para poder hacer todas las actividades que hacemos día a día.</p> "+
+	 			"<p>Respirar es un proceso que solo llevan a cabo los seres vivos y se convierte en la primera fuente de energía de nuestro cuerpo, también son fuentes de energía los alimentos, el descanso y el ejercicio. Hagamos un prueba ¿Cuánto tiempo puedes aguantar la respiración? Vamos pruébalo ¿Cuánto duraste?</p>"+
+	 			"<p>Si dejamos de respirar, después de cuatro minutos nuestro cerebro empieza a fallar, no podemos durar tanto tiempo sin brindar oxígeno al cuerpo dado que la respiración permite el correcto funcionamiento de nuestro organismo, por eso respirar es una función vital. Podemos pasar días sin comer o dormir, sin embargo, no podemos dejar de respirar, la respiración es vida y todo lo que está vivo respira.</p>"+
+	 			"<p>¡Estamos vivos! ¡Somos vida!</p>"+
+	 			"<p>¿Quieres conocer cómo podemos entrenar nuestra respiración y llenar de beneficios a nuestro cuerpo? Ven acompáñanos a bailar con la respiración.</p>", "", "texto", "conexion", "", "conexion-respiracion");
 	 		break;
 	 		case "btn-retouno":
 	 		infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+

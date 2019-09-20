@@ -220,7 +220,7 @@
         </a>
       </div>
       <div class="col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10" id="btns-intro-aap">
-        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 text-center">
+        <div class="col-lg-2 col-md-2 text-center">
           <a href="#"><img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_intro_normal.png"></a>
           <p>Introducción</p>
         </div>
@@ -239,6 +239,10 @@
         <div class="col-lg-2 col-md-2 text-center">
           <a href="#"><img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_creditos_normal.png"></a>
           <p>Créditos</p>
+        </div>
+        <div class="col-lg-2 col-md-2 text-center">
+          <a href="#"><img id="img-bibliografia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png"></a>
+          <p>Bibliografía</p>
         </div>
       </div>
       <div id="div-info-detallada-aap" style="display: none;">
@@ -292,6 +296,9 @@
           </a>
           <a href="#">
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" id="img-telescopio">
+          </a>
+          <a href="#">
+            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/certificado.png" id="img-certificado">
           </a>
         </div>
       </div>

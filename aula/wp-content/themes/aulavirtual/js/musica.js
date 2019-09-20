@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
 	 	$("#div-botones-sala").html("");
 	 	if(modulo == "andina"){
 	 		if(sala == "teorica" || sala == "interactiva"){
-	 			$("#div-botones-sala").append("<button class='btn btn-block btn-h-mus' id='btn-guabina' data-sala=''>Guabina</button>"+
+	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-guabina' data-sala=''>Guabina</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-pasillo' data-sala=''>Pasillo</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-bambuco' data-sala=''>Bambuco</button>");
 	 		}
@@ -40,7 +40,10 @@ jQuery(document).ready(function($){
 	 				"<button class='btn btn-block btn-n-mus' id='btn-armaduras' data-sala=''>Armaduras</button>");
 	 		}
 	 		if(sala == "laboratorio"){
-
+	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-guabina' data-sala=''>Guabina</button>"+
+	 				"<button class='btn btn-block btn-n-mus' id='btn-pasillo' data-sala=''>Pasillo</button>"+
+	 				"<button class='btn btn-block btn-n-mus' id='btn-bambuco' data-sala=''>Bambuco</button>"+
+	 				"<button class='btn btn-block btn-n-mus' id='btn-creacion' data-sala=''>Sube tu creación al foro</button>");
 	 		}
 	 	}
 	 }
@@ -185,6 +188,17 @@ jQuery(document).ready(function($){
 	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-otros' data-sala-genero=''>Otros</button>"+
 	 				"</div>");
 	 			break;
+	 			case "laboratorio":
+	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-guitarra' data-sala-genero=''>Guitarra</button>"+
+	 				"</div>"+
+	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bajo' data-sala-genero=''>Bajo</button>"+
+	 				"</div>"+
+	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bateria' data-sala-genero=''>Bateria</button>"+
+	 				"</div>");
+	 			break;
 	 			default:
 	 			$("#div-subbotones-sala").html("");
 
@@ -237,7 +251,7 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-mus' id='btn-laboratorio' data-curso='andina'>Laboratorio</button>"+
 	 			"<button class='btn btn-block btn-n-mus' id='btn-foros' data-curso='andina'>Foros</button>");
 	 	}
-	 	if($(this).attr('id') == "btn-teorica" || $(this).attr('id') == "btn-interactiva" || $(this).attr('id') == "btn-general"){
+	 	if($(this).attr('id') == "btn-teorica" || $(this).attr('id') == "btn-interactiva" || $(this).attr('id') == "btn-general" || $(this).attr('id') == "btn-laboratorio"){
 	 		$("#btn-regresar").attr("data-atras", "modulo");
 	 		if($(this).attr("data-curso") == "andina"){
 	 			$("#div-seleccion-curso-musica").hide();
@@ -309,6 +323,9 @@ jQuery(document).ready(function($){
 	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo'></iframe>"+
 	 				"</div></p>", 2, 4, "", "interactiva-guabina");
 	 		}
+	 		if($(this).attr("data-sala") == "laboratorio"){
+	 			infoSalaTeorica("La Guabina", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "", "texto", "laboratorio", "", "laboratorio-guabina");
+	 		}
 	 		break;
 	 		case "btn-pasillo":
 	 		if($(this).attr("data-sala") == "teorica"){
@@ -328,6 +345,9 @@ jQuery(document).ready(function($){
 	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PUe8kuK6WAU'></iframe>"+
 	 				"</div></p>", 2, "tocar", "", "interactiva-pasillo");
 	 		}
+	 		if($(this).attr("data-sala") == "laboratorio"){
+	 			infoSalaTeorica("El pasillo", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "", "texto", "laboratorio", "", "laboratorio-pasillo");
+	 		}
 	 		break;
 	 		case "btn-bambuco":
 	 		if($(this).attr("data-sala") == "teorica"){
@@ -344,6 +364,9 @@ jQuery(document).ready(function($){
 	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/eWoIeRze4W0'></iframe>"+
 	 				"</div></p>", 2, "tocar", "", "interactiva-bambuco");
+	 		}
+	 		if($(this).attr("data-sala") == "laboratorio"){
+	 			infoSalaTeorica("El bambuco", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "", "texto", "laboratorio", "", "laboratorio-bambuco");
 	 		}
 	 		break;
 	 		case "btn-instrumentos":
@@ -372,11 +395,8 @@ jQuery(document).ready(function($){
 	 			});
 	 			botonesLaterales("andina", "teorica");
 	 			$("#div-botones-sala button").attr("data-sala", "teorica");
-	 			infoSalaTeorica("La Guabina", "<p>Aire andino de origen campesino, al parecer nacido en Antioquia desde los albores del siglo XIX, con ascendencia europea y con adaptaciones regionales muy sugerentes. Sobre su nombre no existe definición; se habla de la existencia de un pez guabina en los Llanos, y muy apreciado en Cuba por su carne.</p>"+
-	 				"<p>Es otra de las danzas y cantos típicos del folklore musical andino, muy extendida en los departamentos de Santander, Boyacá, Tolima, Huila y antiguamente en Antioquia. Aún cuando el ritmo es común, en cada departamento la guabina adquiere una melodía especial. Su formato instrumental típico está conformado por el tiple, requinto, la bandola el chucho o guache.</p>",
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/guabina/cuchara.png' height='200'></p>"+
-	 				"<p><audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/Cucharas_2_01.mp3' type='audio/mpeg'></audio></p>"+
-	 				"<h3>Cucharas</h3><p>Es un instrumento que nace a partir de la necesidad de la creación de diferentes sonoridades musicales; éstas son empleadas como instrumento de percusión.</p>", 2, "guabina", "", "teorica-guabina");
+	 			infoSalaTeorica("Sala teórica", "<p>Bienvenid@ a la sala teórica, aquí te explicaremos los aspectos teóricos y técnicos necesarios para la comprensión y posterior interpretación de instrumentos andinos y sus particularidades, no te asustes si nunca habías visto una partitura ¿eh? Si das clic en el vídeo podrás entender como funciona la escritura musical.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400'></p>", 2, "guabina", "", "");
 	 		}
 	 		break;
 	 		case "btn-interactiva":
@@ -386,12 +406,8 @@ jQuery(document).ready(function($){
 	 			});
 	 			botonesLaterales("andina", "interactiva");
 	 			$("#div-botones-sala button").attr("data-sala", "interactiva");
-	 			infoSalaTeorica("La Guabina", "<p>Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.</p>"+
-	 				"<p>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.</p>"+
-	 				"<p>La región Andina, de: <a href='https://www.colombia.com/colombia-info/folclor-y-tradiciones/bailes-y-trajes-por-regiones/region-andina/' target='_blank'>Región Andina Colombia.com</a></p>",
-	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo'></iframe>"+
-	 				"</div></p>", 2, 4, "", "interactiva-guabina");
+	 			infoSalaTeorica("Sala interactiva", "<p>Bienvenid@ a la sala interactiva, aquí encontrarás vídeos que te mostrarán la forma de interpretación de cada instrumento explicado por un Artista Formador, además tendrás acceso a pistas sobre las cuales podrás tocar para practicar.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/tiple/tiple.png' height='400'></p>",2, 4, "", "");
 	 		}
 	 		break;
 	 		case "btn-general":
@@ -401,10 +417,16 @@ jQuery(document).ready(function($){
 	 			});
 	 			botonesLaterales("andina", "general");
 	 			$("#div-botones-sala button").attr("data-sala", "general");
-	 			infoSalaTeorica("Escala", "<p>Una escala es una secuencia de notas musicales (sonidos), con un determinado orden de tonos y semitonos entre ellas, desde su tónica (primera nota de la escala), hasta su octava (repetición de la tónica a una octava de distancia ascendente). Estos sonidos son conocidos comúnmente como “grados de la escala”.</p>"+
-	 				"<p>La distancia que hay entre dos sonidos por grado conjunto (sonidos adyacentes o consecutivos) de la escala se mide por tonos (T) y semitonos (S).</p>"+
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/escala/grados_escala.png' class='img-responsive'></p>",
-	 				"", "texto", "escala", "", "general-escala");
+	 			infoSalaTeorica("Sala interactiva", "Bienvenid@ a la sala general, aquí encontrarás información básica sobre teoría musical que te ayudará a entender mejor los conceptos que has aprendido.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/bandola/bandola.png' height='400'></p>",2, 4, "", "");
+	 		}
+	 		break;
+	 		case "btn-laboratorio":
+	 		if($(this).attr("data-curso") == "andina"){
+	 			botonesLaterales("andina", "laboratorio");
+	 			$("#div-botones-sala button").attr("data-sala", "laboratorio");
+	 			infoSalaTeorica("Escala", "<p>Bienvenid@ al laboratorio, aquí podrás ver un ejemplo de las obras anteriormente estudiadas, adaptadas al género rock, deberás hacer y enviar tu propia propuesta de adaptación.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' height='400'></p>", 2, "laboratorio", "", "");
 	 		}
 	 		break;
 	 		case "btn-ritmo":
@@ -536,6 +558,47 @@ jQuery(document).ready(function($){
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='bambuco-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='bambuco-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-bambuco");
 	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-guabina"){
+	 			infoSalaTeorica("Guabina - Guitarra", "<p><video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-guabina");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-pasillo"){
+	 			infoSalaTeorica("Pasillo - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MlDhNETSgwk'></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-pasillo");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-bambuco"){
+	 			infoSalaTeorica("Bambuco - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lRaULOPrEYk'></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-bambuco");
+	 		}
+	 		break;
+	 		case "btn-bajo":
+	 		if($(this).attr("data-sala-genero") == "laboratorio-guabina"){
+	 			infoSalaTeorica("Guabina - Bajo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/vnwnszJ-IAo'></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-guabina");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-pasillo"){
+	 			infoSalaTeorica("Pasillo - Bajo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/1e7b-i5N2zg'></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-pasillo");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-bambuco"){
+	 			infoSalaTeorica("Bambuco - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/hpku2ytO_WI'></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-bambuco");
+	 		}
+	 		break;
+	 		case "btn-bateria":
+	 		if($(this).attr("data-sala-genero") == "laboratorio-guabina"){
+	 			infoSalaTeorica("Guabina - Bateria", "<p><video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-guabina");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-pasillo"){
+	 			infoSalaTeorica("Pasillo - Bateria", "<p><video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-pasillo");
+	 		}
+	 		if($(this).attr("data-sala-genero") == "laboratorio-bambuco"){
+	 			infoSalaTeorica("Bambuco - Bateria", "<p><video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-bambuco");
+	 		}
 	 		break;
 	 		case "btn-voz":
 	 		infoSalaTeorica("Melodía - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
@@ -590,7 +653,7 @@ jQuery(document).ready(function($){
 	 			infoSalaTeorica("Toca con la pista - del Tiple - Cachipay", "<p>video</p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
-	 			infoSalaTeorica("Toca con la pista - del Tiple - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			infoSalaTeorica("Toca con la pista - del Tiple - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xgIW9wqcrbY'></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
@@ -607,9 +670,7 @@ jQuery(document).ready(function($){
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
-	 			infoSalaTeorica("Toca con la pista - de la bandola - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/WwdPuue0LH8'></iframe>"+
-	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
+	 			infoSalaTeorica("Toca con la pista - de la bandola - Bochica", " ", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-karaoke":
