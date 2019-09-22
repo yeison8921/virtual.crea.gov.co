@@ -386,6 +386,61 @@
     </div>
   <?php endif; ?>
   <?php if(is_page("Introducción aula audiovisuales")) :?>
+    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+    <div class="row contenedor" id="div-con-int-aud">
+      <div id="div-ocu-int-aud"></div>
+      <div id="div-des-int-aud" hidden>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div class="col-lg-offset-1 col-lg-10 text-center" id="div-btns-int-aud">
+        <div class="col-lg-offset-1 col-lg-2 text-center">
+          <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
+        </div>
+        <div class="col-lg-2 text-center">
+          <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
+        </div>
+        <div class="col-lg-2 text-center">
+          <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
+        </div>
+        <div class="col-lg-2 text-center">
+          <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
+        </div>
+        <div class="col-lg-2 text-center">
+          <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
+        </div>
+      </div>
+      <div id="div-ocu-principios" hidden></div>
+      <div class="col-lg-offset-2 col-lg-8" id="div-btns-mod-aud" hidden>
+        <div style="float: left;">
+          <button class="btn btn-modulos-aud" id="btn-foro">FORO</button>
+        </div>
+        <div style="float: right;">
+          <button class="btn btn-modulos-aud" id="btn-videoteca">VIDEOTECA</button>
+        </div>
+      </div>
+      <div id="div-ocu-videoteca" hidden></div>
+    </div>
+    <div class="modal fade" id="modal-rollover" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
+            <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+            <div></div>
+          </div>
+          <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 16px;">
+            <div id="div-pri-modal" class="col-lg-9"></div>
+            <div id="div-sec-modal" class="col-lg-3"></div>
+          </div>
+          <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
+            <div class="col-lg-offset-2 col-lg-8">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+  <?php if(is_page("Introducción aula audiovisuales 2")) :?>
     <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
     <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
     <div class="row">

@@ -161,7 +161,8 @@ jQuery(document).ready(function($){
 	 		infoSala("Bienestar","<p>Los movimientos cotidianos como caminar, ir en bicicleta o subir las escaleras, hacen parte de la actividad física que nuestro cuerpo realiza diariamente, sin embargo, el cuerpo necesita de ayuda para fortalecerse y evitar que se debilite; el ejercicio que se realiza en el gimnasio o los deportes son las formas más conocidas de entrenar el cuerpo y siempre escuchamos sobre los beneficios para la salud que trae ejercitarse.</p>"+
 	 			"<p>¿Me creerías si te digo que existe otra forma posible de ejercitar el cuerpo generando bienestar emocional y espiritual en nuestra vida?</p>"+
 	 			"<p>La danza es una forma para mantener el estado óptimo de nuestro cuerpo, dado que la actividad física que se realiza mientras bailamos permite fortalecer los músculos, las articulaciones y los huesos, y mejora la actividad cardiovascular permitiendo que podamos realizar las actividades cotidianas como si siempre tuviéramos la batería al 100 %, pero también la danza es una forma posible para comunicar nuestras emociones, sensaciones y pensamientos, generando así no solo una salud física sino también emocional.</p>"+
-	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>", "video", 2, "conexion", "", "conexion-bienestar");
+	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>",
+	 			"<img src='"+$("#bloginfo").val() +"/danza/images/conexion/bienestar.png'>", 2, "conexion", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-ritmo":
 	 		break;
@@ -175,7 +176,8 @@ jQuery(document).ready(function($){
 	 		infoSala("Bienestar","<p>Los movimientos cotidianos como caminar, ir en bicicleta o subir las escaleras, hacen parte de la actividad física que nuestro cuerpo realiza diariamente, sin embargo, el cuerpo necesita de ayuda para fortalecerse y evitar que se debilite; el ejercicio que se realiza en el gimnasio o los deportes son las formas más conocidas de entrenar el cuerpo y siempre escuchamos sobre los beneficios para la salud que trae ejercitarse.</p>"+
 	 			"<p>¿Me creerías si te digo que existe otra forma posible de ejercitar el cuerpo generando bienestar emocional y espiritual en nuestra vida?</p>"+
 	 			"<p>La danza es una forma para mantener el estado óptimo de nuestro cuerpo, dado que la actividad física que se realiza mientras bailamos permite fortalecer los músculos, las articulaciones y los huesos, y mejora la actividad cardiovascular permitiendo que podamos realizar las actividades cotidianas como si siempre tuviéramos la batería al 100 %, pero también la danza es una forma posible para comunicar nuestras emociones, sensaciones y pensamientos, generando así no solo una salud física sino también emocional.</p>"+
-	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>", "video", 2, "conexion", "", "conexion-bienestar");
+	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>",
+	 			"<img src='"+$("#bloginfo").val() +"/danza/images/conexion/bienestar.png'>", 2, "conexion", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-propiocepcion":
 	 		infoSala("Propiocepción","<p>Seguramente habrás escuchado sobre los cinco sentidos de los que se habla habitualmente: vista, tacto, olfato, oído y gusto, así como su función para los seres humanos; pero, ¿sabías que además existen sentidos adicionales? Estos nos permiten percibir sensaciones relacionadas con la temperatura, el espacio, el equilibrio e incluso el dolor.</p>"+
@@ -206,7 +208,9 @@ jQuery(document).ready(function($){
 	 			"</ol>", "<p><img src='"+$("#bloginfo").val() +"/danza/images/conexion/lunes_movimiento.png'></p>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-retopresencial":
-	 		infoSala("Flashmob","<p><video width='750' controls><source src='mov_bbb.mp4' type='video/mp4'></video></p>", "", 1, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		infoSala("Flashmob","<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mvGdnCNH5KQ'></iframe>"+
+	 			"</div></p>", "", 1, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){

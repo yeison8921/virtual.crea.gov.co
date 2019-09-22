@@ -1,102 +1,85 @@
 jQuery(document).ready(function($){
+	$("#div-ocu-int-aud").click(function(){
+		$("#div-con-int-aud").css({
+			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
+		});
+		$("#div-ocu-int-aud").hide();
+		$("#div-btns-int-aud").hide();
+		$("#div-des-int-aud").hide();
+		$("#div-btns-mod-aud").show();
+		$("#div-ocu-principios").show();
+	});
 
-	fondo_2 = {
-		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_rollover_1.jpg")',
-	};
-	fondo_3 = {
-		'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_videoteca_audiovisuales.jpg")',
-	}
+	$("#div-ocu-principios").click(function(){
+		$(".modal-body").html("").html("<div class='col-lg-9'>"+
+			"<h2>El dueño de la luz</h2>"+
+			"<video width='500' controls><source src='mov_bbb.mp4' type='video/mp4'></video>"+
+			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"</div>"+
+			"<div class='col-lg-3'>"+
+			"<h2>Reto</h2>"+
+			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"+
+			"<button class='btn' id='btn-reto' style='background-color: #03f0e3; color: #24273a;'>Ir al reto</button>"+
+			"</div>");
+		$("#modal-rollover").modal("show");
+	});
 
-	$("#div-rollover div").click(function() {
+	$(".modal-body").on("click", "#btn-reto", function(){
+		$(".modal-body").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
+			"<h2>Reto el dueño de la luz</h2>"+
+			"<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>"+
+			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"</div>");
+		$("#div-sec-modal").html("");
+	});
+
+	$("#btn-videoteca").click(function(){
+		$("#div-con-int-aud").css({
+			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_videoteca.png")'
+		});
+		$("#div-ocu-principios").hide();
+		$("#div-btns-mod-aud").hide();
+		$("#div-ocu-videoteca").show();
+	});
+
+	$("#div-ocu-videoteca").click(function(){
+		$("#div-pri-modal").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
+			"<h2>Principios de fotografía</h2>"+
+			"<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>"+
+			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"</div>");
+		$("#div-sec-modal").html("");
+		$("#modal-rollover").modal("show");
+	});
+
+	$(".btn-index-aud").click(function(){
+		$("#div-des-int-aud").show();
 		switch($(this).attr("id")){
-			case "div-principios":
-			$("#div-rollover").css({'background-image': 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondo_rollover_principios.jpg")'})
-			$("#modal-rollover").modal('show');
-			$(".modal-header div").html("").html("<h4 class='modal-title text-center' style='color:white; font-size: 50px;'><strong>EL DUEÑO DE LA LUZ</strong></h4>")
-			$(".modal-body").html("").html("<iframe width='660' height='415' src='https://www.youtube.com/embed/hewadP1sTic' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-			$(".modal-footer").children().html("").html("<a id='link-reto' href='#'><h4 class='modal-title' style='color:white; font-size: 30px;'><strong>RETO</strong></h4></a>");
-			break;
-		}
-	});
-
-	$(".modal-footer").on("click","#link-reto", function(){
-		$(".modal-header div").html("").html("<h4 class='modal-title text-center' style='color:white; font-size: 50px;'><strong>RETO</strong></h4>")
-		$(".modal-body").html("").html("<iframe width='660' height='415' src='https://www.youtube.com/embed/v7lN69Qv1qQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-		$(".modal-footer").children().html("").html("<a id='link-foro' target='_blank' href='"+ $("#url").val() + "/foro-audiovisuales/topic/reto-fotografia'><h4 class='modal-title' style='color:white; font-size: 30px;'><strong>FORO</strong></h4></a>");
-
-	});
-
-	$("#contenedor-index-audiovisuales a").click(function(){
-		$("#img-camara").hide();
-		$("#div-oculto").hide();
-		$("#div-info-basica-audiovisales").hide();
-		$("#div-info-detallada-audiovisuales").hide();
-		$("#contenedor-index-audiovisuales").css({"background-color":""});
-		$("#div-rollover").hide();
-		$("#contenedor-index-audiovisuales").css({'background-image': ""});
-		if($(this).attr('id') == "btn-introduccion" || $(this).attr('id') == "btn-objetivos" || $(this).attr('id') == "btn-metodologia" || $(this).attr('id') == "btn-publico" || $(this).attr('id') == "btn-creditos") {
-			$("#div-info-detallada-audiovisuales").show();
-			$("#contenedor-index-audiovisuales").css({"background-color":"#5cdfcf"});
-		}
-		switch($(this).attr('id')){
 			case "btn-introduccion":
-			$("#div-info-detallada-audiovisuales h1").text("").text("INTRODUCCIÓN");
-			$("#div-info-detallada-audiovisuales p").html("").html("<br>La Cinería como un viaje lúdico a través de diferentes etapas, en las cuales se abordan los temas fundamentales y principios de la fotografía y de la imagen en  movimiento, expresados gráficamente a través de un viaje por el interior de una cámara, en el cual se accede a contenidos y se deben superar retos relacionados con los mismos. La interacción a partir de contenidos pedagógicos diseñados por los grupos de la línea Emprende del área audiovisuales, permite a los usuarios el desarrollo de sus propios contenidos, que son retroalimentados y compartidos desde el aula virtual, para la construcción de una red o comunidad digital, a la cual pueden acceder también todos los grupos de formación de las diferentes líneas y áreas artísticas del programa CREA, así como comunidades académicas, experiencias pedagógicas similares  o público en general.");
+			$("#div-des-int-aud h2").html("").html("Introducción");
+			$("#div-des-int-aud p").html("").html("<p>La Cinería como un viaje lúdico a través de diferentes etapas, en las cuales se abordan los temas fundamentales y principios de la fotografía y de la imagen en  movimiento, expresados gráficamente a través de un viaje por el interior de una cámara, en el cual se accede a contenidos y se deben superar retos relacionados con los mismos. La interacción a partir de contenidos pedagógicos diseñados por los grupos de la línea Emprende del área audiovisuales, permite a los usuarios el desarrollo de sus propios contenidos, que son retroalimentados y compartidos desde el aula virtual, para la construcción de una red o comunidad digital, a la cual pueden acceder también todos los grupos de formación de las diferentes líneas y áreas artísticas del programa CREA, así como comunidades académicas, experiencias pedagógicas similares  o público en general.</p>");
 			break;
 			case "btn-objetivos":
-			$("#div-info-detallada-audiovisuales h1").text("").text("OBJETIVOS");
-			$("#div-info-detallada-audiovisuales p").html("").html("<br><strong>Objetivo general</strong><br>Desarrollar un proceso pedagógico virtual de formación artística a través de medios y narrativas audiovisuales, a partir de la interacción entre los grupos de formación de la línea Emprende del área de audiovisuales del programa CREA y potenciales usuarios en la red."+
-				"<br><strong>Objetivos específicos</strong><br>"+
-				"Generar un espacio virtual e interactivo a través del intercambio de información práctica sobre los principales aspectos de la fotografía y la realización audiovisual.<br>"+
-				"Construir una comunidad virtual alrededor del desarrollo de contenidos y el intercambio de realizaciones entre los grupos de formación de la línea Emprende del área audiovisuales y público en general, a través de la red.");
-			break;
-			case "btn-metodologia":
-			$("#div-info-detallada-audiovisuales h1").text("").text("METODOLOGÍA");
-			$("#div-info-detallada-audiovisuales p").html("").html("<br>El proyecto de aula virtual está compuesto por dos fases:<br>"+
-				"<strong>Fase de creación:</strong><br>"+
-				"La fase de creación será ofertada para los estudiantes de crea, los cuales serán los que realicen la producción de los tutoriales usando la carta fílmica como referente; la idea que uno de los grupos de SE realicen el primer tutorial y a modo de reto impulsen entre los demás colectivos la realización del resto de contenidos. Esta fase tiene una duración aproximada de 6 meses.<br>"+
-				"<strong>Fase abierta (talleres):</strong><br>"+
-				"La fase abierta es cuando se abre el aula virtual para inscripción abierta de todos los jóvenes dentro y fuera del crea, y seguirán la estructura propuesta. Cada taller tendrá una duración aproximada de 3 o 4 meses.");
+			$("#div-des-int-aud h2").html("").html("Objetivos");
+			$("#div-des-int-aud p").html("").html("<p><strong>Objetivo general</strong>"+
+				"<ul><li>Desarrollar un proceso pedagógico virtual de formación artística a través de medios y narrativas audiovisuales, a partir de la interacción entre los grupos de formación de la línea Emprende del área de audiovisuales del programa CREA y potenciales usuarios en la red.</li></ul></p>"+
+				"<p><strong>Objetivos específicos</strong>"+
+				"<ul>"+
+				"<li>Generar un espacio virtual e interactivo a través del intercambio de información práctica sobre los principales aspectos de la fotografía y la realización audiovisual.</li>"+
+				"<li>Construir una comunidad virtual alrededor del desarrollo de contenidos y el intercambio de realizaciones entre los grupos de formación de la línea Emprende del área audiovisuales y público en general, a través de la red.</li>"+
+				"</ul></p>");
 			break;
 			case "btn-publico":
-			$("#div-info-detallada-audiovisuales h1").text("").text("PÚBLICO OBJETIVO");
-			$("#div-info-detallada-audiovisuales p").html("").html("");
+			$("#div-des-int-aud h2").html("").html("Público objetivo");
+			$("#div-des-int-aud p").html("").html("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat");
+			break;
+			case "btn-metodologia":
+			$("#div-des-int-aud h2").html("").html("Metodología");
+			$("#div-des-int-aud p").html("").html("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat");
 			break;
 			case "btn-creditos":
-			$("#div-info-detallada-audiovisuales h1").text("").text("CRÉDITOS");
-			$("#div-info-detallada-audiovisuales p").html("").html("");
-			break;
-
-			case "btn-regresar":
-			$("#img-camara").show();
-			$("#div-info-basica-audiovisales").show();
-			$("#div-oculto").show();
-			break;
-
-			case "btn-oculto":
-			$("#div-rollover").show();
-			$("#div-rollover").css(fondo_2);
-			$("#div-desplazamiento").show();
-			break;
-			case "btn-regresar-principal":
-			if($(this).attr("data-pagina") == 1){
-				$("#div-info-basica-audiovisales").show();
-				$("#div-desplazamiento").hide();
-				$("#img-camara").show();
-				$("#div-oculto").show();
-			}
-			if($(this).attr("data-pagina") == 2){
-				$("#btn-regresar-principal").attr("data-pagina", 1);
-				$("#btn-videoteca").show();
-				$("#div-rollover").show();
-				$("#div-rollover").css(fondo_2);
-			}
-			break;
-			case "btn-videoteca":
-			$("#btn-regresar-principal").attr("data-pagina", 2);
-			$("#div-desplazamiento").show();
-			$("#btn-videoteca").hide();
-			$("#contenedor-index-audiovisuales").css(fondo_3);
+			$("#div-des-int-aud h2").html("").html("Créditos");
+			$("#div-des-int-aud p").html("").html("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat");
 			break;
 		}
 	});

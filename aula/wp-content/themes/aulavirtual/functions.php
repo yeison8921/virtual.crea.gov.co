@@ -44,6 +44,9 @@ function aula_cargar_scripts(){
     if(is_page("Introducción aula artes plásticas") || is_page("Artes plásticas")){
         wp_enqueue_script( 'artes-plasticas', get_template_directory_uri(). '/js/artes_plasticas.js',array(),false,true);
     }
+    if(is_page("Introducción aula audiovisuales 2")){
+        wp_enqueue_script( 'audiovisuales', get_template_directory_uri(). '/js/audiovisuales_old.js',array(),false,true);
+    }
     if(is_page("Introducción aula audiovisuales")){
         wp_enqueue_script( 'audiovisuales', get_template_directory_uri(). '/js/audiovisuales.js',array(),false,true);
     }
