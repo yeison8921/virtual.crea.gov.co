@@ -156,11 +156,19 @@ jQuery(document).ready(function($){
 			$("#div-sub-modulos").show();
 			$($("#div-sub-modulos").children()[1]).show();
 			$($("#div-sub-modulos").children()[2]).show();
-			$("#div-sub-modulos #div-imgs-submodulos").css({
-				"position": "absolute",
-				"top": "43%",
-				"left": "43%"
-			});
+			if($(window).height() <= 890){
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "absolute",
+					"top": "43%",
+					"left": "43%"
+				});
+			}else{
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "relative",
+					"top": "33%",
+					"left": "42%"
+				});
+			}
 
 			$("#div-sub-modulos img").data("ejercicio", "comic");
 		}
@@ -179,11 +187,19 @@ jQuery(document).ready(function($){
 			});
 			$($("#div-sub-modulos").children()[1]).show();
 			$($("#div-sub-modulos").children()[2]).show();
-			$("#div-sub-modulos #div-imgs-submodulos").css({
-				"position": "absolute",
-				"top": "32%",
-				"left": "44%"
-			});
+			if($(window).height()<= 890){
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "absolute",
+					"top": "32%",
+					"left": "44%"
+				});
+			}else{
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "relative",
+					"top": "20%",
+					"left": "42%"
+				});
+			}
 			$("#div-modulos-aap").hide();
 			$("#div-sub-modulos").show();
 			$("#div-sub-modulos img").data("ejercicio", "ejercicio");

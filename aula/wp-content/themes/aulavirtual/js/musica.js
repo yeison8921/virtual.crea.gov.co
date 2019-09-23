@@ -879,6 +879,11 @@ jQuery(document).ready(function($){
 	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/guacharaca.png' width='400'>"+
 	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/marrana.png' width='400'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
+	 		case "btn-foros":
+	 		if($(this).attr("data-curso") == "andina"){
+	 			window.open($("#blog-info").val()+"/foros-musica");
+	 		}
+	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
 	 			window.location.href=$("#blog-info").val();

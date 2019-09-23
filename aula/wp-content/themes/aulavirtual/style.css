@@ -1394,41 +1394,30 @@ body {
     position: relative;
     top: 35%;
   }
-
   #div-imgs-modulos-app img{
     position: absolute;
   }
-
   #div-imgs-modulos-app #img-brujula{
     left: 24%;
     top: 30px;
   }
-
   #div-imgs-modulos-app #img-lupa{
     left: 42%;
     top: 70px;
   }
-
   #div-imgs-modulos-app #img-compas{
     left: 62%;
     top: 30px;
   }
-
   #div-imgs-modulos-app #img-telescopio{
     left: 24%;
     top: 200px;
   }
-
   #div-imgs-modulos-app #img-certificado{
     top: 200px;
     left: 48%;
     width: 100px;
   }
-  #div-imgs-submodulos{
-    margin-top: 15%;
-    left: 5%;
-  }
-
   #img-comic{
     height: 600px;
   }
