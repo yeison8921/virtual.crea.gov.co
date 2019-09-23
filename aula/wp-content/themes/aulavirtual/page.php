@@ -308,32 +308,34 @@
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="modulos">
           </a>
         </div>
-        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8">
-          <div class="col-lg-3 col-md-3">
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">
-            </a>
-            <span>Línea</span>
+        <div id="div-imgs-submodulos">
+          <div style="display: block;">
+            <div style="float: left; margin-right: 25px;">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_linea.png" id="img-linea" data-ejercicio="">
+              </a>
+              <span style="display: block;">Línea</span>
+            </div>
+            <div>
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_gesto.png" id="img-gesto" data-ejercicio="">
+              </a>
+              <span style="display: block;">Gesto</span>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-3">
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_gesto.png" id="img-gesto" data-ejercicio="">
-            </a>
-            <span>Gesto</span>
-          </div>
-        </div>
-        <div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8">
-          <div class="col-lg-3 col-md-3">
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_color.png" id="img-color" data-ejercicio="">
-            </a>
-            <span>Color</span>
-          </div>
-          <div class="col-lg-3 col-md-3">
-            <a href="#">
-              <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_creatividad.png" id="img-creatividad" data-ejercicio="">
-            </a>
-            <span>Creatividad</span>
+          <div style="display: block;">
+            <div style="float: left; margin-right: 25px;">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_color.png" id="img-color" data-ejercicio="">
+              </a>
+              <span style="display: block;">Color</span>
+            </div>
+            <div style="float: left;">
+              <a href="#">
+                <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/submodulos/img_creatividad.png" id="img-creatividad" data-ejercicio="">
+              </a>
+              <span style="display: block;">Creatividad</span>         
+            </div>
           </div>
         </div>
       </div>
@@ -362,13 +364,13 @@
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="submodulos">
           </a>
         </div>
-        <div class="col-lg-11 col-md-11 text-center" style="height: 10%; font-size: 50px;"></div>
+        <div class="col-lg-11 col-md-11 text-center" id="div-titulo-ejercicio"></div>
         <div class="col-lg-3 col-md-3 text-right" style="height: 90%;">
-          <img src="" id="img-pajaro" style="margin-top: 200px;">
+          <img src="" id="img-pajaro">
         </div>
-        <div class="col-lg-9 col-md-9" id="div-info-ejercicio" style="height: 70%; font-size: 23px; overflow-y: auto;">
+        <div class="col-lg-9 col-md-9" id="div-info-ejercicio">
         </div>
-        <div class="col-lg-9 col-md-9" style="height: 15%; font-size: 23px; padding-top: 20px;">
+        <div class="col-lg-9 col-md-9" id="div-btns-ejercicio">
           <div class="col-lg-6 col-md-6 text-right">
             <span>Realiza tu dibujo</span>
             <a href="https://sketch.io/sketchpad" target="_blank">
@@ -379,132 +381,133 @@
             <a href="#" id="a-foro" target="_blank">
               <img src="">
             </a>
-            <span>Sube tu dibujo al foro</span></div>
+            <span>Sube tu dibujo al foro</span>
           </div>
         </div>
       </div>
     </div>
-  <?php endif; ?>
-  <?php if(is_page("Introducción aula audiovisuales")) :?>
-    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-    <div class="row contenedor" id="div-con-int-aud">
-      <div id="div-ocu-int-aud"></div>
-      <div id="div-des-int-aud" hidden>
-        <h2></h2>
-        <p></p>
-      </div>
-      <div class="col-lg-offset-1 col-lg-10 text-center" id="div-btns-int-aud">
-        <div class="col-lg-offset-1 col-lg-2 text-center">
-          <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
-        </div>
-        <div class="col-lg-2 text-center">
-          <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
-        </div>
-        <div class="col-lg-2 text-center">
-          <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
-        </div>
-        <div class="col-lg-2 text-center">
-          <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
-        </div>
-        <div class="col-lg-2 text-center">
-          <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
-        </div>
-      </div>
-      <div id="div-ocu-principios" hidden></div>
-      <div class="col-lg-offset-2 col-lg-8" id="div-btns-mod-aud" hidden>
-        <div style="float: left;">
-          <button class="btn btn-modulos-aud" id="btn-foro">FORO</button>
-        </div>
-        <div style="float: right;">
-          <button class="btn btn-modulos-aud" id="btn-videoteca">VIDEOTECA</button>
-        </div>
-      </div>
-      <div id="div-ocu-videoteca" hidden></div>
+  </div>
+<?php endif; ?>
+<?php if(is_page("Introducción aula audiovisuales")) :?>
+  <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+  <div class="row contenedor" id="div-con-int-aud">
+    <div id="div-ocu-int-aud"></div>
+    <div id="div-des-int-aud" hidden>
+      <h2></h2>
+      <p></p>
     </div>
-    <div class="modal fade" id="modal-rollover" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
-            <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
-            <div></div>
-          </div>
-          <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 16px;">
-            <div id="div-pri-modal" class="col-lg-9"></div>
-            <div id="div-sec-modal" class="col-lg-3"></div>
-          </div>
-          <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
-            <div class="col-lg-offset-2 col-lg-8">
-            </div>
-          </div>
-        </div>
+    <div class="col-lg-offset-1 col-lg-10 text-center" id="div-btns-int-aud">
+      <div class="col-lg-offset-1 col-lg-2 text-center">
+        <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
+      </div>
+      <div class="col-lg-2 text-center">
+        <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
+      </div>
+      <div class="col-lg-2 text-center">
+        <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
+      </div>
+      <div class="col-lg-2 text-center">
+        <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
+      </div>
+      <div class="col-lg-2 text-center">
+        <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
       </div>
     </div>
-  <?php endif; ?>
-  <?php if(is_page("Introducción aula audiovisuales 2")) :?>
-    <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
-    <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-    <div class="row">
-      <div class="col-lg-12" id="contenedor-index-audiovisuales">
-        <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondo_introduccion_audiovisuales.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
-        <div class="col-lg-offset-1 col-lg-10" id="div-desplazamiento" style="display: none;">
-          <div class="col-lg-offset-2 col-lg-1">
-            <a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a>
-          </div>
-          <div  class="col-lg-offset-6 col-lg-1">
-            <a href="#" id="btn-videoteca" style="color: white;">VIDEOTECA</a>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-12" id="div-oculto">
-          <a id="btn-oculto" href="#">
-            <div id="link-oculto"></div>
-            <div id="link-oculto2">
-              <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png">                  
-              <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png">
-              <img id="circulo" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png">
-            </div>
-          </a>
-        </div>
-        <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
-          <div class="col-lg-offset-1 col-lg-2 text-center"><a href="#" id="btn-introduccion">INTRODUCCIÓN</a></div>
-          <div class="col-lg-2 text-center"><a href="#" id="btn-objetivos">OBJETIVOS</a></div>
-          <div class="col-lg-2 text-center"><a href="#" id="btn-publico">PÚBLICO OBJETIVO</a></div>
-          <div class="col-lg-2 text-center"><a href="#" id="btn-metodologia">METODOLOGÍA</a></div>
-          <div class="col-lg-2 text-center"><a href="#" id="btn-creditos">CRÉDITOS</a></div>
-        </div>
-        <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
-          <div class="col-lg-12 text-center" id="div-tid-audivisuales">
-            <h1></h1>
-          </div>
-          <div class="col-lg-offset-1 col-lg-10 text-center" id="div-cid-audivisuales">
-            <p></p>
-          </div>
-          <div class="col-lg-offset-1 col-lg-10 text-center">
-            <a href="#" id="btn-regresar">REGRESAR</a>
-          </div>
-        </div>
-        <div id="div-rollover" style="display: none;">
-          <div id="div-principios"></div>
-        </div>
+    <div id="div-ocu-principios" hidden></div>
+    <div class="col-lg-offset-2 col-lg-8" id="div-btns-mod-aud" hidden>
+      <div style="float: left;">
+        <button class="btn btn-modulos-aud" id="btn-foro">FORO</button>
+      </div>
+      <div style="float: right;">
+        <button class="btn btn-modulos-aud" id="btn-videoteca">VIDEOTECA</button>
       </div>
     </div>
-    <div class="modal fade" id="modal-rollover" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
-            <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
-            <div></div>
-          </div>
-          <div class="modal-body text-center" style="background-color: #24273a;">
-          </div>
-          <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
-            <div class="col-lg-offset-2 col-lg-8">
-            </div>
+    <div id="div-ocu-videoteca" hidden></div>
+  </div>
+  <div class="modal fade" id="modal-rollover" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
+          <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+          <div></div>
+        </div>
+        <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 16px;">
+          <div id="div-pri-modal" class="col-lg-9"></div>
+          <div id="div-sec-modal" class="col-lg-3"></div>
+        </div>
+        <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
+          <div class="col-lg-offset-2 col-lg-8">
           </div>
         </div>
       </div>
     </div>
-  <?php endif; ?>
+  </div>
+<?php endif; ?>
+<?php if(is_page("Introducción aula audiovisuales 2")) :?>
+  <input type="hidden" id="url" value="<?php bloginfo('url'); ?>">
+  <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
+  <div class="row">
+    <div class="col-lg-12" id="contenedor-index-audiovisuales">
+      <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondo_introduccion_audiovisuales.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
+      <div class="col-lg-offset-1 col-lg-10" id="div-desplazamiento" style="display: none;">
+        <div class="col-lg-offset-2 col-lg-1">
+          <a href="#" id="btn-regresar-principal" data-pagina="1" style="color: white;">REGRESAR</a>
+        </div>
+        <div  class="col-lg-offset-6 col-lg-1">
+          <a href="#" id="btn-videoteca" style="color: white;">VIDEOTECA</a>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12" id="div-oculto">
+        <a id="btn-oculto" href="#">
+          <div id="link-oculto"></div>
+          <div id="link-oculto2">
+            <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png">                  
+            <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png">
+            <img id="circulo" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png">
+          </div>
+        </a>
+      </div>
+      <div id="div-info-basica-audiovisales" class="col-lg-offset-1 col-lg-10">
+        <div class="col-lg-offset-1 col-lg-2 text-center"><a href="#" id="btn-introduccion">INTRODUCCIÓN</a></div>
+        <div class="col-lg-2 text-center"><a href="#" id="btn-objetivos">OBJETIVOS</a></div>
+        <div class="col-lg-2 text-center"><a href="#" id="btn-publico">PÚBLICO OBJETIVO</a></div>
+        <div class="col-lg-2 text-center"><a href="#" id="btn-metodologia">METODOLOGÍA</a></div>
+        <div class="col-lg-2 text-center"><a href="#" id="btn-creditos">CRÉDITOS</a></div>
+      </div>
+      <div class="col-lg-offset-1 col-lg-10" id="div-info-detallada-audiovisuales" style="display: none;">
+        <div class="col-lg-12 text-center" id="div-tid-audivisuales">
+          <h1></h1>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10 text-center" id="div-cid-audivisuales">
+          <p></p>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10 text-center">
+          <a href="#" id="btn-regresar">REGRESAR</a>
+        </div>
+      </div>
+      <div id="div-rollover" style="display: none;">
+        <div id="div-principios"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-rollover" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
+          <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+          <div></div>
+        </div>
+        <div class="modal-body text-center" style="background-color: #24273a;">
+        </div>
+        <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
+          <div class="col-lg-offset-2 col-lg-8">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
 
-  <?php the_content(); ?>
+<?php the_content(); ?>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>

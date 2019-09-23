@@ -156,13 +156,12 @@ jQuery(document).ready(function($){
 			$("#div-sub-modulos").show();
 			$($("#div-sub-modulos").children()[1]).show();
 			$($("#div-sub-modulos").children()[2]).show();
-			$($("#div-sub-modulos").children()[1]).css({
-				"margin-top": "15%",
-				"left": "5%"
-			})
-			$($("#div-sub-modulos").children()[2]).css({
-				"left": "5%"
-			})
+			$("#div-sub-modulos #div-imgs-submodulos").css({
+				"position": "absolute",
+				"top": "43%",
+				"left": "43%"
+			});
+
 			$("#div-sub-modulos img").data("ejercicio", "comic");
 		}
 
@@ -180,13 +179,11 @@ jQuery(document).ready(function($){
 			});
 			$($("#div-sub-modulos").children()[1]).show();
 			$($("#div-sub-modulos").children()[2]).show();
-			$($("#div-sub-modulos").children()[1]).css({
-				"margin-top": "10%",
-				"left": "8%"
-			})
-			$($("#div-sub-modulos").children()[2]).css({
-				"left": "8%"
-			})
+			$("#div-sub-modulos #div-imgs-submodulos").css({
+				"position": "absolute",
+				"top": "32%",
+				"left": "44%"
+			});
 			$("#div-modulos-aap").hide();
 			$("#div-sub-modulos").show();
 			$("#div-sub-modulos img").data("ejercicio", "ejercicio");
