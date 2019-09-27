@@ -391,7 +391,6 @@
 <?php if(is_page("Introducción aula audiovisuales")) :?>
   <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
   <div class="row contenedor" id="div-con-int-aud">
-    <!-- <img src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondos/fondo_index_1.jpg" style="height: 850px; display: block; margin: auto;" id="auto"> -->
     <div id="div-ocu-int-aud"></div>
     <button type="button" class="btn" id="btn-cerrar" style="display: none;"><i class="fas fa-times fa-2x"></i></button>
     <div id="div-des-int-aud" hidden>

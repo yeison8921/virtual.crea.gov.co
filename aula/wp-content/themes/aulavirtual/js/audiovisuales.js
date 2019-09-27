@@ -1,14 +1,30 @@
 jQuery(document).ready(function($){
 
 	$(window).on("resize", function(){
-		a = ((($("#div-con-int-aud").width() - 1449) / 2) + 97) +"px";
-		$("#div-des-int-aud").css({
-			"position": "absolute",
-			"right": a,
-			"width": "350px",
-			"height": "600px"
-		});
+		setElementPosition($(this).width(), $(this).height());
 	});
+
+	function setElementPosition(width, height){
+		if(height > 890 && width > 992){
+			divPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 97) +"px";
+			buttonPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 48) +"px";
+			$("#div-des-int-aud").css({
+				"position": "absolute",
+				"right": divPosition,
+				"width": "350px",
+				"height": "600px",
+				"font-size": "20px",
+				"top": "105px"
+			});
+			$("#btn-cerrar").css({
+				"position": "absolute",
+				"right": buttonPosition,
+				"top": "70px"
+			});
+		}else{
+
+		}
+	}
 
 	$("#div-ocu-int-aud").click(function(){
 		$("#div-con-int-aud").css({
@@ -74,6 +90,7 @@ jQuery(document).ready(function($){
 		});
 		$("#div-des-int-aud").show();
 		if($(this).attr("id") != "btn-cerrar"){
+			setElementPosition($(window).width(), $(window).height());
 			$("#btn-cerrar").show();
 		}
 		switch($(this).attr("id")){

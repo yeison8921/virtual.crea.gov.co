@@ -1475,9 +1475,6 @@ body {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    position: absolute;
-    right: 14%;
-    top: 7%;
   } 
 
   .btn-index-aud{
@@ -1570,13 +1567,11 @@ body {
       font-size: 20px;
     }
     #div-des-int-aud{
-      /*width: 250px;
-      float: right;
-      margin-right: 220px;
-      margin-top: 50px;
-      font-size: 14px;
-      overflow-y: scroll;
-      height: 410px;*/
+      position: absolute;
+      right: 410px;
+      width: 250px;
+      height: 600px;
+      top: 10%;
     }
     .btn-modulos-aud{
       font-size: 20px;
@@ -1592,15 +1587,6 @@ body {
     .btn-index-aud{
       font-size: 20px;
     }
-    /*#div-des-int-aud{
-      width: 350px;
-      float: right;
-      margin-right: 320px;
-      margin-top: 65px;
-      font-size: 20px;
-      overflow-y: scroll;
-      height: 600px;
-    }*/
     .btn-modulos-aud{
       font-size: 30px;
     }
