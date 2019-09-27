@@ -391,25 +391,27 @@
 <?php if(is_page("Introducción aula audiovisuales")) :?>
   <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
   <div class="row contenedor" id="div-con-int-aud">
+    <!-- <img src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondos/fondo_index_1.jpg" style="height: 850px; display: block; margin: auto;" id="auto"> -->
     <div id="div-ocu-int-aud"></div>
+    <button type="button" class="btn" id="btn-cerrar" style="display: none;"><i class="fas fa-times fa-2x"></i></button>
     <div id="div-des-int-aud" hidden>
       <h2></h2>
       <p></p>
     </div>
-    <div class="col-lg-offset-1 col-lg-10 text-center" id="div-btns-int-aud">
-      <div class="col-lg-offset-1 col-lg-2 text-center">
+    <div class="col-lg-offset-1 col-lg-10 col-md-12 text-center" id="div-btns-int-aud">
+      <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
         <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
       </div>
-      <div class="col-lg-2 text-center">
+      <div class="col-lg-2 col-md-2">
         <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
       </div>
-      <div class="col-lg-2 text-center">
+      <div class="col-lg-2 col-md-2">
         <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
       </div>
-      <div class="col-lg-2 text-center">
+      <div class="col-lg-2 col-md-2">
         <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
       </div>
-      <div class="col-lg-2 text-center">
+      <div class="col-lg-2 col-md-2">
         <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
       </div>
     </div>
@@ -427,17 +429,13 @@
   <div class="modal fade" id="modal-rollover" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
-          <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
-          <div></div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" style="color: #03f0e3;">&times;</button>
+          <div class="modal-title" style="font-size: 40px; color: #03f0e3;"></div>
         </div>
-        <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 16px;">
-          <div id="div-pri-modal" class="col-lg-9"></div>
-          <div id="div-sec-modal" class="col-lg-3"></div>
+        <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 20px;">
         </div>
-        <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
-          <div class="col-lg-offset-2 col-lg-8">
-          </div>
+        <div class="modal-footer">
         </div>
       </div>
     </div>

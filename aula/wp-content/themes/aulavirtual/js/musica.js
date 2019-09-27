@@ -650,7 +650,9 @@ jQuery(document).ready(function($){
 	 				"</div></p>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
-	 			infoSalaTeorica("Toca con la pista - del Tiple - Cachipay", "<p>video</p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
+	 			infoSalaTeorica("Toca con la pista - del Tiple - Cachipay", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xcOAkFeEpXg'></iframe>"+
+	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
 	 			infoSalaTeorica("Toca con la pista - del Tiple - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
@@ -666,11 +668,13 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
 	 			infoSalaTeorica("Toca con la pista - de la Bandola - Cachipay", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/bvgrIf4ps-Q'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-1B38WTtkr4'></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
-	 			infoSalaTeorica("Toca con la pista - de la bandola - Bochica", " ", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
+	 			infoSalaTeorica("Toca con la pista - de la bandola - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/oDhauGhtI80'></iframe>"+
+	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-karaoke":
