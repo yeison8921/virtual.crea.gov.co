@@ -11,18 +11,35 @@ jQuery(document).ready(function($){
 			$("#div-des-int-aud").css({
 				"position": "absolute",
 				"right": divPosition,
+				"top": "105px",
 				"width": "350px",
 				"height": "600px",
-				"font-size": "20px",
-				"top": "105px"
+				"font-size": "20px"
 			});
 			$("#btn-cerrar").css({
 				"position": "absolute",
 				"right": buttonPosition,
 				"top": "70px"
 			});
-		}else{
-
+		}
+		if(height < 890 && width > 992){
+			divPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 67) +"px";
+			buttonPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 18) +"px";
+			$("#div-des-int-aud").css({
+				"position": "absolute",
+				"right": divPosition,
+				"top": "90px",
+				"width": "250px",
+				"height": "600px",
+				"font-size": "15px",
+				"height": "440px",
+				"overflow-y": "auto"
+			});
+			$("#btn-cerrar").css({
+				"position": "absolute",
+				"right": buttonPosition,
+				"top": "60px"
+			});
 		}
 	}
 
@@ -100,9 +117,8 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-objetivos":
 			$("#div-des-int-aud h2").html("").html("Objetivos");
-			$("#div-des-int-aud p").html("").html("<ol><li>Realizar un recorrido virtual, provocador e interactivo a través de los principios básicos de la fotografía y la realización audiovisual.</li>"+
-				"<li>Construir una comunidad virtual a través del intercambio de contenidos y de realizaciones a través del aula virtual.Desarrollar un proceso pedagógico virtual de formación artística a través de medios y narrativas audiovisuales, a partir de la interacción entre los grupos de formación de la línea Emprende del área de audiovisuales del programa CREA y potenciales usuarios en la red.</li>"+
-				"</ol></p>");
+			$("#div-des-int-aud p").html("").html("<p>1. Realizar un recorrido virtual, provocador e interactivo a través de los principios básicos de la fotografía y la realización audiovisual.</p>"+
+				"<p>2. Construir una comunidad virtual a través del intercambio de contenidos y de realizaciones a través del aula virtual.Desarrollar un proceso pedagógico virtual de formación artística a través de medios y narrativas audiovisuales, a partir de la interacción entre los grupos de formación de la línea Emprende del área de audiovisuales del programa CREA y potenciales usuarios en la red.</p>");
 			break;
 			case "btn-publico":
 			$("#div-des-int-aud h2").html("").html("Público objetivo");
@@ -111,10 +127,8 @@ jQuery(document).ready(function($){
 			case "btn-metodologia":
 			$("#div-des-int-aud h2").html("").html("Metodología");
 			$("#div-des-int-aud p").html("").html("<p>El proyecto de aula virtual está compuesto por dos fases:</p>"+
-				"<p><ol>"+
-				"<li>Introducción a los principios básicos de cada capítulo a través de un viaje lúdico que inicia en el interior del lente de una cámara, hasta los elementos del lenguaje audiovisual.</li>"+
-				"<li>Video retos: en los cuales la teoría se aterriza en la práctica a través de video tutoriales formato youtuber en los cuales se plantean retos para que los usuarios interactúen, subiendo a la red los resultados de la experimentación fotográfica y audiovisual, resolviendo dudas o inquietudes, e intercambiando opiniones con otros usuarios.</li>"+
-				"</ol></p>");
+				"<p>1. Introducción a los principios básicos de cada capítulo a través de un viaje lúdico que inicia en el interior del lente de una cámara, hasta los elementos del lenguaje audiovisual.</p>"+
+				"<p>2. Video retos: en los cuales la teoría se aterriza en la práctica a través de video tutoriales formato youtuber en los cuales se plantean retos para que los usuarios interactúen, subiendo a la red los resultados de la experimentación fotográfica y audiovisual, resolviendo dudas o inquietudes, e intercambiando opiniones con otros usuarios.</p>");
 			break;
 			case "btn-creditos":
 			$("#div-des-int-aud h2").html("").html("Créditos");
