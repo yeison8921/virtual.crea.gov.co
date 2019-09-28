@@ -1203,15 +1203,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/*#div-info-detallada-aap{
-  height: 100%;
-}*/
-
-/*#div-info-detallada-aap p{
-  position: absolute;
-}*/
-
 #div-mapa-mundi{
   background-image: url("artes_plasticas/images/fondos/fondo_mapamundi.jpg");
 }
@@ -1240,6 +1231,11 @@ body {
   #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
     height: 610px;
   }
+
+  #div-info-detallada-aap{
+    height: 580px;
+    background-size: auto 580px;
+  }
   #div-img-viaje, #div-colombia {
     height: 80%;
     background-size: auto 480px;
@@ -1252,10 +1248,7 @@ body {
   }
   #btns-intro-aap img {
     height: 95px;
-  }
-  #div-info-detallada-aap {
-    background-size: auto 580px;
-  }
+  } 
   #div-info-detallada-aap p{
     font-size: 17px;
     left: 27%;
@@ -1342,13 +1335,11 @@ body {
   }
   #div-info-detallada-aap{
     height: 800px;
+    background-size: auto 800px;
   }
   #div-img-viaje, #div-colombia {
     height: 80%;
     background-size: auto 670px;
-  }
-  #div-info-detallada-aap {
-    background-size: auto 800px;
   }
   #div-img-viaje img {
     position: relative;
@@ -1359,12 +1350,6 @@ body {
   #btns-intro-aap {
     height: 20%
   }
-  /*#div-info-detallada-aap p {
-    font-size: 23px;
-    left: 20%;
-    right: 40%;
-    top: 20%;
-  }*/
   #div-colombia img {
     position: relative;
     top: 55%;

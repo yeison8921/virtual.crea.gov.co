@@ -7,10 +7,71 @@ jQuery(document).ready(function($){
 
 	function setElementPosition(width, height){
 		$("#div-texto-info").attr('style', '');
-		if(height < 890){
-			switch(element){
+		if(width > 992 && height < 890){
+			switch($("#div-texto-info").data("info")){
 				case "introduccion":
-				$("#div-texto-info").css({});
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 100) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "15px"
+				});
+				break;
+				case "objetivos":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 50) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"right": divPosition,
+					"width": "500px",
+					"font-size": "15px"
+				});
+				break;
+				case "publico":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 100) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "15px"
+				});
+				break;
+				case "metologia":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 100) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "15px"
+				});
+				break;
+				case "creditos":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 100) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"right": divPosition,
+					"width": "350px",
+					"height": "400px",
+					"overflow-y": "auto",
+					"font-size": "15px"
+				});
+				break;
+				case "bibliografia":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) + 100) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "50px",
+					"left": divPosition,
+					"width": "400px",
+					"height": "400px",
+					"overflow-y": "auto",
+					"font-size": "15px"
+				});
 				break;
 			}
 		}
