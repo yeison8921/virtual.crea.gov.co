@@ -1,6 +1,89 @@
 jQuery(document).ready(function($){
 	num_pag = 1;
 
+	$(window).on("resize", function(){
+		setElementPosition($(window).width(), $(window).height());
+	});
+
+	function setElementPosition(width, height){
+		$("#div-texto-info").attr('style', '');
+		if(height < 890){
+			switch(element){
+				case "introduccion":
+				$("#div-texto-info").css({});
+				break;
+			}
+		}
+		if(width > 992 && height > 890){
+			switch($("#div-texto-info").data("info")){
+				case "introduccion":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) - 50) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "20px"
+				});
+				break;
+				case "objetivos":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) - 80) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"right": divPosition,
+					"width": "500px",
+					"font-size": "20px"
+				});
+				break;
+				case "publico":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) - 60) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "20px"
+				});
+				break;
+				case "metologia":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) - 60) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"left": divPosition,
+					"width": "500px",
+					"font-size": "20px"
+				});
+				break;
+				case "creditos":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2)) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"right": divPosition,
+					"width": "350px",
+					"height": "550px",
+					"overflow-y": "auto",
+					"font-size": "20px"
+				});
+				break;
+				case "bibliografia":
+				divPosition = ((($("#div-info-detallada-aap").width() - 1090) / 2) - 30) + "px";
+				$("#div-texto-info").css({
+					"position": "absolute",
+					"top": "100px",
+					"left": divPosition,
+					"width": "500px",
+					"height": "550px",
+					"overflow-y": "auto",
+					"font-size": "20px"
+				});
+				break;
+			}
+		}
+	}
+
 	function infoEjercicio(ejercicio){
 		$("#div-comic").hide();
 		switch (ejercicio){
@@ -128,6 +211,9 @@ jQuery(document).ready(function($){
 	}
 	fondo_creditos = {
 		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_creditos.jpg")',
+	}
+	fondo_bibliografia = {
+		"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_bibliografia.jpg")',
 	}
 	
 	$("#contenedor-index-artes-plasticas").on("click", "img", function() {
@@ -370,67 +456,86 @@ $("#btns-intro-aap img").click(function(){
 	$("#div-img-viaje").hide();
 	$("#btns-intro-aap").hide();
 	$("#div-info-detallada-aap").show();
-	$("#div-info-detallada-aap p").css({
-		"left": "",
-		"right": ""
-	});
 	switch($(this).attr("id")){
 		case "img-intro-aap":
 		$("#div-info-detallada-aap").css(fondo_introduccion);
-		$("#div-info-detallada-aap p").html("").html("La experiencia aula virtual está planteada como un viaje en el que Viaticum, nuestro personaje acompañante, introduce al espectador a diferentes aspectos de las artes plásticas y visuales como: punto y línea, color y gesto finalizando en un proceso de creación autónomo.<br><br>El aula virtual de artes plásticas y visuales se proyecta en un espacio de acercamiento a procesos creativos enfocados en la generación de imágenes que comuniquen ideas o sensaciones.");
+		$("#div-texto-info").data("info", "introduccion");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p>La experiencia aula virtual está planteada como un viaje en el que Viaticum, nuestro personaje acompañante, introduce al espectador a diferentes aspectos de las artes plásticas y visuales como: punto y línea, color y gesto finalizando en un proceso de creación autónomo.</p>"+
+			"<p>El aula virtual de artes plásticas y visuales se proyecta en un espacio de acercamiento a procesos creativos enfocados en la generación de imágenes que comuniquen ideas o sensaciones.</p>");
 		break;
 		case "img-objetivos-aap":
 		$("#div-info-detallada-aap").css(fondo_objetivos);
-		$("#div-info-detallada-aap p").css({
-			"left": "45%",
-			"right": "25%"
-		});
-		$("#div-info-detallada-aap p").html("").html("Objetivo general:<br>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.<br><br>"+
-			"Objetivos específicos:<br>"+
-			"<ol>"+
+		$("#div-texto-info").data("info", "objetivos");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p>Objetivo general:<p>"+
+			"<p>Orientar virtualmente  una experiencia  pedagógica, creativa e  interactiva partiendo de los elementos fundamentales de las artes plásticas y visuales, las cuales permiten abrir  un espacio al pensamiento crítico desde la lectura y creación de imágenes. Esta experiencia está dirigida a todo público.</p>"+
+			"<p>Objetivos específicos:</p>"+
+			"<p><ol>"+
 			"<li>Mediar desde las experiencias visuales de los usuarios en relación a un contexto artístico  contemporáneo basados en  diversos  referentes del medio plástico visual.</li>"+
 			"<li>Fomentar espacios de pensamiento creativo frente a la sensibilidad estética y la apreciación plástica y visual.</li>"+
-			"</ol>");
+			"</ol></p>");
 		break;
 		case "img-publico-aap":
 		$("#div-info-detallada-aap").css(fondo_publico);
-		$("#div-info-detallada-aap p").html("").html("Esta plataforma o espacio virtual está diseñado para cualquier persona que quiera explorar o acercarse a las artes plásticas y visuales.");
+		$("#div-texto-info").data("info", "publico");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p>Esta plataforma o espacio virtual está diseñado para cualquier persona que quiera explorar o acercarse a las artes plásticas y visuales.</p>");
 		break;
 		case "img-metodologia-aap":
 		$("#div-info-detallada-aap").css(fondo_metodologia);
-		$("#div-info-detallada-aap p").html("").html("Virtual pedagógica, interactiva y creativa que invita al usuario a vivir una experiencia dinámica en la apropiación de conocimiento y la aplicabilidad del mismo.");
+		$("#div-texto-info").data("info", "metologia");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p>Virtual pedagógica, interactiva y creativa que invita al usuario a vivir una experiencia dinámica en la apropiación de conocimiento y la aplicabilidad del mismo.</p>");
 		break;
 		case "img-creditos-aap":
 		$("#div-info-detallada-aap").css(fondo_creditos);
-		$("#div-info-detallada-aap p").html("").html("Créditos");
-			// $("#div-info-detallada-aap p").html("").html("<p><strong>Creadores Contenido Aula Virtual:</strong>"+
-			// 	"José Manuel Valero Mendieta"+
-			// 	"Juan Sebastián Testa Ramírez"+
-			// 	"Delmi Joanna Martínez Albarracín"+
-			// 	"Reinaldo Castro Rojas"+
-			// 	"Stefany Layton Cuervo"+
-			// 	"Laura Nathalia Pérez Céspedes"+
-			// 	"Olga Yohana Chaparro Rodríguez"+
-			// 	"<strong>Producción de contenidos:</strong>"+
-			// 	"Tatiana Múnera"+
-			// 	"<strong>Diseño gráfico e ilustraciones:</strong>"+
-			// 	"José Valero y Juan Sebastián Testa"+
-			// 	"<strong>Programación:</strong>"+
-			// 	"Yeison Briceño"+
-			// 	"<strong>Asesor pedagógico:</strong>"+
-			// 	"Marcela Jiménez"+
-			// 	"Lia Estefanía García"+
-			// 	"Sary Constanza Murillo"+
-			// 	"<strong>Coordinación programa Crea:</strong>"+
-			// 	"Leonardo Garzón"+
-			// 	"<strong>Coordinación SIF:</strong>"+
-			// 	"Miguel Andrés Salas"+
-			// 	"<strong>Subdirección de formación artistica</strong>"+
-			// 	"Idartes"+
-			// 	"Alcaldía de Bogotá"+
-			// 	"2019</p>");
-			break;
-		}
-	});
+		$("#div-texto-info").data("info", "creditos");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p><strong>Creadores Contenido Aula Virtual:</strong><br>"+
+			"José Manuel Valero Mendieta<br>"+
+			"Juan Sebastián Testa Ramírez<br>"+
+			"Delmi Joanna Martínez Albarracín<br>"+
+			"Reinaldo Castro Rojas<br>"+
+			"Stefany Layton Cuervo<br>"+
+			"Laura Nathalia Pérez Céspedes<br>"+
+			"Olga Yohana Chaparro Rodríguez</p>"+
+			"<p><strong>Producción de contenidos:</strong><br>"+
+			"Tatiana Múnera</p>"+
+			"<p><strong>Diseño gráfico e ilustraciones:</strong><br>"+
+			"José Valero y Juan Sebastián Testa</p>"+
+			"<p><strong>Programación:</strong><br>"+
+			"Yeison Briceño</p>"+
+			"<p><strong>Asesor pedagógico:</strong><br>"+
+			"Marcela Jiménez<br>"+
+			"Lia Estefanía García<br>"+
+			"Sary Constanza Murillo</p>"+
+			"<p><strong>Coordinación programa Crea:</strong><br>"+
+			"Leonardo Garzón</p>"+
+			"<p><strong>Coordinación SIF:</strong><br>"+
+			"Miguel Andrés Salas</p>"+
+			"<p><strong>Subdirección de formación artistica</strong><br>"+
+			"Idartes<br>"+
+			"Alcaldía de Bogotá<br>"+
+			"2019</p>");
+		break;
+		case "img-bibliografia-aap":
+		$("#div-info-detallada-aap").css(fondo_bibliografia);
+		$("#div-texto-info").data("info", "bibliografia");
+		setElementPosition($(window).width(), $(window).height());
+		$("#div-texto-info").html("").html("<p><strong>Artículos</strong></p>"+
+			"<p>Pini, I. (2016), Aproximación al arte colombiano a comienzos del siglo XXI. Revista Credencial. Recuperado de <a href='http://www.revistacredencial.com/credencial/historia/temas/aproximacion-al-arte-colombiano-comienzos-del-siglo-xxi'>Revista credencial</a></p>"+
+			"<p>Tobón, D. (2009), Aquí, hoy, a viva voz: sobre lo contemporáneo en el arte colombiano. Cuadernos de Música, Artes Visuales y Artes Escénicas, 5, 67-86."+
+			"Recuperado de <a href='https://revistas.javeriana.edu.co/index.php/cma/article/view/1949/1238' target='_blank'>Revista Javeriana</a></p>"+
+			"<p><strong>Imágenes</strong></p>"+
+			"<p>Calle, J. (2000). Niñita. [Ensamblaje]. Recuperado de <a href='http://www.banrepcultural.org/coleccion-de-arte-banco-de-la-republica/obra/ni%C3%B1ita-serie-letargia' target='_blank'>Banco de la república</a></p>"+
+			"<p>Caro, A. (1992). Homenaje a Manuel Quintín Lame. [Dibujo]. Recuperado de <a href='http://www.banrepcultural.org/coleccion-de-arte-banco-de-la-republica/obra/homenaje-manuel-quint%C3%ADn-lame' target='_blank'>Banco de la república</a></p>"+
+			"<p>Gonzalez, B. (1965). Los suicidas del sisga. [Pintura]. Recuperado de <a href='https://i2.wp.com/esferapublica.org/nfblog/wp-content/uploads/2011/11/beatriz-gonzalez1.jpg' target='_blank'>Esfera pública</a></p>"+
+			"<p>Lagos, Miler. (2013). Red Heart Tree Rings Datings. [Collage]. Recuperado de <a href='http://www.magnanmetz.com/artists/miler-lagos' target='_blank'>Magnan Metz Gallery</a></p>"+
+			"<p>Muñoz, O. (1995). Narcisos. [Serigrafía]. Recuperado de <a href='http://www.banrepcultural.org/oscar-munoz/narcisos-secos.html' target='_blank'>Banco de la república</a></p>"+
+			"<p>Villabón, C. La suerte de la fea la bonita la desea. [Pintura]. Recuperado de <a href='http://www.lavilladebon.com/pecados_capitales.html' target='_blank'>villadebon</a></p>");
+		break;
+	}
+});
 });
 

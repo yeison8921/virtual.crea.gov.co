@@ -1204,13 +1204,13 @@ body {
   background-position: center;
 }
 
-#div-info-detallada-aap{
+/*#div-info-detallada-aap{
   height: 100%;
-}
+}*/
 
-#div-info-detallada-aap p{
+/*#div-info-detallada-aap p{
   position: absolute;
-}
+}*/
 
 #div-mapa-mundi{
   background-image: url("artes_plasticas/images/fondos/fondo_mapamundi.jpg");
@@ -1219,19 +1219,6 @@ body {
 #div-modulos-aap{
   background-image: url("artes_plasticas/images/fondos/fondo_instrumentos.png");
 }
-
-/*#div-modulos-aap{
-  background-image: url("artes_plasticas/images/fondos/fondo_instrumentos.png"), url("artes_plasticas/images/introduccion/fondo.png");
-  }*/
-
-/*#div-sub-modulos{
-  background-image: url("artes_plasticas/images/fondos/fondo_lupa.jpg");
-  }*/
-
-/*#div-sub-modulos{
-  background-image: url("artes_plasticas/images/submodulos/pergamino.png"), url("artes_plasticas/images/submodulos/fondo.png");
-}
-*/
 #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1350,15 +1337,18 @@ body {
 }
 
 @media (min-height: 891px) and (max-height: 1200px) {
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
     height: 850px;
+  }
+  #div-info-detallada-aap{
+    height: 800px;
   }
   #div-img-viaje, #div-colombia {
     height: 80%;
     background-size: auto 670px;
   }
   #div-info-detallada-aap {
-    background-size: auto 770px;
+    background-size: auto 800px;
   }
   #div-img-viaje img {
     position: relative;
@@ -1369,12 +1359,12 @@ body {
   #btns-intro-aap {
     height: 20%
   }
-  #div-info-detallada-aap p {
+  /*#div-info-detallada-aap p {
     font-size: 23px;
     left: 20%;
     right: 40%;
     top: 20%;
-  }
+  }*/
   #div-colombia img {
     position: relative;
     top: 55%;

@@ -252,7 +252,7 @@
           </a>
         </div>
         <div class="col-lg-offset-1 col-lg-10" style="height: 80%">
-          <p></p>
+          <div id="div-texto-info" data-info=""></div>
         </div>
       </div>
     </div>
