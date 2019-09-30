@@ -47,6 +47,7 @@ jQuery(document).ready(function($){
 		$("#div-con-int-aud").css({
 			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
 		});
+		$(this).hide();
 		$("#img-camara").hide();
 		$("#div-btns-int-aud").hide();
 		$("#div-des-int-aud").hide();
@@ -138,6 +139,7 @@ jQuery(document).ready(function($){
 			$("#div-btns-mod-aud").hide();
 			$("#btn-cerrar").hide();
 			$("#div-ocu-videoteca").show();
+			$("#div-oculto").hide();
 			break;
 			case "btn-foro":
 			break;
