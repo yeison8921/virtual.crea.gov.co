@@ -432,9 +432,7 @@
           <button type="button" class="close" data-dismiss="modal" style="color: #03f0e3;">&times;</button>
           <div class="modal-title" style="font-size: 40px; color: #03f0e3;"></div>
         </div>
-        <div class="modal-body text-center" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 20px;">
-        </div>
-        <div class="modal-footer">
+        <div class="modal-body" style="background-color: #24273a; color: #03f0e3; text-align: left; font-size: 20px; min-height: 550px;">
         </div>
       </div>
     </div>
@@ -492,13 +490,12 @@
       <div class="modal-content">
         <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid">
           <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
-          <div></div>
+          <div class="modal-title"></div>
         </div>
         <div class="modal-body text-center" style="background-color: #24273a;">
+          <div class="modal-text"></div>
         </div>
         <div class="modal-footer" style="background-color: #24273a; border-top: 0px solid">
-          <div class="col-lg-offset-2 col-lg-8">
-          </div>
         </div>
       </div>
     </div>

@@ -79,34 +79,23 @@ jQuery(document).ready(function($){
 			"</div></p>"+
 			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
 			"</div>");
-		$("#div-sec-modal").html("");
-	});
-
-	$("#btn-videoteca").click(function(){
-		$("#div-con-int-aud").css({
-			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_videoteca.png")'
-		});
-		$("#div-ocu-principios").hide();
-		$("#div-btns-mod-aud").hide();
-		$("#div-ocu-videoteca").show();
 	});
 
 	$("#div-ocu-videoteca").click(function(){
-		$("#div-pri-modal").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
+		$(".modal-body").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
 			"<h2>Principios de fotografía</h2>"+
 			"<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>"+
 			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
 			"</div>");
-		$("#div-sec-modal").html("");
 		$("#modal-rollover").modal("show");
 	});
 
 	$("#div-con-int-aud button").click(function(){
-		$("#div-con-int-aud").css({
-			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_2.jpg")'
-		});
-		$("#div-des-int-aud").show();
-		if($(this).attr("id") != "btn-cerrar"){
+		if($(this).attr("id") != "btn-cerrar" && $(this).attr("id") != "btn-videoteca" && $(this).attr("id") != "btn-foro"){
+			$("#div-con-int-aud").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_2.jpg")'
+			});
+			$("#div-des-int-aud").show();
 			setElementPosition($(window).width(), $(window).height());
 			$("#btn-cerrar").show();
 		}
@@ -140,6 +129,17 @@ jQuery(document).ready(function($){
 			$("#div-con-int-aud").css({
 				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.jpg")'
 			});
+			break;
+			case "btn-videoteca":
+			$("#div-con-int-aud").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_videoteca.png")'
+			});
+			$("#div-ocu-principios").hide();
+			$("#div-btns-mod-aud").hide();
+			$("#btn-cerrar").hide();
+			$("#div-ocu-videoteca").show();
+			break;
+			case "btn-foro":
 			break;
 		}
 	});
