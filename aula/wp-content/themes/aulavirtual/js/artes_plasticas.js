@@ -158,7 +158,7 @@ jQuery(document).ready(function($){
 				$("#div-sub-modulos #div-imgs-submodulos").css({
 					"position": "absolute",
 					"top": "43%",
-					"left": "43%"
+					"left": "45%"
 				});
 			}else{
 				$("#div-sub-modulos #div-imgs-submodulos").css({
@@ -179,7 +179,7 @@ jQuery(document).ready(function($){
 				$("#div-sub-modulos #div-imgs-submodulos").css({
 					"position": "absolute",
 					"top": "32%",
-					"left": "44%"
+					"left": "46%"
 				});
 			}else{
 				$("#div-sub-modulos #div-imgs-submodulos").css({
