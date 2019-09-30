@@ -48,9 +48,6 @@
         <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2">
           <button class="btn btn-block btn-n-dan" id="btn-regresar" data-atras="introduccion"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp;Atrás</button>
         </div>
-        <div class="col-lg-offset-6 col-lg-2 col-md-offset-6 col-md-2 col-sm-offset-6 col-sm-2">
-          <button class="btn btn-block btn-n-dan" id="btn-iniciar">Iniciar&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
-        </div>
       </div>
       <div id="div-seleccion-curso-danza" style="padding-top: 100px;">
         <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3 col-sm-offset-2 col-sm-8 text-right">
@@ -61,10 +58,13 @@
             </p>
           </div>
           <div>
+            <div class="text-center">
+              <img src="<?php bloginfo('template_url'); ?>/danza/images/metodologia/conexion.png" height="250">
+            </div>
             <button class="btn btn-block btn-n-dan" id="btn-conexion" data-curso="">Conexión corporal</button>
-            <button class="btn btn-block btn-n-dan" id="btn-ritmo" data-curso="">Ritmo</button>
-            <button class="btn btn-block btn-n-dan" id="btn-expresion" data-curso="">Expresión</button>
             <button class="btn btn-block btn-n-dan" id="btn-espacio" data-curso="">Espacio</button>
+            <button class="btn btn-block btn-n-dan" id="btn-expresion" data-curso="">Expresión</button>
+            <button class="btn btn-block btn-n-dan" id="btn-ritmo" data-curso="">Ritmo</button>
             <button class="btn btn-block btn-n-dan" id="btn-memoria" data-curso="">Memoria</button>
           </div>
         </div>
@@ -267,11 +267,7 @@
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive">
           </a>
         </div>
-        <div id="div-colombia">
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/mapa_colombia.png" id="img-colombia">
-          </a>
-        </div>
+        <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/mapa_colombia.png" id="img-colombia">
         <div id="div-pergamino">
           <a href="#">
             <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/pergamino.png" id="img-pergamino">
@@ -280,26 +276,14 @@
       </div>
       <div class="col-lg-12 text-center" id="div-modulos-aap" style="display: none;">
         <div class="col-lg-12">
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="mapa-mundi">
-          </a>
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/atras.png" class="img-atras img-responsive" data-atras="mapa-mundi">
         </div>
         <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8" id="div-imgs-modulos-app">
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" data-ejercicio="comic">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-lupa">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" id="img-compas">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" id="img-telescopio">
-          </a>
-          <a href="#">
-            <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/certificado.png" id="img-certificado">
-          </a>
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/introducción.png" id="img-brujula" data-ejercicio="comic">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/observación.png" id="img-lupa">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/creacion.png" id="img-compas">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/galeria_1.png" id="img-telescopio">
+          <img src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/introduccion/certificado.png" id="img-certificado">
         </div>
       </div>
       <div class="col-lg-12 col-md-12" id="div-sub-modulos" style="display: none;">
@@ -390,40 +374,57 @@
 <?php endif; ?>
 <?php if(is_page("Introducción aula audiovisuales")) :?>
   <input type="hidden" id="bloginfo" value="<?php bloginfo('template_url'); ?>">
-  <div class="row contenedor" id="div-con-int-aud">
-    <div id="div-ocu-int-aud"></div>
-    <button type="button" class="btn" id="btn-cerrar" style="display: none;"><i class="fas fa-times fa-2x"></i></button>
-    <div id="div-des-int-aud" hidden>
-      <h2></h2>
-      <p></p>
+  <div class="row">
+    <div class="col-lg-12" id="div-con-int-aud">
+      <img id="img-camara" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/fondos/fondo_index_1.png" style="height: 100%; width: auto; margin: auto; left: 0; right: 0; position: absolute;">
+      <div class="col-lg-12 col-md-12" id="div-oculto">
+        <a id="btn-oculto" href="#">
+          <div id="link-oculto"></div>
+          <div id="link-oculto2">
+            <img id="p-i" class="mover" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_izquierda.png">                  
+            <img id="p-d" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/puerta_derecha.png">
+            <img id="circulo" src="<?php bloginfo('template_url'); ?>/audiovisuales/images/circulo.png">
+          </div>
+        </a>
+      </div>
+      <button type="button" class="btn" id="btn-cerrar" style="display: none;"><i class="fas fa-times fa-2x"></i></button>
+      <div id="div-des-int-aud" hidden>
+        <h2></h2>
+        <p></p>
+      </div>
+      <div class="col-lg-offset-1 col-lg-10 col-md-12 text-center" id="div-btns-int-aud">
+        <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+          <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
+        </div>
+      </div>
+      <div id="div-ocu-principios" hidden></div>
+      <div class="col-lg-offset-2 col-lg-8" id="div-btn-atr-aud" hidden>
+        <div style="float: left;">
+          <button class="btn btn-modulos-aud" id="btn-atras" data-atras="">ATRÁS</button>
+        </div>
+      </div>
+      <div class="col-lg-offset-2 col-lg-8" id="div-btns-mod-aud" hidden>
+        <div style="float: left;">
+          <button class="btn btn-modulos-aud" id="btn-foro">FORO</button>
+        </div>
+        <div style="float: right;">
+          <button class="btn btn-modulos-aud" id="btn-videoteca">VIDEOTECA</button>
+        </div>
+      </div>
+      <div id="div-ocu-videoteca" hidden></div>
     </div>
-    <div class="col-lg-offset-1 col-lg-10 col-md-12 text-center" id="div-btns-int-aud">
-      <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-        <button class="btn btn-index-aud" id="btn-introduccion">INTRODUCCIÓN</button>
-      </div>
-      <div class="col-lg-2 col-md-2">
-        <button class="btn btn-index-aud" id="btn-objetivos">OBJETIVOS</button>
-      </div>
-      <div class="col-lg-2 col-md-2">
-        <button class="btn btn-index-aud" id="btn-publico">PÚBLICO OBJETIVO</button>
-      </div>
-      <div class="col-lg-2 col-md-2">
-        <button class="btn btn-index-aud" id="btn-metodologia">METODOLOGÍA</button>
-      </div>
-      <div class="col-lg-2 col-md-2">
-        <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
-      </div>
-    </div>
-    <div id="div-ocu-principios" hidden></div>
-    <div class="col-lg-offset-2 col-lg-8" id="div-btns-mod-aud" hidden>
-      <div style="float: left;">
-        <button class="btn btn-modulos-aud" id="btn-foro">FORO</button>
-      </div>
-      <div style="float: right;">
-        <button class="btn btn-modulos-aud" id="btn-videoteca">VIDEOTECA</button>
-      </div>
-    </div>
-    <div id="div-ocu-videoteca" hidden></div>
   </div>
   <div class="modal fade" id="modal-rollover" role="dialog">
     <div class="modal-dialog modal-lg">

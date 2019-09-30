@@ -6,12 +6,12 @@ jQuery(document).ready(function($){
 
 	function setElementPosition(width, height){
 		if(height > 890 && width > 992){
-			divPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 97) +"px";
-			buttonPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 48) +"px";
+			divPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 108) +"px";
+			buttonPosition = ((($("#div-con-int-aud").width() - 1449) / 2) + 53) +"px";
 			$("#div-des-int-aud").css({
 				"position": "absolute",
 				"right": divPosition,
-				"top": "105px",
+				"top": "60px",
 				"width": "350px",
 				"height": "600px",
 				"font-size": "20px"
@@ -19,16 +19,16 @@ jQuery(document).ready(function($){
 			$("#btn-cerrar").css({
 				"position": "absolute",
 				"right": buttonPosition,
-				"top": "70px"
+				"top": "20px"
 			});
 		}
 		if(height < 890 && width > 992){
-			divPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 67) +"px";
-			buttonPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 18) +"px";
+			divPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 80) +"px";
+			buttonPosition = ((($("#div-con-int-aud").width() - 1040) / 2) + 28) +"px";
 			$("#div-des-int-aud").css({
 				"position": "absolute",
 				"right": divPosition,
-				"top": "90px",
+				"top": "35px",
 				"width": "250px",
 				"height": "600px",
 				"font-size": "15px",
@@ -38,21 +38,24 @@ jQuery(document).ready(function($){
 			$("#btn-cerrar").css({
 				"position": "absolute",
 				"right": buttonPosition,
-				"top": "60px"
+				"top": "5px"
 			});
 		}
 	}
 
-	$("#div-ocu-int-aud").click(function(){
+	$("#div-oculto").click(function(){
 		$("#div-con-int-aud").css({
 			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
 		});
-		$("#div-ocu-int-aud").hide();
+		$("#img-camara").hide();
 		$("#div-btns-int-aud").hide();
 		$("#div-des-int-aud").hide();
+		$("#div-btn-atr-aud").show();
 		$("#div-btns-mod-aud").show();
 		$("#div-ocu-principios").show();
 		$("#btn-cerrar").hide();
+		$("#btn-atras").show();
+		$("#btn-atras").attr("data-atras", "index");
 	});
 
 	$("#div-ocu-principios").click(function(){
@@ -92,9 +95,7 @@ jQuery(document).ready(function($){
 
 	$("#div-con-int-aud button").click(function(){
 		if($(this).attr("id") != "btn-cerrar" && $(this).attr("id") != "btn-videoteca" && $(this).attr("id") != "btn-foro"){
-			$("#div-con-int-aud").css({
-				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_2.jpg")'
-			});
+			$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_2.png');
 			$("#div-des-int-aud").show();
 			setElementPosition($(window).width(), $(window).height());
 			$("#btn-cerrar").show();
@@ -126,20 +127,44 @@ jQuery(document).ready(function($){
 			case "btn-cerrar":
 			$(this).hide();
 			$("#div-des-int-aud").hide();
-			$("#div-con-int-aud").css({
-				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.jpg")'
-			});
+			$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.png');
 			break;
 			case "btn-videoteca":
 			$("#div-con-int-aud").css({
 				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_videoteca.png")'
 			});
+			$("#btn-atras").attr("data-atras", "modulos");
 			$("#div-ocu-principios").hide();
 			$("#div-btns-mod-aud").hide();
 			$("#btn-cerrar").hide();
 			$("#div-ocu-videoteca").show();
 			break;
 			case "btn-foro":
+			break;
+			case "btn-atras":
+			$("#btn-cerrar").hide();
+			$("#div-des-int-aud").hide();
+			if($(this).attr("data-atras") == "index"){
+				$("#div-con-int-aud").css({
+					"background-image": 'url("")'
+				});
+				$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.png');
+				$("#img-camara").show();
+				$("#div-btns-int-aud").show();
+				$("#div-btn-atr-aud").show();
+				$("#div-btns-mod-aud").hide();
+				$("#div-ocu-principios").hide();
+				$("#div-oculto").show();
+				$(this).hide();
+			}
+			if($(this).attr("data-atras") == "modulos"){
+				$("#div-con-int-aud").css({
+					"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
+				});
+				$("#div-ocu-principios").show();
+				$("#div-btns-mod-aud").show();
+				$("#btn-atras").attr("data-atras", "index");
+			}
 			break;
 		}
 	});

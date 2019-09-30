@@ -10,7 +10,13 @@ Text Domain: twentyseventeen
 Tags: aula, virtual, CREA, idartes, artistica
 */
 
-/*********** Fuentes **********/
+body{
+  font-family: 'Local Van Condensed Regular', Regular !important;
+}
+
+/**
+* [Fuentes del sitio]
+**/
 
 @font-face {
   font-family: "Local Van Condensed Bold";
@@ -25,7 +31,13 @@ Tags: aula, virtual, CREA, idartes, artistica
   src: url("fonts/Van Condensed-Regular.otf");
 }
 
-/** Estilos para navvar **/
+/**
+* [Fin fuentes del sitio]
+**/
+
+/**
+* [Estilos navbar]
+**/
 
 .navbar{
   margin-bottom: 0;
@@ -34,26 +46,26 @@ Tags: aula, virtual, CREA, idartes, artistica
   font-size: 26px;
   border-color: #ff3c36;
 }
-
 .navbar-nav li a{
   border-radius: 5px;
   color:white !important;
 }
-
 .navbar-nav li a:hover{
   background-color: #cd2924 !important;
   border-radius: 5px;
 }
-
 .navbar-brand{
   color:white !important;
   font-size: 26px;
 }
 
-/** Fin estilos para navvar **/
+/**
+* [Fin estilos navbar]
+**/
 
-
-/** Estilos para footer **/
+/**
+* [Estilos footer]
+**/
 
 #footer{
   padding-top: 20px;
@@ -62,99 +74,91 @@ Tags: aula, virtual, CREA, idartes, artistica
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  /*height: 240px;*/
   font-family: 'Local Van Condensed Regular', Regular !important;
 }
-
 #footer ul{
   list-style-type: none;
   padding-left: 0;
 }
-
 #footer li a, #footer address a{
   text-decoration: none;
 }
-
 #footer li a{
   color: white;
 }
-
 #footer address a, #footer address a:hover, .color-green-footer{
   color: #b1d400;
 }
 
-/** Fin estilos para footer **/
+/**
+* [Fin estilos footer]
+**/
 
-/** Estilos para index **/
+/**
+* [Estilos index]
+**/
 
+h1{
+  font-family: 'Local Van Condensed Bold' !important;
+  font-size: 80px;
+}
+label{
+  font-family: 'Local Van Condensed Regular', Regular !important;
+  font-size: 14px;
+}
 #slide1{
   background-image: url('index/Foto_back_1.jpg');
 }
-
 #slide2{
   background-image: url('index/Foto_back_2.jpg');
 }
-
 #slide3{
   background-image: url('index/Foto_back_3.png');
 }
-
 #slide4{
   background-image: url('index/Foto_back_4.png');
 }
-
 .slide-index{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #div-areas-index div{
   display: inline-block;
 }
-
 #div-areas-index img{
   width: 120px;
 }
-
 #div-areas-index span{
   display: block;
 }
-
 #div-areas-index a{
   text-decoration: none;
   color: white;
 }
-
 #div-titulo-index{
   color: white;
 }
-
 hr{
   border: 1px solid #b1d400;
 }
-
 #div-logo-index{
   color: white;
 }
-
 #div-logo-index ul{
   list-style-type: none;
   padding-left: 0;
 }
-
 #div-logo-index li a{
   text-decoration: none;
   color: white;
   text-align: left;
 }
-
-.carousel-inner > .item {
+.carousel-inner > .item{
   height: 700px;
 }
-
 @media (max-width: 767px) and (min-width: 0px){
-  .carousel-inner > .item {
+  .carousel-inner > .item{
     height: 1500px;
   }
   #div-areas-index div{
@@ -164,56 +168,49 @@ hr{
 
 /** Fin estilos para index **/
 
-/** Estilos para aula música **/
+/**
+* [Estilos para el aula de música]
+**/
 
 #div-cim{
   background-image: url('musica/images/fondos/fondo_index.jpg');
 }
-
 #div-ccm{
   background-image: url('musica/images/fondos/fondo_modulos.jpg');
 }
-
 #div-cim, #div-ccm{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
 }
-
 .btn-n-mus, .btn-h-mus{
   border-radius: 15px;
   margin-bottom: 15px;
   font-size: 20px;
 }
-
 .btn-h-mus.focus, .btn-h-mus:focus, .btn-h-mus:hover{
   color: #ffffff;
   text-decoration: none;
 }
-
 .btn-n-mus{
   background-color: #bed903;
 }
-
 .btn-h-mus{
   background-color: #000000;
   color: white;
 }
-
 .btn-n-mus:hover{
   background-color: #000000;
   color: white;
   cursor: pointer;
 }
-
 .header-musica{
   background-color: #bed903;
   height: 50px;
   font-size: 24px;
   line-height: 50px;
 }
-
 .titulo-index-musica, .titulo-curso-musica{
   padding-right: 15px;
   color: white;
@@ -222,8 +219,7 @@ hr{
   text-shadow:5px 5px 10px black;
   padding-bottom: 20px;
 }
-
-.titulo-index-musica::after {
+.titulo-index-musica::after{
   content: "";
   display: block;
   position: absolute;
@@ -235,13 +231,16 @@ hr{
   box-shadow:5px 5px 10px black;
   padding-bottom: 50px;
 }
-
 .span-titulo{
   display: block;
   margin-bottom: -20px;
 }
-
-
+audio{
+  width: 100%;  
+}
+.instrumentos span{
+  cursor: pointer;
+}
 @media (min-width: 992px) and (max-width: 1200px){
   .btn-n-mus, .btn-h-mus{
     font-size: 17px;
@@ -256,80 +255,69 @@ hr{
   }
 }
 
-audio{
-  width: 100%;  
-}
+/**
+* [Fin estilos para el aula de música]
+**/
 
-.instrumentos span{
-  cursor: pointer;
-}
-
-/** Fin estilos para aula música **/
-
-/** Inicio estilos para aula danza **/
+/**
+* [Estilos para el aula de danza]
+**/
 
 #div-cid{
   background-image: url('danza/images/fondos/fondo_index.jpg');
 }
-
 #div-ccd{
   background-image: url('danza/images/fondos/fondo_modulos.jpg');
 }
-
 #div-cid, #div-ccd{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
 }
-
 .header-danza{
   background-color: #FD8951;
   height: 50px;
   font-size: 24px;
   line-height: 50px;
 }
-
 .btn-n-dan, .btn-h-dan{
   border-radius: 15px;
   margin-bottom: 15px;
   font-size: 20px;
 }
-
 .btn-h-dan.focus, .btn-h-dan:focus, .btn-h-dan:hover{
   color: #ffffff;
   text-decoration: none;
 }
-
 .btn-n-dan{
   background-color: #FD8951;
 }
-
 .btn-h-dan{
   background-color: #000000;
   color: white;
 }
-
 .btn-n-dan:hover{
   background-color: #000000;
   color: white;
   cursor: pointer;
 }
 
-/** Fin estilos para aula danza **/
+/**
+* [Fin estilos para el aula de danza]
+**/
 
-
-/** Inicio estilos comunes **/
+/**
+* [Estilos comunes para música y danza]
+**/
 
 .navegacion-curso{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .titulo-info-basica{
   font-size: 40px;
 }
-
 .contenedor-info-basica{
   color: white;
   background-color: #000000b5;
@@ -339,676 +327,291 @@ audio{
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 .mini-contenedor-info-basica{
   height: 450px;
   overflow-y: auto;
   padding-right: 50px;
 }
-
 .mini-contenedor-info-basica::-webkit-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 15px;
   background-color: #F5F5F5;
 }
-
 .mini-contenedor-info-basica::-webkit-scrollbar{
   width: 15px;
   background-color: #F5F5F5;
   border-radius: 15px;
 }
-
 .mini-contenedor-info-basica::-webkit-scrollbar-thumb{
   border-radius: 15px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #555;
 }
-
 .contenido-info-basica{
   font-size: 20px;
 }
-
 @media (min-width: 992px) and (max-width: 1200px){
   .contenido-info-basica{
     font-size: 17px;
   }
 }
 
+/**
+* [Fin estilos comunes para música y danza]
+**/
 
-/** Fin estilos comunes **/
+/**
+* [Estilos para audiovisuales]
+**/
 
+/**
+* [Fin estilos para audiovisuales]
+**/
 
-/*********** Grid **********/
+/**
+* [Estilos para artes plásticas]
+**/
 
-/*html, body {
-  height: 900px
-  }*/
-/*
+#contenedor-index-artes-plasticas{
+  font-family: 'Local Van Condensed Regular', Regular !important;
+}
+#div-img-viaje{
+  background-image: url('artes_plasticas/images/fondos/fondo_index_artes_plasticas.jpg');
+}
+#contenedor-index-artes-plasticas, #div-img-viaje, #div-info-detallada-aap, #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos{
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#div-mapa-mundi{
+  background-image: url("artes_plasticas/images/fondos/fondo_mapamundi.jpg");
+}
+#div-modulos-aap{
+  background-image: url("artes_plasticas/images/fondos/fondo_instrumentos.png");
+}
+#div-img-viaje img:hover, #img-colombia:hover{
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transition: all 0.7s ease;
+}
 
-body {
-  min-height: 1000px;
-  padding-top: 50px;
-  }*/
+#div-compas-oculto:hover{
+  cursor: pointer;
+}
 
-  body{
-    font-family: 'Local Van Condensed Regular', Regular !important;
+#div-imgs-modulos-app img{
+  cursor: pointer;
+}
+
+#img-colombia{
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+@media (min-height: 0px) and (max-height: 890px){
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
+    height: 610px;
   }
 
-  .bg{
-    background-image: url("images/ip5.png");
+  #div-info-detallada-aap{
+    height: 580px;
+    background-size: auto 580px;
+  }
+  #div-img-viaje, #div-colombia {
+    height: 80%;
+    background-size: auto 480px;
+  }
+  #div-img-viaje img {
+    position: relative;
+    top: 38%;
+    width: 350px;
+    transition: all 0.7s ease;
+  }
+  #btns-intro-aap img {
+    height: 95px;
+  } 
+  #div-info-detallada-aap p{
+    font-size: 17px;
+    left: 27%;
+    right: 40%;
+    top: 15%;
   }
 
-  #contenedor-index-danza{
-    background-image: url('danza/images/fondo_aula_danza - copia.jpg');
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    height: 700px;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
+  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
+    background-size: auto 545px, cover;
   }
 
-  #contenedor-aula-danza{
-    background-image: url('danza/images/fondo_aula_modulos_2.jpg');
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 750px;
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    font-size: 18px;
-    color: #591508;
+  #img-colombia{
+    top: 315px;
+    left: 820px;
+    width: 25px;
   }
 
-  .tit-enc{
-    color: #425c2f;
-    font-family: 'Local Van Condensed Bold' !important;
+  #div-pergamino img {
+    width: 200px;
+    position: absolute;
+    top: 67%;
+    left: 60%;
+  }
+  #div-imgs-modulos-app img{
+    position: absolute;
+    width: 90px;
+  }
+  #div-sub-modulos img{
+    width: 50px;
+  }
+  #div-imgs-modulos-app #img-brujula{
+    top: 220px;
+    left: 285px;
+  }
+  #div-imgs-modulos-app #img-lupa{
+    top: 250px;
+    left: 400px;
+  }
+  #div-imgs-modulos-app #img-compas{
+    top: 220px;
+    left: 510px;
+  }
+  #div-imgs-modulos-app #img-telescopio{
+    top: 350px;
+    left: 285px;
+  }
+  #div-imgs-modulos-app #img-certificado{
+    top: 325px;
+    left: 410px;
+    width: 65px;
+  }
+  #img-comic{
+    height: 400px;
+  }
+  .mover-comic{
+    height: 100px;
+  }
+  #img-pajaro{
+    margin-top: 90px;
+  }
+  #div-titulo-ejercicio{
+    height: 10%;
+    font-size: 30px;
+  }
+  #div-info-ejercicio{
+    height: 70%;
+    font-size: 17px;
+    overflow-y: auto;
+  }
+  #div-btns-ejercicio{
+    height: 15%;
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  #div-btns-ejercicio img{
+    width: 80px;
+  }
+}
+
+@media (min-height: 891px) and (max-height: 1200px) {
+  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
+    height: 850px;
+  }
+  #div-info-detallada-aap{
+    height: 800px;
+    background-size: auto 800px;
+  }
+  #div-img-viaje, #div-colombia {
+    height: 80%;
+    background-size: auto 670px;
+  }
+  #div-img-viaje img {
+    position: relative;
+    top: 38%;
+    width: 500px;
+    transition: all 0.7s ease;
+  }
+  #btns-intro-aap {
+    height: 20%
+  }
+  #img-colombia{
+    top: 440px;
+    left: 750px;
+    width: 40px;
+  }
+  #div-pergamino{
+    position: absolute;
+    top: 70%;
+    left: 63%;
+  }
+  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
+    background-size: auto, cover;
+  }
+  #div-imgs-modulos-app {
+    position: relative;
+    top: 35%;
+  }
+  #div-imgs-modulos-app img{
+    position: absolute;
+  }
+  #div-imgs-modulos-app #img-brujula{
+    left: 24%;
+    top: 30px;
+  }
+  #div-imgs-modulos-app #img-lupa{
+    left: 42%;
+    top: 70px;
+  }
+  #div-imgs-modulos-app #img-compas{
+    left: 62%;
+    top: 30px;
+  }
+  #div-imgs-modulos-app #img-telescopio{
+    left: 24%;
+    top: 200px;
+  }
+  #div-imgs-modulos-app #img-certificado{
+    top: 200px;
+    left: 48%;
+    width: 100px;
+  }
+  #img-comic{
+    height: 600px;
+  }
+
+  #div-comic-oculto{
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    transform: skew(-20deg);
+    left: 53%;
+    position: absolute;
+    top: 22%;
+    z-index: 1;
+    display: none;
+  }
+  #img-pajaro{
+    margin-top: 200px;
+  }
+  #div-titulo-ejercicio{
+    height: 10%;
     font-size: 50px;
   }
-
-  @media (min-width: 1200px){
-    .col-lg-1-7{
-      width: 14%;
-      float: left;
-      text-align: center;
-    }
-    .bg{
-      height: 900px;
-      background-position: left top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .div-con-gir-uno{
-      overflow: auto;
-      height: 500px;
-    }
+  #div-info-ejercicio{
+    height: 70%;
+    font-size: 23px;
+    overflow-y: auto;
   }
-
-  @media (min-width: 992px){
-    .btn-unsel, .btn-sel{
-      font-size: 18px;
-    }
-    .div-con-rec-uno .btn, .div-con-rec-dos .btn{
-      width: 350px;
-    }
-    .div-con-rec-uno, .div-con-rec-dos{
-      height: 500px;
-    }
-  }
-
-  @media (min-width: 0px) and (max-width: 992px){
-    .btn-unsel .btn-sel{
-      font-size: 15px;
-    }
-  }
-
-  @media (min-width: 1000px) and (max-width: 1200px) {
-    .col-md-1-7{
-      width: 14%;
-      position: left;
-      float: left;
-      text-align: center;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .col-md-1-7{
-      width: 14%;
-      float: left;
-      text-align: center;
-    }
-    .col-md-1-5{
-      width: 20%;
-      float: left;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 992px) {
-    .col-sm-1-7{
-      width: 14%;
-      float: left;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 768px){
-    .col-xs-1-6{
-      width: 33%;
-      text-align: center;
-    }
-    .col-xs-1-6-12{
-      width: 100%;
-      text-align: center;
-    }
-    #contenedor-aula-musica{
-      height: 100%;
-    }
-    .tit-enc{
-      font-size: 45px;
-    }
-  }
-
-  @media (min-width: 769px){
-    #contenedor-aula-musica{
-      height: 100vh;
-    }
-    .tit-enc{
-      font-size: 50px;
-    }
-  }
-
-  @media (min-width: 0px) and (max-width: 767px){
-    .col-xs-12{
-      width: 100%;
-      text-align: center;
-    }
-    #div-logo-bogota, #div-logo-crea{
-      display: none;
-    }
-
-  }
-
-  @media (min-width: 0px) and (max-width: 1200px){
-    .bg{
-      height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow: scroll;
-    }
-  }
-
-  /*********** Estilo index **********/
-
-  .index-titulo{
-    position: relative;
-    top: 150px;
-    text-align: center;
-    color: white;
-  }
-  .index-titulo img{
-    width: 70px;
-  }
-
-  .index-titulo a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    font-size: 16px;
-  }
-
-  .index-menu {
-    position: relative;
-    color: white;
-    top: 35%;
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    font-size: 16px;
-  }
-
-  .index-menu ul{
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  .index-menu li a{
-    text-decoration: none;
-    color: white;
-    text-align: left;
-  }
-
-  .index-logos{
-    top: 32%;
-  }
-
-
-  h1{
-    font-family: 'Local Van Condensed Bold' !important;
-    font-size: 80px;
-  }
-  label{
-    font-family: 'Local Van Condensed Regular', Regular !important;
-    font-size: 14px;
-  }
-
-
-  .btn-index-danza-pri {
-    background-color: #ffffff;
-    border-radius: 7px;
-    border-color: #803335;
-    color: #581508;
-    border-width: 3px;
-    height: 44px;
-    font-size: 22px;
-    margin-bottom: 2px;
-  }
-
-  .btn-index-danza-sec{
-    background-color: #ffffff;
-    border-radius: 8px;
-    border-color: #803335;
-    color: #581508;
-    border-width: 0.5px;
-    height: 35px;
-    font-size: 20px;
-  }
-
-  .btn-index-danza-pri:hover, .btn-index-danza-pri:focus, .btn-index-danza-sec:hover, .btn-index-danza-sec:focus{
-    text-decoration: none !important;
-    color: #581508 !important;
-  }
-
-  .btn-unsel{
-    background-color: #ffffff;
-    border-radius: 10px;
-    color: #581508;
-    border-color:#666666;
-    border-width: 0.5px;
-    height: 30px;
-    margin-bottom: 20px;
-  }
-
-  .btn-sel{
-    background-color: #ea7178; 
-    border-radius: 10px; 
-    color: #ffffff; 
-    border-color:#5e2d30; 
-    border-width: 0.5px; 
-    height: 30px;
-    margin-bottom: 20px;
-  }
-
-
-
-  .p-modal{
-    background-color: rgba(33, 156, 211, 1);
-    color:white;
-    font-size: 16px;
-    border-radius: 5px;
-    text-align: center;
-
-  }
-
-  .b-index{
-    margin-top: 30px;
-  }
-
-  table.dataTable thead th, table.dataTable thead td{
-    border-bottom: 1px solid #999  !important;
-  }
-  table.dataTable.no-footer{
-    border-bottom: 1px solid #999 !important;
-  }
-
-  #map{
-    width: 100%;
-    height: 400px;
-  }
-
-
-  /*Estilos index aula danza */
-  #div-inicio-curso-danza{
-    top: 50%;
-    position: relative;
-  }
-
-  #div-encabezado-info-aula-danza{
-    position: relative;
-    top: 40%;
-  }
-
-  #div-info-aula-danza {
-    position: relative;
-    top: 55%;
-  }
-
-  #div-info-detallada-danza p{
-    overflow: auto;
-    height: 400px;
-  }
-
-  #div-info-detallada-danza h2{
-    color: white;
-  }
-
-  #div-info-detallada-danza{
-    top: 15%;
-    font-size: 18px;
-  }
-  /* Fin estilos index aula danza*/
-
-
-  /*Estilos aula danza */
-  #div-regresar-modulo{
-    text-align: left;
-    padding-left: 30px;
-  }
-
-  #div-video-aula-danza{
-    position: relative;
-    top: 7%;
-  }
-
-  #div-modulos-aula-danza{
-    position: relative;
-    top: 15%;
-  }
-
-  #div-reconocimiento-corporal{
-    position: relative;
-    top: 10%;
-    height: 100%;
-  }
-
-  #div-actividades-reconocimiento-corporal{
-    position: relative;
-    top: -5%;
-  }
-
-  #div-video-reconocimiento-corporal{
-    position: relative;
-    top: -40px;
-  }
-  #div-rompecabezas-reconocimiento-corporal{
-    position: relative;
-    top: -40px;
-    height: 630px;
-  }
-
-  /* Fin estilos aula danza*/
-
-  #div-dropdown-modulo-danza {
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
-
-  #div-dropdown-modulo-danza .dropdown-menu {
-    padding: 0px 0;
-    margin: 0px 0 0;
-    background-color: #fff0;
-    border: 0px solid #ccc;
-    border: 0px solid rgba(0,0,0,.15);
-    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.175);
-    box-shadow: 0 0px 0px rgba(0,0,0,.175);
-  }
-
-  #div-dropdown-modulo-danza .dropdown-menu>li>a {
-    padding: 1px 0px;
-  }
-  #div-dropdown-modulo-danza .btn {
-    padding: 0px 0px;
-  }
-
-  .img-padding{
-    padding-bottom: 10px;
-  }
-
-  #div-mod-enc{
-   background-image: url('danza/images/header.jpg');
-   background-position: left top;
-   background-repeat: no-repeat;
-   background-size: cover;
-   display: flex;
-   align-items: center;
-   height: 80px;
- }
-
- .div-modulos img{
-  height: 220px;
-}
-
-.flecha{
-  color: #7a0228;
-  display: none;
-}
-
-.div-con-rec-uno, .div-con-rec-dos{
-  align-items: center;
-  display: flex;
-}
-
-.div-con-mod{
-  display: block;
-  overflow: auto;
-}
-
-.div-btn-mod{
-  background: radial-gradient(ellipse 100% 150% at 75% 50% , rgba(236,146,156,1) 0%, rgba(236,146,156,1) 30%, rgba(136,86,89,1) 100%);
-}
-
-.div-muneca{
-  position: absolute;
-  left: -200px;
-  z-index: 1;
-  top: 5%;
-}
-
-#div-sel-modulo-danza{
-  top: 50%;
-  position: relative;
-}
-
-#div-sel-modulo img{
-  width: 250px;
-}
-
-
-/*Estilos aula música*/
-
-
-/*.contenido{
-  display: none;
-}
-
-@media (max-height: 889px){
-  #div-info-andina > div > p, #con-idm > p{
-    font-size: 14px;
-  }
-  .btn-musica-s, .btn-musica-t{
-    font-size: 14px;
-    height: 30px;
-  }
-  .text-modulo, .btn-musica-s, .btn-musica-t{
-    font-size: 14px;
-  }
-  .tit-mod-mus{
-    font-size: 35px;
-  }
-  .con-tit-mod-mus{
-    height: 150px; 
-    padding-top: 50px;
+  #div-btns-ejercicio{
+    height: 15%;
+    font-size: 23px;
+    padding-top: 20px;
   }
 }
 
-@media (min-height: 889px) {
-  #div-info-andina > div > p, #con-idm > p{
-    font-size: 22px;
-  }
-  .btn-musica-s, .btn-musica-t{
-    font-size: 22px;
-    height: 40px;
-  }
-  .text-modulo{
-    font-size: 22px;
-  }
-  .tit-mod-mus{
-    font-size: 45px;
-  }
-  .con-tit-mod-mus{
-    height: 150px; 
-    padding-top: 40px;
-  }
-}
 
-#contenedor-index-musica{
-  background-image: url('musica/images/fondo_introduccion_musica.jpg');
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  height: 100vh;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#contenedor-aula-musica{
-  background-image: url('musica/images/fondo_modulos_musica.jpg');
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Local Van Condensed Regular', Regular !important;
-  color: #08580f;
-}
-
-#div-mod-enc-mus{
- background-image: url('musica/images/header_modulo_musica.png');
- background-position: left top;
- background-repeat: no-repeat;
- background-size: cover;
- height: 80px;
- line-height: 80px;
- text-align: center;
-}
-
-.div-dropdown-modulo .dropdown-menu {
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-#contenedor-aula-musica a:hover{
-  text-decoration: none;
-  color: inherit;
-}
+/**
+* [Fin estilos artes plásticas]
+**/
 
 
-.btn-musica-t:hover, .btn-musica-t:focus  {
-  color: #ffffff !important;
-  text-decoration: !important;
-}
-
-#div-botones-inicio{
-  top: 50%;
-  position: relative;
-}
-
-#div-info-aula-musica{
-  top: 65%;
-  position: relative;
-}
-
-#div-sel-modulo-musica{
-  top: 50%;
-  position: relative;
-}
-
-.btn-musica-p{
-  background-color: white; 
-  font-size: 30px;
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 2.5px; 
-  height: 45px;
-  margin-bottom: 20px;
-  font-size: 1.5vw;
-}
-
-.btn-musica-s{
-  background-color: white; 
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 0.5px; 
-  margin-bottom: 20px;
-
-}
-
-.btn-musica-t, .btn-musica-s:hover{
-  background-color: #121a1c; 
-  border-radius: 10px; 
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.btn-musica-d{
-  background-color: white; 
-  font-size: 30px;
-  border-radius: 10px; 
-  color: #08580f; 
-  border-color: #08580f; 
-  border-width: 2.5px; 
-  height: 45px;
-  margin-bottom: 2px;
-  font-size: 1.5vw;
-}
-
-#div-info-detallada-musica{
-  text-align: left;
-  top: 5%;
-}
-
-#div-info-andina > div > h2, #con-idm > h2{
-  font-size: 45px;
-  color: #16a20f;
-  text-align: right;
-}
-
-#div-info-andina > div > p{
-  color: #403938;
-  text-align: right;
-}
-
-#contenedor-aula-musica > div > div > a{
-  text-decoration: none;
-}
-
-.flecha-musica{
-  color: #ffffff;
-  display: none;
-}
-
-#div-btn-mod-mus{
-  background: #98f89f;
-}
-
-.fd{
-  width: 0; 
-  height: 0; 
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid #121a1c;
-}
-
-.fi{
-  width: 0; 
-  height: 0; 
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent; 
-  border-right:20px solid #121a1c; 
-  }*/
-
-
-
-/*Fin estilos aula música
-
-/*Inicio estilos aula audiovisuales*/
 
 #contenedor-index-audiovisuales, #div-rollover{
   background-position: center;
@@ -1189,254 +792,14 @@ body {
 }
 /*Fin estilos aula audiovisuales*/
 
-/*Inicio estilos artes plásticas*/
-
-#contenedor-index-artes-plasticas{
-  font-family: 'Local Van Condensed Regular', Regular !important;
-}
-
-#div-img-viaje{
-  background-image: url('artes_plasticas/images/fondos/fondo_index_artes_plasticas.jpg');
-}
-
-#contenedor-index-artes-plasticas, #div-img-viaje, #div-info-detallada-aap{
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#div-mapa-mundi{
-  background-image: url("artes_plasticas/images/fondos/fondo_mapamundi.jpg");
-}
-
-#div-modulos-aap{
-  background-image: url("artes_plasticas/images/fondos/fondo_instrumentos.png");
-}
-#div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-#div-img-viaje img:hover, #div-colombia img:hover{
-  transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transition: all 0.7s ease;
-}
-
-#div-compas-oculto:hover{
-  cursor: pointer;
-}
-
-@media (min-height: 0px) and (max-height: 890px){
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
-    height: 610px;
-  }
-
-  #div-info-detallada-aap{
-    height: 580px;
-    background-size: auto 580px;
-  }
-  #div-img-viaje, #div-colombia {
-    height: 80%;
-    background-size: auto 480px;
-  }
-  #div-img-viaje img {
-    position: relative;
-    top: 38%;
-    width: 350px;
-    transition: all 0.7s ease;
-  }
-  #btns-intro-aap img {
-    height: 95px;
-  } 
-  #div-info-detallada-aap p{
-    font-size: 17px;
-    left: 27%;
-    right: 40%;
-    top: 15%;
-  }
-
-  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
-    background-size: auto 545px, cover;
-  }
-
-  #div-colombia img {
-    position: relative;
-    top: 51%;
-    left: -8%;
-    width: 25px;
-    transition: all 0.7s ease;
-  }
-  #div-pergamino img {
-    width: 200px;
-    position: absolute;
-    top: 67%;
-    left: 60%;
-  }
-  #div-imgs-modulos-app img{
-    position: absolute;
-    width: 90px;
-  }
-  #div-sub-modulos img{
-    width: 50px;
-  }
-  #div-imgs-modulos-app #img-brujula{
-    top: 220px;
-    left: 150px;
-  }
-  #div-imgs-modulos-app #img-lupa{
-    top: 250px;
-    left: 270px;
-  }
-  #div-imgs-modulos-app #img-compas{
-    top: 220px;
-    left: 385px;
-  }
-  #div-imgs-modulos-app #img-telescopio{
-    top: 350px;
-    left: 180px;
-  }
-  #div-imgs-modulos-app #img-certificado{
-    top: 325px;
-    left: 285px;
-    width: 65px;
-  }
-  #img-comic{
-    height: 400px;
-  }
-  .mover-comic{
-    height: 100px;
-  }
-  #img-pajaro{
-    margin-top: 90px;
-  }
-  #div-titulo-ejercicio{
-    height: 10%;
-    font-size: 30px;
-  }
-  #div-info-ejercicio{
-    height: 70%;
-    font-size: 17px;
-    overflow-y: auto;
-  }
-  #div-btns-ejercicio{
-    height: 15%;
-    font-size: 17px;
-    padding-top: 20px;
-  }
-  #div-btns-ejercicio img{
-    width: 80px;
-  }
-}
-
-@media (min-height: 891px) and (max-height: 1200px) {
-  #contenedor-index-artes-plasticas, #div-mapa-mundi, #div-modulos-aap, #div-comic, #div-sub-modulos, #div-ejercicios{
-    height: 850px;
-  }
-  #div-info-detallada-aap{
-    height: 800px;
-    background-size: auto 800px;
-  }
-  #div-img-viaje, #div-colombia {
-    height: 80%;
-    background-size: auto 670px;
-  }
-  #div-img-viaje img {
-    position: relative;
-    top: 38%;
-    width: 500px;
-    transition: all 0.7s ease;
-  }
-  #btns-intro-aap {
-    height: 20%
-  }
-  #div-colombia img {
-    position: relative;
-    top: 55%;
-    left: -10%;
-    width: 40px;
-    transition: all 0.7s ease;
-  }
-  #div-pergamino{
-    position: absolute;
-    top: 70%;
-    left: 63%;
-  }
-  #div-mapa-mundi, #div-modulos-aap, #div-sub-modulos {
-    background-size: auto, cover;
-  }
-  #div-imgs-modulos-app {
-    position: relative;
-    top: 35%;
-  }
-  #div-imgs-modulos-app img{
-    position: absolute;
-  }
-  #div-imgs-modulos-app #img-brujula{
-    left: 24%;
-    top: 30px;
-  }
-  #div-imgs-modulos-app #img-lupa{
-    left: 42%;
-    top: 70px;
-  }
-  #div-imgs-modulos-app #img-compas{
-    left: 62%;
-    top: 30px;
-  }
-  #div-imgs-modulos-app #img-telescopio{
-    left: 24%;
-    top: 200px;
-  }
-  #div-imgs-modulos-app #img-certificado{
-    top: 200px;
-    left: 48%;
-    width: 100px;
-  }
-  #img-comic{
-    height: 600px;
-  }
-
-  #div-comic-oculto{
-    cursor: pointer;
-    width: 200px;
-    height: 300px;
-    transform: skew(-20deg);
-    left: 53%;
-    position: absolute;
-    top: 22%;
-    z-index: 1;
-    display: none;
-  }
-  #img-pajaro{
-    margin-top: 200px;
-  }
-  #div-titulo-ejercicio{
-    height: 10%;
-    font-size: 50px;
-  }
-  #div-info-ejercicio{
-    height: 70%;
-    font-size: 23px;
-    overflow-y: auto;
-  }
-  #div-btns-ejercicio{
-    height: 15%;
-    font-size: 23px;
-    padding-top: 20px;
-  }
-}
-
-/*Fin estilos aula artes plásticas*/
-
 
 
 /*Inicio estilos aula audiovisuales*/
 
 #div-con-int-aud{
-  background-image: url('audiovisuales/images/fondos/fondo_index_1.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  font-family: 'Local Van Condensed Regular', Regular !important;
 }
 
 #btn-cerrar{
@@ -1460,6 +823,7 @@ body {
   background-color: transparent;
   font-weight: bold;
   color: white;
+  font-size: 20px;
 }
 .btn-modulos-aud:hover{
   color: white;
@@ -1496,14 +860,6 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #555;
 }
-#div-ocu-int-aud{
-  position: absolute;
-  top: 58%;
-  left: 48%;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
 #div-ocu-principios{
   position: absolute;
   top: 50%;
@@ -1520,6 +876,10 @@ body {
   height: 166px;
   cursor: pointer;
 }
+#div-btn-atr-aud{
+  position: absolute;
+}
+
 #div-btns-mod-aud{
   position: absolute;
   top: 90%;
@@ -1544,23 +904,22 @@ body {
     height: 600px;
     top: 10%;
   }
-  .btn-modulos-aud{
-    font-size: 20px;
-  }
 }
 
 @media (min-height: 890px){
   #div-con-int-aud{
     height: 850px;
-    font-family: 'Local Van Condensed Regular', Regular !important;
     background-size: auto 850px;
   }
   .btn-index-aud{
     font-size: 20px;
   }
-  .btn-modulos-aud{
-    font-size: 30px;
-  }
 }
 
-  /*Fin estilos aula audiovisuales*/
+/*Fin estilos aula audiovisuales*/
+
+
+#map{
+  width: 100%;
+  height: 400px;
+}

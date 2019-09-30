@@ -80,7 +80,7 @@ jQuery(document).ready(function($){
 	 		"<p>¿Se imaginan cómo sería el mundo si todos estuviéramos más conectados con nuestro cuerpo?</p>"+
 	 		"<p>¡Bienvenidos!</p>");
 	 }else{
-	 	infoModulo("Conexión corporal", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 	infoModulo("Bienvenido", "<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 		"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Ngf-gMzOvsM'></iframe>"+
 	 		"</div></p>", "conexion");
 	 }
@@ -158,9 +158,9 @@ jQuery(document).ready(function($){
 	 			"background-image": 'url("'+ $("#bloginfo").val() + '/danza/images/fondos/fondo_conexion.jpg")',
 	 		});
 	 		botonesLaterales("conexion");
-	 		infoSala("", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 		"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Ngf-gMzOvsM'></iframe>"+
-	 		"</div></p>", "", 1, "conexion", "", "conexion-bienestar");
+	 		infoSala("Conexión corporal", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/5sZMbdd0txo'></iframe>"+
+	 			"</div></p>", "", 1, "", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-ritmo":
 	 		break;
@@ -171,10 +171,6 @@ jQuery(document).ready(function($){
 	 		case "btn-memoria":
 	 		break;
 	 		case "btn-bienestar":
-	 		// infoSala("Flashmob todo se mueve", "video", "<button class='btn btn-block btn-n-dan'>Reto 1</button>"+
-	 		// 	"<button class='btn btn-block btn-n-dan'>Reto 2</button>"+
-	 		// 	"<button class='btn btn-block btn-n-dan'>Reto 3</button>"+
-	 		// 	"<button class='btn btn-block btn-n-dan'>Reto 4</button>", 3, "conexion", "", "conexion-bienestar");
 	 		infoSala("Bienestar","<p>Los movimientos cotidianos como caminar, ir en bicicleta o subir las escaleras, hacen parte de la actividad física que nuestro cuerpo realiza diariamente, sin embargo, el cuerpo necesita de ayuda para fortalecerse y evitar que se debilite; el ejercicio que se realiza en el gimnasio o los deportes son las formas más conocidas de entrenar el cuerpo y siempre escuchamos sobre los beneficios para la salud que trae ejercitarse.</p>"+
 	 			"<p>¿Me creerías si te digo que existe otra forma posible de ejercitar el cuerpo generando bienestar emocional y espiritual en nuestra vida?</p>"+
 	 			"<p>La danza es una forma para mantener el estado óptimo de nuestro cuerpo, dado que la actividad física que se realiza mientras bailamos permite fortalecer los músculos, las articulaciones y los huesos, y mejora la actividad cardiovascular permitiendo que podamos realizar las actividades cotidianas como si siempre tuviéramos la batería al 100 %, pero también la danza es una forma posible para comunicar nuestras emociones, sensaciones y pensamientos, generando así no solo una salud física sino también emocional.</p>"+
@@ -195,19 +191,6 @@ jQuery(document).ready(function($){
 	 			"<p>¿Quieres conocer cómo podemos entrenar nuestra respiración y llenar de beneficios a nuestro cuerpo? Ven acompáñanos a bailar con la respiración.</p>", "", "texto", "conexion", "", "conexion-respiracion");
 	 		break;
 	 		case "btn-lunes":
-	 		// infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+
-	 		// 	"<p>Como todo es cuestión de actitud, queremos invitarles a unirse a nuestro reto <strong>#LunesDeMovimiento</strong> y así comenzar la semana activando el cuerpo para llenarlo de energía.</p>"+
-	 		// 	"<p>Nuestro primer reto <strong>#LunesdeMovimiento</strong> te invita a comenzar la semana bailando. Bailar es una manera divertida de ejercitarse, activar el cuerpo y despejar la mente.</p>"+
-	 		// 	"<p>¡Muévete con nosotros y te sentirás muy bien! Sólo vas a necesitar unos minutos y lo puedes hacer donde quieras.</p>"+
-	 		// 	"<p>PASO A PASO:</p>"+
-	 		// 	"<ol>"+
-	 		// 	"<li>Repite y aprende los movimientos del video.</li>"+
-	 		// 	"<li>Combina los movimientos como quieras y arma tu propia secuencia.</li>"+
-	 		// 	"<li>Graba un video haciendo la secuencia con tu canción favorita para comenzar la semana.</li>"+
-	 		// 	"<li>Publica tu video incluyendo las etiquetas:</li>"+
-	 		// 	"<strong>#LunesdeMovimiento #AulaVirtualDanza #CuerpoenMovimiento</strong>"+
-	 		// 	"<li>Comparte este reto para que otras personas lo hagan y puedan también empezar la semana con un cuerpo activo.</li>"+
-	 		// 	"</ol>", "<p><img src='"+$("#bloginfo").val() +"/danza/images/conexion/lunes_movimiento.png'></p>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+
 	 			"<p>Como todo es cuestión de actitud, queremos invitarles a unirse a nuestro reto <strong>#LunesDeMovimiento</strong> y así comenzar la semana activando el cuerpo para llenarlo de energía.</p>"+
 	 			"<p>Nuestro primer reto <strong>#LunesdeMovimiento</strong> te invita a comenzar la semana bailando. Bailar es una manera divertida de ejercitarse, activar el cuerpo y despejar la mente.</p>"+
@@ -220,15 +203,37 @@ jQuery(document).ready(function($){
 	 			"<li>Publica tu video incluyendo las etiquetas:</li>"+
 	 			"<strong>#LunesdeMovimiento #AulaVirtualDanza #CuerpoenMovimiento</strong>"+
 	 			"<li>Comparte este reto para que otras personas lo hagan y puedan también empezar la semana con un cuerpo activo.</li>"+
-	 			"</ol>", "<button class='btn btn-block btn-n-dan'>Reto 1</button>"+
-	 		 	"<button class='btn btn-block btn-n-dan'>Reto 2</button>"+
-	 		 	"<button class='btn btn-block btn-n-dan'>Reto 3</button>"+
-	 		 	"<button class='btn btn-block btn-n-dan'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 			"</ol>", "<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-uno' data-actividad-reto='bienestar-lunes'>Reto 1</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-dos' data-actividad-reto='bienestar-lunes'>Reto 2</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-tres' data-actividad-reto='bienestar-lunes'>Reto 3</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-reto-uno":
+	 		infoSala("Reto 1", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-reto-dos":
+	 		infoSala("Reto 2", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-reto-tres":
+	 		infoSala("Reto 3", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-reto-cuatro":
+	 		infoSala("Reto 4", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-flash":
 	 		infoSala("Flashmob","<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mvGdnCNH5KQ'></iframe>"+
-	 			"</div></p>", "<button class='btn btn-block btn-n-dan'>Reto</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 			"</div></p>", "<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-flash' data-actividad-reto='bienestar-flash'>Reto</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-reto-flash":
+	 		infoSala("Reto flashmob","<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."+
+	 			"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."+
+	 			"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."+
+	 			"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>", "<button class='btn btn-block btn-n-dan' id='btn-reto-flash'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
@@ -248,6 +253,10 @@ jQuery(document).ready(function($){
 	 	}
 	 	if($(this).hasClass('sub-boton')){
 	 		$("#btn-"+$(this).attr('data-sala-genero').split("-")[1]).removeClass().addClass("btn btn-block btn-h-dan");
+	 	}
+	 	if ($(this).hasClass('sub-boton-dos')){
+	 		$("#btn-"+$(this).attr("data-actividad-reto").split("-")[0]).removeClass("btn-n-dan").addClass("btn-h-dan");
+	 		$("#btn-"+$(this).attr("data-actividad-reto").split("-")[1]).removeClass("btn-n-dan").addClass("btn-h-dan");
 	 	}
 	 });
 });

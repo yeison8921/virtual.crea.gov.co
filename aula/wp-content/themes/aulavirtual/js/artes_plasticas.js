@@ -193,6 +193,29 @@ jQuery(document).ready(function($){
 			$("#div-sub-modulos").show();
 			$("#div-sub-modulos img").data("ejercicio", "ejercicio");
 		}
+		if(element == "telescopio"){
+			$("#div-sub-modulos").css({
+				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_telescopio.jpg")',
+			});
+			$($("#div-sub-modulos").children()[1]).show();
+			$($("#div-sub-modulos").children()[2]).show();
+			if($(window).height() <= 890){
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "absolute",
+					"top": "40%",
+					"left": "49%"
+				});
+			}else{
+				$("#div-sub-modulos #div-imgs-submodulos").css({
+					"position": "relative",
+					"top": "35%",
+					"left": "48%"
+				});
+			}
+			$("#div-modulos-aap").hide();
+			$("#div-sub-modulos").show();
+			$("#div-sub-modulos img").data("ejercicio", "");
+		}
 	}
 
 	function infoEjercicio(ejercicio){
@@ -362,13 +385,7 @@ jQuery(document).ready(function($){
 
 		}
 		if($(this).attr("id") == "img-telescopio"){
-			$("#div-sub-modulos").css({
-				"background-image": 'url("'+ $("#bloginfo").val() + '/artes_plasticas/images/fondos/fondo_telescopio.jpg")',
-			});
-			$("#div-modulos-aap").hide();
-			$("#div-sub-modulos").show();
-			$($("#div-sub-modulos").children()[1]).hide();
-			$($("#div-sub-modulos").children()[2]).hide();
+			setElementsActivities("telescopio");
 		}
 
 		if($(this).attr("id") == "img-certificado"){
@@ -382,12 +399,14 @@ jQuery(document).ready(function($){
 		}
 
 		if($(this).attr("id") == "img-creatividad" || $(this).attr("id") == "img-linea" || $(this).attr("id") == "img-color" || $(this).attr("id") == "img-gesto"){
-			$("#div-comic .img-atras").data("atras", "submodulos");
-			$("#div-sub-modulos").hide();
 			if($(this).data("ejercicio") == "ejercicio"){
+				$("#div-comic .img-atras").data("atras", "submodulos");
+				$("#div-sub-modulos").hide();
 				infoEjercicio($(this).attr("id").split("-")[1]);
 			}
 			if($(this).data("ejercicio") == "comic"){
+				$("#div-comic .img-atras").data("atras", "submodulos");
+				$("#div-sub-modulos").hide();
 				$("#img-comic").attr("src", $("#bloginfo").val() + "/artes_plasticas/images/"+$(this).attr("id").split("-")[1]+"/img_viñeta_1.jpg");
 				$("#btns-mover-comic img").data("comic", $(this).attr("id").split("-")[1]);
 				if($(this).attr("id") == "img-linea"){
