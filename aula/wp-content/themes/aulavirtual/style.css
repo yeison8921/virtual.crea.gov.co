@@ -159,7 +159,7 @@ hr{
     font-size: 60px;
   }
 }
-@media (min-height: 992px){
+@media (min-height: 891px){
   h1{
     font-family: 'Local Van Condensed Bold' !important;
     font-size: 80px;
