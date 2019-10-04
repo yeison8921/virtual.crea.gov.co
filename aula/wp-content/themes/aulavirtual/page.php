@@ -179,9 +179,9 @@
             </div>
           </div>
           <div id="div-botones-salas-musica">
+            <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="andina">Sala general</button>
             <button class="btn btn-block btn-n-mus" id="btn-teorica" data-curso="andina">Sala teórica</button>
             <button class="btn btn-block btn-n-mus" id="btn-interactiva" data-curso="andina">Sala interactiva</button>
-            <button class="btn btn-block btn-n-mus" id="btn-general" data-curso="andina">Sala general</button>
             <button class="btn btn-block btn-n-mus" id="btn-laboratorio" data-curso="andina">Laboratorio</button>
             <button class="btn btn-block btn-n-mus" id="btn-foros" data-curso="andina">Foros</button>
           </div>
@@ -429,7 +429,7 @@
   <div class="modal fade" id="modal-rollover" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color: #24273a; border-bottom: 0px solid;">
           <button type="button" class="close" data-dismiss="modal" style="color: #03f0e3;">&times;</button>
           <div class="modal-title" style="font-size: 40px; color: #03f0e3;"></div>
         </div>

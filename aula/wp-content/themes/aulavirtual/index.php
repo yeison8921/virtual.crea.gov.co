@@ -45,19 +45,19 @@
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="#" data-toggle="modal" data-target="#modalIndex">
               <img src="<?php bloginfo('template_url'); ?>/index/normal_literatura.png" id="img-literatura">
               <span>Creación<br>literaria</span>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="#" data-toggle="modal" data-target="#modalIndex">
               <img src="<?php bloginfo('template_url'); ?>/index/normal_dramatico.png" id="img-dramatico">
               <span>Arte<br>dramático</span>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="#" data-toggle="modal" data-target="#modalIndex">
               <img src="<?php bloginfo('template_url'); ?>/index/normal_electronicas.png" id="img-electronicas">
               <span>Artes<br>electrónicas</span>
             </a>
@@ -76,4 +76,23 @@
   </div>
 </div>
 </section>
+<div class="modal fade" id="modalIndex" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Proximamente...</h4>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <p><img src="http://begasmotor.com/serviciotecnico/img/construccion.jpg"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <?php get_footer(); ?>

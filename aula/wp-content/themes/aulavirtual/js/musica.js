@@ -29,11 +29,8 @@ jQuery(document).ready(function($){
 	 		if(sala == "teorica"){
 	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-instrumentos' data-sala=''>Instrumentos</button>");
 	 		}
-	 		/*if(sala == "interactiva"){
-	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-referentes' data-sala=''>Referentes</button>");
-	 		}*/
 	 		if(sala == "general"){
-	 			$("#div-botones-sala").append("<button class='btn btn-block btn-h-mus' id='btn-escala' data-sala=''>Escala</button>"+
+	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-escala' data-sala=''>Escala</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-ritmometrica' data-sala=''>Ritmo y métrica</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-acordes' data-sala=''>Acordes</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-funcionesarmonicas' data-sala=''>Funciones Armónicas</button>"+
@@ -92,120 +89,109 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-melodia' data-sala-genero=''>Melodía y Armonía</button>"+
 	 			"</div>");
 	 		break;
-	 		/*case 3:
-	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
+	 		case 4:
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-guitarra' data-sala-genero=''>Toca con la pista - Guitarra</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-tiple' data-sala-genero=''>Toca con la pista - Tiple</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-bandola' data-sala-genero=''>Toca con la pista - Bandola</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-karaoke' data-sala-genero=''>Karaoke</button>"+
+	 			"</div>");
+	 		break;
+	 		case "guabina":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
 	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ritmo' data-sala-genero=''>Ritmo</button>"+
 	 			"</div>"+
-	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
 	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-melodia' data-sala-genero=''>Melodía</button>"+
 	 			"</div>"+
-	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
 	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-armonia' data-sala-genero=''>Armonía</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-explicaciones' data-sala-genero=''>Explicaciones</button>"+
 	 			"</div>");
-	 			break;*/
-	 			case 4:
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-guitarra' data-sala-genero=''>Toca con la pista - Guitarra</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-tiple' data-sala-genero=''>Toca con la pista - Tiple</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-bandola' data-sala-genero=''>Toca con la pista - Bandola</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-karaoke' data-sala-genero=''>Karaoke</button>"+
-	 				"</div>");
-	 			break;
-	 			case "guabina":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ritmo' data-sala-genero=''>Ritmo</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-melodia' data-sala-genero=''>Melodía</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-armonia' data-sala-genero=''>Armonía</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-explicaciones' data-sala-genero=''>Explicaciones</button>"+
-	 				"</div>");
-	 			break;
-	 			case "tocar":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-1 col-lg-3 col-md-4'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-guitarra' data-sala-genero=''>Toca con la pista - Guitarra</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-4'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-tiple' data-sala-genero=''>Toca con la pista - Tiple</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-4'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-bandola' data-sala-genero=''>Toca con la pista - Bandola</button>"+
-	 				"</div>");
-	 			break;
-	 			case "escala":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-estructuraescala' data-sala-genero='escala'>Estructura de la escala mayor</button>"+
-	 				"</div>");
-	 			break;
-	 			case "ritmometrica":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-metricas-compas' data-sala-genero=''>Métricas de compas simple</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-figuras' data-sala-genero=''>Figuras musicales</button>"+
-	 				"</div>");
-	 			break;
-	 			case "acordes":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-triadas' data-sala-genero=''>Triadas</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-cuatriadas' data-sala-genero=''>Cuatriadas</button>"+
-	 				"</div>");
-	 			break;
-	 			case "funciones-armonicas":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-tonica' data-sala-genero=''>Tónica</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-subdominante' data-sala-genero=''>Subdominante</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-dominante' data-sala-genero=''>Dominante</button>"+
-	 				"</div>");
-	 			break;
-	 			case "instrumentos":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-guitarra' data-sala-genero=''>Guitarra</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-tiple' data-sala-genero=''>Tiple</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-bandola' data-sala-genero=''>Bandola</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-3 col-md-3'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-otros' data-sala-genero=''>Otros</button>"+
-	 				"</div>");
-	 			break;
-	 			case "laboratorio":
-	 			$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-guitarra' data-sala-genero=''>Guitarra</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bajo' data-sala-genero=''>Bajo</button>"+
-	 				"</div>"+
-	 				"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
-	 				"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bateria' data-sala-genero=''>Bateria</button>"+
-	 				"</div>");
-	 			break;
-	 			default:
-	 			$("#div-subbotones-sala").html("");
+	 		break;
+	 		case "tocar":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-1 col-lg-3 col-md-4'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-guitarra' data-sala-genero=''>Toca con la pista - Guitarra</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-4'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-tiple' data-sala-genero=''>Toca con la pista - Tiple</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-4'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-along-bandola' data-sala-genero=''>Toca con la pista - Bandola</button>"+
+	 			"</div>");
+	 		break;
+	 		case "escala":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-estructuraescala' data-sala-genero='escala'>Estructura de la escala mayor</button>"+
+	 			"</div>");
+	 		break;
+	 		case "ritmometrica":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-metricascompas' data-sala-genero=''>Métricas de compas simple</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-figuras' data-sala-genero=''>Figuras musicales</button>"+
+	 			"</div>");
+	 		break;
+	 		case "acordes":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-triadas' data-sala-genero=''>Triadas</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-cuatriadas' data-sala-genero=''>Cuatriadas</button>"+
+	 			"</div>");
+	 		break;
+	 		case "funciones-armonicas":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-tonica' data-sala-genero=''>Tónica</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-subdominante' data-sala-genero=''>Subdominante</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-dominante' data-sala-genero=''>Dominante</button>"+
+	 			"</div>");
+	 		break;
+	 		case "instrumentos":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-guitarra' data-sala-genero=''>Guitarra</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-tiple' data-sala-genero=''>Tiple</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-bandola' data-sala-genero=''>Bandola</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-3 col-md-3'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-ins-otros' data-sala-genero=''>Otros</button>"+
+	 			"</div>");
+	 		break;
+	 		case "laboratorio":
+	 		$("#div-subbotones-sala").html("").html("<div class='col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-guitarra' data-sala-genero=''>Guitarra</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bajo' data-sala-genero=''>Bajo</button>"+
+	 			"</div>"+
+	 			"<div class='col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2'>"+
+	 			"<button class='btn btn-block btn-n-mus sub-boton' id='btn-bateria' data-sala-genero=''>Bateria</button>"+
+	 			"</div>");
+	 		break;
+	 		default:
+	 		$("#div-subbotones-sala").html("");
 
-	 		}
-	 		if(botonHover != ""){
-	 			$("#"+botonHover).removeClass("btn-n-mus").addClass("btn-h-mus");
-	 		}
+	 	}
+	 	if(botonHover != ""){
+	 		$("#"+botonHover).removeClass("btn-n-mus").addClass("btn-h-mus");
+	 	}
 	 	/*if(botonHover != ""){
 	 		$("#div-subbotones-sala #"+botonHover).removeClass("btn-n-mus").addClass("btn-h-mus");
 	 	}*/
@@ -289,7 +275,34 @@ jQuery(document).ready(function($){
 	 			"</ul>")
 	 		break;
 	 		case "btn-creditos":
-	 		infoIntroduccion("Créditos", "");
+	 		infoIntroduccion("Créditos", "<p><strong>Investigación y desarrollo de contenidos:</strong><br>"+
+	 			"Mauricio Vela<br>"+
+	 			"Diego Álzate</p>"+
+	 			"<p><strong>Producción de contenidos:</strong><br>"+
+	 			"Tatiana Múnera</p>"+
+	 			"<p><strong>Asesor pedagógico:</strong><br>"+
+	 			"William Durán</p>"+
+	 			"<p><strong>Producción Audiovisual:</strong><br>"+
+	 			"Camilo Bonilla</p>"+
+	 			"<p><strong>Programación:</strong><br>"+
+	 			"Yeison Briceño</p>"+
+	 			"<p><strong>Diseño gráfico:</strong><br>"+
+	 			"Johann Tarazona Matiz</p>"+
+	 			"<p><strong>Coordinación programa Crea:</strong><br>"+
+	 			"Leonardo Garzón</p>"+
+	 			"<p><strong>Coordinación SIF:</strong><br>"+
+	 			"Miguel Andrés Salas</p>"+
+	 			"<p><strong>Agradecimientos:</strong><br>"+
+	 			"Mausoleo Estudio<br>"+
+	 			"Trio Vocal Instrumental &quot;Alhajas&quot;</p>"+
+	 			"<p><strong>Interpretación de temas musicales:</strong><br>"+
+	 			"Andrea Diaz (voz), Lenin Camilo Silva Arana (Tiple), Hugo Mario Marín Gómez (Guitarra), Mauricio Pinzón Gómez (Bandola), Aprendiz de Mauricio</p>"+
+	 			"<p><strong>Temas musicales:</strong><br>"+
+	 			"Bochica: Autor: Francisco Cristancho, Mauricio Pinzón<br>"+
+	 			"Cachipay: Autor:  Emilio Murillo<br>"+
+	 			"La Ruana: Autor: Miguel Ángel Calderón<br><br>"+
+	 			"Sayco-Acinpro.©<br></p>"+
+	 			"<p><strong>Idartes<br>Alcaldía de Bogotá<br>2019</strong></p>");
 	 		break;
 	 		case "btn-andina":
 	 		$("#div-botones-salas-musica").show();
@@ -320,7 +333,7 @@ jQuery(document).ready(function($){
 	 			infoSalaTeorica("La Guabina", "<p>Expresión musical de los departamentos de Santander, Boyacá, Tolima y Huila, aunque antiguamente también se cultivaba en Antioquia. Aun cuando el ritmo es común a todos, la guabina adquiere en cada departamento un tipo de melodía especial.</p>"+
 	 				"<p>El instrumental típico para la ejecución de la guabina está conformado por el tiple, el requinto, la bandola y el chucho o guache.</p>",
 	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qv_quuy50Jo' allowfullscreen></iframe>"+
 	 				"</div></p>", 2, 4, "", "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
@@ -342,7 +355,7 @@ jQuery(document).ready(function($){
 	 				"<p>Según el historiador Javier Ocampo, el pasillo colombiano presenta semejanzas con el vals de Venezuela, el sanjuanito de ecuador y el valsecito de costa rica.</p>"+
 	 				"<p>CIFUENTES, LUIS JAIRO. (2009). Colombia: Identidades y tradiciones, de: <a href='http://identidadyfolclorcolombiano.blogspot.com/' target='_blank'>http://identidadyfolclorcolombiano.blogspot.com/</a></p>",
 	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PUe8kuK6WAU'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PUe8kuK6WAU' allowfullscreen></iframe>"+
 	 				"</div></p>", 2, "tocar", "", "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
@@ -362,7 +375,7 @@ jQuery(document).ready(function($){
 	 			infoSalaTeorica("El Bambuco", "<p>El bambuco es el aire folklórico mestizo más típico de la zona andina colombiana, y es por esencia la danza nacional más representativa. Su instrumento fundamental es el tiple.</p>"+
 	 				"<p>OCAMPO LÓPEZ, Javier. El folclor y los bailes típicos colombianos. Manizales, Colombia. Biblioteca de Escritores Caldenses. </p>",
 	 				"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/eWoIeRze4W0'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/eWoIeRze4W0' allowfullscreen></iframe>"+
 	 				"</div></p>", 2, "tocar", "", "interactiva-bambuco");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
@@ -370,22 +383,40 @@ jQuery(document).ready(function($){
 	 		}
 	 		break;
 	 		case "btn-instrumentos":
-	 		infoSalaTeorica("Instrumentos música andina", "", "", "texto", "instrumentos", "", "teorica-instrumentos");
+	 		infoSalaTeorica("Instrumentos música andina", "<p class='instrumentos'>"+
+	 			"<span id='clavijas'>Clavijas</span><br>"+
+	 			"<span id='cabeza'>Cabeza o clavijero</span><br>"+
+	 			"<span id='cejuela'>Hueso o cejuela</span><br>"+
+	 			"<span id='cuerpo'>Cuerpo o tapa armónica</span><br>"+
+	 			"<span id='costados'>Costados o aros</span><br>"+
+	 			"<span id='hueso'>Hueso del puente</span><br>"+
+	 			"<span id='diapason'>Diapasón</span><br>"+
+	 			"<span id='trastes'>Trastes</span><br>"+
+	 			"<span id='filetes'>Filetes</span><br>"+
+	 			"<span id='cuerdas'>Cuerdas</span><br>"+
+	 			"<span id='roseta'>Roseta</span><br>"+
+	 			"<span id='boca'>Boca</span><br>"+
+	 			"<span id='puente'>Puente</span>"+
+	 			"</p>",
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' style='height: 400px; margin-left: -70px;' id='img-guitarra'>/////"+
+	 			"<div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/twg8bqj6kFE' allowfullscreen></iframe>"+
+	 			"</div>", "instrumentos", "instrumentos", "btn-ins-guitarra", "teorica-instrumentos");
 	 		break;
 	 		case "btn-referentes":
 	 		infoSalaTeorica("Referentes", "<p>Les presentamos algunos referentes de música colombiana aplicada a otros ritmos.</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/vjr2OwojRUQ'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/vjr2OwojRUQ' allowfullscreen></iframe>"+
 	 			"</div></p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/KJ95IZxmffE'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/KJ95IZxmffE' allowfullscreen></iframe>"+
 	 			"</div></p>",
 	 			"<p>&nbsp<br>&nbsp</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/z7lXhmFwMKs'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/z7lXhmFwMKs' allowfullscreen></iframe>"+
 	 			"</div></p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/GVkRXz6qSr0'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/GVkRXz6qSr0' allowfullscreen></iframe>"+
 	 			"</div></p>", 2, "", $(this).attr("id"), "interactiva-referentes");
 	 		break;
 	 		case "btn-teorica":
@@ -396,7 +427,7 @@ jQuery(document).ready(function($){
 	 			botonesLaterales("andina", "teorica");
 	 			$("#div-botones-sala button").attr("data-sala", "teorica");
 	 			infoSalaTeorica("Sala teórica", "<p>Bienvenid@ a la sala teórica, aquí te explicaremos los aspectos teóricos y técnicos necesarios para la comprensión y posterior interpretación de instrumentos andinos y sus particularidades, no te asustes si nunca habías visto una partitura ¿eh? Si das clic en el vídeo podrás entender como funciona la escritura musical.</p>",
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400'></p>", 2, "guabina", "", "");
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' height='400'></p>", 2, "", "", "");
 	 		}
 	 		break;
 	 		case "btn-interactiva":
@@ -407,7 +438,7 @@ jQuery(document).ready(function($){
 	 			botonesLaterales("andina", "interactiva");
 	 			$("#div-botones-sala button").attr("data-sala", "interactiva");
 	 			infoSalaTeorica("Sala interactiva", "<p>Bienvenid@ a la sala interactiva, aquí encontrarás vídeos que te mostrarán la forma de interpretación de cada instrumento explicado por un Artista Formador, además tendrás acceso a pistas sobre las cuales podrás tocar para practicar.</p>",
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/tiple/tiple.png' height='400'></p>",2, 4, "", "");
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/tiple/tiple.png' height='400'></p>",2, "", "", "");
 	 		}
 	 		break;
 	 		case "btn-general":
@@ -417,29 +448,29 @@ jQuery(document).ready(function($){
 	 			});
 	 			botonesLaterales("andina", "general");
 	 			$("#div-botones-sala button").attr("data-sala", "general");
-	 			infoSalaTeorica("Sala interactiva", "Bienvenid@ a la sala general, aquí encontrarás información básica sobre teoría musical que te ayudará a entender mejor los conceptos que has aprendido.</p>",
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/bandola/bandola.png' height='400'></p>",2, 4, "", "");
+	 			infoSalaTeorica("Sala general", "Bienvenid@ a la sala general, aquí encontrarás información básica sobre teoría musical que te ayudará a entender mejor los conceptos que has aprendido.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/bandola/bandola.png' height='400'></p>",2, "", "", "");
 	 		}
 	 		break;
 	 		case "btn-laboratorio":
 	 		if($(this).attr("data-curso") == "andina"){
 	 			botonesLaterales("andina", "laboratorio");
 	 			$("#div-botones-sala button").attr("data-sala", "laboratorio");
-	 			infoSalaTeorica("Escala", "<p>Bienvenid@ al laboratorio, aquí podrás ver un ejemplo de las obras anteriormente estudiadas, adaptadas al género rock, deberás hacer y enviar tu propia propuesta de adaptación.</p>",
-	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' height='400'></p>", 2, "laboratorio", "", "");
+	 			infoSalaTeorica("Laboratorio", "<p>Bienvenid@ al laboratorio, aquí podrás ver un ejemplo de las obras anteriormente estudiadas, adaptadas al género rock, deberás hacer y enviar tu propia propuesta de adaptación.</p>",
+	 				"<p><img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' height='400'></p>", 2, "", "", "");
 	 		}
 	 		break;
 	 		case "btn-ritmo":
 	 		if($(this).attr("data-sala-genero") == "teorica-guabina"){
 	 			infoSalaTeorica("Ritmo Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ' allowfullscreen allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-ritmo'>Guitarra</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "teorica-pasillo"){
 	 			infoSalaTeorica("Ritmo Pasillo Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<a href='"+$("#bloginfo").val() +"/musica/pdf/pasillo/ritmo_cachipay.pdf' alt='Ritmo Cachipay' download>Ritmo Cachipay <i class='fas fa-download'></i></a>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='pasillo-ritmo'>Tiple</button>"+
@@ -447,7 +478,7 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-sala-genero") == "teorica-bambuco"){
 	 			infoSalaTeorica("Ritmo Bambuco Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mKIsvh6MNG0'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mKIsvh6MNG0' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='bambuco-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='bambuco-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-bambuco");
@@ -456,7 +487,7 @@ jQuery(document).ready(function($){
 	 		case "btn-melodia":
 	 		if($(this).attr("data-sala-genero") == "teorica-guabina"){
 	 			infoSalaTeorica("Melodía - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_voz.pdf' alt='La ruana voz' download>La Ruana - voz <i class='fas fa-download'></i></a></p>"+
 	 				"",
@@ -465,7 +496,7 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-sala-genero") == "teorica-pasillo"){
 	 			infoSalaTeorica("Melodía Pasillo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/O0gs6KvKY_c'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/O0gs6KvKY_c' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/pasillo/melodia_cachipay.pdf' alt='Melodía Cachipay' download>Melodía Cachipay <i class='fas fa-download'></i></a></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/pasillo/armonia_cachipay.pdf' alt='Armonía Cachipay' download>Armonía Cachipay <i class='fas fa-download'></i></a></p>",
@@ -473,7 +504,7 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-sala-genero") == "teorica-bambuco"){
 	 			infoSalaTeorica("Melodía Bambuco", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/gymuFsEyOfI'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/gymuFsEyOfI' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/bambuco/armonia_bochica.pdf' alt='Armonía Bochica' download>Armonía Bochica <i class='fas fa-download'></i></a></p>", "", 1, 2, $(this).attr("id"), "teorica-bambuco");	
 	 		}
@@ -481,7 +512,7 @@ jQuery(document).ready(function($){
 	 		case "btn-armonia":
 	 		if($(this).attr("data-sala-genero") == "teorica-guabina"){
 	 			infoSalaTeorica("Armonía - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/c1yuvkCoCZA'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/c1yuvkCoCZA' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_armonia.pdf' alt='Armonía_La_Ruana' download>Armonía La Ruana <i class='fas fa-download'></i></a></p>",
 	 				"", 1, "guabina", $(this).attr("id"), "teorica-guabina");
@@ -490,7 +521,7 @@ jQuery(document).ready(function($){
 	 		case "btn-explicaciones":
 	 		if($(this).attr("data-sala-genero") == "teorica-guabina"){
 	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
@@ -500,28 +531,28 @@ jQuery(document).ready(function($){
 	 		case "btn-tiple":
 	 		if($(this).attr("data-genero-sonido") == "guabina-ritmo"){
 	 			infoSalaTeorica("Ritmo Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/IrbROBwoqBQ' allowfullscreen allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-ritmo'>Guitarra</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "pasillo-ritmo"){
 	 			infoSalaTeorica("Ritmo Pasillo Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MhYvTpzFnNk' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='pasillo-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='pasillo-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-pasillo");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "bambuco-ritmo"){
 	 			infoSalaTeorica("Ritmo Bambuco Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mKIsvh6MNG0'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mKIsvh6MNG0' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='bambuco-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='bambuco-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-bambuco");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
 	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/wdKrryrpArg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/wdKrryrpArg' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
@@ -531,14 +562,14 @@ jQuery(document).ready(function($){
 	 		case "btn-guitarra":
 	 		if($(this).attr("data-genero-sonido") == "guabina-ritmo"){
 	 			infoSalaTeorica("Ritmo guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-N9U-O7Hfkg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-N9U-O7Hfkg' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-ritmo'>Guitarra</button>", 3, "guabina", $(this).attr("id"), "teorica-guabina");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
 	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/HMqDztHdJo0' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
@@ -546,14 +577,14 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "pasillo-ritmo"){
 	 			infoSalaTeorica("Ritmo Pasillo Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PpMsiRbdn9A'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/PpMsiRbdn9A' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='pasillo-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='pasillo-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-pasillo");
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "bambuco-ritmo"){
 	 			infoSalaTeorica("Ritmo Bambuco Tiple", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/QB9q9hbzuQo'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/QB9q9hbzuQo' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='bambuco-ritmo'>Tiple</button>"+
 	 				"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='bambuco-ritmo'>Guitarra</button>", 3, 2, $(this).attr("id"), "teorica-bambuco");
@@ -563,29 +594,29 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-sala-genero") == "laboratorio-pasillo"){
 	 			infoSalaTeorica("Pasillo - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MlDhNETSgwk'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MlDhNETSgwk' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "laboratorio-bambuco"){
 	 			infoSalaTeorica("Bambuco - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lRaULOPrEYk'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lRaULOPrEYk' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-bambuco");
 	 		}
 	 		break;
 	 		case "btn-bajo":
 	 		if($(this).attr("data-sala-genero") == "laboratorio-guabina"){
 	 			infoSalaTeorica("Guabina - Bajo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/vnwnszJ-IAo'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/vnwnszJ-IAo' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "laboratorio-pasillo"){
 	 			infoSalaTeorica("Pasillo - Bajo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/1e7b-i5N2zg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/1e7b-i5N2zg' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "laboratorio-bambuco"){
 	 			infoSalaTeorica("Bambuco - Guitarra", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/hpku2ytO_WI'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/hpku2ytO_WI' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "laboratorio", $(this).attr("id"), "laboratorio-bambuco");
 	 		}
 	 		break;
@@ -602,7 +633,7 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-voz":
 	 		infoSalaTeorica("Melodía - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/amWGWqkfNjc' allowfullscreen></iframe>"+
 	 			"</div><p>"+
 	 			"<p>link</p>",
 	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-voz' data-genero-sonido='guabina-melodia'>Voz</button>"+
@@ -611,7 +642,7 @@ jQuery(document).ready(function($){
 	 		case "btn-bandola":
 	 		if($(this).attr("data-genero-sonido") == "guabina-melodia"){
 	 			infoSalaTeorica("Bandola - Voz", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_2zTWzYUgtI'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_2zTWzYUgtI' allowfullscreen></iframe>"+
 	 				"</div></p>"+
 	 				"<p><a href='"+$("#bloginfo").val() +"/musica/pdf/guabina/la_ruana_bandola.pdf' alt='Melodía_La_Ruana_Bandola' download>Melodía - La Bandola <i class='fas fa-download'></i></a></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-voz' data-genero-sonido='guabina-melodia'>Voz</button>"+
@@ -619,7 +650,7 @@ jQuery(document).ready(function($){
 	 		}
 	 		if($(this).attr("data-genero-sonido") == "guabina-explicaciones"){
 	 			infoSalaTeorica("Explicaciones", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TVgPBIibUPk'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TVgPBIibUPk' allowfullscreen></iframe>"+
 	 				"</div></p>",
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-guitarra' data-genero-sonido='guabina-explicaciones'>Guitarra</button>"+
 	 				"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-tiple' data-genero-sonido='guabina-explicaciones'>Tiple</button>"+
@@ -629,58 +660,58 @@ jQuery(document).ready(function($){
 	 		case "btn-along-guitarra":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
 	 			infoSalaTeorica("Toca con la pista - de la Guitarra - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/BRyJnicgeKg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/BRyJnicgeKg' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
 	 			infoSalaTeorica("Toca con la pista - de la Guitarra - Cachipay", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/NH7EjRotTYI'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/NH7EjRotTYI' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
 	 			infoSalaTeorica("Toca con la pista - de la Guitarra - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_oLDw5oUYPY'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_oLDw5oUYPY' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-along-tiple":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
 	 			infoSalaTeorica("Toca con la pista - del Tiple - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8sFJkixKn8c'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8sFJkixKn8c' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
 	 			infoSalaTeorica("Toca con la pista - del Tiple - Cachipay", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xcOAkFeEpXg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xcOAkFeEpXg' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
 	 			infoSalaTeorica("Toca con la pista - del Tiple - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xgIW9wqcrbY'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xgIW9wqcrbY' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-along-bandola":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
 	 			infoSalaTeorica("Toca con la pista - de la Bandola - La Ruana", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/KEm4i4lDUvM'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/KEm4i4lDUvM' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
 	 			infoSalaTeorica("Toca con la pista - de la Bandola - Cachipay", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-1B38WTtkr4'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-1B38WTtkr4' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-bambuco"){
 	 			infoSalaTeorica("Toca con la pista - de la bandola - Bochica", "<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/oDhauGhtI80'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/oDhauGhtI80' allowfullscreen></iframe>"+
 	 				"</div></p>", "", 1, "tocar", $(this).attr("id"), "interactiva-bambuco");
 	 		}
 	 		break;
 	 		case "btn-karaoke":
 	 		if($(this).attr("data-sala-genero") == "interactiva-guabina"){
 	 			infoSalaTeorica("Karaoke - La Ruana", "<div class='embed-responsive embed-responsive-16by9'>"+
-	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Xw1YF92Guwg'></iframe>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Xw1YF92Guwg' allowfullscreen></iframe>"+
 	 				"</div>", "", 1, 4, $(this).attr("id"), "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala-genero") == "interactiva-pasillo"){
@@ -730,7 +761,7 @@ jQuery(document).ready(function($){
 	 		case "btn-do-mayor":
 	 		infoSalaTeorica("Escala de DO mayor", "<p>Diferenciación de tonos (T) y semitonos (S) entre cada uno de los grados.</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lGzbLp_rdRU'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lGzbLp_rdRU' allowfullscreen></iframe>"+
 	 			"</div></p>",
 	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
@@ -739,7 +770,7 @@ jQuery(document).ready(function($){
 	 		case "btn-sol-mayor":
 	 		infoSalaTeorica("Escala de SOL mayor", "<p>Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota fa# (Primer sostenido).</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/LFKh0d_amGc'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/LFKh0d_amGc' allowfullscreen></iframe>"+
 	 			"</div></p>",
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
 	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
@@ -748,28 +779,36 @@ jQuery(document).ready(function($){
 	 		case "btn-re-mayor":
 	 		infoSalaTeorica("Escala de RE mayor", "<p>Para mantener la estructura de la Escala Mayor, se altera el séptimo grado de la escala, aparece la nota do# (Segundo sostenido).</p>"+
 	 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/DC88WSDTTh0'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/DC88WSDTTh0' allowfullscreen></iframe>"+
 	 			"</div></p>",
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-do-mayor' data-genero-sonido='escala-estructuraescala'>Escala Do Mayor</button>"+
 	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-sol-mayor' data-genero-sonido='escala-estructuraescala'>Escala Sol Mayor</button>"+
 	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-re-mayor' data-genero-sonido='escala-estructuraescala'>Escala Re Mayor</button>", 3, "escala", $(this).attr("id"), "general-escala");
 	 		break;
-	 		case "btn-metricas-compas":
+	 		case "btn-metricascompas":
 	 		infoSalaTeorica("&nbsp", "<p>La métrica está representada por un fraccionario que aparece al inicio de la pieza musical.</p>"+
 	 			"<p>El número que está en la parte superior del fraccionario indica el número de pulsos por compás.</p>"+
 	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/fraccion.png' class='img-responsive'></p>"+
 	 			"<p>El número que está en la parte inferior del fraccionario indica la figura que ocupa cada uno de esos pulsos en compás simple.<p>",
-	 			"<button class='btn btn-block btn-n-mus'>Métricas más utilizadas</button>", 3, "ritmometrica", $(this).attr("id"), "general-ritmometrica");
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-metricas-mas-utilizadas' data-genero-sonido='ritmometrica-metricascompas'>Métricas más utilizadas</button>", 3, "ritmometrica", $(this).attr("id"), "general-ritmometrica");
+	 		break;
+	 		case "btn-metricas-mas-utilizadas":
+	 		infoSalaTeorica("&nbsp", "<p>En cada una de las métricas existen unidades de compá, pulso, primera y segunda división.</p>"+
+	 			"<p>A continuación, veremos las métricas más utilizadas en el compás simple.</p>"+
+	 			"<div class='col-lg-4' style='font-size: 40px;'>2/4</div>"+
+	 			"<div class='col-lg-4' style='font-size: 40px;'>3/4</div>"+
+	 			"<div class='col-lg-4' style='font-size: 40px;'>4/4</div>",
+	 			"<button class='btn btn-block btn-h-mus sub-boton-dos' id='btn-metricas-mas-utilizadas' data-genero-sonido='ritmometrica-metricascompas'>Métricas más utilizadas</button>", 3, "ritmometrica", "", "general-ritmometrica");
 	 		break;
 	 		case "btn-figuras":
 	 		infoSalaTeorica("&nbsp", "<p>Todas las figuras musicales tienen un número que las representa así:</p>"+
 	 			"<p><img src='"+$("#bloginfo").val() +"/musica/images/ritmo/notas_musicales.png'></p>",
-	 			"<button class='btn btn-block btn-n-mus'>Métricas más utilizadas</button>", "texto", "ritmometrica", $(this).attr("id"), "general-ritmometrica");
+	 			"<button class='btn btn-block btn-n-mus sub-boton-dos' id='btn-metricas-mas-utilizadas'>Métricas más utilizadas</button>", "texto", "ritmometrica", $(this).attr("id"), "general-ritmometrica");
 	 		break;
 	 		case "btn-triadas":
 	 		infoSalaTeorica("Triadas", "<p>Acordes TRIADAS: Entre lossonidos de cada acorde existe un intervalo de 3 quedando conformado por una nota base, un intervalo de tercera y un intervalo de quinta.</p>"+
 	 			"<div class='col-lg-8'><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/ZaO9YNXM1gY'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/ZaO9YNXM1gY' allowfullscreen></iframe>"+
 	 			"</div></div>"+
 	 			"<p>En el video anterior tenemos la escala de Do mayor, los números ubicados debajo de cada nota, simbolizan los grados de la escala, que como habiamos dicho ante riormente también son representados con números romanos.</p>"+
 	 			"<p>Encontramos asi mismo en esta imagen, que el primer, tercer y quinto grado de la escala conforman el primer acorde de triada de la escala mayor.</p>",
@@ -780,7 +819,7 @@ jQuery(document).ready(function($){
 	 			"<p>A continuación encontraremos en el primer gráfico la construcción de acordes de cuatro sonidos y en el siguiente gráfico sus respectivos nombres.</p>"+
 	 			"<p>Acordes de cuatro sonidos de la escala de Do Mayor con numeración y carácter.</p>"+
 	 			"<div class='col-lg-offset-2 col-lg-8'><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/0M3yF8Vba3Y'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/0M3yF8Vba3Y' allowfullscreen></iframe>"+
 	 			"</div></div>",
 	 			"", "texto", "acordes", $(this).attr("id"), "general-acordes");
 	 		break;
@@ -834,7 +873,7 @@ jQuery(document).ready(function($){
 	 			"</p>",
 	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/guitarra/guitarra.png' style='height: 400px; margin-left: -70px;' id='img-guitarra'>/////"+
 	 			"<div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/twg8bqj6kFE'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/twg8bqj6kFE' allowfullscreen></iframe>"+
 	 			"</div>", "instrumentos", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-tiple":
@@ -852,7 +891,7 @@ jQuery(document).ready(function($){
 	 			"<span id='puente'>Puente</span>"+
 	 			"</p>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/tiple/tiple.png' style='height: 400px; margin-left: -70px;' id='img-tiple'>/////"+
 	 			"<div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/yMGcuuFcwQQ'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/yMGcuuFcwQQ' allowfullscreen></iframe>"+
 	 			"</div>", "instrumentos", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-bandola":
@@ -873,15 +912,30 @@ jQuery(document).ready(function($){
 	 			"<span id='tapa'>Tapa</span>"+
 	 			"</p>", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/bandola/bandola.png' style='height: 400px; margin-left: -70px;' id='img-bandola'>/////"+
 	 			"<div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/cYS8ccLwQOM'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/cYS8ccLwQOM' allowfullscreen></iframe>"+
 	 			"</div>", "instrumentos", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-ins-otros":
-	 		infoSalaTeorica("Instrumentos música andina", "<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' width='400'>"+
-	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/cucharas.png' width='400'>"+
-	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/esterilla.png' width='400'>"+
-	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/guacharaca.png' width='400'>"+
-	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/marrana.png' width='400'>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
+	 		infoSalaTeorica("Instrumentos música andina", "<div class='col-lg-offset-2 col-lg-4 text-center'>"+
+	 			"<p>Carraca</p>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/carraca.png' width='300'>"+
+	 			"</div>"+
+	 			"<div class='col-lg-4 text-center'>"+
+	 			"<p>Cucharas</p>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/cucharas.png' width='300'>"+
+	 			"</div>"+
+	 			"<div class='col-lg-4 text-center'>"+
+	 			"<p>Esterilla</p>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/esterilla.png' width='300'>"+
+	 			"</div>"+
+	 			"<div class='col-lg-4 text-center'>"+
+	 			"<p>Guaracha</p>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/guacharaca.png' width='300'>"+
+	 			"</div>"+
+	 			"<div class='col-lg-4 text-center'>"+
+	 			"<p>Marrana</p>"+
+	 			"<img src='"+$("#bloginfo").val() +"/musica/images/instrumentos/otros/marrana.png' width='300'>"+
+	 			"</div>", "", "texto", "instrumentos", $(this).attr("id"), "teorica-instrumentos");
 	 		break;
 	 		case "btn-foros":
 	 		if($(this).attr("data-curso") == "andina"){

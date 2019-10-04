@@ -95,9 +95,9 @@ jQuery(document).ready(function($){
 
 	 	switch($(this).attr('id')){
 	 		case "btn-introduccion":
-	 		infoIntroduccion("Introducción", "<p>El Aula Virtual de danza es un espacio que invita a relacionarse con el cuerpo de manera consciente. Nuestro punto de partida es el impulso cotidiano de movimiento como herramienta para reconocer el cuerpo, ese territorio que habitamos, el lugar desde el que nos comunicamos e interactuamos con el mundo. Posteriormente, nos acercamos a la danza como el lenguaje que nos conecta con nosotros mismos y los otros, el ritual de conexión con lo primitivo, con las costumbres y tradiciones de pueblos, comunidades y territorios.</p>"+
-	 			"<p>Las herramientas, ejercicios y retos propuestos son un llamado a la interacción y exploración de las potencialidades del movimiento, dialogando con diversos géneros de la danza y técnicas corporales. Les invitamos a crear un mundo en el que todos nos relacionamos de una manera más cercana y amigable con nuestros cuerpos.</p>"+
-	 			"<p>¿Se imaginan cómo sería el mundo si todos estuviéramos más conectados con nuestro cuerpo?</p>"+
+	 		infoIntroduccion("Introducción", "<p>¿Se imaginan cómo sería el mundo si todos estuviéramos más conectados con nuestro cuerpo?</p>"+
+	 			"<p>Partiendo del impulso cotidiano de movimiento como herramienta para reconocer el cuerpo; ese territorio que habitamos, el lugar desde el que nos comunicamos e interactuamos con el mundo; nos acercamos a la danza como el lenguaje que permite expresar a través del cuerpo, conectarnos con nosotros mismos y los otros. La danza como ritual de conexión con lo primitivo; con las costumbres, tradiciones y el legado cultural de pueblos y comunidades.</p>"+
+	 			"<p>Las herramientas, ejercicios y retos en el Aula Virtual son un llamado a interactuar y explorar las potencialidades del movimiento, dialogando con diversas técnicas corporales., estilos y géneros de la danza para invitarlos a poner el cuerpo en movimiento.</p>"+
 	 			"<p>¡Bienvenidos!</p>");
 	 		break;
 	 		case "btn-objetivos":
@@ -149,7 +149,34 @@ jQuery(document).ready(function($){
 	 			"<p>No es necesario que quienes van a tomar el curso tengan conocimientos previos en las temáticas que se abordan en las secciones dirigidas a la conexión corporal, al ritmo, a la expresión, al espacio y la memoria, sin embargo, todos deben contar con el manejo básico de computadores o dispositivos móviles con acceso a internet.</p>")
 	 		break;
 	 		case "btn-creditos":
-	 		infoIntroduccion("Créditos", "");
+	 		infoIntroduccion("Créditos", "<p><strong>Investigación y desarrollo de contenidos:</strong><br>"+
+	 			"Johanna Sánchez<br>"+
+	 			"Oscar Rojas<br>"+
+	 			"Alejandra Vargas<br>"+
+	 			"</p>"+
+	 			"<p><strong>Producción de contenidos:</strong><br>"+
+	 			"Tatiana Múnera</p>"+
+	 			"<p><strong>Asesor pedagógico:</strong><br>"+
+	 			"Jenny Caraballo</p>"+
+	 			"<p><strong>Producción Audiovisual:</strong><br>"+
+	 			"Camilo Bonilla<br>"+
+	 			"Johanna Sánchez<br>"+
+	 			"Oscar Rojas<br>"+
+	 			"Alejandra Vargas</p>"+
+	 			"<p><strong>Edición:</strong><br>"+
+	 			"Johanna Sánchez<br>"+
+	 			"Zion Producciones<br>"+
+	 			"<p><strong>Diseño gráfico:</strong><br>"+
+	 			"Johann Tarazona Matiz</p>"+
+	 			"<p><strong>Programación:</strong><br>"+
+	 			"Yeison Briceño</p>"+
+	 			"<p><strong>Coordinación programa Crea:</strong><br>"+
+	 			"Leonardo Garzón</p>"+
+	 			"<p><strong>Coordinación SIF:</strong><br>"+
+	 			"Miguel Andrés Salas</p>"+
+	 			"<p><strong>Agradecimientos:</strong><br>"+
+	 			"Angélica Plata, Crea La Campiña, Crea Las Flores, Crea Villemar, Crea Suba Centro, Colectivos de Danza Cattleyas, Ujjina, Bailarinas de corazón, Zion Producciones, Juliana Atuesta, Colectivo Danza Viva, Colectivo Incorpus, Sofhia García Figueroa, Samantha García Figueroa, Kevin Samuel Sainz Moreno</p>"+
+	 			"<p><strong>Idartes<br>Alcaldía de Bogotá<br>2019</strong></p>");
 	 		break;
 	 		case "btn-conexion":
 	 		$("#div-seleccion-curso-danza").hide();
@@ -171,24 +198,26 @@ jQuery(document).ready(function($){
 	 		case "btn-memoria":
 	 		break;
 	 		case "btn-bienestar":
-	 		infoSala("Bienestar","<p>Los movimientos cotidianos como caminar, ir en bicicleta o subir las escaleras, hacen parte de la actividad física que nuestro cuerpo realiza diariamente, sin embargo, el cuerpo necesita de ayuda para fortalecerse y evitar que se debilite; el ejercicio que se realiza en el gimnasio o los deportes son las formas más conocidas de entrenar el cuerpo y siempre escuchamos sobre los beneficios para la salud que trae ejercitarse.</p>"+
-	 			"<p>¿Me creerías si te digo que existe otra forma posible de ejercitar el cuerpo generando bienestar emocional y espiritual en nuestra vida?</p>"+
-	 			"<p>La danza es una forma para mantener el estado óptimo de nuestro cuerpo, dado que la actividad física que se realiza mientras bailamos permite fortalecer los músculos, las articulaciones y los huesos, y mejora la actividad cardiovascular permitiendo que podamos realizar las actividades cotidianas como si siempre tuviéramos la batería al 100 %, pero también la danza es una forma posible para comunicar nuestras emociones, sensaciones y pensamientos, generando así no solo una salud física sino también emocional.</p>"+
-	 			"<p>Te invitamos a moverte con nosotros en los retos de esta sección, ¡te sentirás muy bien!</p>",
+	 		infoSala("Bienestar","<p>¿Me creerías si te digo que existe una manera divertida de ejercitar el cuerpo, generando bienestar físico, mental y emocional?</p>"+
+	 			"<p>Seguro has escuchado sobre los beneficios que trae la actividad física para la salud; el movimiento ayuda al que el cuerpo se mantenga sano, fuerte y activo. No sólo en el gimnasio podemos hacer ejercicio; caminar, ir en bicicleta o subir escaleras, son formas cotidianas de ejercitarnos.</p>"+
+	 			"<p>La danza además de trabajar los músculos, articulaciones y huesos; mejora la actividad cardiovascular, fortalece la memoria, brinda una sensación de bienestar; nos permite comunicar emociones, sensaciones y pensamientos a través del movimiento, contribuyendo a nuestra salud física, mental y emocional.</p>"+
+	 			"<p>Te invitamos a moverte con nosotros en los retos a continuación y experimentes el bienestar en tu propio cuerpo.</p>",
 	 			"<img src='"+$("#bloginfo").val() +"/danza/images/conexion/bienestar.png'>", 2, "conexion", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-propiocepcion":
-	 		infoSala("Propiocepción","<p>Seguramente habrás escuchado sobre los cinco sentidos de los que se habla habitualmente: vista, tacto, olfato, oído y gusto, así como su función para los seres humanos; pero, ¿sabías que además existen sentidos adicionales? Estos nos permiten percibir sensaciones relacionadas con la temperatura, el espacio, el equilibrio e incluso el dolor.</p>"+
-	 			"<p>Uno de estos sentidos adicionales se llama PROPIOCEPCIÓN y es la capacidad de sentir el propio cuerpo. Además de darnos información sobre dónde y cómo están ubicadas las partes específicas sin necesidad de utilizar la vista, la propiocepción nos ayuda a crear una imagen del cuerpo en relación al espacio que habitamos; ser conscientes de la postura corporal, la dirección y rango de movimientos que hacemos a diario como girar, saltar, agacharnos, esquivar objetos o personas de manera eficiente y sin provocar lesiones.</p>"+
-	 			"<p>A continuación te invitamos a participar en unos retos para explorar y mejorar tu propiocepción.</p>", "", "texto", "conexion", "", "conexion-propiocepcion");
+	 		infoSala("Propiocepción","<p>Seguramente habrás escuchado sobre los cinco sentidos: vista, tacto, olfato, oído y gusto; pero, ¿sabías que existen sentidos adicionales relacionados con la percepción de temperatura, espacio, equilibrio e incluso el dolor?</p>"+
+	 			"<p>Uno de estos se llama propiocepción y es la capacidad de sentir el propio cuerpo.</p>"+
+	 			"<p>La propiocepción nos ayuda a crear una imagen del cuerpo en relación al espacio que habitamos; nos informa sobre dónde y cómo están ubicadas nuestras partes sin necesidad mirar.  Permite que seamos conscientes de la postura corporal, dirección y rango de los movimientos cotidianos como girar, saltar, agacharnos, esquivar obstáculos, para hacerlos de manera eficaz y sin provocar lesiones.</p>"+
+	 			"<p>Te invitamos a participar en los retos a continuación para desarrollar tu propiocepción.</p>", "", "texto", "", "", "conexion-propiocepcion");
 	 		break;
 	 		case "btn-respiracion":
-	 		infoSala("Respiración","<p>Inhala... Exhala... Inhala… Exhala…</p>"+
-	 			"<p>Respirar es brindarle a nuestro cuerpo una recarga de energía, como si la respiración fuera ese cargador que pone nuestra batería al 100% para poder hacer todas las actividades que hacemos día a día.</p> "+
-	 			"<p>Respirar es un proceso que solo llevan a cabo los seres vivos y se convierte en la primera fuente de energía de nuestro cuerpo, también son fuentes de energía los alimentos, el descanso y el ejercicio. Hagamos un prueba ¿Cuánto tiempo puedes aguantar la respiración? Vamos pruébalo ¿Cuánto duraste?</p>"+
-	 			"<p>Si dejamos de respirar, después de cuatro minutos nuestro cerebro empieza a fallar, no podemos durar tanto tiempo sin brindar oxígeno al cuerpo dado que la respiración permite el correcto funcionamiento de nuestro organismo, por eso respirar es una función vital. Podemos pasar días sin comer o dormir, sin embargo, no podemos dejar de respirar, la respiración es vida y todo lo que está vivo respira.</p>"+
-	 			"<p>¡Estamos vivos! ¡Somos vida!</p>"+
-	 			"<p>¿Quieres conocer cómo podemos entrenar nuestra respiración y llenar de beneficios a nuestro cuerpo? Ven acompáñanos a bailar con la respiración.</p>", "", "texto", "conexion", "", "conexion-respiracion");
+	 		infoSala("Respiración","<p>Hagamos un prueba ¿Cuánto tiempo puedes aguantar la respiración? </p>"+
+	 			"<p>¡Vamos pruébalo!  ...¿Cuánto duraste?...</p>"+
+	 			"<p>La respiración es un proceso vital en el que se lleva oxígeno a todas las partes del cuerpo para el correcto funcionamiento de nuestro organismo; se convierte en una fuente de energía junto con  los alimentos, el descanso y la actividad física.</p>"+
+	 			"<p>Inhala... Exhala... Inhala… Exhala… Todo lo que está vivo respira.</p>"+
+	 			"<p>Podemos pasar varios días sin comer o dormir, pero no más de unos minutos sin respirar. Hacerlo de manera consciente es darle a nuestro cuerpo una recarga de energía, poner la batería al 100% para hacer todas las actividades del día a día.</p>"+
+	 			"<p>¿Quieres entrenar la respiración para llenar tu cuerpo de energía?</p>"+
+	 			"<p>Acompáñanos a movernos al ritmo de la respiración en los retos a continuación.</p>", "", "texto", "", "", "conexion-respiracion");
 	 		break;
 	 		case "btn-lunes":
 	 		infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+
@@ -209,7 +238,9 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-uno":
-	 		infoSala("Reto 1", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 		infoSala("Reto 1", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TzyTEUq7CnY' allowfullscreen></iframe>"+
+	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-dos":
@@ -226,7 +257,7 @@ jQuery(document).ready(function($){
 	 		break;
 	 		case "btn-flash":
 	 		infoSala("Flashmob","<p><div class='embed-responsive embed-responsive-16by9'>"+
-	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mvGdnCNH5KQ'></iframe>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/xCTS6xdHXxM' allowfullscreen></iframe>"+
 	 			"</div></p>", "<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-flash' data-actividad-reto='bienestar-flash'>Reto</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-flash":
