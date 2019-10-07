@@ -221,27 +221,27 @@
       </div>
       <div class="col-lg-offset-3 col-lg-6 col-md-offset-1 col-md-10" id="btns-intro-aap">
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_intro_normal.png"></a>
+          <img id="img-intro-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_intro_normal.png">
           <p>Introducción</p>
         </div>
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-objetivos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_objetivos_normal.png"></a>
+          <img id="img-objetivos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_objetivos_normal.png">
           <p>Objetivos</p>
         </div>
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-publico-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_publico_normal.png"></a>
+          <img id="img-publico-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_publico_normal.png">
           <p>Público objetivo</p>
         </div>
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-metodologia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png"></a>
+          <img id="img-metodologia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png">
           <p>Metodología</p>
         </div>
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_creditos_normal.png"></a>
+          <img id="img-creditos-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_creditos_normal.png">
           <p>Créditos</p>
         </div>
         <div class="col-lg-2 col-md-2 text-center">
-          <a href="#"><img id="img-bibliografia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png"></a>
+          <img id="img-bibliografia-aap" src="<?php bloginfo('template_url'); ?>/artes_plasticas/images/index/img_metodologia_normal.png">
           <p>Bibliografía</p>
         </div>
       </div>

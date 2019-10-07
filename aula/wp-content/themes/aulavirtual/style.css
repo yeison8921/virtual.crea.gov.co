@@ -439,6 +439,7 @@ audio{
   }
   #btns-intro-aap img {
     height: 95px;
+    cursor: pointer;
   } 
   #div-info-detallada-aap p{
     font-size: 17px;
@@ -507,10 +508,10 @@ audio{
     width: 65px;
   }
   #img-comic{
-    height: 400px;
+    height: 460px;
   }
   .mover-comic{
-    height: 100px;
+    height: 50px;
   }
   #img-pajaro{
     margin-top: 90px;
