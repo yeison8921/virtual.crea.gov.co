@@ -40,7 +40,8 @@ jQuery(document).ready(function($){
 	 			$("#div-botones-sala").append("<button class='btn btn-block btn-n-mus' id='btn-guabina' data-sala=''>Guabina</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-pasillo' data-sala=''>Pasillo</button>"+
 	 				"<button class='btn btn-block btn-n-mus' id='btn-bambuco' data-sala=''>Bambuco</button>"+
-	 				"<button class='btn btn-block btn-n-mus' id='btn-creacion' data-sala=''>Sube tu creación al foro</button>");
+	 				"<button class='btn btn-block btn-n-mus' id='btn-forocreacion' data-sala=''>Sube tu creación al foro</button>"+
+	 				"<button class='btn btn-block btn-n-mus' id='btn-creaciones' data-sala=''>Creaciones</button>");
 	 		}
 	 	}
 	 }
@@ -381,6 +382,10 @@ jQuery(document).ready(function($){
 	 		if($(this).attr("data-sala") == "laboratorio"){
 	 			infoSalaTeorica("El bambuco", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "", "texto", "laboratorio", "", "laboratorio-bambuco");
 	 		}
+	 		break;
+	 		case "btn-forocreacion":
+	 		infoSalaTeorica("Enhorabuena", "<p>Te invitamos a subir tu creación al foro haciendo clic en el siguiente enlace "+
+	 			"<a href='"+$("#blog-info").val()+"/foros-musica' target='_blank'>Foros</a>", "", "texto", "", "", "laboratorio-bambuco");
 	 		break;
 	 		case "btn-instrumentos":
 	 		infoSalaTeorica("Instrumentos música andina", "<p class='instrumentos'>"+
