@@ -190,12 +190,20 @@ jQuery(document).ready(function($){
 	 			"</div></p>", "", 1, "", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-ritmo":
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "ritmo");
+	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/ritmo.png")
 	 		break;
 	 		case "btn-expresion":
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "expresion");
+	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/expresion.png")
 	 		break;
 	 		case "btn-espacio":
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "espacio");
+	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/espacio.png")
 	 		break;
 	 		case "btn-memoria":
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "memoria");
+	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/memoria.png")
 	 		break;
 	 		case "btn-bienestar":
 	 		infoSala("Bienestar","<p>¿Me creerías si te digo que existe una manera divertida de ejercitar el cuerpo, generando bienestar físico, mental y emocional?</p>"+
@@ -240,7 +248,7 @@ jQuery(document).ready(function($){
 	 		case "btn-reto-uno":
 	 		infoSala("Reto 1", "<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TzyTEUq7CnY' allowfullscreen></iframe>"+
-	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
+	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-dos":
@@ -265,6 +273,24 @@ jQuery(document).ready(function($){
 	 			"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."+
 	 			"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."+
 	 			"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>", "<button class='btn btn-block btn-n-dan' id='btn-reto-flash'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-retos":
+	 		infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+
+	 			"<p>Como todo es cuestión de actitud, queremos invitarles a unirse a nuestro reto <strong>#LunesDeMovimiento</strong> y así comenzar la semana activando el cuerpo para llenarlo de energía.</p>"+
+	 			"<p>Nuestro primer reto <strong>#LunesdeMovimiento</strong> te invita a comenzar la semana bailando. Bailar es una manera divertida de ejercitarse, activar el cuerpo y despejar la mente.</p>"+
+	 			"<p>¡Muévete con nosotros y te sentirás muy bien! Sólo vas a necesitar unos minutos y lo puedes hacer donde quieras.</p>"+
+	 			"<p>PASO A PASO:</p>"+
+	 			"<ol>"+
+	 			"<li>Repite y aprende los movimientos del video.</li>"+
+	 			"<li>Combina los movimientos como quieras y arma tu propia secuencia.</li>"+
+	 			"<li>Graba un video haciendo la secuencia con tu canción favorita para comenzar la semana.</li>"+
+	 			"<li>Publica tu video incluyendo las etiquetas:</li>"+
+	 			"<strong>#LunesdeMovimiento #AulaVirtualDanza #CuerpoenMovimiento</strong>"+
+	 			"<li>Comparte este reto para que otras personas lo hagan y puedan también empezar la semana con un cuerpo activo.</li>"+
+	 			"</ol>", "<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-uno' data-actividad-reto='bienestar-lunes'>Reto 1</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-dos' data-actividad-reto='bienestar-lunes'>Reto 2</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-tres' data-actividad-reto='bienestar-lunes'>Reto 3</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){

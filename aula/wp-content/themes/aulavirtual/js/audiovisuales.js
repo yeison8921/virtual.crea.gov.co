@@ -14,7 +14,8 @@ jQuery(document).ready(function($){
 				"top": "60px",
 				"width": "350px",
 				"height": "600px",
-				"font-size": "20px"
+				"font-size": "20px",
+				"overflow-y": "auto"
 			});
 			$("#btn-cerrar").css({
 				"position": "absolute",
@@ -44,32 +45,20 @@ jQuery(document).ready(function($){
 	}
 
 	$("#div-oculto").click(function(){
-		$("#div-con-int-aud").css({
-			"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
-		});
-		$(this).hide();
-		$("#img-camara").hide();
-		$("#div-btns-int-aud").hide();
-		$("#div-des-int-aud").hide();
-		$("#div-btn-atr-aud").show();
-		$("#div-btns-mod-aud").show();
-		$("#div-ocu-principios").show();
-		$("#btn-cerrar").hide();
-		$("#btn-atras").show();
-		$("#btn-atras").attr("data-atras", "index");
+		window.location.href=$("#blog-info").val()+"/audiovisuales";
 	});
 
 	$("#div-ocu-principios").click(function(){
 		$(".modal-title").html("Los magos de la luz");
 		$(".modal-body").html("").html("<div class='col-lg-9'>"+
 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/WZ_WIESK-Gw'></iframe>"+
+			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/WZ_WIESK-Gw' allowfullscreen></iframe>"+
 			"</div></p>"+
-			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"<p>Aprenderás como jugar con la luz y la imagen en movimiento.</p>"+
 			"</div>"+
 			"<div class='col-lg-3'>"+
 			"<h2>Reto</h2>"+
-			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"+
+			"<p>Te invitamos a que observes el primer reto de Los magos de la luz.</p>"+
 			"<button class='btn' id='btn-reto' style='background-color: #03f0e3; color: #24273a;'>Ir al reto</button>"+
 			"</div>");
 		$("#modal-rollover").modal("show");
@@ -77,24 +66,31 @@ jQuery(document).ready(function($){
 
 	$(".modal-body").on("click", "#btn-reto", function(){
 		$(".modal-title").html("Reto los magos de la luz");
-		$(".modal-body").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
+		$(".modal-body").html("").html("<div class='col-lg-9'>"+
 			"<p><div class='embed-responsive embed-responsive-16by9'>"+
-			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Ad1pp2DdaDU'></iframe>"+
+			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/Ad1pp2DdaDU' allowfullscreen></iframe>"+
 			"</div></p>"+
-			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"<p>Llegó la hora de poner en práctica los conceptos que aprendiste en el vídeo anterior.</p>"+
+			"</div>"+
+			"<div class='col-lg-3'>"+
+			"<h2>Foro</h2>"+
+			"<p>Tiempo que seas el mago de la luz, sube tus fotos al foro y supera este primer reto.</p>"+
+			"<a href='"+$("#blog-info").val()+"/foros-audiovisuales/topic/reto-fotografia/' target='_blank' class='btn' style='background-color: #03f0e3; color: #24273a;'>Ir al foro</a>"+
 			"</div>");
 	});
 
 	$("#div-ocu-videoteca").click(function(){
+		$(".modal-title").html("Principios de la fotografía");
 		$(".modal-body").html("").html("<div class='col-lg-offset-1 col-lg-10'>"+
-			"<h2>Principios de fotografía</h2>"+
-			"<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>"+
-			"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"+
+			"<p><div class='embed-responsive embed-responsive-16by9'>"+
+			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/WZ_WIESK-Gw' allowfullscreen></iframe>"+
+			"</div></p>"+
+			"<p></p>"+
 			"</div>");
 		$("#modal-rollover").modal("show");
 	});
 
-	$("#div-con-int-aud button").click(function(){
+	$(".contenedor button").click(function(){
 		if($(this).attr("id") != "btn-cerrar" && $(this).attr("id") != "btn-videoteca" && $(this).attr("id") != "btn-foro"){
 			$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_2.png');
 			$("#div-des-int-aud").show();
@@ -123,7 +119,23 @@ jQuery(document).ready(function($){
 			break;
 			case "btn-creditos":
 			$("#div-des-int-aud h2").html("").html("Créditos");
-			$("#div-des-int-aud p").html("").html("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+			$("#div-des-int-aud p").html("").html("<p><strong>Investigación y desarrollo de contenidos:</strong><br>"+
+				"Rodney Pulido<br>"+
+				"Laura Martínez</p>"+
+				"<p><strong>Producción de contenidos:</strong><br>"+
+				"Tatiana Múnera</p>"+
+				"<p><strong>Asesor pedagógico:</strong><br>"+
+				"Leonardo Villamizar</p>"+
+				"<p><strong>Programación:</strong><br>"+
+				"Yeison Briceño</p>"+
+				"<p><strong>Diseño gráfico:</strong><br>"+
+				"Raúl Eduardo Díaz<br>"+
+				"Johann Tarazona Matiz</p>"+
+				"<p><strong>Coordinación programa Crea:</strong><br>"+
+				"Leonardo Garzón</p>"+
+				"<p><strong>Coordinación SIF:</strong><br>"+
+				"Miguel Andrés Salas</p>"+
+				"<p><strong>Idartes<br>Alcaldía de Bogotá<br>2019</strong></p>");
 			break;
 			case "btn-cerrar":
 			$(this).hide();
@@ -131,38 +143,27 @@ jQuery(document).ready(function($){
 			$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.png');
 			break;
 			case "btn-videoteca":
-			$("#div-con-int-aud").css({
+			$("#div-con-aul-aud").css({
 				"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_videoteca.png")'
 			});
 			$("#btn-atras").attr("data-atras", "modulos");
 			$("#div-ocu-principios").hide();
 			$("#div-btns-mod-aud").hide();
-			$("#btn-cerrar").hide();
 			$("#div-ocu-videoteca").show();
-			$("#div-oculto").hide();
 			break;
 			case "btn-foro":
+			window.open($("#blog-info").val()+"/foros-audiovisuales/topic/reto-fotografia");
 			break;
 			case "btn-atras":
-			$("#btn-cerrar").hide();
 			$("#div-des-int-aud").hide();
 			if($(this).attr("data-atras") == "index"){
-				$("#div-con-int-aud").css({
-					"background-image": 'url("")'
-				});
-				$("#img-camara").attr("src", $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_index_1.png');
-				$("#img-camara").show();
-				$("#div-btns-int-aud").show();
-				$("#div-btn-atr-aud").show();
-				$("#div-btns-mod-aud").hide();
-				$("#div-ocu-principios").hide();
-				$("#div-oculto").show();
-				$(this).hide();
+				window.location.href=$("#blog-info").val()+"/introduccion-aula-audiovisuales";
 			}
 			if($(this).attr("data-atras") == "modulos"){
-				$("#div-con-int-aud").css({
+				$("#div-con-aul-aud").css({
 					"background-image": 'url("'+ $("#bloginfo").val() + '/audiovisuales/images/fondos/fondo_modulos.png")'
 				});
+				$("#div-ocu-videoteca").hide();
 				$("#div-ocu-principios").show();
 				$("#div-btns-mod-aud").show();
 				$("#btn-atras").attr("data-atras", "index");

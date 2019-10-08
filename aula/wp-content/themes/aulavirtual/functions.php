@@ -44,10 +44,7 @@ function aula_cargar_scripts(){
     if(is_page("Introducción aula artes plásticas") || is_page("Artes plásticas")){
         wp_enqueue_script( 'artes-plasticas', get_template_directory_uri(). '/js/artes_plasticas.js',array(),false,true);
     }
-    if(is_page("Introducción aula audiovisuales 2")){
-        wp_enqueue_script( 'audiovisuales', get_template_directory_uri(). '/js/audiovisuales_old.js',array(),false,true);
-    }
-    if(is_page("Introducción aula audiovisuales")){
+    if(is_page("Introducción aula audiovisuales") || is_page("Audiovisuales")){
         wp_enqueue_script( 'audiovisuales', get_template_directory_uri(). '/js/audiovisuales.js',array(),false,true);
     }
     //wp_enqueue_script( 'notas' , get_template_directory_uri() . '/js/notas.js',array(),false,true);
@@ -61,7 +58,6 @@ add_action( 'wp_enqueue_scripts', 'aula_cargar_scripts' );
 
 function aula_cargar_estilos(){
     wp_register_style('bootstrap-css', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css',array(),false,'all');
-    wp_register_style('sweetAlert2', get_template_directory_uri().'/css/sweetAlert2.min.css',array(),false,'all');
     wp_register_style('estilo-principal',get_template_directory_uri().'/style.css',array(),false,'all');
     wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css',array(),false,'all');
     wp_enqueue_style('bootstrap-css');
