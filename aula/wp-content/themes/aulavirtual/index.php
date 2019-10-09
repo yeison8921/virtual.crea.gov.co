@@ -85,7 +85,7 @@
       </div>
       <div class="modal-body">
         <div class="text-center">
-          <p style="font-size: 50px;">Proximamente...</p>
+          <p style="font-size: 50px;">Próximamente...</p>
         </div>
       </div>
       <!-- <div class="modal-footer">

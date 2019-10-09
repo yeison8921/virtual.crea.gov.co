@@ -190,19 +190,19 @@ jQuery(document).ready(function($){
 	 			"</div></p>", "", 1, "", "", "conexion-bienestar");
 	 		break;
 	 		case "btn-ritmo":
-	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "ritmo");
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Próximamente</p>", "ritmo");
 	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/ritmo.png")
 	 		break;
 	 		case "btn-expresion":
-	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "expresion");
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Próximamente</p>", "expresion");
 	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/expresion.png")
 	 		break;
 	 		case "btn-espacio":
-	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "espacio");
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Próximamente</p>", "espacio");
 	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/espacio.png")
 	 		break;
 	 		case "btn-memoria":
-	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Proximamente</p>", "memoria");
+	 		infoModulo("&nbsp", "<p style='font-size: 30px;'>Próximamente</p>", "memoria");
 	 		$("#div-img-mod-cur-dan img").attr("src", $("#bloginfo").val() +"/danza/images/metodologia/memoria.png")
 	 		break;
 	 		case "btn-bienestar":
@@ -249,7 +249,7 @@ jQuery(document).ready(function($){
 	 		infoSala("Reto 1", "<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TzyTEUq7CnY' allowfullscreen></iframe>"+
 	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
-	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-dos":
 	 		infoSala("Reto 2", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
@@ -291,6 +291,9 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-dos' data-actividad-reto='bienestar-lunes'>Reto 2</button>"+
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-tres' data-actividad-reto='bienestar-lunes'>Reto 3</button>"+
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		break;
+	 		case "btn-foro":
+	 		window.open($("#blog-info").val()+"/foros-danza/topic/foro-reto-1-danza");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
