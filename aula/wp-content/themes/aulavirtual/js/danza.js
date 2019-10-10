@@ -152,7 +152,7 @@ jQuery(document).ready(function($){
 	 		infoIntroduccion("Créditos", "<p><strong>Investigación y desarrollo de contenidos:</strong><br>"+
 	 			"Johanna Sánchez<br>"+
 	 			"Oscar Rojas<br>"+
-	 			"Alejandra Vargas<br>"+
+	 			"Alejandra Vargas"+
 	 			"</p>"+
 	 			"<p><strong>Producción de contenidos:</strong><br>"+
 	 			"Tatiana Múnera</p>"+
@@ -166,6 +166,7 @@ jQuery(document).ready(function($){
 	 			"<p><strong>Edición:</strong><br>"+
 	 			"Johanna Sánchez<br>"+
 	 			"Zion Producciones<br>"+
+	 			"Mario Alexander Veloza"+
 	 			"<p><strong>Diseño gráfico:</strong><br>"+
 	 			"Johann Tarazona Matiz</p>"+
 	 			"<p><strong>Programación:</strong><br>"+
@@ -249,19 +250,25 @@ jQuery(document).ready(function($){
 	 		infoSala("Reto 1", "<p><div class='embed-responsive embed-responsive-16by9'>"+
 	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/TzyTEUq7CnY' allowfullscreen></iframe>"+
 	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
-	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-foro='1'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-dos":
-	 		infoSala("Reto 2", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
-	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		infoSala("Reto 2", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/oVmKrpr-Oio' allowfullscreen></iframe>"+
+	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-foro='2'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-tres":
-	 		infoSala("Reto 3", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
-	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		infoSala("Reto 3", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/gfKm2KcQzw0' allowfullscreen></iframe>"+
+	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-foro='3'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-cuatro":
-	 		infoSala("Reto 4", "<video width='700' controls><source src='mov_bbb.mp4' type='video/mp4'></video>","<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Retos</button>"+
-	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto=''>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		infoSala("Reto 4", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 			"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/8QusyVuy1kY' allowfullscreen></iframe>"+
+	 			"</div></p>","<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-retos' data-actividad-reto='bienestar-lunes'>Retos</button>"+
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-foro' data-foro='4'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-flash":
 	 		infoSala("Flashmob","<p><div class='embed-responsive embed-responsive-16by9'>"+
@@ -293,7 +300,7 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-foro":
-	 		window.open($("#blog-info").val()+"/foros-danza/topic/foro-reto-1-danza");
+	 			window.open($("#blog-info").val()+"/foros-danza/topic/foro-reto-"+$(this).attr("data-foro")+"-danza");
 	 		break;
 	 		case "btn-regresar":
 	 		if($(this).attr("data-atras") == "index"){
