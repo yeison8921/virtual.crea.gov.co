@@ -276,10 +276,8 @@ jQuery(document).ready(function($){
 	 			"</div></p>", "<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-flash' data-actividad-reto='bienestar-flash'>Reto</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-reto-flash":
-	 		infoSala("Reto flashmob","<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."+
-	 			"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."+
-	 			"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."+
-	 			"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>", "<button class='btn btn-block btn-n-dan' id='btn-reto-flash'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
+	 		infoSala("Reto flashmob","<p>Si participaste en nuestro Flashmob en el Festival Crea, te invitamos a subir tus vídeos y fotografías al foro y así revivir ese momento.</p>",
+	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' data-actividad-reto='bienestar-flash' id='btn-foro'>Foro</button>", 3, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-retos":
 	 		infoSala("Lunes de movimiento","<p>Sabemos que para todos es difícil comenzar la semana pues cuesta retomar la rutina después del descanso, sobre todo cuando estamos acostumbrados a escuchar frases como: “Otra vez es lunes”, “todo va bien hasta que te acuerdas que es lunes”, etc.</p>"+
@@ -300,6 +298,9 @@ jQuery(document).ready(function($){
 	 			"<button class='btn btn-block btn-n-dan sub-boton-dos' id='btn-reto-cuatro' data-actividad-reto='bienestar-lunes'>Reto 4</button>", 2, "conexion", $(this).attr("id"), "conexion-bienestar");
 	 		break;
 	 		case "btn-foro":
+	 		if($(this).attr("data-actividad-reto") == "bienestar-flash")
+	 			window.open($("#blog-info").val()+"/foros-danza/topic/foro-flashmob");
+	 		else
 	 			window.open($("#blog-info").val()+"/foros-danza/topic/foro-reto-"+$(this).attr("data-foro")+"-danza");
 	 		break;
 	 		case "btn-regresar":
