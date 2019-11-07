@@ -1,6 +1,12 @@
 jQuery(document).ready(function($){
 	num_pag = 1;
 
+	$('#modal-inicio-artes-plasticas').modal('show');
+
+	$("#btn-cerrar-modal").on("click", function(){
+		$("iframe.video-inicio").attr("src", $("iframe.video-inicio").attr("src"));
+	});
+
 	$(window).on("resize", function(){
 		setElementPosition($(window).width(), $(window).height());
 	});

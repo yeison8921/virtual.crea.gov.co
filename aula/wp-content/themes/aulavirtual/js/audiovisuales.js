@@ -1,5 +1,11 @@
 jQuery(document).ready(function($){
 
+	$('#modal-inicio-audiovisuales').modal('show');
+
+	$("#btn-cerrar-modal").on("click", function(){
+		$("iframe.video-inicio").attr("src", $("iframe.video-inicio").attr("src"));
+	});
+
 	$(window).on("resize", function(){
 		setElementPosition($(this).width(), $(this).height());
 	});

@@ -1,4 +1,11 @@
 jQuery(document).ready(function($){
+
+	$('#modal-inicio-danza').modal('show');
+
+	$("#btn-cerrar-modal").on("click", function(){
+		$("iframe.video-inicio").attr("src", $("iframe.video-inicio").attr("src"));
+	});
+	
 	function infoIntroduccion(title, text) {
 		$(".titulo-info-basica").html("").html(title);
 		$(".contenido-info-basica").html("").html(text);

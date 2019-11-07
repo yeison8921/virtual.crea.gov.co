@@ -1,5 +1,11 @@
 jQuery(document).ready(function($){
 
+	$('#modal-inicio-index').modal('show');
+
+	$("#btn-cerrar-modal").on("click", function(){
+		$("iframe").attr("src", $("iframe").attr("src"));
+	});
+
 	$(".carousel").carousel({
 		interval: 3000
 	})

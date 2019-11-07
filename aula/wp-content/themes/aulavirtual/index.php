@@ -79,20 +79,33 @@
 <div class="modal fade" id="modalIndex" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"></h4>
-      </div>
       <div class="modal-body">
         <div class="text-center">
           <p style="font-size: 50px;">Próximamente...</p>
         </div>
       </div>
-      <!-- <div class="modal-footer">
+      <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div> -->
+      </div>
     </div>
-
   </div>
 </div>
+
+<div class="modal fade" id="modal-inicio-index" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>
+          <div class='embed-responsive embed-responsive-16by9'>
+            <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/9SmXLOv7GSg' allowfullscreen></iframe>
+          </div>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-cerrar-modal" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php get_footer(); ?>

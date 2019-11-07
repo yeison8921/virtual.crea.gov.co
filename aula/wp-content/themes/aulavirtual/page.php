@@ -38,6 +38,23 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal-inicio-danza" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>
+              <div class='embed-responsive embed-responsive-16by9'>
+                <iframe class='embed-responsive-item video-inicio' src='https://www.youtube.com/embed/chMLL9P4TJM' allowfullscreen></iframe>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-cerrar-modal" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <?php endif; ?>
   <?php if(is_page("Danza")) :?>
     <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
@@ -136,6 +153,23 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal-inicio-musica" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>
+              <div class='embed-responsive embed-responsive-16by9'>
+                <iframe class='embed-responsive-item video-inicio' src='https://www.youtube.com/embed/wuPqRHPXSwU' allowfullscreen></iframe>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-cerrar-modal" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>  
   <?php endif; ?>
   <?php if(is_page("Música")) :?>
     <input type="hidden" id="blog-info" value="<?php bloginfo('url'); ?>">
@@ -253,6 +287,23 @@
         </div>
         <div class="col-lg-offset-1 col-lg-10" style="height: 80%">
           <div id="div-texto-info" data-info=""></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-inicio-artes-plasticas" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>
+              <div class='embed-responsive embed-responsive-16by9'>
+                <iframe class='embed-responsive-item video-inicio' src='https://www.youtube.com/embed/12RViPyxcCc' allowfullscreen></iframe>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-cerrar-modal" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
         </div>
       </div>
     </div>
@@ -408,6 +459,23 @@
         </div>
         <div class="col-lg-2 col-md-2">
           <button class="btn btn-index-aud" id="btn-creditos">CRÉDITOS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-inicio-audiovisuales" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>
+            <div class='embed-responsive embed-responsive-16by9'>
+              <iframe class='embed-responsive-item video-inicio' src='https://www.youtube.com/embed/xKh_0KvxPKE' allowfullscreen></iframe>
+            </div>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="btn-cerrar-modal" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>

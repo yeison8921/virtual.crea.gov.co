@@ -1,5 +1,11 @@
 jQuery(document).ready(function($){
 
+	$('#modal-inicio-musica').modal('show');
+
+	$("#btn-cerrar-modal").on("click", function(){
+		$("iframe.video-inicio").attr("src", $("iframe.video-inicio").attr("src"));
+	});
+
 	function infoIntroduccion(title, text) {
 		$(".titulo-info-basica").html("").html(title);
 		$(".contenido-info-basica").html("").html(text);
@@ -297,12 +303,12 @@ jQuery(document).ready(function($){
 	 			"Mausoleo Estudio<br>"+
 	 			"Trio Vocal Instrumental &quot;Alhajas&quot;</p>"+
 	 			"<p><strong>Interpretación de temas musicales:</strong><br>"+
-	 			"Andrea Diaz (voz), Lenin Camilo Silva Arana (Tiple), Hugo Mario Marín Gómez (Guitarra), Mauricio Pinzón Gómez (Bandola), Aprendiz de Mauricio</p>"+
+	 			"Andrea Diaz (voz), Lenin Camilo Silva Arana (Tiple), Hugo Mario Marín Gómez (Guitarra), Mauricio Pinzón Gómez (Bandola)</p>"+
 	 			"<p><strong>Temas musicales:</strong><br>"+
 	 			"Bochica: Autor: Francisco Cristancho, Mauricio Pinzón<br>"+
 	 			"Cachipay: Autor:  Emilio Murillo<br>"+
 	 			"La Ruana: Autor: Miguel Ángel Calderón<br><br>"+
-	 			"Sayco-Acinpro.©<br></p>"+
+	 			"Sayco-Acinpro©<br></p>"+
 	 			"<p><strong>Idartes<br>Alcaldía de Bogotá<br>2019</strong></p>");
 	 		break;
 	 		case "btn-andina":
@@ -338,8 +344,9 @@ jQuery(document).ready(function($){
 	 				"</div></p>", 2, 4, "", "interactiva-guabina");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
-	 			infoSalaTeorica("La Guabina", "<p>Escucha la creación a partir del ritmo de la Guabina.</p>"+
-	 				"<p><audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/laboratorio_guabina.mp3' type='audio/mpeg'></audio></p>", "", "texto", "laboratorio", "", "laboratorio-guabina");
+	 			infoSalaTeorica("La Guabina", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/RN5EsnQg9yA' allowfullscreen></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", "", "laboratorio-guabina");
 	 		}
 	 		break;
 	 		case "btn-pasillo":
@@ -361,8 +368,9 @@ jQuery(document).ready(function($){
 	 				"</div></p>", 2, "tocar", "", "interactiva-pasillo");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
-	 			infoSalaTeorica("El pasillo", "<p>Escucha la creación a partir del ritmo de Pasillo.</p>"+
-	 				"<p><audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/laboratorio_pasillo.mp3' type='audio/mpeg'></audio></p>", "", "texto", "laboratorio", "", "laboratorio-pasillo");
+	 			infoSalaTeorica("El pasillo", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mEQSWrnxQEA' allowfullscreen></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", "", "laboratorio-pasillo");
 	 		}
 	 		break;
 	 		case "btn-bambuco":
@@ -382,8 +390,9 @@ jQuery(document).ready(function($){
 	 				"</div></p>", 2, "tocar", "", "interactiva-bambuco");
 	 		}
 	 		if($(this).attr("data-sala") == "laboratorio"){
-	 			infoSalaTeorica("El bambuco", "<p>Escucha la creación a partir del ritmo de Bambuco.</p>"+
-	 				"<p><audio controls><source src='"+ $("#bloginfo").val() + "/musica/audios/laboratorio_bambuco.mp3' type='audio/mpeg'></audio></p>", "", "texto", "laboratorio", "", "laboratorio-bambuco");
+	 			infoSalaTeorica("El bambuco", "<p><div class='embed-responsive embed-responsive-16by9'>"+
+	 				"<iframe class='embed-responsive-item' src='https://www.youtube.com/embed/tL6CVPll4pA' allowfullscreen></iframe>"+
+	 				"</div></p>", "", 1, "laboratorio", "", "laboratorio-bambuco");
 	 		}
 	 		break;
 	 		case "btn-forocreacion":
